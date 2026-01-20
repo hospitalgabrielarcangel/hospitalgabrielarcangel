@@ -53,7 +53,7 @@ const certification = [
       alt: "CECA logotype",
       width: 540,
       height: 540,
-      className: "h-30",
+      className: "h-36",
     },
   },
   {
@@ -64,7 +64,7 @@ const certification = [
       alt: "CNDH logotype",
       width: 240,
       height: 95,
-      className: "h-20",
+      className: "h-24",
     },
   },
   {
@@ -75,7 +75,7 @@ const certification = [
       alt: "Protección Civil logotype",
       width: 800,
       height: 303,
-      className: "h-20",
+      className: "h-24",
     },
   },
 ]
@@ -158,29 +158,31 @@ export default function LobbyPage() {
           <InfiniteMovingImages items={certification} speed="slow" />
         </div>
       </section>
-      {/* <section className="flex">
-        <div className="w-1/2">
-          <h2 className="font-header text-h3 heading text-balance">
-            Lorem ipsum dolor sit amet consetratum
-          </h2>
-          <p className="text-md paragraph">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-            similique qui, quisquam iure et at omnis nihil deleniti eum
-            exercitationem iusto ut temporibus vel architecto soluta vitae
-            labore, ipsa accusantium!
-          </p>
-        </div>
-        <div className="w-1/2">
-          <Image
-            src=""
-            alt=""
-            width={1024}
-            height={1024}
-            sizes="(max-width: 744px) 100vw, (max-width: 1280px) 50vw, 500px"
-            loading="lazy"
-          />
-        </div>
-      </section> */}
+      {/* <Shell>
+        <section className="flex">
+          <div className="w-1/2">
+            <h2 className="font-header text-h3 heading text-balance">
+              Lorem ipsum dolor sit amet consetratum
+            </h2>
+            <p className="text-md paragraph">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
+              similique qui, quisquam iure et at omnis nihil deleniti eum
+              exercitationem iusto ut temporibus vel architecto soluta vitae
+              labore, ipsa accusantium!
+            </p>
+          </div>
+          <div className="w-1/2">
+            <Image
+              src=""
+              alt=""
+              width={1024}
+              height={1024}
+              sizes="(max-width: 744px) 100vw, (max-width: 1280px) 50vw, 500px"
+              loading="lazy"
+            />
+          </div>
+        </section>
+      </Shell> */}
     </div>
   )
 }

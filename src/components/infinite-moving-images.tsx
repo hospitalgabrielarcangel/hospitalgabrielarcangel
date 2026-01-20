@@ -91,7 +91,7 @@ export const InfiniteMovingImages = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap items-center gap-4 py-20",
+          "flex w-max min-w-full shrink-0 flex-nowrap items-center gap-4 py-12",
           start && "animate-scroll",
           pauseOnHover && "hover:paused"
         )}
@@ -99,7 +99,7 @@ export const InfiniteMovingImages = ({
         {items.map((item) => (
           <li key={item.name}>
             <Link href={item.url}>
-              <div className="relative max-w-full shrink-0 rounded-2xl px-24">
+              <div className="relative max-w-full shrink-0 rounded-2xl px-32">
                 {item.image && (
                   <span className="relative z-20">
                     <Image
@@ -108,7 +108,7 @@ export const InfiniteMovingImages = ({
                       width={item.image.width}
                       height={item.image.height}
                       loading="lazy"
-                      className={cn("h-16 w-auto", item.image.className)}
+                      className={cn("h-18 w-auto", item.image.className)}
                     />
                   </span>
                 )}
