@@ -134,7 +134,7 @@
   }
 
   .container {
-    @apply mx-auto max-w-350 px-4 md:px-8;
+    @apply mx-auto px-4 md:px-8;
   }
 }
 
@@ -146,6 +146,11 @@
   .paragraph {
     @apply leading-[1.4] tracking-tighter;
   }
+}
+
+@utility container {
+  width: unset;
+  max-width: 87.5rem;
 }
 
 @theme {
@@ -188,5 +193,3 @@
     }
   }
 }
-
-@source not inline("container");

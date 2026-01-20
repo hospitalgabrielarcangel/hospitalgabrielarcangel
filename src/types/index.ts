@@ -1,5 +1,6 @@
 import { type PropsWithChildren } from "react"
 
+import { type Locale } from "@/lib/constants"
 import type { Icons } from "@/components/icons"
 
 export type ContainerElementType = "div" | "section" | "article"
@@ -10,7 +11,7 @@ export type LayoutProps = Readonly<PropsWithChildren>
 
 export interface LocaleParams {
   readonly params: Promise<{
-    locale: string
+    locale: Locale
   }>
 }
 
