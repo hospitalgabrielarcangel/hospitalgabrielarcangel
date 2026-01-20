@@ -1,0 +1,32 @@
+{
+  "SiteMeta": {
+    "description": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery — supporting the healing of substance dependencies and addictions"
+  },
+  "SiteFooter": {
+    "author": "Built by"
+  },
+  "LobbyPage": {
+    "pageHeaderTitle": "Inpatient Addiction Treatment Clinic",
+    "pageHeaderDescription": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery — supporting the healing of substance dependencies and addictions.",
+    "pageHeaderLabel": "Inpatient Addiction Treatment Clinic",
+    "pageHeaderAction": "Contact us",
+    "aboutUs": "We understand that every recovery process is as unique as the story of the person experiencing it. That's why our center combines science, technology, and human care to provide truly comprehensive treatment. Through individual and group therapy, specialized psychiatric care, and continuous support, we help reduce withdrawal symptoms, prevent relapses, and strengthen emotional stability.",
+    "aboutUsAction": "About us",
+    "certifications": "Certified by"
+  },
+  "CallToAction": {
+    "home": "Home",
+    "contact": "Talk to us"
+  },
+  "Locale": {
+    "title": "Switch language",
+    "en": "Inglés",
+    "es": "Español"
+  },
+  "Theme": {
+    "title": "Toggle theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  }
+}
