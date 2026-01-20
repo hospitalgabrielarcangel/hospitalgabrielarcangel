@@ -43,7 +43,7 @@ export function LocaleSwitcher({
         }
       >
         <Button
-          className={cn("group", className)}
+          className={cn("group hover:cursor-pointer", className)}
           style={style}
           size={withSet || withChevron ? "default" : "icon"}
           variant={variant}
