@@ -5,11 +5,11 @@ import { Logomark, Logotype } from "@/components/logotype"
 
 export function SiteHeader() {
   return (
-    <header className="bg-background/80 sticky top-0 z-50 w-full backdrop-blur-xl">
+    <header className="sticky top-0 z-50 w-full bg-[#fcf7f11a] backdrop-blur-xl">
       <div className="container flex h-20 items-center">
         <div className="flex items-center gap-x-2">
           <div className="-ml-1.5">
-            <Logotype className="xs:block hidden h-13" />
+            <Logotype className="xs:block hidden h-12" />
             <Logomark className="xs:hidden block h-16" />
           </div>
         </div>

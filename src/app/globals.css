@@ -154,7 +154,7 @@
 }
 
 @theme {
-  --animate-scroll: scroll var(--animation-duration, 200s)
+  --animate-scroll: scroll var(--animation-duration, 150s)
     var(--animation-direction, forwards) linear infinite;
   --animate-fade-up: fade-up 0.5s ease-out;
   --animate-fade-down: fade-down 0.5s ease-out;

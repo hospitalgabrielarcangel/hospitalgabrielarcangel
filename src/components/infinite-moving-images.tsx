@@ -57,7 +57,7 @@ export const InfiniteMovingImages = ({
       } else if (speed === "normal") {
         containerRef.current.style.setProperty("--animation-duration", "100s")
       } else {
-        containerRef.current.style.setProperty("--animation-duration", "200s")
+        containerRef.current.style.setProperty("--animation-duration", "150s")
       }
     }
   }
@@ -99,7 +99,7 @@ export const InfiniteMovingImages = ({
         {items.map((item) => (
           <li key={item.name}>
             <Link href={item.url}>
-              <div className="relative max-w-full shrink-0 rounded-2xl px-32">
+              <div className="relative max-w-full shrink-0 rounded-2xl px-24">
                 {item.image && (
                   <span className="relative z-20">
                     <Image
@@ -108,7 +108,7 @@ export const InfiniteMovingImages = ({
                       width={item.image.width}
                       height={item.image.height}
                       loading="lazy"
-                      className={cn("h-18 w-auto", item.image.className)}
+                      className={cn("h-20 w-auto", item.image.className)}
                     />
                   </span>
                 )}

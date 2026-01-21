@@ -31,8 +31,9 @@ const certification = [
     image: {
       src: "/images/certifications/logo-conasama.webp",
       alt: "CONASAMA logotype",
-      width: 405,
-      height: 84,
+      width: 512,
+      height: 271,
+      className: "h-36",
     },
   },
   {
@@ -129,7 +130,7 @@ export default function LobbyPage() {
           >
             <source src="/video/video-home.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 z-10 bg-black/5" />
+          <div className="absolute inset-0 z-10 mt-20 bg-black/25" />
         </div>
       </div>
       <Shell>
