@@ -115,7 +115,7 @@ export default function LobbyPage() {
             </PageActions>
           </PageHeader>
         </Shell>
-        <div className="absolute inset-0 right-0 z-0 overflow-hidden pt-20">
+        <div className="absolute inset-0 right-0 z-0 overflow-hidden">
           <video
             className="relative size-full object-cover"
             width={1920}
@@ -130,7 +130,7 @@ export default function LobbyPage() {
           >
             <source src="/video/video-home.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 z-10 mt-20 bg-black/25" />
+          <div className="absolute inset-0 z-10 bg-black/15" />
         </div>
       </div>
       <Shell>
