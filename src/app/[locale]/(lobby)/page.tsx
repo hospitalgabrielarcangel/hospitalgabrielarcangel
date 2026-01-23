@@ -4,10 +4,10 @@ import { ArrowRightIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
-import { CallToAction } from "@/components/call-to-action"
+// import { CallToAction } from "@/components/call-to-action"
 import { InfiniteMovingImages } from "@/components/infinite-moving-images"
 import {
-  PageActions,
+  // PageActions,
   PageHeader,
   PageHeaderDescription,
   PageHeaderHeading,
@@ -87,33 +87,34 @@ export default function LobbyPage() {
   return (
     <div>
       <div className="relative -mt-20 h-dvh overflow-hidden">
-        <Shell className="relative z-10 h-full">
+        <div className="relative z-10 h-full px-4">
           <PageHeader
-            className="h-full max-w-4xl gap-4 sm:gap-5 lg:gap-6"
-            withPadding
+            className="flex h-full max-w-full justify-between gap-0 py-8"
+            centered
           >
-            <PageHeaderHeading
-              className="animate-fade-up mt-16 text-white"
-              style={{ animationDelay: "0.2s", animationFillMode: "both" }}
-              size="lg"
-            >
-              {t("pageHeaderTitle")}
-            </PageHeaderHeading>
             <PageHeaderDescription
-              className="animate-fade-up text-white"
+              className="animate-fade-up font-header mx-auto mt-16 text-2xl tracking-tight text-white md:mt-0 md:px-4 md:text-3xl lg:text-3xl"
               style={{ animationDelay: "0.3s", animationFillMode: "both" }}
               size="lg"
             >
               {t("pageHeaderDescription")}
             </PageHeaderDescription>
-            <PageActions
+            <PageHeaderHeading
+              className="animate-fade-up xs:text-[13vw] mt-16 w-full text-center text-[14vw] leading-none text-white sm:text-[11vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw]"
+              style={{ animationDelay: "0.2s", animationFillMode: "both" }}
+              size="lg"
+            >
+              {t("pageHeaderTitle")}
+            </PageHeaderHeading>
+
+            {/* <PageActions
               className="animate-fade-up justify-start"
               style={{ animationDelay: "0.4s", animationFillMode: "both" }}
             >
               <CallToAction className="uppercase" to="contact" size="lg" />
-            </PageActions>
+            </PageActions> */}
           </PageHeader>
-        </Shell>
+        </div>
         <div className="absolute inset-0 right-0 z-0 overflow-hidden">
           <video
             className="relative size-full object-cover"
@@ -129,7 +130,7 @@ export default function LobbyPage() {
           >
             <source src="/video/video-home.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 z-10 bg-black/10" />
+          {/* <div className="absolute inset-0 z-10 bg-black/10" /> */}
         </div>
       </div>
       <Shell>

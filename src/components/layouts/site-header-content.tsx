@@ -10,9 +10,9 @@ export function SiteHeaderContent() {
   return (
     <SiteHeaderContainer>
       <header>
-        <div className="container flex h-20 items-center">
+        <div className="mx-auto flex h-20 items-center pr-5 pl-5 md:w-47/50 lg:pr-9">
           <div className="flex items-center gap-x-2">
-            <Logomark className="h-16" />
+            <Logomark className="h-14 md:h-16" />
           </div>
           <div className="flex flex-1 items-center justify-end gap-x-2">
             <div className="flex items-center gap-x-1">
@@ -21,7 +21,7 @@ export function SiteHeaderContent() {
                 style={{ animationDelay: '0.40s', animationFillMode: 'both' }}
               /> */}
               <LocaleSwitcher
-                className="animate-fade-down gap-0.5 p-2 [&>.icon]:size-5"
+                className="animate-fade-down hidden gap-0.5 p-2 lg:flex [&>.icon]:size-5"
                 style={{ animationDelay: "0.30s", animationFillMode: "both" }}
                 withSet="1"
               />

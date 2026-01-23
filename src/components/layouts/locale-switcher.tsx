@@ -26,7 +26,7 @@ interface LocalSwitcherProps {
 export function LocaleSwitcher({
   className,
   style,
-  variant = "ghost",
+  variant = "secondary",
   withSet,
   withChevron,
 }: LocalSwitcherProps) {
