@@ -54,7 +54,7 @@ const certification = [
       alt: "CECA logotype",
       width: 540,
       height: 540,
-      className: "h-36",
+      className: "h-38",
     },
   },
   {
@@ -88,7 +88,10 @@ export default function LobbyPage() {
     <div>
       <div className="relative -mt-20 h-dvh overflow-hidden">
         <Shell className="relative z-10 h-full">
-          <PageHeader className="max-w-4xl gap-4 sm:gap-5 lg:gap-6" withPadding>
+          <PageHeader
+            className="h-full max-w-4xl gap-4 sm:gap-5 lg:gap-6"
+            withPadding
+          >
             <PageHeaderHeading
               className="animate-fade-up mt-16 text-white"
               style={{ animationDelay: "0.2s", animationFillMode: "both" }}
@@ -107,11 +110,7 @@ export default function LobbyPage() {
               className="animate-fade-up justify-start"
               style={{ animationDelay: "0.4s", animationFillMode: "both" }}
             >
-              <CallToAction
-                className="font-semibold uppercase"
-                to="contact"
-                size="lg"
-              />
+              <CallToAction className="uppercase" to="contact" size="lg" />
             </PageActions>
           </PageHeader>
         </Shell>
@@ -130,7 +129,7 @@ export default function LobbyPage() {
           >
             <source src="/video/video-home.mp4" type="video/mp4" />
           </video>
-          <div className="absolute inset-0 z-10 bg-black/15" />
+          <div className="absolute inset-0 z-10 bg-black/10" />
         </div>
       </div>
       <Shell>

@@ -2,6 +2,7 @@ import { ComponentProps } from "react"
 import { Link } from "@/i18n/routing"
 import { useTranslations } from "next-intl"
 
+import { cn } from "@/lib/utils"
 import { Button, type ButtonProps } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
 
@@ -41,7 +42,12 @@ export function CallToAction({
   const title = useTranslations("CallToAction")(callToAction.title)
 
   return (
-    <Button asChild size={size} variant={variant} className={className}>
+    <Button
+      asChild
+      size={size}
+      variant={variant}
+      className={cn("h-10 font-light", className)}
+    >
       <Link href={callToAction.href} {...props}>
         {size !== "icon" ? (
           <>
