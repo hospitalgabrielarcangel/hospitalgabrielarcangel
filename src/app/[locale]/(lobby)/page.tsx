@@ -98,7 +98,7 @@ export default function LobbyPage() {
               {t("pageHeaderDescription")}
             </PageHeaderDescription>
             <PageHeaderHeading
-              className="animate-fade-up xs:text-[13vw] mt-16 w-full text-center text-[14vw] leading-none text-white sm:text-[11vw] md:text-[10vw] lg:text-[8vw] xl:text-[7vw]"
+              className="animate-fade-up w-full text-center text-[14vw] leading-none text-white sm:text-[11vw] md:text-[10vw] lg:mb-8 lg:text-[8vw] xl:text-[7vw]"
               style={{ animationDelay: "0.2s", animationFillMode: "both" }}
               size="lg"
             >
