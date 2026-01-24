@@ -142,7 +142,7 @@ export default function LobbyPage() {
         </section>
       </Shell>
       <section className="border-t md:border-b">
-        <div className="text-muted-foreground pt-4 text-center text-sm font-semibold tracking-wide uppercase">
+        <div className="text-muted-foreground pt-4 text-center text-sm tracking-wide uppercase">
           {t("certifications")}
         </div>
         <div className="flex w-full">
