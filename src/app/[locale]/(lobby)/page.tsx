@@ -123,7 +123,8 @@ export default function LobbyPage() {
           </video>
         </div>
       </div>
-      <Shell>
+      <Shell className="relative">
+        <div className="bg-muted-foreground absolute inset-x-1/2 -top-4 h-20 w-px lg:-top-5 lg:h-26" />
         <section className="flex flex-col items-center gap-12 pt-20 pb-14 md:pt-36">
           <h2 className="heading text-h2 mx-auto max-w-6xl text-center text-balance">
             {t("aboutUs")}
