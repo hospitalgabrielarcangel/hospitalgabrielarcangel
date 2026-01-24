@@ -46,7 +46,10 @@ export function CallToAction({
       asChild
       size={size}
       variant={variant}
-      className={cn("h-10 font-light", className)}
+      className={cn(
+        "h-10 text-[0.8rem] font-extralight tracking-wider",
+        className
+      )}
     >
       <Link href={callToAction.href} {...props}>
         {size !== "icon" ? (

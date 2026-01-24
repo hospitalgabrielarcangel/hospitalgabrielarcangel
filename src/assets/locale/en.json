@@ -10,9 +10,12 @@
     "pageHeaderDescription": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery.",
     "pageHeaderLabel": "Inpatient Addiction Treatment Clinic",
     "pageHeaderAction": "Contact us",
-    "aboutUs": "We understand that every recovery process is as unique as the story of the person experiencing it. That's why our center combines science, technology, and human care to provide truly comprehensive treatment. Through individual and group therapy, specialized psychiatric care, and continuous support, we help reduce withdrawal symptoms, prevent relapses, and strengthen emotional stability.",
+    "aboutUs": "We understand that every recovery process is as unique as the story of the person experiencing it. That's why our clinic combines science, technology, and human care to provide truly comprehensive treatment. Through individual and group therapy, specialized psychiatric care, and continuous support, we help reduce withdrawal symptoms, prevent relapses, and strengthen emotional stability.",
     "aboutUsAction": "About us",
-    "certifications": "Certified by"
+    "certifications": "Certified by",
+    "whatWeTreatTitle": "What we treat",
+    "whatWeTreatHeading": "En Gabriel Arcángel, comienza el camino hacia tu recuperación.",
+    "whatWeTreatDescription": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis similique qui, quisquam iure et at omnis nihil deleniti eum exercitationem iusto ut temporibus vel architecto soluta vitae labore, ipsa accusantium!"
   },
   "CallToAction": {
     "home": "Home",

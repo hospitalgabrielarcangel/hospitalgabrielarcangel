@@ -1,13 +1,11 @@
-// import Image from "next/image"
+import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { ArrowRightIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 
 import { Button } from "@/components/ui/button"
-// import { CallToAction } from "@/components/call-to-action"
 import { InfiniteMovingImages } from "@/components/infinite-moving-images"
 import {
-  // PageActions,
   PageHeader,
   PageHeaderDescription,
   PageHeaderHeading,
@@ -106,13 +104,6 @@ export default function LobbyPage() {
             >
               {t("pageHeaderTitle")}
             </PageHeaderHeading>
-
-            {/* <PageActions
-              className="animate-fade-up justify-start"
-              style={{ animationDelay: "0.4s", animationFillMode: "both" }}
-            >
-              <CallToAction className="uppercase" to="contact" size="lg" />
-            </PageActions> */}
           </PageHeader>
         </div>
         <div className="absolute inset-0 right-0 z-0 overflow-hidden">
@@ -130,7 +121,6 @@ export default function LobbyPage() {
           >
             <source src="/video/video-home.mp4" type="video/mp4" />
           </video>
-          {/* <div className="absolute inset-0 z-10 bg-black/10" /> */}
         </div>
       </div>
       <Shell>
@@ -151,7 +141,7 @@ export default function LobbyPage() {
           </Button>
         </section>
       </Shell>
-      <section className="border-y">
+      <section className="border-t md:border-b">
         <div className="text-muted-foreground pt-4 text-center text-sm font-semibold tracking-wide uppercase">
           {t("certifications")}
         </div>
@@ -159,31 +149,34 @@ export default function LobbyPage() {
           <InfiniteMovingImages items={certification} speed="slow" />
         </div>
       </section>
-      {/* <Shell>
-        <section className="flex">
-          <div className="w-1/2">
-            <h2 className="font-header text-h3 heading text-balance">
-              Lorem ipsum dolor sit amet consetratum
-            </h2>
-            <p className="text-md paragraph">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-              similique qui, quisquam iure et at omnis nihil deleniti eum
-              exercitationem iusto ut temporibus vel architecto soluta vitae
-              labore, ipsa accusantium!
-            </p>
-          </div>
-          <div className="w-1/2">
+      <Shell className="mt-14 px-5 pt-0 pb-7 md:mt-0 lg:p-0">
+        <section className="flex flex-col md:flex-row">
+          <div className="md:w-1/2 md:border-r md:py-7 md:pr-7">
             <Image
-              src=""
-              alt=""
-              width={1024}
-              height={1024}
-              sizes="(max-width: 744px) 100vw, (max-width: 1280px) 50vw, 500px"
+              src="/images/whatwetreat-section.webp"
+              alt="EMT"
+              width={2160}
+              height={2880}
+              sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
               loading="lazy"
             />
           </div>
+          <div className="mt-14 md:mt-0 md:w-1/2 md:pb-0">
+            <div className="md:py-7 md:pl-7">
+              <p className="text-muted-foreground py-3 text-[13px] font-medium tracking-widest uppercase">
+                {t("whatWeTreatTitle")}
+              </p>
+              <h2 className="font-header text-h3 heading">
+                {t("whatWeTreatHeading")}
+              </h2>
+              <div className="hidden h-95 lg:block" />
+              <p className="text-md paragraph mt-5 font-extralight text-balance lg:pr-10">
+                {t("whatWeTreatDescription")}
+              </p>
+            </div>
+          </div>
         </section>
-      </Shell> */}
+      </Shell>
     </div>
   )
 }
