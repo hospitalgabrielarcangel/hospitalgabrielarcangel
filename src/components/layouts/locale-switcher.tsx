@@ -51,7 +51,10 @@ export function LocaleSwitcher({
         >
           <LanguagesIcon className="icon" aria-hidden />
           {withSet && (
-            <span className="title text-sm tracking-wide uppercase" aria-hidden>
+            <span
+              className="title text-sm font-normal tracking-wide uppercase"
+              aria-hidden
+            >
               {withSet === "1"
                 ? LOCALES.find((localeItem) => localeItem.set1 === locale)!.set1
                 : LOCALES.find((localeItem) => localeItem.set1 === locale)!
