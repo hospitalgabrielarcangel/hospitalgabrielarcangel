@@ -13,7 +13,7 @@ export function SiteFooter() {
     <footer className="bg-background border-t">
       <Shell>
         <section className="flex items-center justify-between">
-          <div className="text-muted-foreground text-sm">
+          <div className="text-muted-foreground text-sm font-light">
             {siteConfig.name} © 2017
           </div>
           <div className="flex items-center">

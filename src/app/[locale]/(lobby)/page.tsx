@@ -3,6 +3,12 @@ import { Link } from "@/i18n/routing"
 import { ArrowRightIcon } from "lucide-react"
 import { useTranslations } from "next-intl"
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { Button } from "@/components/ui/button"
 import { InfiniteMovingImages } from "@/components/infinite-moving-images"
 import {
@@ -12,75 +18,98 @@ import {
 } from "@/components/page-header"
 import { Shell } from "@/components/shell"
 
-const certification = [
-  {
-    name: "U.S. Food and Drug Administration",
-    url: "https://www.fda.gov/",
-    image: {
-      src: "/images/certifications/logo-fda.webp",
-      alt: "FDA logotype",
-      width: 3840,
-      height: 2160,
-    },
-  },
-  {
-    name: "Comisión Nacional de Salud Mental y Adicciones",
-    url: "https://www.gob.mx/conasama/",
-    image: {
-      src: "/images/certifications/logo-conasama.webp",
-      alt: "CONASAMA logotype",
-      width: 512,
-      height: 271,
-      className: "h-36",
-    },
-  },
-  {
-    name: "Comisión Federal para la Protección contra Riesgos Sanitarios",
-    url: "https://www.gob.mx/cofepris/",
-    image: {
-      src: "/images/certifications/logo-cofepris.webp",
-      alt: "COFEPRIS logotype",
-      width: 1158,
-      height: 282,
-    },
-  },
-  {
-    name: "Consejo Estatal Contra las Adicciones",
-    url: "https://gobqro.gob.mx/cecaqro/",
-    image: {
-      src: "/images/certifications/logo-ceca.webp",
-      alt: "CECA logotype",
-      width: 540,
-      height: 540,
-      className: "h-38",
-    },
-  },
-  {
-    name: "Comisión Nacional de los Derechos Humanos",
-    url: "https://www.cndh.org.mx/",
-    image: {
-      src: "/images/certifications/logo-cndh.webp",
-      alt: "CNDH logotype",
-      width: 240,
-      height: 95,
-      className: "h-24",
-    },
-  },
-  {
-    name: "Protección Civil",
-    url: "https://municipiodequeretaro.gob.mx/entidades/proteccion-civil/",
-    image: {
-      src: "/images/certifications/logo-proteccioncivil.webp",
-      alt: "Protección Civil logotype",
-      width: 800,
-      height: 303,
-      className: "h-24",
-    },
-  },
-]
-
 export default function LobbyPage() {
   const t = useTranslations("LobbyPage")
+
+  const certification = [
+    {
+      name: "U.S. Food and Drug Administration",
+      url: "https://www.fda.gov/",
+      image: {
+        src: "/images/certifications/logo-fda.webp",
+        alt: "FDA logotype",
+        width: 3840,
+        height: 2160,
+      },
+    },
+    {
+      name: "Comisión Nacional de Salud Mental y Adicciones",
+      url: "https://www.gob.mx/conasama/",
+      image: {
+        src: "/images/certifications/logo-conasama.webp",
+        alt: "CONASAMA logotype",
+        width: 512,
+        height: 271,
+        className: "h-36",
+      },
+    },
+    {
+      name: "Comisión Federal para la Protección contra Riesgos Sanitarios",
+      url: "https://www.gob.mx/cofepris/",
+      image: {
+        src: "/images/certifications/logo-cofepris.webp",
+        alt: "COFEPRIS logotype",
+        width: 1158,
+        height: 282,
+      },
+    },
+    {
+      name: "Consejo Estatal Contra las Adicciones",
+      url: "https://gobqro.gob.mx/cecaqro/",
+      image: {
+        src: "/images/certifications/logo-ceca.webp",
+        alt: "CECA logotype",
+        width: 540,
+        height: 540,
+        className: "h-38",
+      },
+    },
+    {
+      name: "Comisión Nacional de los Derechos Humanos",
+      url: "https://www.cndh.org.mx/",
+      image: {
+        src: "/images/certifications/logo-cndh.webp",
+        alt: "CNDH logotype",
+        width: 240,
+        height: 95,
+        className: "h-24",
+      },
+    },
+    {
+      name: "Protección Civil",
+      url: "https://municipiodequeretaro.gob.mx/entidades/proteccion-civil/",
+      image: {
+        src: "/images/certifications/logo-proteccioncivil.webp",
+        alt: "Protección Civil logotype",
+        width: 800,
+        height: 303,
+        className: "h-24",
+      },
+    },
+  ]
+
+  const whatWeTreat = [
+    {
+      title: t("whatWeTreatItem1Title"),
+      description: t("whatWeTreatItem1Description"),
+      slug: "#",
+    },
+    {
+      title: t("whatWeTreatItem2Title"),
+      description: t("whatWeTreatItem2Description"),
+      slug: "#",
+    },
+    {
+      title: t("whatWeTreatItem3Title"),
+      description: t("whatWeTreatItem3Description"),
+      slug: "#",
+    },
+    {
+      title: t("whatWeTreatItem4Title"),
+      description: t("whatWeTreatItem4Description"),
+      slug: "#",
+    },
+  ]
 
   return (
     <div>
@@ -143,16 +172,14 @@ export default function LobbyPage() {
         </section>
       </Shell>
       <section className="border-t md:border-b">
-        <div className="text-muted-foreground pt-4 text-center text-sm tracking-wide uppercase">
-          {t("certifications")}
-        </div>
+        <div className="tag pt-4 text-center">{t("certifications")}</div>
         <div className="flex w-full">
           <InfiniteMovingImages items={certification} speed="slow" />
         </div>
       </section>
-      <Shell className="mt-14 px-5 pt-0 pb-7 md:mt-0 lg:p-0">
+      <Shell className="mt-14 px-5 pt-0 pb-0 md:mt-0 lg:p-0">
         <section className="flex flex-col md:flex-row">
-          <div className="md:w-1/2 md:border-r md:py-7 md:pr-7">
+          <div className="md:w-1/2 md:py-7 md:pr-6 lg:border-r lg:pr-7">
             <Image
               src="/images/whatwetreat-section.webp"
               alt="EMT"
@@ -162,11 +189,9 @@ export default function LobbyPage() {
               loading="lazy"
             />
           </div>
-          <div className="mt-14 md:mt-0 md:w-1/2 md:pb-0">
-            <div className="md:py-7 md:pl-7">
-              <p className="text-muted-foreground py-3 text-[13px] font-medium tracking-widest uppercase">
-                {t("whatWeTreatTitle")}
-              </p>
+          <div className="flex flex-col md:w-1/2">
+            <div className="pt-7 pb-10 md:pl-6">
+              <p className="tag py-3">{t("whatWeTreatTitle")}</p>
               <h2 className="font-header text-h3 heading">
                 {t("whatWeTreatHeading")}
               </h2>
@@ -175,6 +200,32 @@ export default function LobbyPage() {
                 {t("whatWeTreatDescription")}
               </p>
             </div>
+            <Accordion type="single" collapsible className="border-t">
+              {whatWeTreat.map((item) => (
+                <AccordionItem
+                  value={item.title}
+                  key={item.title}
+                  className="p-0"
+                >
+                  <AccordionTrigger className="px-5 py-8 text-[16px] hover:cursor-pointer md:px-10">
+                    {item.title}
+                  </AccordionTrigger>
+                  <AccordionContent className="px-5 pb-8 md:px-10">
+                    <p className="text-base font-extralight">
+                      {item.description}
+                    </p>
+                    <div className="border-foreground mt-5 w-fit border-b">
+                      <Link
+                        href={item.slug}
+                        className="text-xs tracking-wider uppercase"
+                      >
+                        {t("readMore")}
+                      </Link>
+                    </div>
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
         </section>
       </Shell>

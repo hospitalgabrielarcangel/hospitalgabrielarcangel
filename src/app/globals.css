@@ -147,6 +147,10 @@
   .paragraph {
     @apply leading-normal tracking-tight;
   }
+
+  .tag {
+    @apply text-muted-foreground text-[13px] font-medium tracking-widest uppercase;
+  }
 }
 
 @utility container {
