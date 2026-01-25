@@ -14,7 +14,7 @@ export function SiteFooter() {
       <Shell>
         <section className="flex items-center justify-between">
           <div className="text-muted-foreground text-sm font-light">
-            {siteConfig.name} © 2017
+            {new Date().getFullYear()} © {siteConfig.name}
           </div>
           <div className="flex items-center">
             <Link
