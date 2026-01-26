@@ -279,8 +279,8 @@ export default function LobbyPage() {
           </div>
         </Shell>
       </div>
-      <div className="bg-muted border-t pt-10 pb-16">
-        <Shell className="gap-0 pt-0 lg:py-0">
+      <div className="bg-muted border-t">
+        <Shell className="gap-0 pt-10 pb-16 lg:py-0">
           <div className="space-y-5 text-center md:hidden">
             <p className="tag uppercase">{t("ourProgramsTag")}</p>
             <h2 className="font-header heading text-h3 text-balance">
@@ -325,7 +325,7 @@ export default function LobbyPage() {
             to="ourPrograms"
             size="lg"
             variant="outline"
-            className="mx-auto mt-12 w-fit"
+            className="mx-auto mt-10 w-fit"
             withIcon
           />
         </Shell>
