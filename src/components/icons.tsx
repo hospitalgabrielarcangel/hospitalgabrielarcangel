@@ -1,4 +1,4 @@
-import { ChevronRightIcon, HomeIcon } from "lucide-react"
+import { ArrowRightIcon, ChevronRightIcon, HomeIcon } from "lucide-react"
 
 export type IconProps = React.HTMLAttributes<SVGElement>
 
@@ -478,4 +478,5 @@ export const Icons = {
   ),
   chevronright: ChevronRightIcon,
   home: HomeIcon,
+  arrowright: ArrowRightIcon,
 }

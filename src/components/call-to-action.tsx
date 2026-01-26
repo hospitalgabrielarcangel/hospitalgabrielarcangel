@@ -15,7 +15,17 @@ const CALL_TO_ACTIONS = [
   {
     title: "contact",
     href: "#",
-    icon: Icons.chevronright,
+    icon: Icons.arrowright,
+  },
+  {
+    title: "aboutUs",
+    href: "#",
+    icon: Icons.arrowright,
+  },
+  {
+    title: "ourPrograms",
+    href: "#",
+    icon: Icons.arrowright,
   },
 ] as const
 
@@ -46,12 +56,12 @@ export function CallToAction({
       asChild
       size={size}
       variant={variant}
-      className={cn("h-10 text-[0.8rem]", className)}
+      className={cn("uppercase", className)}
     >
       <Link href={callToAction.href} {...props}>
         {size !== "icon" ? (
           <>
-            {children || title}
+            <span className="pt-px">{children || title}</span>
             {withIcon && <callToAction.icon aria-hidden />}
           </>
         ) : (

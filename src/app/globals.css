@@ -133,10 +133,6 @@
   body {
     @apply bg-background text-foreground;
   }
-
-  .container {
-    @apply mx-auto px-5;
-  }
 }
 
 @layer utilities {
@@ -149,18 +145,30 @@
   }
 
   .tag {
-    @apply text-muted-foreground text-[13px] font-medium tracking-widest uppercase;
+    @apply text-[13px] font-medium tracking-widest uppercase;
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   }
 }
 
 @utility container {
   width: 94%;
   max-width: unset;
+  padding: 0;
+  margin: 0 auto;
 }
 
 @media (max-width: 768px) {
   .container {
     width: unset;
+    padding: 0 1.25rem;
   }
 }
 

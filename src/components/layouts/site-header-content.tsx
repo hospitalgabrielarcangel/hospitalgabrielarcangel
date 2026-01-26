@@ -10,12 +10,12 @@ export function SiteHeaderContent() {
     <SiteHeaderContainer>
       <header>
         <Shell className="py-0 lg:py-0">
-          <div className="flex h-20 w-full items-center lg:pr-4">
+          <div className="flex h-20 w-full items-center md:px-5 lg:pr-4">
             <div className="flex items-center gap-x-2">
               <Logomark className="h-14 md:h-16" />
             </div>
-            <div className="flex flex-1 items-center justify-end gap-x-2">
-              <div className="flex items-center gap-x-1">
+            <div className="flex flex-1 items-center justify-end gap-x-2 pr-5">
+              <div className="flex items-center gap-x-2">
                 <LocaleSwitcher
                   className="animate-fade-down hidden gap-0.5 p-2 lg:flex [&>.icon]:size-5"
                   style={{ animationDelay: "0.30s", animationFillMode: "both" }}
@@ -23,9 +23,10 @@ export function SiteHeaderContent() {
                 />
               </div>
               <CallToAction
-                className="animate-fade-down uppercase"
+                className="animate-fade-down"
                 style={{ animationDelay: "0.20s", animationFillMode: "both" }}
                 to="contact"
+                size="lg"
               />
             </div>
           </div>

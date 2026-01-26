@@ -11,8 +11,7 @@
     "pageHeaderLabel": "Clínica Hospitalizada Contra Adicciones",
     "pageHeaderAction": "Contáctanos",
     "aboutUs": "Entendemos que cada proceso de recuperación es tan único como la historia de quien lo vive. Por eso, en nuestra clínica integramos la ciencia, la tecnología y el acompañamiento humano para ofrecer una atención verdaderamente integral. A través de terapias individuales y grupales, tratamiento psiquiátrico especializado, y apoyo continuo, ayudamos a reducir los síntomas de abstinencia, prevenir recaídas y fortalecer la estabilidad emocional.",
-    "aboutUsAction": "Sobre nosotros",
-    "certifications": "Certificados por",
+    "certificationsTag": "Certificados por",
     "whatWeTreatTitle": "Lo que tratamos",
     "whatWeTreatHeading": "En Gabriel Arcángel, comienza el camino hacia tu recuperación.",
     "whatWeTreatDescription": "Sabemos que el peso de la adicción no solo lo carga quien la padece, sino quienes lo acompañan día tras día. Independientemente de la historia que los haya traído hasta aquí, estamos listos para que dejen de luchar en soledad. Con décadas de experiencia atendiendo a perfiles de alto nivel, ofrecemos un entorno de máxima privacidad y exclusividad donde su ser querido recibirá la atención científica y humana que merece.",
@@ -29,16 +28,26 @@
     "howWeTreatHeading": "Un enfoque médico, integral y personalizado en cada etapa de la recuperación física, mental y emocional.",
     "howWeTreatDescription1": "En Gabriel Arcángel, entendemos que un enfoque generalizado es insuficiente para una sanación verdadera; por ello, nos especializamos en lo excepcional. Somos el único centro de tratamiento a nivel global que asigna un equipo mínimo de 15 profesionales dedicados exclusivamente a cada paciente.",
     "howWeTreatDescription2": "Durante su estancia, no solo estará bajo el cuidado de una institución, sino respaldado por una junta de médicos, terapeutas y especialistas de prestigio mundial. Combinamos la medicina de vanguardia con enfoques holísticos de alto nivel para abordar el espectro completo de la salud. Desde la biología celular hasta el bienestar emocional, cada detalle de su plan de tratamiento es diseñado a medida, garantizando que su proceso de recuperación sea tan único como su propia historia.",
-    "treatmentPlans": "Descubre nuestros planes de tratamiento"
+    "treatmentPlans": "Descubre nuestros planes de tratamiento",
+    "ourProgramsTitle": "Porque su historia es única, su recuperación no puede ser ordinaria.",
+    "ourProgramsTag": "Una experiencia a medida",
+    "ourProgramsItem1Title": "Un santuario de protección y cuidado integral.",
+    "ourProgramsItem1Description": "No importa en qué etapa de su camino se encuentre, los desafíos que enfrente o su historia personal. Ofrecemos la atención de excelencia que usted merece en un entorno privado, seguro y diseñado para sostenerle en cada paso hacia su bienestar.",
+    "ourProgramsItem2Title": "Un ecosistema de expertos dedicado a su excelencia.",
+    "ourProgramsItem2Description": "No solo damos un tratamiento, Contamos con especialistas de élite dedicados exclusivamente a su evolución. Desde su psiquiatra personal y médico de cabecera, hasta un terapeuta residente y un equipo de gestión de relaciones, garantizamos una presencia constante las 24 horas del día.",
+    "ourProgramsItem3Title": "Privacidad y exclusividad sin concesiones",
+    "ourProgramsItem3Description": "Hemos creado un entorno donde su identidad es su activo más protegido. Nuestra experiencia de tratamiento es enteramente privada y discreta, diseñada no solo para priorizar su salud, sino para salvaguardar su integridad personal en cada etapa del proceso."
   },
   "CallToAction": {
     "home": "Inicio",
-    "contact": "Hable con nosotros"
+    "contact": "Hable con nosotros",
+    "aboutUs": "Sobre nosotros",
+    "ourPrograms": "Ver nuestros programas"
   },
   "Locale": {
     "title": "Cambiar idioma",
-    "en": "English",
-    "es": "Spanish"
+    "en": "Inglés",
+    "es": "Español"
   },
   "Theme": {
     "title": "Alternar tema",
