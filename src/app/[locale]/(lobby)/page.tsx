@@ -169,7 +169,7 @@ export default function LobbyPage() {
           </video>
         </div>
       </div>
-      <Shell className="relative gap-12 pt-20 pb-14 md:pt-36 lg:pt-36 lg:pb-14">
+      <Shell className="relative gap-12 px-5 pt-20 pb-14 md:pt-36">
         <div className="bg-muted-foreground absolute inset-x-1/2 -top-4 h-20 w-px lg:-top-5 lg:h-26" />
         <h2 className="heading text-h2 mx-auto max-w-6xl text-center text-balance">
           {t("aboutUs")}

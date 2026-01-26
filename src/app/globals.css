@@ -161,14 +161,14 @@
 @utility container {
   width: 94%;
   max-width: unset;
-  padding: 0;
+  padding: auto;
   margin: 0 auto;
 }
 
 @media (max-width: 768px) {
   .container {
     width: unset;
-    padding: 0 1.25rem;
+    padding: auto 1.25rem;
   }
 }
 
