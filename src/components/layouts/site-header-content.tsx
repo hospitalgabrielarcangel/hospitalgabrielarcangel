@@ -14,7 +14,7 @@ export function SiteHeaderContent() {
             <div className="flex items-center gap-x-2">
               <Logomark className="h-14 md:h-16" />
             </div>
-            <div className="flex flex-1 items-center justify-end gap-x-2 pr-5">
+            <div className="flex flex-1 items-center justify-end gap-x-2 lg:pr-5">
               <div className="flex items-center gap-x-2">
                 <LocaleSwitcher
                   className="animate-fade-down hidden gap-0.5 p-2 lg:flex [&>.icon]:size-5"
