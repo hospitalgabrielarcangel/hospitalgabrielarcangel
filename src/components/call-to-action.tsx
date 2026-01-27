@@ -15,17 +15,17 @@ const CALL_TO_ACTIONS = [
   {
     title: "contact",
     href: "#",
-    icon: Icons.arrowright,
+    icon: Icons.arrowRight,
   },
   {
     title: "aboutUs",
     href: "#",
-    icon: Icons.arrowright,
+    icon: Icons.arrowRight,
   },
   {
     title: "ourPrograms",
     href: "#",
-    icon: Icons.arrowright,
+    icon: Icons.arrowRight,
   },
 ] as const
 

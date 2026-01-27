@@ -1,4 +1,4 @@
-import { ArrowRightIcon, ChevronRightIcon, HomeIcon } from "lucide-react"
+import { HomeIcon } from "lucide-react"
 
 export type IconProps = React.HTMLAttributes<SVGElement>
 
@@ -476,7 +476,17 @@ export const Icons = {
       />
     </svg>
   ),
-  chevronright: ChevronRightIcon,
+  arrowRight: (props: IconProps) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={13}
+      height={14}
+      fill="currentColor"
+      aria-hidden="true"
+      {...props}
+    >
+      <path d="m6.478 13.413-.606-.606 4.796-4.795h1.21l-5.4 5.4ZM11.892 6.001h-1.21l-4.81-4.808.606-.605 5.414 5.413ZM7.694 6.584h4.782l.414.414-.428.428-.029.002H11.26l.001-.002L.11 7.43v-.856l4.944-.002v.012h1.43l-.013-.013h1.21l.013.013Z" />
+    </svg>
+  ),
   home: HomeIcon,
-  arrowright: ArrowRightIcon,
 }
