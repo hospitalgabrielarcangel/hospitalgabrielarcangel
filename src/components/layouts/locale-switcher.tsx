@@ -52,7 +52,7 @@ export function LocaleSwitcher({
           <LanguagesIcon className="icon" aria-hidden />
           {withSet && (
             <span
-              className="title text-sm font-normal tracking-wide uppercase"
+              className="title text-sm font-light tracking-wide uppercase"
               aria-hidden
             >
               {withSet === "1"
@@ -88,7 +88,7 @@ export function LocaleSwitcher({
                     )}
                   >
                     <span
-                      className="text-muted-foreground pt-px text-[0.6875em] leading-none font-semibold uppercase"
+                      className="text-muted-foreground pt-px text-[0.6875em] leading-none uppercase"
                       aria-hidden
                     >
                       {localeItem.set1}

@@ -84,49 +84,49 @@ const certification = [
   },
 ]
 
+const whatWeTreat = [
+  {
+    title: "whatWeTreatItem1Title",
+    description: "whatWeTreatItem1Description",
+    slug: "#",
+  },
+  {
+    title: "whatWeTreatItem2Title",
+    description: "whatWeTreatItem2Description",
+    slug: "#",
+  },
+  {
+    title: "whatWeTreatItem3Title",
+    description: "whatWeTreatItem3Description",
+    slug: "#",
+  },
+  {
+    title: "whatWeTreatItem4Title",
+    description: "whatWeTreatItem4Description",
+    slug: "#",
+  },
+]
+
+const ourPrograms = [
+  {
+    title: "ourProgramsItem1Title",
+    description: "ourProgramsItem1Description",
+    slug: "#",
+  },
+  {
+    title: "ourProgramsItem2Title",
+    description: "ourProgramsItem2Description",
+    slug: "#",
+  },
+  {
+    title: "ourProgramsItem3Title",
+    description: "ourProgramsItem3Description",
+    slug: "#",
+  },
+]
+
 export default function LobbyPage() {
   const t = useTranslations("LobbyPage")
-
-  const whatWeTreat = [
-    {
-      title: t("whatWeTreatItem1Title"),
-      description: t("whatWeTreatItem1Description"),
-      slug: "#",
-    },
-    {
-      title: t("whatWeTreatItem2Title"),
-      description: t("whatWeTreatItem2Description"),
-      slug: "#",
-    },
-    {
-      title: t("whatWeTreatItem3Title"),
-      description: t("whatWeTreatItem3Description"),
-      slug: "#",
-    },
-    {
-      title: t("whatWeTreatItem4Title"),
-      description: t("whatWeTreatItem4Description"),
-      slug: "#",
-    },
-  ]
-
-  const ourPrograms = [
-    {
-      title: t("ourProgramsItem1Title"),
-      description: t("ourProgramsItem1Description"),
-      slug: "#",
-    },
-    {
-      title: t("ourProgramsItem2Title"),
-      description: t("ourProgramsItem2Description"),
-      slug: "#",
-    },
-    {
-      title: t("ourProgramsItem3Title"),
-      description: t("ourProgramsItem3Description"),
-      slug: "#",
-    },
-  ]
 
   return (
     <div>
@@ -171,7 +171,7 @@ export default function LobbyPage() {
       </div>
       <Shell className="relative gap-12 px-5 pt-20 pb-14 md:pt-36">
         <div className="bg-muted-foreground absolute inset-x-1/2 -top-4 h-20 w-px lg:-top-5 lg:h-26" />
-        <h2 className="heading text-h2 mx-auto max-w-6xl text-center text-balance">
+        <h2 className="heading text-h2 mx-auto max-w-6xl text-center">
           {t("aboutUs")}
         </h2>
         <CallToAction
@@ -220,16 +220,16 @@ export default function LobbyPage() {
           <Accordion type="single" collapsible className="border-t">
             {whatWeTreat.map((item) => (
               <AccordionItem
-                value={item.title}
-                key={item.title}
+                value={t(item.title)}
+                key={t(item.title)}
                 className="p-0"
               >
                 <AccordionTrigger className="px-5 py-8 text-[16px] hover:cursor-pointer md:px-10">
-                  {item.title}
+                  {t(item.title)}
                 </AccordionTrigger>
                 <AccordionContent className="px-5 pb-8 md:px-10">
                   <p className="text-base font-extralight">
-                    {item.description}
+                    {t(item.description)}
                   </p>
                   <div className="border-foreground mt-5 w-fit border-b">
                     <Link
@@ -280,14 +280,14 @@ export default function LobbyPage() {
         </Shell>
       </div>
       <div className="bg-muted border-t">
-        <Shell className="gap-0 pt-10 pb-16 lg:py-0">
+        <Shell className="gap-0 pt-10 pb-16">
           <div className="space-y-5 text-center md:hidden">
             <p className="tag uppercase">{t("ourProgramsTag")}</p>
             <h2 className="font-header heading text-h3 text-balance">
               {t("ourProgramsTitle")}
             </h2>
           </div>
-          <div className="relative mt-10 flex aspect-353/380 items-center justify-center overflow-hidden md:mt-0 md:aspect-1360/616">
+          <div className="relative flex aspect-353/380 items-center justify-center overflow-hidden md:aspect-1360/616">
             <Image
               src="/images/ourprograms-section.webp"
               alt="Dental"
@@ -307,15 +307,13 @@ export default function LobbyPage() {
           <ul className="no-scrollbar flex justify-between overflow-x-scroll pt-18 md:overflow-x-auto">
             {ourPrograms.map((item) => (
               <li
-                key={item.title}
+                key={t(item.title)}
                 className="flex-[0_0_80%] pl-8 first:pl-0 md:flex-[0_0_31.33%] md:pl-0"
               >
                 <div className="border-foreground space-y-4 border-t-2 pt-8">
-                  <h2 className="paragraph font-extralight text-balance">
-                    {item.title}
-                  </h2>
-                  <p className="paragraph font-extralight text-balance">
-                    {item.description}
+                  <h2 className="paragraph font-extralight">{t(item.title)}</h2>
+                  <p className="paragraph font-extralight">
+                    {t(item.description)}
                   </p>
                 </div>
               </li>

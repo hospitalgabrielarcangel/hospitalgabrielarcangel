@@ -56,12 +56,16 @@ export function CallToAction({
       asChild
       size={size}
       variant={variant}
-      className={cn("uppercase", className)}
+      className={cn(
+        "uppercase",
+        variant === "outline" ? "[&>span]:pt-0.5" : "[&>span]:pt-px",
+        className
+      )}
     >
       <Link href={callToAction.href} {...props}>
         {size !== "icon" ? (
           <>
-            <span className="pt-px">{children || title}</span>
+            <span>{children || title}</span>
             {withIcon && <callToAction.icon aria-hidden />}
           </>
         ) : (
