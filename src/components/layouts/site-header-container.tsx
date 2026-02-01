@@ -1,13 +1,14 @@
 "use client"
 
+import { useState } from "react"
 import type { LayoutProps } from "@/types"
 import { motion, useMotionValueEvent, useScroll } from "motion/react"
 
-import { useStore } from "@/lib/store"
+import { ContactSidebar } from "./contact-sidebar"
 
 export function SiteHeaderContainer({ children }: LayoutProps) {
   const { scrollYProgress } = useScroll()
-  const { isOnTop, setIsOnTop } = useStore()
+  const [isOnTop, setIsOnTop] = useState(true)
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number" && scrollYProgress.get() > 0) {
@@ -18,22 +19,25 @@ export function SiteHeaderContainer({ children }: LayoutProps) {
   })
 
   return (
-    <div className="sticky top-0 z-50 w-full">
-      <div className="relative">
-        {children}
-        <motion.div
-          initial={{
-            opacity: 0,
-          }}
-          animate={{
-            opacity: isOnTop ? 0 : 1,
-          }}
-          transition={{
-            duration: 0.3,
-          }}
-          className="absolute inset-0 -z-10 bg-[#fcf7f11a] backdrop-blur-xl"
-        />
+    <>
+      <div className="sticky top-0 z-50 w-full">
+        <div className="relative">
+          {children}
+          <motion.div
+            initial={{
+              opacity: 0,
+            }}
+            animate={{
+              opacity: isOnTop ? 0 : 1,
+            }}
+            transition={{
+              duration: 0.3,
+            }}
+            className="absolute inset-0 -z-10 bg-[#fcf7f11a] backdrop-blur-xl"
+          />
+        </div>
       </div>
-    </div>
+      <ContactSidebar />
+    </>
   )
 }

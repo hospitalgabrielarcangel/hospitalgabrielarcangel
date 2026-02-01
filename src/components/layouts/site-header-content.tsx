@@ -22,12 +22,7 @@ export function SiteHeaderContent() {
                   withSet="1"
                 />
               </div>
-              <CallToAction
-                className="animate-fade-down"
-                style={{ animationDelay: "0.20s", animationFillMode: "both" }}
-                to="contact"
-                size="lg"
-              />
+              <CallToAction />
             </div>
           </div>
         </Shell>

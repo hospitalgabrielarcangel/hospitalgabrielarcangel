@@ -39,10 +39,22 @@
     "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process."
   },
   "CallToAction": {
+    "contact": "Talk to us"
+  },
+  "PageLink": {
     "home": "Home",
-    "contact": "Talk to us",
     "aboutUs": "About us",
     "ourPrograms": "See our programs"
+  },
+  "Gender": {
+    "male": "Male",
+    "female": "Female"
+  },
+  "Contact": {
+    "title": "How can we help?",
+    "callNow": "Call anytime",
+    "label": "Customer service number",
+    "messageUs": "Message us"
   },
   "Locale": {
     "title": "Switch language",

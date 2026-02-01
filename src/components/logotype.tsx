@@ -34,7 +34,7 @@ import { Icons, type IconProps } from "@/components/icons"
 // }
 
 // export function Logotype ({ className, variant, size }: LogotypeProps) {
-//   const title = useTranslations('CallToAction')('home')
+//   const title = useTranslations('PageLink')('home')
 
 //   return (
 //     <Link
@@ -49,7 +49,7 @@ import { Icons, type IconProps } from "@/components/icons"
 // }
 
 export function Logomark({ className, ...props }: IconProps) {
-  const title = useTranslations("CallToAction")("home")
+  const title = useTranslations("PageLink")("home")
 
   return (
     <Link href="/">
@@ -64,7 +64,7 @@ export function Logomark({ className, ...props }: IconProps) {
 }
 
 export function Logotype({ className, ...props }: IconProps) {
-  const title = useTranslations("CallToAction")("home")
+  const title = useTranslations("PageLink")("home")
 
   return (
     <Link href="/">

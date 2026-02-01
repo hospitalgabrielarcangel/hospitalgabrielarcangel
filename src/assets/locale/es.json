@@ -39,10 +39,22 @@
     "ourProgramsItem3Description": "Nuestra experiencia de tratamiento es enteramente privada y discreta, diseñada no solo para priorizar su salud, sino para salvaguardar su integridad personal en cada etapa del proceso."
   },
   "CallToAction": {
+    "contact": "Hable con nosotros"
+  },
+  "PageLink": {
     "home": "Inicio",
-    "contact": "Hable con nosotros",
     "aboutUs": "Sobre nosotros",
     "ourPrograms": "Ver nuestros programas"
+  },
+  "Gender": {
+    "male": "Varonil",
+    "female": "Femenil"
+  },
+  "Contact": {
+    "title": "¿Cómo podemos ayudarle?",
+    "callNow": "Llame en cualquier momento",
+    "label": "Número de atención a clientes",
+    "messageUs": "Envíenos un mensaje"
   },
   "Locale": {
     "title": "Cambiar idioma",

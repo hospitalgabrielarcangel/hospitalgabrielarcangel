@@ -8,13 +8,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { CallToAction } from "@/components/call-to-action"
 import { InfiniteMovingImages } from "@/components/infinite-moving-images"
 import {
   PageHeader,
   PageHeaderDescription,
   PageHeaderHeading,
 } from "@/components/page-header"
+import { PageLink } from "@/components/page-link"
 import { Shell } from "@/components/shell"
 
 const certification = [
@@ -171,10 +171,10 @@ export default function LobbyPage() {
       </div>
       <Shell className="relative gap-12 px-5 pt-20 pb-14 md:pt-36">
         <div className="bg-muted-foreground absolute inset-x-1/2 -top-4 h-20 w-px lg:-top-5 lg:h-26" />
-        <h2 className="heading text-h2 mx-auto max-w-6xl text-center">
+        <h2 className="heading text-h3 mx-auto max-w-6xl text-center">
           {t("aboutUs")}
         </h2>
-        <CallToAction
+        <PageLink
           to="aboutUs"
           size="lg"
           variant="outline"
@@ -209,7 +209,7 @@ export default function LobbyPage() {
             <p className="tag text-muted-foreground py-3">
               {t("whatWeTreatTitle")}
             </p>
-            <h2 className="font-header text-h3 heading">
+            <h2 className="font-header text-h2 heading">
               {t("whatWeTreatHeading")}
             </h2>
             <div className="hidden h-94 lg:block" />
@@ -251,7 +251,7 @@ export default function LobbyPage() {
             <p className="tag text-muted-foreground py-3">
               {t("howWeTreatTitle")}
             </p>
-            <h2 className="font-header text-h3 heading">
+            <h2 className="font-header text-h2 heading">
               {t("howWeTreatHeading")}
             </h2>
             <div className="hidden h-94 lg:block" />
@@ -283,7 +283,7 @@ export default function LobbyPage() {
         <Shell className="gap-0 pt-10 pb-16">
           <div className="space-y-5 text-center md:hidden">
             <p className="tag uppercase">{t("ourProgramsTag")}</p>
-            <h2 className="font-header heading text-h3 text-balance">
+            <h2 className="font-header heading text-h2 text-balance">
               {t("ourProgramsTitle")}
             </h2>
           </div>
@@ -299,7 +299,7 @@ export default function LobbyPage() {
             />
             <div className="absolute inset-0 hidden flex-col items-center justify-center gap-y-6 md:flex lg:px-18">
               <p className="tag text-white uppercase">{t("ourProgramsTag")}</p>
-              <h2 className="font-header heading text-h3 text-center text-balance text-white">
+              <h2 className="font-header heading text-h2 text-center text-balance text-white">
                 {t("ourProgramsTitle")}
               </h2>
             </div>
@@ -319,7 +319,7 @@ export default function LobbyPage() {
               </li>
             ))}
           </ul>
-          <CallToAction
+          <PageLink
             to="ourPrograms"
             size="lg"
             variant="outline"

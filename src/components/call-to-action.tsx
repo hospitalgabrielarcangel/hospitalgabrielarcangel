@@ -1,77 +1,42 @@
-import { ComponentProps } from "react"
-import { Link } from "@/i18n/routing"
+"use client"
+
 import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils"
 import { Button, type ButtonProps } from "@/components/ui/button"
 import { Icons } from "@/components/icons"
+import { useContactSidebarStore } from "@/components/layouts/contact-sidebar"
 
-const CALL_TO_ACTIONS = [
-  {
-    title: "home",
-    href: "/",
-    icon: Icons.home,
-  },
-  {
-    title: "contact",
-    href: "#",
-    icon: Icons.arrowRight,
-  },
-  {
-    title: "aboutUs",
-    href: "#",
-    icon: Icons.arrowRight,
-  },
-  {
-    title: "ourPrograms",
-    href: "#",
-    icon: Icons.arrowRight,
-  },
-] as const
-
-interface CallToActionProps
-  extends
-    Omit<ComponentProps<typeof Link>, "href">,
-    Pick<ButtonProps, "size" | "variant"> {
-  to: (typeof CALL_TO_ACTIONS)[number]["title"]
+interface CallToActionProps extends Omit<
+  ButtonProps,
+  "children" | "size" | "variant"
+> {
+  variant?: Exclude<ButtonProps["variant"], "link">
   withIcon?: boolean
 }
 
 export function CallToAction({
-  children,
   className,
-  to,
-  size,
   variant,
   withIcon,
   ...props
 }: CallToActionProps) {
-  const callToAction = CALL_TO_ACTIONS.find(
-    (callToActionItem) => callToActionItem.title === to
-  )!
-  const title = useTranslations("CallToAction")(callToAction.title)
+  const t = useTranslations("CallToAction")
+  const { openSidebar } = useContactSidebarStore()
 
   return (
     <Button
-      asChild
-      size={size}
-      variant={variant}
       className={cn(
         "uppercase",
         variant === "outline" ? "[&>span]:pt-0.5" : "[&>span]:pt-px",
         className
       )}
+      onClick={() => openSidebar()}
+      size="lg"
+      {...props}
     >
-      <Link href={callToAction.href} {...props}>
-        {size !== "icon" ? (
-          <>
-            <span>{children || title}</span>
-            {withIcon && <callToAction.icon aria-hidden />}
-          </>
-        ) : (
-          <callToAction.icon aria-hidden />
-        )}
-      </Link>
+      <span>{t("contact")}</span>
+      {withIcon && <Icons.arrowRight aria-hidden />}
     </Button>
   )
 }

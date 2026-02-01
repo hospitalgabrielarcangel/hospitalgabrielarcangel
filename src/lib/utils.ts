@@ -10,3 +10,28 @@ export function cn(...inputs: ClassValue[]) {
 export function absoluteUrl(path: string = "/") {
   return `${siteConfig.url}${path}`
 }
+
+export function formatPhoneNumber(phoneNumber: string | number) {
+  const cleanedNumber = String(phoneNumber).replace(/\D/g, "")
+
+  if (cleanedNumber.length < 10 || cleanedNumber.length > 14) {
+    return cleanedNumber
+  } else if (cleanedNumber.length === 10) {
+    const numberSections = cleanedNumber.match(/^(\d{3})(\d{3})(\d{4})$/)
+    return numberSections
+      ? `(${numberSections[1]}) ${numberSections[2]}-${numberSections[3]}`
+      : cleanedNumber
+  }
+
+  const dialCode = cleanedNumber.slice(0, cleanedNumber.length - 10)
+  const number = cleanedNumber.slice(-10)
+  const numberSections = number.match(/^(\d{3})(\d{3})(\d{4})$/)
+
+  return numberSections
+    ? `+${dialCode} (${numberSections[1]}) ${numberSections[2]}-${numberSections[3]}`
+    : cleanedNumber
+}
+
+export function createWhatsappUrl(phoneNumber: string, message?: string) {
+  return `https://wa.me/${phoneNumber}${message ? `?text=${message.replaceAll(" ", "+")}` : ""}`
+}
