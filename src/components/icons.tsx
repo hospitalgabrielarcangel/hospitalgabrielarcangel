@@ -70,7 +70,7 @@ export const Icons = {
       </g>
     </svg>
   ),
-  facebooksq: (props: IconProps) => (
+  facebook: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
@@ -131,7 +131,7 @@ export const Icons = {
       />
     </svg>
   ),
-  instagramsq: (props: IconProps) => (
+  instagram: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
@@ -201,7 +201,7 @@ export const Icons = {
       />
     </svg>
   ),
-  twittersq: (props: IconProps) => (
+  twitter: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
@@ -222,7 +222,7 @@ export const Icons = {
       />
     </svg>
   ),
-  youtubesq: (props: IconProps) => (
+  youtube: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
@@ -265,7 +265,7 @@ export const Icons = {
       />
     </svg>
   ),
-  tiktoksq: (props: IconProps) => (
+  tiktok: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
@@ -332,7 +332,7 @@ export const Icons = {
       />
     </svg>
   ),
-  linkedinsq: (props: IconProps) => (
+  linkedin: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"
@@ -374,7 +374,7 @@ export const Icons = {
       />
     </svg>
   ),
-  whatsappsq: (props: IconProps) => (
+  whatsapp: (props: IconProps) => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlSpace="preserve"

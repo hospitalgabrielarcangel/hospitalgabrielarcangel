@@ -32,6 +32,14 @@ export function formatPhoneNumber(phoneNumber: string | number) {
     : cleanedNumber
 }
 
+export function createEmailUrl(email: string, subject?: string, body?: string) {
+  return `mailto:${email}${subject ? `?subject=${encodeURIComponent(subject)}` : ""}${body ? `&body=${encodeURIComponent(body)}` : ""}`
+}
+
+export function createCallUrl(phoneNumber: string) {
+  return `tel:${phoneNumber}`
+}
+
 export function createWhatsappUrl(phoneNumber: string, message?: string) {
   return `https://wa.me/${phoneNumber}${message ? `?text=${message.replaceAll(" ", "+")}` : ""}`
 }

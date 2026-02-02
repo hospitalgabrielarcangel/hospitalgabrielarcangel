@@ -5,7 +5,14 @@ import { useTranslations } from "next-intl"
 import { create } from "zustand"
 
 import { siteConfig } from "@/config/site"
+import {
+  createCallUrl,
+  createEmailUrl,
+  createWhatsappUrl,
+  formatPhoneNumber,
+} from "@/lib/utils"
 import { Button } from "@/components/ui/button"
+import { ContactForm } from "@/components/forms/contact-form"
 
 import Sidebar from "./sidebar"
 
@@ -25,8 +32,7 @@ export const useContactSidebarStore = create<ContactSidebarStore>((set) => ({
 
 export function ContactSidebar() {
   const { closeSidebar, isSidebarOpen } = useContactSidebarStore()
-  const tContact = useTranslations("Contact")
-  const tGender = useTranslations("Gender")
+  const t = useTranslations("ContactSidebar")
 
   return (
     <Sidebar
@@ -39,7 +45,7 @@ export function ContactSidebar() {
       <div>
         <div className="flex items-center justify-between p-5">
           <span className="font-header text-3xl tracking-tighter">
-            {tContact("title")}
+            {t("title")}
           </span>
           <Button
             size="icon"
@@ -52,32 +58,28 @@ export function ContactSidebar() {
         </div>
         <div className="[&>div]:[&>span]:font-header [&>div]:flex [&>div]:flex-col [&>div]:gap-y-12 [&>div]:border-t [&>div]:px-5 [&>div]:py-15 [&>div]:md:flex-row [&>div]:md:items-center [&>div]:md:justify-between [&>div]:md:gap-y-0 [&>div]:[&>span]:text-[1.7rem] [&>div]:[&>span]:leading-9 [&>div]:[&>span]:tracking-tighter">
           <div>
-            <span className="w-40">{tContact("callNow")}</span>
-            <div key={siteConfig.phoneNumbers[0]!.title}>
-              <Button
-                asChild
-                variant="link"
-                className="text-foreground hover:text-accent-foreground group flex w-fit flex-col items-start gap-y-0.5 rounded-none px-0"
-                onClick={() => closeSidebar()}
+            <span className="md:w-40">{t("callUsTitle")}</span>
+            <Button
+              asChild
+              variant="link"
+              className="text-foreground hover:text-accent-foreground group flex w-fit flex-col items-start gap-y-0.5 rounded-none px-0"
+              onClick={() => closeSidebar()}
+            >
+              <Link
+                href={createCallUrl(siteConfig.phoneNumbers.male)}
+                title={t("callUsLabel")}
+                aria-label={t("callUsLabel")}
+                target="_blank"
+                rel="noreferrer"
               >
-                <Link
-                  aria-label={`${tContact("label")} - ${tGender(siteConfig.phoneNumbers[0]!.title)}`}
-                  title={`${tContact("label")} - ${tGender(siteConfig.phoneNumbers[0]!.title)}`}
-                  target="_blank"
-                  rel="noreferrer"
-                  href={siteConfig.phoneNumbers[0]!.callUrl}
-                >
-                  <span className="border-foreground group-hover:border-primary border-b text-xl">
-                    {siteConfig.phoneNumbers[0]!.displayNumber}
-                  </span>
-                </Link>
-              </Button>
-            </div>
+                <span className="border-foreground group-hover:border-primary border-b text-xl">
+                  {formatPhoneNumber(siteConfig.phoneNumbers.male)}
+                </span>
+              </Link>
+            </Button>
           </div>
-        </div>
-        <div className="[&>div]:[&>span]:font-header [&>div]:flex [&>div]:flex-col [&>div]:gap-y-12 [&>div]:border-t [&>div]:px-5 [&>div]:py-15 [&>div]:md:flex-row [&>div]:md:items-center [&>div]:md:justify-between [&>div]:md:gap-y-0 [&>div]:[&>span]:text-[1.7rem] [&>div]:[&>span]:leading-9 [&>div]:[&>span]:tracking-tighter">
           <div>
-            <span className="w-40">{tContact("messageUs")}</span>
+            <span className="md:w-40">{t("messageUsTitle")}</span>
             <div className="space-x-4">
               <Button
                 asChild
@@ -87,11 +89,11 @@ export function ContactSidebar() {
                 className="uppercase"
               >
                 <Link
-                  aria-label={`${tContact("label")} - ${tGender(siteConfig.phoneNumbers[0]!.title)}`}
-                  title={`${tContact("label")} - ${tGender(siteConfig.phoneNumbers[0]!.title)}`}
+                  href={createEmailUrl(siteConfig.emails.contact)}
+                  title={t("emailLabel")}
+                  aria-label={t("emailLabel")}
                   target="_blank"
                   rel="noreferrer"
-                  href={siteConfig.phoneNumbers[0]!.whatsappUrl}
                 >
                   Email
                 </Link>
@@ -104,17 +106,23 @@ export function ContactSidebar() {
                 className="uppercase"
               >
                 <Link
-                  aria-label={`${tContact("label")} - ${tGender(siteConfig.phoneNumbers[1]!.title)}`}
-                  title={`${tContact("label")} - ${tGender(siteConfig.phoneNumbers[1]!.title)}`}
+                  href={createWhatsappUrl(siteConfig.phoneNumbers.male)}
+                  title={t("callUsLabel")}
+                  aria-label={t("callUsLabel")}
                   target="_blank"
                   rel="noreferrer"
-                  href={siteConfig.phoneNumbers[1]!.callUrl}
                 >
                   WhatsApp
                 </Link>
               </Button>
             </div>
           </div>
+        </div>
+        <div className="flex flex-col gap-y-5 border-t px-5 py-15">
+          <span className="font-header text-[1.7rem] leading-9 tracking-tighter">
+            {t("emailUsTitle")}
+          </span>
+          <ContactForm />
         </div>
       </div>
     </Sidebar>

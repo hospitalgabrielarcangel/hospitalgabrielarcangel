@@ -58,7 +58,7 @@ export default function Sidebar({
               type: "spring",
             }}
             className={cn(
-              "bg-sidebar-accent fixed inset-y-0 z-70 overflow-hidden",
+              "bg-sidebar-accent fixed inset-y-0 z-70 overflow-x-hidden overflow-y-scroll",
               position === "right" ? "right-0" : "left-0",
               containerClassName
             )}

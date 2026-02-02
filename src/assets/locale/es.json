@@ -3,7 +3,12 @@
     "description": "Un enfoque médico, integral y personalizado en cada etapa de la recuperación física, mental y emocional."
   },
   "SiteFooter": {
-    "author": "Contruido por"
+    "author": "Contruido por",
+    "socialTitle": "Redes sociales",
+    "contactTitle": "Contacto",
+    "emailTitle": "Correo electrónico",
+    "callUsTitle": "Llámanos",
+    "whatsappTitle": "WhatsApp"
   },
   "LobbyPage": {
     "pageHeaderTitle": "Clínica Hospitalizada Contra Adicciones",
@@ -38,23 +43,57 @@
     "ourProgramsItem3Title": "Privacidad y exclusividad",
     "ourProgramsItem3Description": "Nuestra experiencia de tratamiento es enteramente privada y discreta, diseñada no solo para priorizar su salud, sino para salvaguardar su integridad personal en cada etapa del proceso."
   },
+  "Service": {
+    "itName": "Tratamiento residencial",
+    "itDescription": "Programa de internamiento especializado para la superación de adicciones. Ofrecemos contención profesional, supervisión continua y un entorno de apoyo diseñado para eliminar riesgos y fortalecer la voluntad del paciente en cada etapa del proceso.",
+    "otName": "Tratamiento ambulatorio",
+    "otDescription": "Nuestro programa ambulatorio te ofrece sesiones de tratamiento intensivo adaptadas a tu horario, brindándote el acompañamiento necesario para fortalecer tu sobriedad mientras mantienes tus vínculos y actividades cotidianas.",
+    "edpName": "Programa de desintoxicación ejecutiva",
+    "edpDescription": "La solución inmediata para frenar el consumo de sustancias y recuperar el control. Un primer paso estratégico y medicamente supervisado que te prepara para el éxito en tu tratamiento continuo, sin necesidad de ausencias prolongadas de tu entorno profesional o familiar.",
+    "tmsName": "Estimulación magnética transcraneal",
+    "tmsDescription": "Neuroestimulación de precisión no invasiva y libre de dolor. Mediante campos magnéticos seguros, estimulamos las áreas del cerebro responsables del control de impulsos y el estado de ánimo, ayudando a reducir el deseo de consumo (craving) y restaurar el equilibrio mental sin necesidad de fármacos adicionales.",
+    "cipName": "Programa de intervención clínica",
+    "cipDescription": "Identificamos los desafíos reales detrás de la conducta. Nuestro proceso de diagnóstico evalúa tu salud emocional y física de manera integral, permitiéndonos crear un plan de acción a tu medida que aborde no solo la adicción, sino también tu bienestar mental y estabilidad a largo plazo.",
+    "rppName": "Plan de prevención de recaídas",
+    "rppDescription": "Aprende a reconocer y dominar las situaciones que ponen en riesgo tu recuperación. Trabajamos contigo para detectar emociones o entornos peligrosos y crear respuestas efectivas que eviten recaídas. Sal de nuestra clínica con un plan de acción claro y las habilidades necesarias para proteger tu bienestar cada día."
+  },
   "CallToAction": {
-    "contact": "Hable con nosotros"
+    "contact": "Habla con nosotros"
   },
   "PageLink": {
     "home": "Inicio",
     "aboutUs": "Sobre nosotros",
     "ourPrograms": "Ver nuestros programas"
   },
+  "ContactSidebar": {
+    "title": "¿Cómo podemos ayudarte?",
+    "callUsTitle": "Llama en cualquier momento",
+    "callUsLabel": "Número de atención a clientes",
+    "messageUsTitle": "Envíanos un mensaje",
+    "emailLabel": "Correo electrónico de atención a clientes",
+    "whatsappLabel": "WhatsApp de atención a clientes",
+    "emailUsTitle": "Envíanos una consulta"
+  },
+  "ContactForm": {
+    "firstNamePlaceholder": "Nombre",
+    "lastNamePlaceholder": "Apellido",
+    "emailPlaceholder": "Correo electrónico",
+    "phoneNumberPlaceholder": "Número de teléfono",
+    "servicePlaceholder": "Servicio",
+    "messagePlaceholder": "Mensaje",
+    "messageChars": "caracteres",
+    "resetButton": "Reiniciar",
+    "submitButton": "Enviar",
+    "firstNameError": "El nombre debe tener al menos de 2 a 28 caracteres",
+    "lastNameError": "El apellido debe tener al menos de 2 a 28 caracteres",
+    "emailError": "El correo electrónico debe ser válido",
+    "phoneNumberError": "El número de teléfono debe ser válido",
+    "serviceError": "El servicio debe ser válido",
+    "messageError": "El mensaje debe tener al menos de 12 a 100 caracteres"
+  },
   "Gender": {
     "male": "Varonil",
     "female": "Femenil"
-  },
-  "Contact": {
-    "title": "¿Cómo podemos ayudarle?",
-    "callNow": "Llame en cualquier momento",
-    "label": "Número de atención a clientes",
-    "messageUs": "Envíenos un mensaje"
   },
   "Locale": {
     "title": "Cambiar idioma",

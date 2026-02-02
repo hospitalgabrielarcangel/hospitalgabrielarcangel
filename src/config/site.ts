@@ -2,19 +2,29 @@ import type { Author } from "next/dist/lib/metadata/types/metadata-types"
 import { env } from "@/env.mjs"
 import type { FooterItem, MainNavItem } from "@/types"
 
-import { createWhatsappUrl, formatPhoneNumber } from "@/lib/utils"
+import "@/lib/utils"
+
+import { createCallUrl, createEmailUrl, createWhatsappUrl } from "@/lib/utils"
 
 const links = {
-  twitter: "https://x.com/clinicarcangel",
-  facebook: "https://www.facebook.com/hospitalgabrielarcangel",
-  instagram: "https://www.instagram.com/hospitalgabrielarcangel",
+  facebook: "https://www.facebook.com/ClinicaGabrielArcangelAC",
+  instagram: "https://www.instagram.com/clinicagabrielarcangel",
   youtube: "https://www.youtube.com/@hospitalgabrielarcangel",
+  twitter: "https://x.com/GArcangelH",
   tiktok: "https://www.tiktok.com/@hospitalgabrielarcangel",
+  facebookFemale: "https://www.facebook.com/hospitalgabrielarcangelfemenill",
+  instagramFemale: "https://www.instagram.com/clinica.arcangel.femenil",
+  twitterFemale: "https://x.com/GArcangelHFem",
+  tiktokFemale: "https://www.tiktok.com/@gabrielarcangelfemenil",
 }
 
 const phoneNumbers = {
   male: env.NEXT_PUBLIC_PHONE_NUMBER_MALE,
   female: env.NEXT_PUBLIC_PHONE_NUMBER_FEMALE,
+}
+
+const emails = {
+  contact: env.NEXT_PUBLIC_CONTACT_EMAIL,
 }
 
 export const siteConfig = {
@@ -23,12 +33,8 @@ export const siteConfig = {
     "Un enfoque médico, integral y personalizado en cada etapa de la recuperación física, mental y emocional — ayudando a sanar dependencias a sustancias y adicciones",
   url: env.NEXT_PUBLIC_APP_URL,
   links,
-  phoneNumbers: Object.entries(phoneNumbers).map(([key, number]) => ({
-    title: key,
-    displayNumber: formatPhoneNumber(number),
-    callUrl: `tel:${number}`,
-    whatsappUrl: createWhatsappUrl(number),
-  })),
+  phoneNumbers,
+  emails,
   mainNav: [
     {
       title: "Inicio",
@@ -37,7 +43,7 @@ export const siteConfig = {
   ] satisfies MainNavItem[],
   footerNav: [
     {
-      title: "Social",
+      title: "socialTitle",
       items: [
         {
           title: "Facebook",
@@ -55,8 +61,33 @@ export const siteConfig = {
           external: true,
         },
         {
-          title: "Twitter",
+          title: "X",
           href: links.twitter,
+          external: true,
+        },
+        {
+          title: "TikTok",
+          href: links.tiktok,
+          external: true,
+        },
+      ],
+    },
+    {
+      title: "contactTitle",
+      items: [
+        {
+          title: "emailTitle",
+          href: createEmailUrl(emails.contact),
+          external: true,
+        },
+        {
+          title: "whatsappTitle",
+          href: createWhatsappUrl(phoneNumbers.male),
+          external: true,
+        },
+        {
+          title: "callUsTitle",
+          href: createCallUrl(phoneNumbers.male),
           external: true,
         },
       ],

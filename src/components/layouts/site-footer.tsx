@@ -30,7 +30,7 @@ export function SiteFooter() {
               "xs:flex hidden [&_svg]:size-5"
             )}
           >
-            <Icons.facebooksq
+            <Icons.facebook
               className="fill-muted-foreground group-hover:fill-foreground"
               aria-hidden
             />
@@ -50,7 +50,7 @@ export function SiteFooter() {
               "xs:flex hidden [&_svg]:size-5"
             )}
           >
-            <Icons.instagramsq
+            <Icons.instagram
               className="fill-muted-foreground group-hover:fill-foreground"
               aria-hidden
             />
@@ -58,9 +58,6 @@ export function SiteFooter() {
           </Link>
           <Link
             href={siteConfig.links.twitter}
-            target="_blank"
-            rel="noreferrer"
-            title="Twitter"
             className={cn(
               buttonVariants({
                 size: "icon",
@@ -69,18 +66,18 @@ export function SiteFooter() {
               }),
               "xs:flex hidden [&_svg]:size-5"
             )}
+            title="X"
+            target="_blank"
+            rel="noreferrer"
           >
-            <Icons.twittersq
+            <Icons.twitter
               className="fill-muted-foreground group-hover:fill-foreground"
               aria-hidden
             />
-            <span className="sr-only">Twitter</span>
+            <span className="sr-only">X</span>
           </Link>
           <Link
             href={siteConfig.links.youtube}
-            target="_blank"
-            rel="noreferrer"
-            title="Youtube"
             className={cn(
               buttonVariants({
                 size: "icon",
@@ -89,8 +86,11 @@ export function SiteFooter() {
               }),
               "xs:flex hidden [&_svg]:size-5"
             )}
+            title="Youtube"
+            target="_blank"
+            rel="noreferrer"
           >
-            <Icons.youtubesq
+            <Icons.youtube
               className="fill-muted-foreground group-hover:fill-foreground"
               aria-hidden
             />
@@ -98,9 +98,6 @@ export function SiteFooter() {
           </Link>
           <Link
             href={siteConfig.links.tiktok}
-            target="_blank"
-            rel="noreferrer"
-            title="Tiktok"
             className={cn(
               buttonVariants({
                 size: "icon",
@@ -109,8 +106,11 @@ export function SiteFooter() {
               }),
               "xs:flex hidden [&_svg]:size-5"
             )}
+            title="Tiktok"
+            target="_blank"
+            rel="noreferrer"
           >
-            <Icons.tiktoksq
+            <Icons.tiktok
               className="fill-muted-foreground group-hover:fill-foreground"
               aria-hidden
             />

@@ -3,7 +3,12 @@
     "description": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery."
   },
   "SiteFooter": {
-    "author": "Built by"
+    "author": "Built by",
+    "socialTitle": "Social Media",
+    "contactTitle": "Contact",
+    "emailTitle": "Email",
+    "callUsTitle": "Call us",
+    "whatsappTitle": "WhatsApp"
   },
   "LobbyPage": {
     "pageHeaderTitle": "Inpatient Addiction Treatment Clinic",
@@ -38,6 +43,20 @@
     "ourProgramsItem3Title": "Privacy and exclusivity",
     "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process."
   },
+  "Service": {
+    "itName": "Inpatient treatment",
+    "itDescription": "A specialized residential program for overcoming addiction. We provide professional guidance, 24/7 supervision, and a supportive environment designed to eliminate risks and empower patients through every stage of their recovery.",
+    "otName": "Outpatient treatment",
+    "otDescription": "Our outpatient program offers intensive treatment sessions tailored to your schedule, providing the necessary support to strengthen your sobriety while maintaining your daily routines and personal connections.",
+    "edpName": "Executive detox program",
+    "edpDescription": "The immediate solution to interrupt substance use and regain control. A strategic and medically supervised first step that prepares you for success in ongoing treatment, without the need for prolonged absences from your professional or family life.",
+    "tmsName": "Transcranial magnetic stimulation",
+    "tmsDescription": "Non-Invasive and Painless Neurostimulation. Regulate your brain activity safely and naturally. This technique uses magnetic technology to strengthen areas of the brain affected by substance use, reducing anxiety and facilitating the rehabilitation process without systemic side effects.",
+    "cipName": "Clinical intervention program",
+    "cipDescription": "We identify the real challenges behind the addiction. Our diagnostic process evaluates your emotional and physical health holistically, allowing us to create a tailored action plan that addresses not only the dependency but also your mental well-being and long-term stability.",
+    "rppName": "Relapse prevention plan",
+    "rppDescription": "Learn to recognize and master the situations that put your recovery at risk. We work with you to detect high-risk emotions or environments and create effective responses to prevent relapse. Leave our facility with a clear action plan and the skills necessary to protect your well-being every single day."
+  },
   "CallToAction": {
     "contact": "Talk to us"
   },
@@ -46,15 +65,35 @@
     "aboutUs": "About us",
     "ourPrograms": "See our programs"
   },
+  "ContactSidebar": {
+    "title": "How can we help?",
+    "callUsTitle": "Call anytime",
+    "callUsLabel": "Customer service number",
+    "messageUsTitle": "Message us",
+    "emailLabel": "Customer service email",
+    "whatsappLabel": "Customer service WhatsApp",
+    "emailUsTitle": "Send us an enquiry"
+  },
+  "ContactForm": {
+    "firstNamePlaceholder": "First name",
+    "lastNamePlaceholder": "Last name",
+    "emailPlaceholder": "Email",
+    "phoneNumberPlaceholder": "Phone number",
+    "servicePlaceholder": "Service",
+    "messagePlaceholder": "Message",
+    "messageChars": "characters",
+    "resetButton": "Reset",
+    "submitButton": "Submit",
+    "firstNameError": "First name must be between 2 to 28 characters",
+    "lastNameError": "Last name must be between 2 to 28 characters",
+    "emailError": "Email must be valid",
+    "phoneNumberError": "Phone number must be valid",
+    "serviceError": "Service must be valid",
+    "messageError": "Message must be between 12 to 100 characters"
+  },
   "Gender": {
     "male": "Male",
     "female": "Female"
-  },
-  "Contact": {
-    "title": "How can we help?",
-    "callNow": "Call anytime",
-    "label": "Customer service number",
-    "messageUs": "Message us"
   },
   "Locale": {
     "title": "Switch language",

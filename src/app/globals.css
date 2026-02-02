@@ -138,6 +138,18 @@
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
+
+  ::-webkit-scrollbar {
+    @apply bg-foreground/40 h-1.5 w-1.5;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-foreground rounded-[1ex];
+  }
+
+  ::-webkit-scrollbar-corner {
+    @apply bg-foreground;
+  }
 }
 
 @layer utilities {
