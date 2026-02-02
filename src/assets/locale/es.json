@@ -58,7 +58,7 @@
     "rppDescription": "Aprende a reconocer y dominar las situaciones que ponen en riesgo tu recuperación. Trabajamos contigo para detectar emociones o entornos peligrosos y crear respuestas efectivas que eviten recaídas. Sal de nuestra clínica con un plan de acción claro y las habilidades necesarias para proteger tu bienestar cada día."
   },
   "CallToAction": {
-    "contact": "Habla con nosotros"
+    "contact": "Contacto"
   },
   "PageLink": {
     "home": "Inicio",
@@ -105,5 +105,11 @@
     "light": "Claro",
     "dark": "Oscuro",
     "system": "Sistema"
+  },
+  "MenuButton": {
+    "label": "Abrir menú"
+  },
+  "MenuSidebar": {
+    "title": "Excelencia en rehabilitación: La clínica de tratamiento de salud mental más completa para tu recuperación."
   }
 }

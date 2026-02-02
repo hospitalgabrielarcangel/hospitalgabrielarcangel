@@ -46,7 +46,7 @@ export default function Sidebar({
   return (
     <AnimatePresence>
       {status && (
-        <>
+        <div className={cn("relative overflow-hidden", containerClassName)}>
           <motion.div
             initial={{ width: "0" }}
             animate={{
@@ -58,9 +58,8 @@ export default function Sidebar({
               type: "spring",
             }}
             className={cn(
-              "bg-sidebar-accent fixed inset-y-0 z-70 overflow-x-hidden overflow-y-scroll",
-              position === "right" ? "right-0" : "left-0",
-              containerClassName
+              "bg-sidebar-accent fixed inset-y-0 z-10 overflow-x-hidden overflow-y-auto",
+              position === "right" ? "right-0" : "left-0"
             )}
           >
             <div
@@ -83,10 +82,10 @@ export default function Sidebar({
               duration: 0.5,
               type: "spring",
             }}
-            className="fixed inset-0 z-60 bg-black"
+            className="fixed inset-0 bg-black"
             onClick={() => onClickOutside && onClickOutside()}
           />
-        </>
+        </div>
       )}
     </AnimatePresence>
   )

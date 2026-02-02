@@ -22,7 +22,7 @@ export function CallToAction({
   ...props
 }: CallToActionProps) {
   const t = useTranslations("CallToAction")
-  const { openSidebar } = useContactSidebarStore()
+  const { openContactSidebar } = useContactSidebarStore()
 
   return (
     <Button
@@ -31,7 +31,7 @@ export function CallToAction({
         variant === "outline" ? "[&>span]:pt-0.5" : "[&>span]:pt-px",
         className
       )}
-      onClick={() => openSidebar()}
+      onClick={() => openContactSidebar()}
       size="lg"
       {...props}
     >

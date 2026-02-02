@@ -1,6 +1,7 @@
 import type { LayoutProps } from "@/types"
 
 import { ContactSidebar } from "@/components/layouts/contact-sidebar"
+import { MenuSidebar } from "@/components/layouts/menu-sidebar"
 import { SiteFooter } from "@/components/layouts/site-footer"
 import { SiteHeader } from "@/components/layouts/site-header"
 
@@ -11,6 +12,7 @@ export default function LobbyLayout({ children }: LayoutProps) {
       <main className="flex-1">{children}</main>
       <SiteFooter />
       <ContactSidebar />
+      <MenuSidebar />
     </div>
   )
 }

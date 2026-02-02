@@ -58,7 +58,7 @@
     "rppDescription": "Learn to recognize and master the situations that put your recovery at risk. We work with you to detect high-risk emotions or environments and create effective responses to prevent relapse. Leave our facility with a clear action plan and the skills necessary to protect your well-being every single day."
   },
   "CallToAction": {
-    "contact": "Talk to us"
+    "contact": "Contact"
   },
   "PageLink": {
     "home": "Home",
@@ -105,5 +105,11 @@
     "light": "Light",
     "dark": "Dark",
     "system": "System"
+  },
+  "MenuButton": {
+    "label": "Open menu"
+  },
+  "MenuSidebar": {
+    "title": "Excellence in Rehabilitation: The most comprehensive mental health treatment clinic for your recovery."
   }
 }

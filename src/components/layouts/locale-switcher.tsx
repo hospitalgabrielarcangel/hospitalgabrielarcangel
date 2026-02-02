@@ -18,7 +18,7 @@ import { LedIndicator } from "@/components/status-indicator"
 interface LocalSwitcherProps {
   className?: string
   style?: CSSProperties
-  variant?: Exclude<ButtonProps["variant"], "destructive" | "link">
+  variant?: Exclude<ButtonProps["variant"], "destructive">
   withSet?: "1" | "2"
   withChevron?: boolean
 }

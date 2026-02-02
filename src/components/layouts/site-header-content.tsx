@@ -1,6 +1,7 @@
 import { CallToAction } from "@/components/call-to-action"
 import { LocaleSwitcher } from "@/components/layouts/locale-switcher"
 import { Logomark } from "@/components/logotype"
+import { MenuButton } from "@/components/menu-button"
 import { Shell } from "@/components/shell"
 
 import { SiteHeaderContainer } from "./site-header-container"
@@ -16,13 +17,14 @@ export function SiteHeaderContent() {
             </div>
             <div className="flex flex-1 items-center justify-end gap-x-2 lg:pr-5">
               <div className="flex items-center gap-x-2">
+                <MenuButton />
                 <LocaleSwitcher
-                  className="animate-fade-down hidden gap-0.5 p-2 lg:flex [&>.icon]:size-5"
+                  className="animate-fade-down gap-0.5 p-2 [&>.icon]:size-5"
                   style={{ animationDelay: "0.30s", animationFillMode: "both" }}
                   withSet="1"
                 />
+                <CallToAction />
               </div>
-              <CallToAction />
             </div>
           </div>
         </Shell>

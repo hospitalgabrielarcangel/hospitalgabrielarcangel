@@ -16,31 +16,32 @@ import { ContactForm } from "@/components/forms/contact-form"
 
 import Sidebar from "./sidebar"
 
-export interface ContactSidebarStore {
-  isSidebarOpen: boolean
-  setIsSidebarOpen: (isSidebarOpen: boolean) => void
-  openSidebar: () => void
-  closeSidebar: () => void
+interface ContactSidebarStore {
+  isContactSidebarOpen: boolean
+  setIsContactSidebarOpen: (isContactSidebarOpen: boolean) => void
+  openContactSidebar: () => void
+  closeContactSidebar: () => void
 }
 
-export const useContactSidebarStore = create<ContactSidebarStore>((set) => ({
-  isSidebarOpen: false,
-  setIsSidebarOpen: (isSidebarOpen: boolean) => set({ isSidebarOpen }),
-  openSidebar: () => set({ isSidebarOpen: true }),
-  closeSidebar: () => set({ isSidebarOpen: false }),
+const useContactSidebarStore = create<ContactSidebarStore>((set) => ({
+  isContactSidebarOpen: false,
+  setIsContactSidebarOpen: (isContactSidebarOpen: boolean) =>
+    set({ isContactSidebarOpen }),
+  openContactSidebar: () => set({ isContactSidebarOpen: true }),
+  closeContactSidebar: () => set({ isContactSidebarOpen: false }),
 }))
 
-export function ContactSidebar() {
-  const { closeSidebar, isSidebarOpen } = useContactSidebarStore()
+function ContactSidebar() {
+  const { closeContactSidebar, isContactSidebarOpen } = useContactSidebarStore()
   const t = useTranslations("ContactSidebar")
 
   return (
     <Sidebar
       position="right"
       width="lg"
-      status={isSidebarOpen}
-      onClickOutside={closeSidebar}
-      containerClassName="md:rounded-l-2xl"
+      status={isContactSidebarOpen}
+      onClickOutside={closeContactSidebar}
+      containerClassName="md:rounded-l-2xl z-70"
     >
       <div>
         <div className="flex items-center justify-between p-5">
@@ -51,7 +52,7 @@ export function ContactSidebar() {
             size="icon"
             variant="ghost"
             className="text-muted-foreground text-lg"
-            onClick={() => closeSidebar()}
+            onClick={() => closeContactSidebar()}
           >
             X
           </Button>
@@ -63,7 +64,7 @@ export function ContactSidebar() {
               asChild
               variant="link"
               className="text-foreground hover:text-accent-foreground group flex w-fit flex-col items-start gap-y-0.5 rounded-none px-0"
-              onClick={() => closeSidebar()}
+              onClick={() => closeContactSidebar()}
             >
               <Link
                 href={createCallUrl(siteConfig.phoneNumbers.male)}
@@ -85,7 +86,7 @@ export function ContactSidebar() {
                 asChild
                 variant="outline"
                 size="lg"
-                onClick={() => closeSidebar()}
+                onClick={() => closeContactSidebar()}
                 className="uppercase"
               >
                 <Link
@@ -102,7 +103,7 @@ export function ContactSidebar() {
                 asChild
                 variant="outline"
                 size="lg"
-                onClick={() => closeSidebar()}
+                onClick={() => closeContactSidebar()}
                 className="uppercase"
               >
                 <Link
@@ -128,3 +129,5 @@ export function ContactSidebar() {
     </Sidebar>
   )
 }
+
+export { type ContactSidebarStore, useContactSidebarStore, ContactSidebar }
