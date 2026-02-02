@@ -99,7 +99,7 @@ export const InfiniteMovingImages = ({
         {items.map((item) => (
           <li key={item.name}>
             <Link href={item.url}>
-              <div className="relative max-w-full shrink-0 rounded-2xl px-24">
+              <div className="relative max-w-full shrink-0 rounded-2xl px-12">
                 {item.image && (
                   <span className="relative z-20">
                     <Image
