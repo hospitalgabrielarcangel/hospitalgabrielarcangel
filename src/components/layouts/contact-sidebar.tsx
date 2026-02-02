@@ -118,7 +118,7 @@ export function ContactSidebar() {
             </div>
           </div>
         </div>
-        <div className="flex flex-col gap-y-5 border-t px-5 py-15">
+        <div className="flex flex-col gap-y-5 border-t px-5 pt-15 pb-5">
           <span className="font-header text-[1.7rem] leading-9 tracking-tighter">
             {t("emailUsTitle")}
           </span>

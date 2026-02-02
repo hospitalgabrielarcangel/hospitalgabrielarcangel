@@ -79,7 +79,7 @@
     "lastNamePlaceholder": "Last name",
     "emailPlaceholder": "Email",
     "phoneNumberPlaceholder": "Phone number",
-    "servicePlaceholder": "Service",
+    "servicePlaceholder": "Which treatment are you interested in?",
     "messagePlaceholder": "Message",
     "messageChars": "characters",
     "resetButton": "Reset",
@@ -88,7 +88,7 @@
     "lastNameError": "Last name must be between 2 to 28 characters",
     "emailError": "Email must be valid",
     "phoneNumberError": "Phone number must be valid",
-    "serviceError": "Service must be valid",
+    "serviceError": "Select treatment",
     "messageError": "Message must be between 12 to 100 characters"
   },
   "Gender": {

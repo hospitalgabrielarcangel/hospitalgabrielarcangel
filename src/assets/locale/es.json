@@ -79,7 +79,7 @@
     "lastNamePlaceholder": "Apellido",
     "emailPlaceholder": "Correo electrónico",
     "phoneNumberPlaceholder": "Número de teléfono",
-    "servicePlaceholder": "Servicio",
+    "servicePlaceholder": "¿En qué tratamiento estás interesado?",
     "messagePlaceholder": "Mensaje",
     "messageChars": "caracteres",
     "resetButton": "Reiniciar",
@@ -88,7 +88,7 @@
     "lastNameError": "El apellido debe tener al menos de 2 a 28 caracteres",
     "emailError": "El correo electrónico debe ser válido",
     "phoneNumberError": "El número de teléfono debe ser válido",
-    "serviceError": "El servicio debe ser válido",
+    "serviceError": "Seleccione un tratamiento",
     "messageError": "El mensaje debe tener al menos de 12 a 100 caracteres"
   },
   "Gender": {

@@ -6,6 +6,7 @@ import { useTranslations } from "next-intl"
 import { toast } from "sonner"
 import * as z from "zod"
 
+import { serviceConfig } from "@/config/service"
 import { Button } from "@/components/ui/button"
 import { Field, FieldError, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
@@ -15,17 +16,30 @@ import {
   InputGroupText,
   InputGroupTextarea,
 } from "@/components/ui/input-group"
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectLabel,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select"
 
 export function ContactForm() {
   const t = useTranslations("ContactForm")
+  const tService = useTranslations("Service")
 
   const formSchema = z.object({
-    firstName: z.string(t("firstNameError")).min(2).max(28),
-    lastName: z.string(t("lastNameError")).min(2).max(28),
+    firstName: z
+      .string()
+      .min(2, t("firstNameError"))
+      .max(28, t("firstNameError")),
+    lastName: z.string().min(2, t("lastNameError")).max(28, t("lastNameError")),
     email: z.email(t("emailError")),
     phoneNumber: z.e164(t("phoneNumberError")),
-    service: z.string(t("serviceError")),
-    message: z.string(t("messageError")).min(12).max(100),
+    service: z.string().min(1, t("serviceError")),
+    message: z.string().min(2, t("messageError")).max(100, t("messageError")),
   })
 
   const form = useForm({
@@ -177,16 +191,33 @@ export function ContactForm() {
                   field.state.meta.isTouched && !field.state.meta.isValid
                 return (
                   <Field data-invalid={isInvalid}>
-                    <Input
-                      id={field.name}
+                    <Select
                       name={field.name}
                       value={field.state.value}
-                      onBlur={field.handleBlur}
-                      onChange={(e) => field.handleChange(e.target.value)}
-                      aria-invalid={isInvalid}
-                      placeholder={t("servicePlaceholder")}
-                      autoComplete="off"
-                    />
+                      onValueChange={(value) => field.handleChange(value)}
+                    >
+                      <SelectTrigger
+                        id={field.name}
+                        onBlur={field.handleBlur}
+                        aria-invalid={isInvalid}
+                        className="w-full"
+                      >
+                        <SelectValue placeholder={t("servicePlaceholder")} />
+                      </SelectTrigger>
+                      <SelectContent className="z-70">
+                        <SelectGroup>
+                          <SelectLabel>{t("servicePlaceholder")}</SelectLabel>
+                          {serviceConfig.map((service) => {
+                            const serviceName = tService(service.name)
+                            return (
+                              <SelectItem key={serviceName} value={serviceName}>
+                                {serviceName}
+                              </SelectItem>
+                            )
+                          })}
+                        </SelectGroup>
+                      </SelectContent>
+                    </Select>
                     {isInvalid && (
                       <FieldError errors={field.state.meta.errors} />
                     )}
@@ -241,6 +272,7 @@ export function ContactForm() {
             {t("submitButton")}
           </Button>
           <Button
+            className="uppercase"
             type="button"
             variant="link"
             size="sm"
