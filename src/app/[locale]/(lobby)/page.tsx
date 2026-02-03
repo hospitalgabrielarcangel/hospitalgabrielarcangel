@@ -137,7 +137,7 @@ export default function LobbyPage() {
             centered
           >
             <PageHeaderDescription
-              className="animate-fade-up font-header mx-auto mt-16 text-2xl tracking-tight text-white md:mt-0 md:px-4 md:text-3xl lg:text-3xl"
+              className="animate-fade-up font-header mx-auto mt-16 text-2xl tracking-tight text-white md:px-4 md:text-3xl lg:mt-0 lg:text-3xl"
               style={{ animationDelay: "0.3s", animationFillMode: "both" }}
               size="lg"
             >
