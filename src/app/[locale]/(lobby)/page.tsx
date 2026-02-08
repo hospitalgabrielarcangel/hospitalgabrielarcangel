@@ -8,7 +8,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { InfiniteMovingImages } from "@/components/infinite-moving-images"
+import { InfiniteMovingImages } from "@/components/layouts/infinite-moving-images"
 import {
   PageHeader,
   PageHeaderDescription,
@@ -17,10 +17,11 @@ import {
 import { PageLink } from "@/components/page-link"
 import { Shell } from "@/components/shell"
 
-const certification = [
+const certificationConfig = [
   {
     name: "U.S. Food and Drug Administration",
     url: "https://www.fda.gov/",
+    external: true,
     image: {
       src: "/images/certifications/logo-fda.webp",
       alt: "U.S. Food and Drug Administration",
@@ -31,6 +32,7 @@ const certification = [
   {
     name: "Comisión Nacional de Salud Mental y Adicciones",
     url: "https://www.gob.mx/conasama/",
+    external: true,
     image: {
       src: "/images/certifications/logo-conasama.webp",
       alt: "Comisión Nacional de Salud Mental y Adicciones",
@@ -42,6 +44,7 @@ const certification = [
   {
     name: "Comisión Federal para la Protección contra Riesgos Sanitarios",
     url: "https://www.gob.mx/cofepris/",
+    external: true,
     image: {
       src: "/images/certifications/logo-cofepris.webp",
       alt: "Comisión Federal para la Protección contra Riesgos Sanitarios",
@@ -52,6 +55,7 @@ const certification = [
   {
     name: "Consejo Estatal Contra las Adicciones",
     url: "https://gobqro.gob.mx/cecaqro/",
+    external: true,
     image: {
       src: "/images/certifications/logo-ceca.webp",
       alt: "Consejo Estatal Contra las Adicciones",
@@ -63,6 +67,7 @@ const certification = [
   {
     name: "Comisión Nacional de los Derechos Humanos",
     url: "https://www.cndh.org.mx/",
+    external: true,
     image: {
       src: "/images/certifications/logo-cndh.webp",
       alt: "Comisión Nacional de los Derechos Humanos",
@@ -74,6 +79,7 @@ const certification = [
   {
     name: "Protección Civil",
     url: "https://municipiodequeretaro.gob.mx/entidades/proteccion-civil/",
+    external: true,
     image: {
       src: "/images/certifications/logo-proteccioncivil.webp",
       alt: "Protección Civil",
@@ -84,7 +90,7 @@ const certification = [
   },
 ]
 
-const whatWeTreat = [
+const whatWeTreatConfig = [
   {
     title: "whatWeTreatItem1Title",
     description: "whatWeTreatItem1Description",
@@ -107,7 +113,7 @@ const whatWeTreat = [
   },
 ]
 
-const ourPrograms = [
+const ourProgramsConfig = [
   {
     title: "ourProgramsItem1Title",
     description: "ourProgramsItem1Description",
@@ -125,11 +131,11 @@ const ourPrograms = [
   },
 ]
 
-export default function LobbyPage() {
+export default function Page() {
   const t = useTranslations("LobbyPage")
 
   return (
-    <div>
+    <>
       <div className="relative -mt-20 h-dvh overflow-hidden">
         <div className="relative z-10 h-full px-4">
           <PageHeader
@@ -137,16 +143,14 @@ export default function LobbyPage() {
             centered
           >
             <PageHeaderDescription
-              className="animate-fade-up font-header mx-auto mt-16 text-2xl tracking-tight text-white md:px-4 md:text-3xl lg:mt-0 lg:text-3xl"
+              className="heading-xl animate-fade-up mx-auto mt-16 text-white md:px-4 lg:mt-0"
               style={{ animationDelay: "0.3s", animationFillMode: "both" }}
-              size="lg"
             >
               {t("pageHeaderDescription")}
             </PageHeaderDescription>
             <PageHeaderHeading
-              className="animate-fade-up w-full text-center text-[14vw] leading-none text-white sm:text-[9vw] lg:mb-8 lg:text-[8vw] xl:text-[7vw]"
+              className="animate-fade-up font-heading w-full text-center text-[14vw] leading-none font-medium tracking-tight text-white sm:text-[9vw] lg:mb-8 lg:text-[8vw] xl:text-[7vw]"
               style={{ animationDelay: "0.2s", animationFillMode: "both" }}
-              size="lg"
             >
               {t("pageHeaderTitle")}
             </PageHeaderHeading>
@@ -171,7 +175,7 @@ export default function LobbyPage() {
       </div>
       <Shell className="relative gap-12 px-5 pt-20 pb-14 md:pt-36">
         <div className="bg-muted-foreground absolute inset-x-1/2 -top-4 h-20 w-px lg:-top-5 lg:h-26" />
-        <h2 className="heading text-h3 mx-auto max-w-6xl text-center">
+        <h2 className="heading-2xl mx-auto max-w-6xl text-center">
           {t("aboutUs")}
         </h2>
         <PageLink
@@ -186,11 +190,11 @@ export default function LobbyPage() {
         variant="sidebar"
         className="block border-t p-0 md:border-b lg:p-0"
       >
-        <div className="tag text-muted-foreground mx-auto w-full pt-4 text-center">
-          {t("certificationsTag")}
+        <div className="eyebrow text-muted-foreground mx-auto w-full pt-4 text-center">
+          {t("certificationsEyebrow")}
         </div>
         <div className="flex w-full">
-          <InfiniteMovingImages items={certification} speed="slow" />
+          <InfiniteMovingImages items={certificationConfig} speed="slow" />
         </div>
       </Shell>
       <Shell variant="vertical">
@@ -206,35 +210,33 @@ export default function LobbyPage() {
         </div>
         <div className="md:w-1/2">
           <div className="pt-12 pb-10 md:pt-7 md:pl-6">
-            <p className="tag text-muted-foreground py-3">
-              {t("whatWeTreatTitle")}
+            <p className="eyebrow text-muted-foreground py-3">
+              {t("whatWeTreatEyebrow")}
             </p>
-            <h2 className="font-header text-h2 heading">
-              {t("whatWeTreatHeading")}
-            </h2>
+            <h2 className="heading-3xl">{t("whatWeTreatHeading")}</h2>
             <div className="hidden h-94 lg:block" />
-            <p className="text-md paragraph mt-6 font-extralight text-balance lg:mt-0">
+            <p className="subtitle-md mt-6 text-balance lg:mt-0">
               {t("whatWeTreatDescription")}
             </p>
           </div>
-          <Accordion type="single" collapsible className="border-t">
-            {whatWeTreat.map((item) => (
+          <Accordion className="rounded-none border-none">
+            {whatWeTreatConfig.map((item) => (
               <AccordionItem
-                value={t(item.title)}
                 key={t(item.title)}
+                value={t(item.title)}
                 className="p-0"
               >
-                <AccordionTrigger className="px-5 py-8 text-[16px] hover:cursor-pointer md:px-10">
-                  {t(item.title)}
+                <AccordionTrigger className="px-5 py-8 md:px-10">
+                  <span className="subtitle-md font-normal">
+                    {t(item.title)}
+                  </span>
                 </AccordionTrigger>
                 <AccordionContent className="px-5 pb-8 md:px-10">
-                  <p className="text-base font-extralight">
-                    {t(item.description)}
-                  </p>
-                  <div className="border-foreground mt-5 w-fit border-b">
+                  <p className="paragraph text-base">{t(item.description)}</p>
+                  <div className="mt-5 w-fit">
                     <Link
                       href={item.slug}
-                      className="text-xs tracking-wider uppercase"
+                      className="text-sm font-medium tracking-wide uppercase"
                     >
                       {t("readMore")}
                     </Link>
@@ -248,21 +250,22 @@ export default function LobbyPage() {
       <div className="border-t">
         <Shell variant="vertical" className="flex-col-reverse">
           <div className="px-5 pt-16 pb-14 md:w-1/2 md:pt-4 md:pr-5 md:pl-0 lg:border-r">
-            <p className="tag text-muted-foreground py-3">
-              {t("howWeTreatTitle")}
+            <p className="eyebrow text-muted-foreground py-3">
+              {t("howWeTreatEyebrow")}
             </p>
-            <h2 className="font-header text-h2 heading">
-              {t("howWeTreatHeading")}
-            </h2>
+            <h2 className="heading-2xl">{t("howWeTreatHeading")}</h2>
             <div className="hidden h-94 lg:block" />
-            <p className="text-md paragraph mt-6 font-extralight text-balance lg:mt-0">
+            <p className="subtitle-md mt-6 text-balance lg:mt-0">
               {t("howWeTreatDescription1")}
             </p>
-            <p className="text-md paragraph mt-4 font-extralight text-balance">
+            <p className="subtitle-md mt-4 text-balance">
               {t("howWeTreatDescription2")}
             </p>
             <div className="border-foreground mt-5 w-fit border-b">
-              <Link href="#" className="text-xs tracking-wider uppercase">
+              <Link
+                href="#"
+                className="text-sm font-medium tracking-wide uppercase"
+              >
                 {t("treatmentPlans")}
               </Link>
             </div>
@@ -282,8 +285,8 @@ export default function LobbyPage() {
       <div className="bg-muted border-t">
         <Shell className="gap-0 pt-10 pb-16">
           <div className="space-y-5 text-center md:hidden">
-            <p className="tag uppercase">{t("ourProgramsTag")}</p>
-            <h2 className="font-header heading text-h2 text-balance">
+            <p className="eyebrow uppercase">{t("ourProgramsEyebrow")}</p>
+            <h2 className="font-header heading text-2x-large text-balance">
               {t("ourProgramsTitle")}
             </h2>
           </div>
@@ -298,23 +301,23 @@ export default function LobbyPage() {
               className="h-full w-full object-cover object-center"
             />
             <div className="absolute inset-0 hidden flex-col items-center justify-center gap-y-6 md:flex lg:px-18">
-              <p className="tag text-white uppercase">{t("ourProgramsTag")}</p>
-              <h2 className="font-header heading text-h2 text-center text-balance text-white">
+              <p className="eyebrow text-white uppercase">
+                {t("ourProgramsEyebrow")}
+              </p>
+              <h2 className="heading-3xl text-center text-balance text-white">
                 {t("ourProgramsTitle")}
               </h2>
             </div>
           </div>
           <ul className="no-scrollbar flex justify-between overflow-x-scroll pt-18 md:overflow-x-auto">
-            {ourPrograms.map((item) => (
+            {ourProgramsConfig.map((item) => (
               <li
                 key={t(item.title)}
                 className="flex-[0_0_80%] pl-8 first:pl-0 md:flex-[0_0_31.33%] md:pl-0"
               >
                 <div className="border-foreground space-y-4 border-t-2 pt-8">
-                  <h2 className="paragraph font-extralight">{t(item.title)}</h2>
-                  <p className="paragraph font-extralight">
-                    {t(item.description)}
-                  </p>
+                  <h2 className="paragraph">{t(item.title)}</h2>
+                  <p className="paragraph">{t(item.description)}</p>
                 </div>
               </li>
             ))}
@@ -328,6 +331,6 @@ export default function LobbyPage() {
           />
         </Shell>
       </div>
-    </div>
+    </>
   )
 }

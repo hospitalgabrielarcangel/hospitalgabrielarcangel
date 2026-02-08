@@ -17,13 +17,20 @@ export function SiteHeaderContent() {
             </div>
             <div className="flex flex-1 items-center justify-end gap-x-2 lg:pr-5">
               <div className="flex items-center gap-x-2">
-                <MenuButton />
+                <MenuButton
+                  className="animate-fade-down"
+                  style={{ animationDelay: "0.40s", animationFillMode: "both" }}
+                />
                 <LocaleSwitcher
                   className="animate-fade-down gap-0.5 p-2 [&>.icon]:size-5"
                   style={{ animationDelay: "0.30s", animationFillMode: "both" }}
                   withSet="1"
+                  withChevron
                 />
-                <CallToAction />
+                <CallToAction
+                  className="animate-fade-down"
+                  style={{ animationDelay: "0.20s", animationFillMode: "both" }}
+                />
               </div>
             </div>
           </div>

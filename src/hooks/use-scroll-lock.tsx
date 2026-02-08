@@ -1,7 +1,7 @@
-import { useState } from "react"
+import * as React from "react"
 
 export function useScrollLock() {
-  const [isLocked, setIsLocked] = useState(false)
+  const [isLocked, setIsLocked] = React.useState(false)
 
   const lockScroll = () => {
     const scrollBarWidth =

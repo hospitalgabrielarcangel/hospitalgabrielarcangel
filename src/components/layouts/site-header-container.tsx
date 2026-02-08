@@ -1,12 +1,12 @@
 "use client"
 
-import { useState } from "react"
+import * as React from "react"
 import type { LayoutProps } from "@/types"
 import { motion, useMotionValueEvent, useScroll } from "motion/react"
 
 export function SiteHeaderContainer({ children }: LayoutProps) {
   const { scrollYProgress } = useScroll()
-  const [isOnTop, setIsOnTop] = useState(true)
+  const [isOnTop, setIsOnTop] = React.useState(true)
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number" && scrollYProgress.get() > 0) {

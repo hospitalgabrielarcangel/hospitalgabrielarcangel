@@ -1,4 +1,4 @@
-export const serviceConfig = [
+export const treatmentConfig = [
   {
     name: "itName",
     description: "itDescription",
@@ -23,4 +23,4 @@ export const serviceConfig = [
     name: "rppName",
     description: "rppDescription",
   },
-]
+] as const

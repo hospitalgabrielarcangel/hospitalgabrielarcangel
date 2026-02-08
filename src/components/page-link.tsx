@@ -1,9 +1,10 @@
-import { ComponentProps } from "react"
+import * as React from "react"
 import { Link } from "@/i18n/routing"
+import { type VariantProps } from "class-variance-authority"
 import { useTranslations } from "next-intl"
 
 import { cn } from "@/lib/utils"
-import { Button, type ButtonProps } from "@/components/ui/button"
+import { buttonVariants } from "@/lib/variants"
 import { Icons } from "@/components/icons"
 
 const PAGE_LINK_CONFIG = [
@@ -26,8 +27,8 @@ const PAGE_LINK_CONFIG = [
 
 interface PageLinkProps
   extends
-    Omit<ComponentProps<typeof Link>, "href">,
-    Pick<ButtonProps, "size" | "variant"> {
+    Omit<React.ComponentProps<typeof Link>, "href">,
+    VariantProps<typeof buttonVariants> {
   to: (typeof PAGE_LINK_CONFIG)[number]["title"]
   withIcon?: boolean
 }
@@ -47,26 +48,26 @@ export function PageLink({
   const title = useTranslations("PageLink")(pageLink.title)
 
   return (
-    <Button
-      asChild
-      size={size}
-      variant={variant}
+    <Link
       className={cn(
         "uppercase",
-        variant === "outline" ? "[&>span]:pt-0.5" : "[&>span]:pt-px",
+        buttonVariants({
+          size,
+          variant,
+        }),
         className
       )}
+      href={pageLink.href}
+      {...props}
     >
-      <Link href={pageLink.href} {...props}>
-        {size !== "icon" ? (
-          <>
-            <span>{children || title}</span>
-            {withIcon && <pageLink.icon aria-hidden />}
-          </>
-        ) : (
-          <pageLink.icon aria-hidden />
-        )}
-      </Link>
-    </Button>
+      {size !== "icon" ? (
+        <>
+          <span>{children || title}</span>
+          {withIcon && <pageLink.icon aria-hidden />}
+        </>
+      ) : (
+        <pageLink.icon aria-hidden />
+      )}
+    </Link>
   )
 }

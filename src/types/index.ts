@@ -1,16 +1,17 @@
-import { type PropsWithChildren } from "react"
+import * as React from "react"
 
+import { type Locale } from "@/lib/constants"
 import type { Icons } from "@/components/icons"
 
 export type ContainerElementType = "div" | "section" | "article"
 
 export type HeadingElementType = "h1" | "h2" | "h3" | "h4" | "h5" | "h6"
 
-export type LayoutProps = Readonly<PropsWithChildren>
+export type LayoutProps = Readonly<React.PropsWithChildren>
 
 export interface LocaleParams {
   readonly params: Promise<{
-    locale: string
+    locale: Locale
   }>
 }
 
@@ -35,11 +36,7 @@ export interface NavItemWithChildren extends NavItem {
 
 export interface FooterItem {
   title: string
-  items: {
-    title: string
-    href: string
-    external?: boolean
-  }[]
+  items: NavItem[]
 }
 
 export type MainNavItem = NavItemWithChildren

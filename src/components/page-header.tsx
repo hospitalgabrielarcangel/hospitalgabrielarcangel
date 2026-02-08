@@ -1,10 +1,10 @@
-import { type HTMLAttributes } from "react"
+import * as React from "react"
 import { type ContainerElementType, type HeadingElementType } from "@/types"
 import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 
-interface PageHeaderProps extends HTMLAttributes<HTMLDivElement> {
+interface PageHeaderProps extends React.HTMLAttributes<HTMLDivElement> {
   as?: ContainerElementType
   centered?: boolean
   withPadding?: boolean
@@ -33,7 +33,7 @@ function PageHeader({
   )
 }
 
-const headingVariants = cva("font-header text-balance", {
+const headingVariants = cva("text-balance", {
   variants: {
     size: {
       default: "text-4xl md:text-5xl lg:text-6xl",
@@ -48,7 +48,7 @@ const headingVariants = cva("font-header text-balance", {
 
 interface PageHeaderHeadingProps
   extends
-    HTMLAttributes<HTMLHeadingElement>,
+    React.HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof headingVariants> {
   as?: HeadingElementType
 }
@@ -79,7 +79,7 @@ const descriptionVariants = cva("text-foreground/70 max-w-2xl text-balance", {
 
 interface PageHeaderDescriptionProps
   extends
-    HTMLAttributes<HTMLParagraphElement>,
+    React.HTMLAttributes<HTMLParagraphElement>,
     VariantProps<typeof descriptionVariants> {}
 
 function PageHeaderDescription({
@@ -92,7 +92,10 @@ function PageHeaderDescription({
   )
 }
 
-function PageActions({ className, ...props }: HTMLAttributes<HTMLDivElement>) {
+function PageActions({
+  className,
+  ...props
+}: React.HTMLAttributes<HTMLDivElement>) {
   return (
     <div
       className={cn(

@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl"
 import { toast } from "sonner"
 import * as z from "zod"
 
-import { serviceConfig } from "@/config/service"
+import { treatmentConfig } from "@/config/treatment"
 import { Button } from "@/components/ui/button"
 import { Field, FieldError, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
@@ -28,18 +28,29 @@ import {
 
 export function ContactForm() {
   const t = useTranslations("ContactForm")
-  const tService = useTranslations("Service")
+  const tService = useTranslations("Treatment")
+
+  const treatmentItems = treatmentConfig.map((treatment) => ({
+    value: tService(treatment.name),
+    label: tService(treatment.name),
+  }))
 
   const formSchema = z.object({
     firstName: z
       .string()
-      .min(2, t("firstNameError"))
-      .max(28, t("firstNameError")),
-    lastName: z.string().min(2, t("lastNameError")).max(28, t("lastNameError")),
-    email: z.email(t("emailError")),
-    phoneNumber: z.e164(t("phoneNumberError")),
-    service: z.string().min(1, t("serviceError")),
-    message: z.string().min(2, t("messageError")).max(100, t("messageError")),
+      .min(2, t("firstNameInputError"))
+      .max(28, t("firstNameInputError")),
+    lastName: z
+      .string()
+      .min(2, t("lastNameInputError"))
+      .max(28, t("lastNameInputError")),
+    email: z.email(t("emailInputError")),
+    phoneNumber: z.e164(t("phoneNumberInputError")),
+    treatment: z.string().min(1, t("treatmentInputError")),
+    message: z
+      .string()
+      .min(2, t("messageInputError"))
+      .max(100, t("messageInputError")),
   })
 
   const form = useForm({
@@ -48,7 +59,7 @@ export function ContactForm() {
       lastName: "",
       email: "",
       phoneNumber: "",
-      service: "",
+      treatment: "",
       message: "",
     },
     validators: {
@@ -74,6 +85,7 @@ export function ContactForm() {
 
   return (
     <div className="flex flex-col gap-y-8">
+      <h2 className="heading-lg">{t("contactFormHeading")}</h2>
       <div>
         <form
           id="contact-form"
@@ -98,7 +110,7 @@ export function ContactForm() {
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
                       aria-invalid={isInvalid}
-                      placeholder={t("firstNamePlaceholder")}
+                      placeholder={t("firstNameInputLabel")}
                       autoComplete="off"
                     />
                     {isInvalid && (
@@ -123,7 +135,7 @@ export function ContactForm() {
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
                       aria-invalid={isInvalid}
-                      placeholder={t("lastNamePlaceholder")}
+                      placeholder={t("lastNameInputLabel")}
                       autoComplete="off"
                     />
                     {isInvalid && (
@@ -148,7 +160,7 @@ export function ContactForm() {
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
                       aria-invalid={isInvalid}
-                      placeholder={t("emailPlaceholder")}
+                      placeholder={t("emailInputLabel")}
                       autoComplete="off"
                     />
                     {isInvalid && (
@@ -173,7 +185,7 @@ export function ContactForm() {
                       onBlur={field.handleBlur}
                       onChange={(e) => field.handleChange(e.target.value)}
                       aria-invalid={isInvalid}
-                      placeholder={t("phoneNumberPlaceholder")}
+                      placeholder={t("phoneNumberInputLabel")}
                       autoComplete="off"
                     />
                     {isInvalid && (
@@ -184,7 +196,7 @@ export function ContactForm() {
               }}
             />
             <form.Field
-              name="service"
+              name="treatment"
               // eslint-disable-next-line react/no-children-prop
               children={(field) => {
                 const isInvalid =
@@ -194,27 +206,30 @@ export function ContactForm() {
                     <Select
                       name={field.name}
                       value={field.state.value}
-                      onValueChange={(value) => field.handleChange(value)}
+                      onValueChange={(value) =>
+                        field.handleChange(value as string)
+                      }
                     >
                       <SelectTrigger
                         id={field.name}
+                        name={field.name}
                         onBlur={field.handleBlur}
                         aria-invalid={isInvalid}
-                        className="w-full"
+                        className="min-w-full"
                       >
-                        <SelectValue placeholder={t("servicePlaceholder")} />
+                        <SelectValue placeholder={t("treatmentInputLabel")} />
                       </SelectTrigger>
-                      <SelectContent className="z-70">
+                      <SelectContent>
                         <SelectGroup>
-                          <SelectLabel>{t("servicePlaceholder")}</SelectLabel>
-                          {serviceConfig.map((service) => {
-                            const serviceName = tService(service.name)
-                            return (
-                              <SelectItem key={serviceName} value={serviceName}>
-                                {serviceName}
-                              </SelectItem>
-                            )
-                          })}
+                          <SelectLabel>{t("treatmentInputLabel")}</SelectLabel>
+                          {treatmentItems.map((treatmentItem) => (
+                            <SelectItem
+                              key={treatmentItem.value}
+                              value={treatmentItem.value}
+                            >
+                              {treatmentItem.label}
+                            </SelectItem>
+                          ))}
                         </SelectGroup>
                       </SelectContent>
                     </Select>
@@ -240,14 +255,15 @@ export function ContactForm() {
                         value={field.state.value}
                         onBlur={field.handleBlur}
                         onChange={(e) => field.handleChange(e.target.value)}
-                        placeholder={t("messagePlaceholder")}
+                        placeholder={t("messageInputLabel")}
                         rows={6}
                         className="min-h-24 resize-none"
                         aria-invalid={isInvalid}
                       />
                       <InputGroupAddon align="block-end">
                         <InputGroupText className="tabular-nums">
-                          {field.state.value.length}/100 {t("messageChars")}
+                          {field.state.value.length}/100{" "}
+                          {t("messageInputChars")}
                         </InputGroupText>
                       </InputGroupAddon>
                     </InputGroup>
@@ -263,21 +279,10 @@ export function ContactForm() {
       </div>
       <div>
         <Field orientation="horizontal" className="gap-0.5">
-          <Button
-            className="h-11 px-8 pt-px tracking-widest uppercase"
-            type="submit"
-            form="contact-form"
-            size="lg"
-          >
+          <Button type="submit" form="contact-form" size="lg">
             {t("submitButton")}
           </Button>
-          <Button
-            className="uppercase"
-            type="button"
-            variant="link"
-            size="sm"
-            onClick={() => form.reset()}
-          >
+          <Button type="button" variant="ghost" onClick={() => form.reset()}>
             {t("resetButton")}
           </Button>
         </Field>

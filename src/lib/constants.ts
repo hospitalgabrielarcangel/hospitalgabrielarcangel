@@ -21,3 +21,9 @@ export const LOCALES = [
     nlsLang: "en_EU",
   },
 ] as const
+
+/**
+ * Supported languages `set1` code type
+ * @see {@link LOCALES} for the list of supported languages
+ */
+export type Locale = (typeof LOCALES)[number]["set1"]

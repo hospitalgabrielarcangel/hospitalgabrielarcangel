@@ -1,6 +1,19 @@
+import { Figtree, Geist, Geist_Mono } from "next/font/google"
 import localFont from "next/font/local"
 
-export const fontHeader = localFont({
+const figtree = Figtree({ subsets: ["latin"], variable: "--font-sans" })
+
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+})
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+})
+
+const recklessNeue = localFont({
   src: [
     {
       path: "../assets/fonts/reckless-neue/RecklessNeue-Thin.woff2",
@@ -38,31 +51,32 @@ export const fontHeader = localFont({
       style: "normal",
     },
   ],
-  display: "swap",
-  variable: "--font-header",
+  variable: "--font-heading",
 })
 
-export const fontSans = localFont({
-  src: [
-    {
-      path: "../assets/fonts/twk-lausanne-pan/TWKLausannePan-250.woff2",
-      weight: "250",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/twk-lausanne-pan/TWKLausannePan-300.woff2",
-      weight: "300",
-      style: "normal",
-    },
-    {
-      path: "../assets/fonts/twk-lausanne-pan/TWKLausannePan-450.woff2",
-      weight: "450",
-      style: "normal",
-    },
-  ],
-  display: "swap",
-  variable: "--font-sans",
-})
+export { figtree, geistSans, geistMono, recklessNeue }
+
+// export const fontSans = localFont({
+//   src: [
+//     {
+//       path: "../assets/fonts/twk-lausanne-pan/TWKLausannePan-250.woff2",
+//       weight: "250",
+//       style: "normal",
+//     },
+//     {
+//       path: "../assets/fonts/twk-lausanne-pan/TWKLausannePan-300.woff2",
+//       weight: "300",
+//       style: "normal",
+//     },
+//     {
+//       path: "../assets/fonts/twk-lausanne-pan/TWKLausannePan-450.woff2",
+//       weight: "450",
+//       style: "normal",
+//     },
+//   ],
+//   display: "swap",
+//   variable: "--font-sans",
+// })
 
 // export const fontSans = localFont({
 //   src: [

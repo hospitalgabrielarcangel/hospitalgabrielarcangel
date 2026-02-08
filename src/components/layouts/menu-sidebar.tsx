@@ -32,13 +32,13 @@ function MenuSidebar() {
   return (
     <Sidebar
       position="left"
-      width="full"
+      size="full"
       status={isMenuSidebarOpen}
       onClickOutside={closeSidebarMenu}
       containerClassName="z-30"
     >
       <Shell className="px-25 pt-25">
-        <h5 className="heading max-w-lg text-2xl">{t("title")}</h5>
+        <h5 className="heading-lg max-w-lg">{t("title")}</h5>
       </Shell>
     </Sidebar>
   )

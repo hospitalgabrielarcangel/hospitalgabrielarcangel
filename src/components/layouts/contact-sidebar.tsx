@@ -13,8 +13,8 @@ import {
 } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ContactForm } from "@/components/forms/contact-form"
-
-import Sidebar from "./sidebar"
+import { Icons } from "@/components/icons"
+import Sidebar from "@/components/layouts/sidebar"
 
 interface ContactSidebarStore {
   isContactSidebarOpen: boolean
@@ -38,91 +38,85 @@ function ContactSidebar() {
   return (
     <Sidebar
       position="right"
-      width="lg"
+      size="lg"
       status={isContactSidebarOpen}
       onClickOutside={closeContactSidebar}
-      containerClassName="md:rounded-l-2xl z-70"
+      containerClassName="z-70"
     >
       <div>
         <div className="flex items-center justify-between p-5">
-          <span className="font-header text-3xl tracking-tighter">
-            {t("title")}
-          </span>
+          <h2 className="heading-xl tracking-tighter">{t("title")}</h2>
           <Button
-            size="icon"
-            variant="ghost"
+            size="icon-sm"
+            variant="outline"
             className="text-muted-foreground text-lg"
             onClick={() => closeContactSidebar()}
           >
-            X
+            <Icons.close className="size-5" aria-label="Close" />
           </Button>
         </div>
-        <div className="[&>div]:[&>span]:font-header [&>div]:flex [&>div]:flex-col [&>div]:gap-y-12 [&>div]:border-t [&>div]:px-5 [&>div]:py-15 [&>div]:md:flex-row [&>div]:md:items-center [&>div]:md:justify-between [&>div]:md:gap-y-0 [&>div]:[&>span]:text-[1.7rem] [&>div]:[&>span]:leading-9 [&>div]:[&>span]:tracking-tighter">
-          <div>
-            <span className="md:w-40">{t("callUsTitle")}</span>
-            <Button
-              asChild
-              variant="link"
-              className="text-foreground hover:text-accent-foreground group flex w-fit flex-col items-start gap-y-0.5 rounded-none px-0"
-              onClick={() => closeContactSidebar()}
-            >
+        <div className="flex flex-col gap-y-12 border-t px-5 py-15 md:flex-row md:items-center md:justify-between md:gap-y-0">
+          <h2 className="heading-lg md:w-40">{t("callUsTitle")}</h2>
+          <Button
+            variant="link"
+            className="subtitle-md flex w-fit flex-col items-start gap-y-0.5 rounded-none px-0 underline underline-offset-4"
+            onClick={() => closeContactSidebar()}
+            render={
               <Link
                 href={createCallUrl(siteConfig.phoneNumbers.male)}
                 title={t("callUsLabel")}
                 aria-label={t("callUsLabel")}
                 target="_blank"
                 rel="noreferrer"
-              >
-                <span className="border-foreground group-hover:border-primary border-b text-xl">
-                  {formatPhoneNumber(siteConfig.phoneNumbers.male)}
-                </span>
-              </Link>
-            </Button>
-          </div>
-          <div>
-            <span className="md:w-40">{t("messageUsTitle")}</span>
-            <div className="space-x-4">
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                onClick={() => closeContactSidebar()}
-                className="uppercase"
-              >
+              />
+            }
+            nativeButton={false}
+          >
+            {formatPhoneNumber(siteConfig.phoneNumbers.male)}
+          </Button>
+        </div>
+        <div className="flex flex-col gap-y-12 border-t px-5 py-15 md:flex-row md:items-center md:justify-between md:gap-y-0">
+          <h2 className="heading-lg md:w-40">{t("messageUsTitle")}</h2>
+          <div className="space-x-4">
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => closeContactSidebar()}
+              className="uppercase"
+              render={
                 <Link
                   href={createEmailUrl(siteConfig.emails.contact)}
                   title={t("emailLabel")}
                   aria-label={t("emailLabel")}
                   target="_blank"
                   rel="noreferrer"
-                >
-                  Email
-                </Link>
-              </Button>
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                onClick={() => closeContactSidebar()}
-                className="uppercase"
-              >
+                />
+              }
+              nativeButton={false}
+            >
+              Email
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              onClick={() => closeContactSidebar()}
+              className="uppercase"
+              render={
                 <Link
                   href={createWhatsappUrl(siteConfig.phoneNumbers.male)}
                   title={t("callUsLabel")}
                   aria-label={t("callUsLabel")}
                   target="_blank"
                   rel="noreferrer"
-                >
-                  WhatsApp
-                </Link>
-              </Button>
-            </div>
+                />
+              }
+              nativeButton={false}
+            >
+              WhatsApp
+            </Button>
           </div>
         </div>
-        <div className="flex flex-col gap-y-5 border-t px-5 pt-15 pb-5">
-          <span className="font-header text-[1.7rem] leading-9 tracking-tighter">
-            {t("emailUsTitle")}
-          </span>
+        <div className="border-t px-5 pt-15 pb-5">
           <ContactForm />
         </div>
       </div>
@@ -130,4 +124,4 @@ function ContactSidebar() {
   )
 }
 
-export { type ContactSidebarStore, useContactSidebarStore, ContactSidebar }
+export { ContactSidebar, useContactSidebarStore, type ContactSidebarStore }

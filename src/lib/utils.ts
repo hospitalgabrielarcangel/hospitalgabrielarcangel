@@ -43,3 +43,11 @@ export function createCallUrl(phoneNumber: string) {
 export function createWhatsappUrl(phoneNumber: string, message?: string) {
   return `https://wa.me/${phoneNumber}${message ? `?text=${message.replaceAll(" ", "+")}` : ""}`
 }
+
+export function slugify(str: string) {
+  return str
+    .toLowerCase()
+    .replace(/ /g, "-")
+    .replace(/[^\w-]+/g, "")
+    .replace(/--+/g, "-")
+}

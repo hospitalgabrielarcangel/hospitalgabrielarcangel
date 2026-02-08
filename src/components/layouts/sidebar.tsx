@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect } from "react"
+import * as React from "react"
 import { type LayoutProps } from "@/types"
 import { AnimatePresence, motion } from "motion/react"
 
@@ -10,7 +10,7 @@ import { useScrollLock } from "@/hooks/use-scroll-lock"
 
 interface SidebarProps extends LayoutProps {
   position?: "right" | "left"
-  width?: "xs" | "sm" | "md" | "lg" | "xl" | "full"
+  size?: "xs" | "sm" | "md" | "lg" | "xl" | "full"
   status?: boolean
   onClickOutside?: () => void
   containerClassName?: string
@@ -28,16 +28,16 @@ const sidebarWidth = {
 export default function Sidebar({
   children,
   position = "left",
-  width = "md",
+  size = "md",
   status,
   onClickOutside,
   containerClassName,
 }: SidebarProps) {
   const { lockScroll, unlockScroll } = useScrollLock()
   const isMobile = useIsMobile()
-  const w = isMobile ? sidebarWidth.full : sidebarWidth[width]
+  const width = isMobile ? sidebarWidth.full : sidebarWidth[size]
 
-  useEffect(() => {
+  React.useEffect(() => {
     if (!status) return
     lockScroll()
     return () => unlockScroll()
@@ -49,23 +49,19 @@ export default function Sidebar({
         <div className={cn("relative overflow-hidden", containerClassName)}>
           <motion.div
             initial={{ width: "0" }}
-            animate={{
-              width: w,
-            }}
+            animate={{ width }}
             exit={{ width: "0" }}
             transition={{
               duration: 0.5,
               type: "spring",
             }}
             className={cn(
-              "bg-sidebar-accent fixed inset-y-0 z-10 overflow-x-hidden overflow-y-auto",
+              "bg-background fixed inset-y-0 z-10 overflow-x-hidden overflow-y-auto",
               position === "right" ? "right-0" : "left-0"
             )}
           >
             <div
-              style={{
-                width: w,
-              }}
+              style={{ width }}
               className={cn(
                 "absolute",
                 position === "right" ? "left-0" : "right-0"
@@ -74,17 +70,19 @@ export default function Sidebar({
               {children}
             </div>
           </motion.div>
-          <motion.div
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 0.5 }}
-            exit={{ opacity: 0 }}
-            transition={{
-              duration: 0.5,
-              type: "spring",
-            }}
-            className="fixed inset-0 bg-black"
-            onClick={() => onClickOutside && onClickOutside()}
-          />
+          {width !== "full" && !isMobile && (
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 0.5 }}
+              exit={{ opacity: 0 }}
+              transition={{
+                duration: 0.5,
+                type: "spring",
+              }}
+              className="fixed inset-0 bg-black"
+              onClick={() => onClickOutside && onClickOutside()}
+            />
+          )}
         </div>
       )}
     </AnimatePresence>

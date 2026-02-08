@@ -1,6 +1,6 @@
 "use client"
 
-import { useEffect, useEffectEvent, useRef, useState } from "react"
+import * as React from "react"
 import Image from "next/image"
 import Link from "next/link"
 
@@ -16,6 +16,7 @@ export const InfiniteMovingImages = ({
   items: {
     name: string
     url: string
+    external?: boolean
     image?: {
       src: string
       alt: string
@@ -29,10 +30,10 @@ export const InfiniteMovingImages = ({
   pauseOnHover?: boolean
   className?: string
 }) => {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const scrollerRef = useRef<HTMLUListElement>(null)
+  const containerRef = React.useRef<HTMLDivElement>(null)
+  const scrollerRef = React.useRef<HTMLUListElement>(null)
 
-  const [start, setStart] = useState(false)
+  const [start, setStart] = React.useState(false)
 
   const getDirection = () => {
     if (containerRef.current) {
@@ -62,7 +63,7 @@ export const InfiniteMovingImages = ({
     }
   }
 
-  const addAnimation = useEffectEvent(() => {
+  const addAnimation = React.useEffectEvent(() => {
     if (containerRef.current && scrollerRef.current) {
       const scrollerContent = Array.from(scrollerRef.current.children)
 
@@ -79,7 +80,7 @@ export const InfiniteMovingImages = ({
     }
   })
 
-  useEffect(() => {
+  React.useEffect(() => {
     addAnimation()
   })
 
@@ -91,15 +92,19 @@ export const InfiniteMovingImages = ({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex w-max min-w-full shrink-0 flex-nowrap items-center gap-4 py-12",
+          "pointer-events-none flex w-max min-w-full shrink-0 flex-nowrap items-center gap-x-28 gap-y-4 py-12",
           start && "animate-scroll",
           pauseOnHover && "hover:paused"
         )}
       >
         {items.map((item) => (
-          <li key={item.name}>
-            <Link href={item.url}>
-              <div className="relative max-w-full shrink-0 rounded-2xl px-12">
+          <li key={item.name} className="pointer-events-auto">
+            <Link
+              href={item.url}
+              target={item.external ? "_blank" : ""}
+              rel={item.external ? "noopener noreferrer" : ""}
+            >
+              <div className="relative max-w-full shrink-0 rounded-2xl">
                 {item.image && (
                   <span className="relative z-20">
                     <Image

@@ -24,6 +24,7 @@ export default function Manifest(): MetadataRoute.Manifest {
         src: "/icon-512x512.webp",
         sizes: "512x512",
         type: "image/webp",
+        purpose: "maskable",
       },
     ],
   }

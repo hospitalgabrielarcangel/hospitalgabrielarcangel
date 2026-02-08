@@ -8,8 +8,7 @@ import { getMessages, getTranslations } from "next-intl/server"
 
 import { siteConfig } from "@/config/site"
 import { LOCALES } from "@/lib/constants"
-import { fontHeader, fontSans } from "@/lib/fonts"
-import { cn } from "@/lib/utils"
+import { figtree, geistMono, geistSans, recklessNeue } from "@/lib/fonts"
 import { Toaster } from "@/components/ui/sonner"
 import GoogleSearchScript from "@/components/layouts/google-seacrch-script"
 import { TailwindIndicator } from "@/components/tailwind-indicator"
@@ -31,7 +30,10 @@ export async function generateMetadata({
       template: `${siteConfig.name} — %s`,
     },
     description: t("description"),
-    keywords: ["hospital el camino a gabriel arcángel"],
+    keywords: [
+      "hospital el camino a gabriel arcangel",
+      "clinica hospitalizada contra adicciones",
+    ],
     authors: siteConfig.author,
     creator: siteConfig.author.name,
     publisher: siteConfig.author.name,
@@ -85,13 +87,9 @@ export default async function RootLayout({
   const messages = await getMessages()
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={figtree.variable}>
       <body
-        className={cn(
-          "bg-background text-foreground min-h-screen scroll-smooth! font-sans",
-          fontHeader.variable,
-          fontSans.variable
-        )}
+        className={`${geistSans.variable} ${geistMono.variable} ${recklessNeue.variable} bg-background text-foreground min-h-screen scroll-smooth!`}
       >
         <NextIntlClientProvider messages={messages}>
           {children}
