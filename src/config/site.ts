@@ -6,28 +6,44 @@ import "@/lib/utils"
 
 import { createCallUrl, createEmailUrl, createWhatsappUrl } from "@/lib/utils"
 
+const genres = ["male", "female"] as const
+
 const phoneNumbers = {
   male: env.NEXT_PUBLIC_PHONE_NUMBER_MALE,
   female: env.NEXT_PUBLIC_PHONE_NUMBER_FEMALE,
 } as const
 
 const emails = {
-  contact: env.NEXT_PUBLIC_CONTACT_EMAIL,
+  male: env.NEXT_PUBLIC_CONTACT_EMAIL_MALE,
+  female: env.NEXT_PUBLIC_CONTACT_EMAIL_FEMALE,
 } as const
 
-const links = {
+const linksMale = {
   facebook: "https://www.facebook.com/ClinicaGabrielArcangelAC",
   instagram: "https://www.instagram.com/clinicagabrielarcangel",
   youtube: "https://www.youtube.com/@hospitalgabrielarcangel",
   twitter: "https://x.com/GArcangelH",
   tiktok: "https://www.tiktok.com/@hospitalgabrielarcangel",
-  whatsapp: createWhatsappUrl(phoneNumbers.male),
-  facebookFemale: "https://www.facebook.com/hospitalgabrielarcangelfemenill",
-  instagramFemale: "https://www.instagram.com/clinica.arcangel.femenil",
-  twitterFemale: "https://x.com/GArcangelHFem",
-  tiktokFemale: "https://www.tiktok.com/@gabrielarcangelfemenil",
-  whatsappFemale: createWhatsappUrl(phoneNumbers.female),
-  email: createEmailUrl(emails.contact),
+} as const
+
+const linksFemale = {
+  facebook: "https://www.facebook.com/hospitalgabrielarcangelfemenill",
+  instagram: "https://www.instagram.com/clinica.arcangel.femenil",
+  twitter: "https://x.com/GArcangelHFem",
+  tiktok: "https://www.tiktok.com/@gabrielarcangelfemenil",
+} as const
+
+const addresses = {
+  male: {
+    title: "male",
+    description: env.NEXT_PUBLIC_ADDRESS_MALE,
+    href: env.NEXT_PUBLIC_ADDRESS_LINK_MALE,
+  },
+  female: {
+    title: "female",
+    description: env.NEXT_PUBLIC_ADDRESS_FEMALE,
+    href: env.NEXT_PUBLIC_ADDRESS_LINK_FEMALE,
+  },
 } as const
 
 export const siteConfig = {
@@ -35,9 +51,12 @@ export const siteConfig = {
   description:
     "Un enfoque médico, integral y personalizado en cada etapa de la recuperación física, mental y emocional — ayudando a sanar dependencias a sustancias y adicciones",
   url: env.NEXT_PUBLIC_APP_URL,
-  links,
+  genres,
+  linksMale,
+  linksFemale,
   phoneNumbers,
   emails,
+  addresses,
   mainNav: [
     {
       title: "Inicio",
@@ -50,37 +69,37 @@ export const siteConfig = {
       items: [
         {
           title: "Facebook",
-          href: links.facebook,
+          href: linksMale.facebook,
           icon: "facebook",
           external: true,
         },
         {
           title: "Instagram",
-          href: links.instagram,
+          href: linksMale.instagram,
           icon: "instagram",
           external: true,
         },
         {
           title: "YouTube",
-          href: links.youtube,
+          href: linksMale.youtube,
           icon: "youtube",
           external: true,
         },
         {
           title: "X",
-          href: links.twitter,
+          href: linksMale.twitter,
           icon: "twitter",
           external: true,
         },
         {
           title: "TikTok",
-          href: links.tiktok,
+          href: linksMale.tiktok,
           icon: "tiktok",
           external: true,
         },
         {
           title: "Whatsapp",
-          href: links.whatsapp,
+          href: createWhatsappUrl(phoneNumbers.male),
           icon: "whatsapp",
           external: true,
         },
@@ -91,7 +110,7 @@ export const siteConfig = {
       items: [
         {
           title: "emailTitle",
-          href: createEmailUrl(emails.contact),
+          href: createEmailUrl(emails.male),
           icon: "mail",
           external: true,
         },

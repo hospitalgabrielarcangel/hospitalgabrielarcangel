@@ -20,7 +20,12 @@ export const env = createEnv({
     NEXT_PUBLIC_APP_URL: z.url(),
     NEXT_PUBLIC_PHONE_NUMBER_MALE: z.e164(),
     NEXT_PUBLIC_PHONE_NUMBER_FEMALE: z.e164(),
-    NEXT_PUBLIC_CONTACT_EMAIL: z.email(),
+    NEXT_PUBLIC_CONTACT_EMAIL_MALE: z.email(),
+    NEXT_PUBLIC_CONTACT_EMAIL_FEMALE: z.email(),
+    NEXT_PUBLIC_ADDRESS_MALE: z.string(),
+    NEXT_PUBLIC_ADDRESS_LINK_MALE: z.url(),
+    NEXT_PUBLIC_ADDRESS_FEMALE: z.string(),
+    NEXT_PUBLIC_ADDRESS_LINK_FEMALE: z.url(),
   },
   /**
    * You can't destruct `process.env` as a regular object in the Next.js edge runtimes (e.g.
@@ -32,7 +37,14 @@ export const env = createEnv({
     NEXT_PUBLIC_PHONE_NUMBER_MALE: process.env.NEXT_PUBLIC_PHONE_NUMBER_MALE,
     NEXT_PUBLIC_PHONE_NUMBER_FEMALE:
       process.env.NEXT_PUBLIC_PHONE_NUMBER_FEMALE,
-    NEXT_PUBLIC_CONTACT_EMAIL: process.env.NEXT_PUBLIC_CONTACT_EMAIL,
+    NEXT_PUBLIC_CONTACT_EMAIL_MALE: process.env.NEXT_PUBLIC_CONTACT_EMAIL_MALE,
+    NEXT_PUBLIC_CONTACT_EMAIL_FEMALE:
+      process.env.NEXT_PUBLIC_CONTACT_EMAIL_FEMALE,
+    NEXT_PUBLIC_ADDRESS_MALE: process.env.NEXT_PUBLIC_ADDRESS_MALE,
+    NEXT_PUBLIC_ADDRESS_LINK_MALE: process.env.NEXT_PUBLIC_ADDRESS_LINK_MALE,
+    NEXT_PUBLIC_ADDRESS_FEMALE: process.env.NEXT_PUBLIC_ADDRESS_FEMALE,
+    NEXT_PUBLIC_ADDRESS_LINK_FEMALE:
+      process.env.NEXT_PUBLIC_ADDRESS_LINK_FEMALE,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

@@ -85,7 +85,7 @@ function ContactSidebar() {
               className="uppercase"
               render={
                 <Link
-                  href={createEmailUrl(siteConfig.emails.contact)}
+                  href={createEmailUrl(siteConfig.emails.male)}
                   title={t("emailLabel")}
                   aria-label={t("emailLabel")}
                   target="_blank"
