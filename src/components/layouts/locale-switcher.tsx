@@ -1,8 +1,9 @@
+"use client"
+
 import * as React from "react"
-import Link from "next/link"
+import { LOCALE, usePathname, useRouter } from "@/i18n/routing"
 import { useTranslations } from "next-intl"
 
-import { LOCALES } from "@/lib/constants"
 import { cn } from "@/lib/utils"
 import { useLocale } from "@/hooks/use-locale"
 import { Button, type ButtonProps } from "@/components/ui/button"
@@ -30,13 +31,21 @@ export function LocaleSwitcher({
   withSet,
   withChevron,
 }: LocalSwitcherProps) {
+  const pathname = usePathname()
+  const router = useRouter()
   const locale = useLocale()
   const t = useTranslations("Locale")
+
   const title = t("title")
+
+  const handleLanguageChange = (nextLocale: string) => {
+    router.replace({ pathname }, { locale: nextLocale })
+  }
 
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
+        openOnHover
         render={
           <Button
             className={className}
@@ -51,21 +60,20 @@ export function LocaleSwitcher({
         {withSet && (
           <span className="title text-sm tracking-wide uppercase" aria-hidden>
             {withSet === "1"
-              ? LOCALES.find((localeItem) => localeItem.set1 === locale)!.set1
-              : LOCALES.find((localeItem) => localeItem.set1 === locale)!.set2}
+              ? LOCALE.find((localeItem) => localeItem.set1 === locale)!.set1
+              : LOCALE.find((localeItem) => localeItem.set1 === locale)!.set2}
           </span>
         )}
         {withChevron && <Icons.chevronDown aria-hidden />}
         <span className="sr-only">{title}</span>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end" className="min-w-fit">
-        {LOCALES.map((localeItem) => {
+        {LOCALE.map((localeItem) => {
           const isActive = localeItem.set1 === locale
           return (
             <DropdownMenuItem
-              className=""
               key={`locale-${localeItem.name}`}
-              render={<Link href={"/" + localeItem.set1} prefetch={false} />}
+              onClick={() => handleLanguageChange(localeItem.set1)}
             >
               <>
                 <div className="flex items-center gap-2">

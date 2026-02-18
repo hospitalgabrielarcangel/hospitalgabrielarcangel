@@ -1,13 +1,12 @@
 import type { Metadata, Viewport } from "next"
 import { notFound } from "next/navigation"
 import { env } from "@/env.mjs"
-import { routing } from "@/i18n/routing"
+import { LOCALE, routing } from "@/i18n/routing"
 import type { LayoutWithLocaleProps, LocaleParams } from "@/types"
 import { NextIntlClientProvider } from "next-intl"
 import { getMessages, getTranslations } from "next-intl/server"
 
 import { siteConfig } from "@/config/site"
-import { LOCALES } from "@/lib/constants"
 import { figtree, geistMono, geistSans, recklessNeue } from "@/lib/fonts"
 import { Toaster } from "@/components/ui/sonner"
 import GoogleSearchScript from "@/components/layouts/google-seacrch-script"
@@ -21,7 +20,7 @@ export async function generateMetadata({
   const { locale } = await params
   const t = await getTranslations({ locale, namespace: "SiteMeta" })
   const defaultLocale =
-    LOCALES.find((localeItem) => localeItem.set1 === locale) || LOCALES[0]
+    LOCALE.find((localeItem) => localeItem.set1 === locale) || LOCALE[0]
 
   return {
     metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
@@ -43,7 +42,7 @@ export async function generateMetadata({
     openGraph: {
       type: "website",
       locale: defaultLocale.nlsLang,
-      alternateLocale: LOCALES.map((localeItem) => localeItem.nlsLang).filter(
+      alternateLocale: LOCALE.map((localeItem) => localeItem.nlsLang).filter(
         (nlsLangItem) => nlsLangItem !== defaultLocale.nlsLang
       ),
       url: siteConfig.url,

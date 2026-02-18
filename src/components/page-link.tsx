@@ -15,7 +15,7 @@ const PAGE_LINK_CONFIG = [
   },
   {
     title: "aboutUs",
-    href: "#",
+    href: "about-us",
     icon: Icons.arrowRight,
   },
   {

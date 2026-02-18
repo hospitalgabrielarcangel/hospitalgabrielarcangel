@@ -13,7 +13,7 @@ export function SiteHeaderContent() {
         <Shell className="py-0 lg:py-0">
           <div className="flex h-20 w-full items-center md:px-5 lg:pr-4">
             <div className="flex items-center gap-x-2">
-              <Logomark className="h-14 md:h-16" />
+              <Logomark className="h-14" />
             </div>
             <div className="flex flex-1 items-center justify-end gap-x-2 lg:pr-5">
               <div className="flex items-center gap-x-2">
@@ -22,7 +22,7 @@ export function SiteHeaderContent() {
                   style={{ animationDelay: "0.40s", animationFillMode: "both" }}
                 />
                 <LocaleSwitcher
-                  className="animate-fade-down gap-0.5 p-2 [&>.icon]:size-5"
+                  className="animate-fade-down hidden gap-0.5 p-2 md:flex [&>.icon]:size-5"
                   style={{ animationDelay: "0.30s", animationFillMode: "both" }}
                   withSet="1"
                   withChevron

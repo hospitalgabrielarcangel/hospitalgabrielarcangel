@@ -2,6 +2,10 @@
   "SiteMeta": {
     "description": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery."
   },
+  "SiteNav": {
+    "home": "Home",
+    "aboutUs": "About us"
+  },
   "SiteFooter": {
     "author": "Built by",
     "socialTitle": "Social Media",
@@ -31,8 +35,7 @@
     "readMore": "Read more",
     "howWeTreatEyebrow": "How we treat",
     "howWeTreatHeading": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery.",
-    "howWeTreatDescription1": "At Gabriel Arcángel, we believe that a generalized approach hinders true recovery. We stand alone as the only treatment center in the world to provide a dedicated team of at least 15 professionals for every single patient.",
-    "howWeTreatDescription2": "Throughout your stay, you will be supported by a private circle of world-renowned physicians, therapists, and specialists. By merging cutting-edge medical excellence with sophisticated holistic methodologies, we address the entire spectrum of your health. From cellular biology to psychological well-being, we craft a singular path to healing—ensuring that in the most exclusive environment, your recovery is our only focus.",
+    "howWeTreatDescription": "At Gabriel Arcángel, we believe that a generalized approach hinders true recovery. We stand alone as the only treatment center in the world to provide a dedicated team of at least 15 professionals for every single patient.\nThroughout your stay, you will be supported by a private circle of world-renowned physicians, therapists, and specialists. By merging cutting-edge medical excellence with sophisticated holistic methodologies, we address the entire spectrum of your health. From cellular biology to psychological well-being, we craft a singular path to healing—ensuring that in the most exclusive environment, your recovery is our only focus.",
     "treatmentPlans": "Discover our approach",
     "ourProgramsEyebrow": "A bespoke experience",
     "ourProgramsTitle": "Your story is singular. Your recovery must be exceptional.",
@@ -42,6 +45,12 @@
     "ourProgramsItem2Description": "You are supported by a private circle of experts dedicated exclusively to your recovery. From your personal psychiatrist and primary physician to your live-in therapist and client relations team, we provide unwavering 24/7 support.",
     "ourProgramsItem3Title": "Privacy and exclusivity",
     "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process."
+  },
+  "AboutUsPage": {
+    "pageHeaderHeading": "The first step at\nGabriel Arcángel\nis the last one\nyou’ll take alone.",
+    "whoWeAreEyebrow": "Who we are",
+    "whoWeAreHeading": "We understand unequivocally that pain is universal, but recovery has to be personal.",
+    "whoWeAreDescription": "Established in 2012 in Zurich, Paracelsus Recovery was founded by the Gerber family, who pioneered the one-client-at-a-time and 360° approach to mental health and addiction treatment. We also introduced functional medicine into the field, shaping a more comprehensive and effective way to support lasting recovery.\nAs the first clinic of its kind, we provide fully personalised, interdisciplinary treatment plans with an unparalleled 15:1 team-client ratio. Our approach is truly unique because it is so deeply tailored to each individual."
   },
   "Treatment": {
     "itName": "Inpatient treatment",
@@ -91,7 +100,7 @@
     "resetButton": "Reset",
     "submitButton": "Submit"
   },
-  "Genres": {
+  "ClinicGender": {
     "male": "Male",
     "female": "Female"
   },

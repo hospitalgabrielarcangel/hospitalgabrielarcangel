@@ -1,3 +1,6 @@
+"use client"
+
+import * as React from "react"
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { useTranslations } from "next-intl"
@@ -210,12 +213,15 @@ export default function Page() {
         </div>
         <div className="md:w-1/2">
           <div className="pt-12 pb-10 md:pt-7 md:pl-6">
-            <p className="eyebrow text-muted-foreground py-3">
-              {t("whatWeTreatEyebrow")}
-            </p>
-            <h2 className="heading-3xl">{t("whatWeTreatHeading")}</h2>
-            <div className="hidden h-94 lg:block" />
-            <p className="subtitle-md mt-6 text-balance lg:mt-0">
+            <div className="relative h-164">
+              <div className="sticky top-0 -mt-20 h-fit pt-20.25">
+                <p className="eyebrow text-muted-foreground py-3">
+                  {t("whatWeTreatEyebrow")}
+                </p>
+                <h2 className="heading-3xl">{t("whatWeTreatHeading")}</h2>
+              </div>
+            </div>
+            <p className="subtitle-md mt-6 pt-8 text-balance lg:mt-0">
               {t("whatWeTreatDescription")}
             </p>
           </div>
@@ -250,17 +256,23 @@ export default function Page() {
       <div className="border-t">
         <Shell variant="vertical" className="flex-col-reverse">
           <div className="px-5 pt-16 pb-14 md:w-1/2 md:pt-4 md:pr-5 md:pl-0 lg:border-r">
-            <p className="eyebrow text-muted-foreground py-3">
-              {t("howWeTreatEyebrow")}
-            </p>
-            <h2 className="heading-2xl">{t("howWeTreatHeading")}</h2>
-            <div className="hidden h-94 lg:block" />
-            <p className="subtitle-md mt-6 text-balance lg:mt-0">
-              {t("howWeTreatDescription1")}
-            </p>
-            <p className="subtitle-md mt-4 text-balance">
-              {t("howWeTreatDescription2")}
-            </p>
+            <div className="relative h-164">
+              <div className="sticky top-0 -mt-20 h-fit pt-20.25">
+                <p className="eyebrow text-muted-foreground py-3">
+                  {t("howWeTreatEyebrow")}
+                </p>
+                <h2 className="heading-2xl text-balance">
+                  {t("howWeTreatHeading")}
+                </h2>
+              </div>
+            </div>
+            <div className="subtitle-md max-w-lg space-y-5 pt-8 text-balance">
+              {t("howWeTreatDescription")
+                .split("\n")
+                .map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+            </div>
             <div className="border-foreground mt-5 w-fit border-b">
               <Link
                 href="#"

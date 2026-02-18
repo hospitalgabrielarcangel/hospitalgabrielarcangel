@@ -1,5 +1,6 @@
 import * as React from "react"
 
+import { siteConfig } from "@/config/site"
 import type { Icons } from "@/components/icons"
 
 export type ContainerElementType = "div" | "section" | "article"
@@ -20,7 +21,7 @@ export type Icon = keyof typeof Icons
 
 export interface NavItem {
   title: string
-  href?: string
+  href: string
   active?: boolean
   disabled?: boolean
   external?: boolean
@@ -39,3 +40,5 @@ export interface FooterItem {
 }
 
 export type MainNavItem = NavItemWithChildren
+
+export type ClinicGender = (typeof siteConfig.clinicGender)[number]
