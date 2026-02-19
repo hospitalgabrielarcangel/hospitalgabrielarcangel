@@ -201,27 +201,30 @@ export default function Page() {
         </div>
       </Shell>
       <Shell variant="vertical">
-        <div className="md:w-1/2 md:py-6 md:pr-6 lg:border-r">
-          <Image
-            src="/images/whatwetreat-section.webp"
-            alt="EMT"
-            width={2160}
-            height={2880}
-            sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
-            loading="lazy"
-          />
+        <div className="md:relative md:w-1/2 md:py-6 md:pr-6 lg:border-r">
+          <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
+            <Image
+              src="/images/about-us-hero.webp"
+              alt="EMT"
+              width={2160}
+              height={2880}
+              sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
+              loading="lazy"
+              className="aspect-3/4 h-full w-full object-cover object-center"
+            />
+          </div>
         </div>
         <div className="md:w-1/2">
-          <div className="pt-12 pb-10 md:pt-7 md:pl-6">
-            <div className="relative h-164">
-              <div className="sticky top-0 -mt-20 h-fit pt-20.25">
-                <p className="eyebrow text-muted-foreground py-3">
+          <div className="px-5 pt-16 md:pt-8 md:pr-0 md:pl-6">
+            <div className="md:relative md:h-164">
+              <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
+                <p className="eyebrow text-muted-foreground pb-3">
                   {t("whatWeTreatEyebrow")}
                 </p>
                 <h2 className="heading-3xl">{t("whatWeTreatHeading")}</h2>
               </div>
             </div>
-            <p className="subtitle-md mt-6 pt-8 text-balance lg:mt-0">
+            <p className="subtitle-md py-10 text-balance">
               {t("whatWeTreatDescription")}
             </p>
           </div>
@@ -255,10 +258,10 @@ export default function Page() {
       </Shell>
       <div className="border-t">
         <Shell variant="vertical" className="flex-col-reverse">
-          <div className="px-5 pt-16 pb-14 md:w-1/2 md:pt-4 md:pr-5 md:pl-0 lg:border-r">
-            <div className="relative h-164">
-              <div className="sticky top-0 -mt-20 h-fit pt-20.25">
-                <p className="eyebrow text-muted-foreground py-3">
+          <div className="px-5 pt-16 pb-14 md:w-1/2 md:pt-8 md:pr-5 md:pl-0 lg:border-r">
+            <div className="md:relative md:h-164">
+              <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
+                <p className="eyebrow text-muted-foreground pb-3">
                   {t("howWeTreatEyebrow")}
                 </p>
                 <h2 className="heading-2xl text-balance">
@@ -266,7 +269,7 @@ export default function Page() {
                 </h2>
               </div>
             </div>
-            <div className="subtitle-md max-w-lg space-y-5 pt-8 text-balance">
+            <div className="subtitle-md max-w-lg space-y-5 py-10 text-balance">
               {t("howWeTreatDescription")
                 .split("\n")
                 .map((paragraph, index) => (
@@ -282,27 +285,30 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="pt-6 md:w-1/2 md:py-6 lg:pl-6">
-            <Image
-              src="/images/howwetreat-section.webp"
-              alt="Dental"
-              width={2160}
-              height={2700}
-              sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
-              loading="lazy"
-            />
+          <div className="md:relative md:w-1/2 md:py-6 md:pr-6">
+            <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
+              <Image
+                src="/images/howwetreat-section.webp"
+                alt="Dental"
+                width={2160}
+                height={2700}
+                sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
+                loading="lazy"
+                className="aspect-3/4 h-full w-full object-cover object-center"
+              />
+            </div>
           </div>
         </Shell>
       </div>
       <div className="bg-muted border-t">
         <Shell className="gap-0 pt-10 pb-16">
-          <div className="space-y-5 text-center md:hidden">
+          <div className="space-y-4 pb-10 text-center md:hidden">
             <p className="eyebrow uppercase">{t("ourProgramsEyebrow")}</p>
-            <h2 className="font-header heading text-2x-large text-balance">
+            <h2 className="heading-3xl text-balance">
               {t("ourProgramsTitle")}
             </h2>
           </div>
-          <div className="relative flex aspect-353/380 items-center justify-center overflow-hidden md:aspect-1360/616">
+          <div className="relative flex items-center justify-center overflow-hidden">
             <Image
               src="/images/ourprograms-section.webp"
               alt="Dental"
@@ -310,7 +316,7 @@ export default function Page() {
               height={1024}
               sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
               loading="lazy"
-              className="h-full w-full object-cover object-center"
+              className="aspect-353/380 h-full w-full object-cover object-center sm:aspect-1360/616"
             />
             <div className="absolute inset-0 hidden flex-col items-center justify-center gap-y-6 md:flex lg:px-18">
               <p className="eyebrow text-white uppercase">
