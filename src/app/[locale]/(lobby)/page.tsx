@@ -285,7 +285,7 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="md:relative md:w-1/2 md:py-6 md:pr-6">
+          <div className="md:relative md:w-1/2 md:py-6 md:pl-6">
             <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
               <Image
                 src="/images/howwetreat-section.webp"

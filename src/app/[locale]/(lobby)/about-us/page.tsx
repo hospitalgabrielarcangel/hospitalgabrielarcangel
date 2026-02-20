@@ -7,7 +7,6 @@ import { Shell } from "@/components/shell"
 export default function Page() {
   const t = useTranslations("AboutUsPage")
   const pageHeaderHeading = t("pageHeaderHeading").split("\n")
-  const whoWeAreDescription = t("whoWeAreDescription").split("\n")
 
   return (
     <>
@@ -88,7 +87,7 @@ export default function Page() {
               ))}
           </div>
         </div>
-        <div className="md:w-1/2">
+        <div className="pb-5 md:w-1/2 md:pb-0">
           <Image
             src="/images/about-us-hero.webp"
             alt="EMT"
@@ -99,6 +98,23 @@ export default function Page() {
           />
         </div>
       </Shell>
+      <section className="bg-muted px-5">
+        <div className="mx-auto max-w-4xl space-y-6 pt-20 pb-24 text-center">
+          <div className="space-y-4">
+            <p className="eyebrow text-muted-foreground">
+              {t("ourApproachEyebrow")}
+            </p>
+            <h2 className="heading-3xl">{t("ourApproachTitle")}</h2>
+          </div>
+          <div className="subtitle-md space-y-4">
+            {t("ourApproachDescription")
+              .split("\n")
+              .map((paragraph, index) => (
+                <p key={index}>{paragraph}</p>
+              ))}
+          </div>
+        </div>
+      </section>
     </>
   )
 }
