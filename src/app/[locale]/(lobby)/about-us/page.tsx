@@ -1,8 +1,52 @@
 import Image from "next/image"
 import { useTranslations } from "next-intl"
 
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 import { PageHeader, PageHeaderHeading } from "@/components/page-header"
+import { PageLink } from "@/components/page-link"
 import { Shell } from "@/components/shell"
+
+import { CertificationsCarousel } from "../_components/cerfifications-carousel"
+
+const faqsConfig = [
+  {
+    title: "faqItem1Title",
+    description: "faqItem1Description",
+  },
+  {
+    title: "faqItem2Title",
+    description: "faqItem2Description",
+  },
+  {
+    title: "faqItem3Title",
+    description: "faqItem3Description",
+  },
+  {
+    title: "faqItem4Title",
+    description: "faqItem4Description",
+  },
+  {
+    title: "faqItem5Title",
+    description: "faqItem5Description",
+  },
+  {
+    title: "faqItem6Title",
+    description: "faqItem6Description",
+  },
+  {
+    title: "faqItem7Title",
+    description: "faqItem7Description",
+  },
+  {
+    title: "faqItem8Title",
+    description: "faqItem8Description",
+  },
+]
 
 export default function Page() {
   const t = useTranslations("AboutUsPage")
@@ -36,19 +80,18 @@ export default function Page() {
           </PageHeader>
         </div>
       </div>
+      <CertificationsCarousel />
       <Shell variant="vertical" className="w-full">
-        <div className="flex flex-col md:w-1/2 md:px-[2.3dvw] md:pt-8 lg:border-r">
+        <div className="flex flex-col pt-6 md:w-1/2 md:px-[2.3dvw] md:pt-10 lg:border-r">
           <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
               <p className="eyebrow text-muted-foreground py-3">
                 {t("whoWeAreEyebrow")}
               </p>
-              <h2 className="heading-2xl text-balance">
-                {t("whoWeAreHeading")}
-              </h2>
+              <h2 className="heading-3xl">{t("whoWeAreHeading")}</h2>
             </div>
           </div>
-          <div className="subtitle-md max-w-xl space-y-5 pt-10 pb-14 text-balance md:pb-20">
+          <div className="subtitle-md max-w-xl space-y-5 pt-10 pb-14 md:pb-20">
             {t("whoWeAreDescription")
               .split("\n")
               .map((paragraph, index) => (
@@ -56,7 +99,7 @@ export default function Page() {
               ))}
           </div>
         </div>
-        <div className="bg-blue-500/50 md:w-1/2">
+        <div className="md:w-1/2">
           <Image
             src="/images/howwetreat-section.webp"
             alt="EMT"
@@ -68,18 +111,16 @@ export default function Page() {
         </div>
       </Shell>
       <Shell variant="vertical" className="w-full flex-col md:flex-row-reverse">
-        <div className="flex flex-col pt-24 md:w-1/2 md:px-[2.3dvw] md:pt-8 lg:border-r">
+        <div className="flex flex-col pt-24 md:w-1/2 md:px-[2.3dvw] md:pt-10 lg:border-r">
           <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
               <p className="eyebrow text-muted-foreground pb-3">
                 {t("whoWeTreatEyebrow")}
               </p>
-              <h2 className="heading-2xl text-balance">
-                {t("whoWeTreatHeading")}
-              </h2>
+              <h2 className="heading-3xl">{t("whoWeTreatHeading")}</h2>
             </div>
           </div>
-          <div className="subtitle-md max-w-xl space-y-5 pt-10 pb-14 text-balance md:pb-20">
+          <div className="subtitle-md max-w-xl space-y-5 pt-10 pb-14 md:pb-20">
             {t("whoWeTreatDescription")
               .split("\n")
               .map((paragraph, index) => (
@@ -104,7 +145,7 @@ export default function Page() {
             <p className="eyebrow text-muted-foreground">
               {t("ourApproachEyebrow")}
             </p>
-            <h2 className="heading-3xl">{t("ourApproachTitle")}</h2>
+            <h2 className="heading-3xl">{t("ourApproachHeading")}</h2>
           </div>
           <div className="subtitle-md space-y-4">
             {t("ourApproachDescription")
@@ -112,6 +153,43 @@ export default function Page() {
               .map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
               ))}
+          </div>
+        </div>
+      </section>
+      <section className="flex flex-col px-5 py-20 md:flex-row md:px-0">
+        <div className="flex flex-col pb-8 md:w-2/5 md:px-[2.3dvw] md:pb-0">
+          <div className="relative max-w-lg grow">
+            <div className="sticky top-0 -mt-20 h-fit pt-20.25">
+              <p className="eyebrow text-muted-foreground py-3">FAQS</p>
+              <h2 className="heading-3xl">{t("faqsHeading")}</h2>
+            </div>
+          </div>
+        </div>
+        <div className="md:w-3/5 md:pr-[2.3dvw]">
+          <Accordion className="rounded-none border-none">
+            {faqsConfig.map((item) => (
+              <AccordionItem key={t(item.title)} value={t(item.title)}>
+                <AccordionTrigger className="py-8">
+                  <h3 className="subtitle-md font-normal">{t(item.title)}</h3>
+                </AccordionTrigger>
+                <AccordionContent className="sapce-y-4 pb-8">
+                  {t(item.description)
+                    .split("\n")
+                    .map((paragraph, index) => (
+                      <p className="paragraph max-w-2xl text-base" key={index}>
+                        {paragraph}
+                      </p>
+                    ))}
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
+          <div className="py-20">
+            <h2 className="heading-xl max-w-sm">{t("faqFooterHeading")}</h2>
+            <p className="paragraph pt-10 italic">
+              {t("faqFooterDescription")}
+            </p>
+            <PageLink className="pt-10" to="contact" variant="link" />
           </div>
         </div>
       </section>

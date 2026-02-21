@@ -1,6 +1,3 @@
-"use client"
-
-import * as React from "react"
 import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { useTranslations } from "next-intl"
@@ -11,7 +8,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { InfiniteMovingImages } from "@/components/layouts/infinite-moving-images"
 import {
   PageHeader,
   PageHeaderDescription,
@@ -20,78 +16,7 @@ import {
 import { PageLink } from "@/components/page-link"
 import { Shell } from "@/components/shell"
 
-const certificationConfig = [
-  {
-    name: "U.S. Food and Drug Administration",
-    url: "https://www.fda.gov/",
-    external: true,
-    image: {
-      src: "/images/certifications/logo-fda.webp",
-      alt: "U.S. Food and Drug Administration",
-      width: 3840,
-      height: 2160,
-    },
-  },
-  {
-    name: "Comisión Nacional de Salud Mental y Adicciones",
-    url: "https://www.gob.mx/conasama/",
-    external: true,
-    image: {
-      src: "/images/certifications/logo-conasama.webp",
-      alt: "Comisión Nacional de Salud Mental y Adicciones",
-      width: 512,
-      height: 271,
-      className: "h-36",
-    },
-  },
-  {
-    name: "Comisión Federal para la Protección contra Riesgos Sanitarios",
-    url: "https://www.gob.mx/cofepris/",
-    external: true,
-    image: {
-      src: "/images/certifications/logo-cofepris.webp",
-      alt: "Comisión Federal para la Protección contra Riesgos Sanitarios",
-      width: 1158,
-      height: 282,
-    },
-  },
-  {
-    name: "Consejo Estatal Contra las Adicciones",
-    url: "https://gobqro.gob.mx/cecaqro/",
-    external: true,
-    image: {
-      src: "/images/certifications/logo-ceca.webp",
-      alt: "Consejo Estatal Contra las Adicciones",
-      width: 540,
-      height: 540,
-      className: "h-38",
-    },
-  },
-  {
-    name: "Comisión Nacional de los Derechos Humanos",
-    url: "https://www.cndh.org.mx/",
-    external: true,
-    image: {
-      src: "/images/certifications/logo-cndh.webp",
-      alt: "Comisión Nacional de los Derechos Humanos",
-      width: 240,
-      height: 95,
-      className: "h-24",
-    },
-  },
-  {
-    name: "Protección Civil",
-    url: "https://municipiodequeretaro.gob.mx/entidades/proteccion-civil/",
-    external: true,
-    image: {
-      src: "/images/certifications/logo-proteccioncivil.webp",
-      alt: "Protección Civil",
-      width: 800,
-      height: 303,
-      className: "h-24",
-    },
-  },
-]
+import { CertificationsCarousel } from "./_components/cerfifications-carousel"
 
 const whatWeTreatConfig = [
   {
@@ -155,7 +80,7 @@ export default function Page() {
               className="animate-fade-up font-heading w-full text-center text-[14vw] leading-none font-medium tracking-tight text-white sm:text-[9vw] lg:mb-8 lg:text-[8vw] xl:text-[7vw]"
               style={{ animationDelay: "0.2s", animationFillMode: "both" }}
             >
-              {t("pageHeaderTitle")}
+              {t("pageHeaderHeading")}
             </PageHeaderHeading>
           </PageHeader>
         </div>
@@ -189,17 +114,7 @@ export default function Page() {
           withIcon
         />
       </Shell>
-      <Shell
-        variant="sidebar"
-        className="block border-t p-0 md:border-b lg:p-0"
-      >
-        <div className="eyebrow text-muted-foreground mx-auto w-full pt-4 text-center">
-          {t("certificationsEyebrow")}
-        </div>
-        <div className="flex w-full">
-          <InfiniteMovingImages items={certificationConfig} speed="slow" />
-        </div>
-      </Shell>
+      <CertificationsCarousel />
       <Shell variant="vertical">
         <div className="md:relative md:w-1/2 md:py-6 md:pr-6 lg:border-r">
           <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
@@ -224,9 +139,7 @@ export default function Page() {
                 <h2 className="heading-3xl">{t("whatWeTreatHeading")}</h2>
               </div>
             </div>
-            <p className="subtitle-md py-10 text-balance">
-              {t("whatWeTreatDescription")}
-            </p>
+            <p className="subtitle-md py-10">{t("whatWeTreatDescription")}</p>
           </div>
           <Accordion className="rounded-none border-none">
             {whatWeTreatConfig.map((item) => (
@@ -264,12 +177,10 @@ export default function Page() {
                 <p className="eyebrow text-muted-foreground pb-3">
                   {t("howWeTreatEyebrow")}
                 </p>
-                <h2 className="heading-2xl text-balance">
-                  {t("howWeTreatHeading")}
-                </h2>
+                <h2 className="heading-3xl">{t("howWeTreatHeading")}</h2>
               </div>
             </div>
-            <div className="subtitle-md max-w-lg space-y-5 py-10 text-balance">
+            <div className="subtitle-md max-w-lg space-y-5 py-10">
               {t("howWeTreatDescription")
                 .split("\n")
                 .map((paragraph, index) => (
@@ -304,9 +215,7 @@ export default function Page() {
         <Shell className="gap-0 pt-10 pb-16">
           <div className="space-y-4 pb-10 text-center md:hidden">
             <p className="eyebrow uppercase">{t("ourProgramsEyebrow")}</p>
-            <h2 className="heading-3xl text-balance">
-              {t("ourProgramsTitle")}
-            </h2>
+            <h2 className="heading-3xl">{t("ourProgramsTitle")}</h2>
           </div>
           <div className="relative flex items-center justify-center overflow-hidden">
             <Image
@@ -322,7 +231,7 @@ export default function Page() {
               <p className="eyebrow text-white uppercase">
                 {t("ourProgramsEyebrow")}
               </p>
-              <h2 className="heading-3xl text-center text-balance text-white">
+              <h2 className="heading-3xl text-center text-white">
                 {t("ourProgramsTitle")}
               </h2>
             </div>

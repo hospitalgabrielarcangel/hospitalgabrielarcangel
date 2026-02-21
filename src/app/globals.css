@@ -236,14 +236,14 @@
   .heading-2xl,
   .heading-3xl,
   .heading-4xl {
-    @apply font-heading leading-[1.2] tracking-tighter antialiased;
+    @apply font-heading leading-[1.2] tracking-tighter text-balance antialiased;
   }
 
   .paragraph,
   .subtitle-md,
   .subtitle-lg,
   .subtitle-xl {
-    @apply leading-[1.4] font-normal tracking-tight;
+    @apply leading-[1.4] font-normal tracking-tight text-balance;
   }
 
   .heading-md,

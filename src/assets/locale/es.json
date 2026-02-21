@@ -15,12 +15,11 @@
     "whatsappTitle": "WhatsApp"
   },
   "LobbyPage": {
-    "pageHeaderTitle": "Clínica Hospitalizada Contra Adicciones",
+    "pageHeaderHeading": "Clínica Hospitalizada Contra Adicciones",
     "pageHeaderDescription": "Un enfoque médico, integral y personalizado en cada etapa de la recuperación física, mental y emocional.",
     "pageHeaderLabel": "Clínica Hospitalizada Contra Adicciones",
     "pageHeaderAction": "Contáctanos",
     "aboutUs": "Entendemos que cada proceso de recuperación es tan único como la historia de quien lo vive. Por eso, en nuestra clínica integramos la ciencia, la tecnología y el acompañamiento humano para ofrecer una atención verdaderamente integral. A través de terapias individuales y grupales, tratamiento psiquiátrico especializado, y apoyo continuo, ayudamos a reducir los síntomas de abstinencia, prevenir recaídas y fortalecer la estabilidad emocional.",
-    "certificationsEyebrow": "Certificados por",
     "whatWeTreatEyebrow": "Lo que tratamos",
     "whatWeTreatHeading": "En Gabriel Arcángel, comienza el camino hacia tu recuperación.",
     "whatWeTreatDescription": "Sabemos que el peso de la adicción no solo lo carga quien la padece, sino quienes lo acompañan día tras día. Independientemente de la historia que los haya traído hasta aquí, estamos listos para que dejen de luchar en soledad. Con décadas de experiencia atendiendo a perfiles de alto nivel, ofrecemos un entorno de máxima privacidad y exclusividad donde su ser querido recibirá la atención científica y humana que merece.",
@@ -55,8 +54,27 @@
     "whoWeTreatHeading": "Sin importar quién seas, estamos aquí para ti.",
     "whoWeTreatDescription": "En nuestra clínica hospitalizada contra adicciones, reconocida como discreta, cómoda y altamente especializada, hemos tenido el privilegio de tratar a miles de personas de todo tipo, sin importar su posición social, condición, edad, género, origen o creencias.\nTratamos a una sola persona a la vez. Por eso, sin importar cómo vivas, lo que hayas vivido, quién seas o hacia dónde quieras ir, el tratamiento en Gabriel Arcángel te ayudará no solo a ver con claridad todo lo que has logrado, sino también a descubrir con confianza el camino que aún tienes por delante.",
     "ourApproachEyebrow": "Nuestro enfoque",
-    "ourApproachTitle": "Comprometidos con la excelencia",
-    "ourApproachDescription": "Somos la única clínica hospitalizada contra adicciones en Querétaro que trabaja con profesionales en la salud mental y tecnología de vanguardia. Durante su estancia, contará con el acompañamiento de un equipo de médicos, terapeutas y especialistas certificados, todos trabajando de forma coordinada para ofrecer el más alto estándar de atención.\nCon el fin de garantizar tratamientos verdaderamente avanzados y efectivos, hemos reunido a un equipo líder de expertos médicos y terapeutas que trabajan de manera personalizada, uno a uno, con cada paciente. Integramos los últimos avances científicos en nuestro enfoque terapéutico como la Estimulación Magnética Transcraneal y la Sueroterapia, los cuales ayudan en la desintoxicación y recuperación efectiva de nuestros pacientes.\nContaras con un equipo de apoyo disponible las 24 horas y especialistas que te atenderán cuando lo necesites, no importa el día o la hora. Todo ha sido diseñado para garantizar discreción absoluta, el máximo confort y un acompañamiento constante a lo largo de tu proceso de recuperación."
+    "ourApproachHeading": "Comprometidos con la excelencia",
+    "ourApproachDescription": "Somos la única clínica hospitalizada contra adicciones en Querétaro que trabaja con profesionales en la salud mental y tecnología de vanguardia. Durante su estancia, contará con el acompañamiento de un equipo de médicos, terapeutas y especialistas certificados, todos trabajando de forma coordinada para ofrecer el más alto estándar de atención.\nCon el fin de garantizar tratamientos verdaderamente avanzados y efectivos, hemos reunido a un equipo líder de expertos médicos y terapeutas que trabajan de manera personalizada, uno a uno, con cada paciente. Integramos los últimos avances científicos en nuestro enfoque terapéutico como la Estimulación Magnética Transcraneal y la Sueroterapia, los cuales ayudan en la desintoxicación y recuperación efectiva de nuestros pacientes.\nContaras con un equipo de apoyo disponible las 24 horas y especialistas que te atenderán cuando lo necesites, no importa el día o la hora. Todo ha sido diseñado para garantizar discreción absoluta, el máximo confort y un acompañamiento constante a lo largo de tu proceso de recuperación.",
+    "faqsHeading": "¿Tienes dudas? Permítenos ayudarte.",
+    "faqItem1Title": "¿Quién es el fundador de Gabriel Arcángel?",
+    "faqItem1Description": "Junto con su familia, César Salazar fundó Gabriel Arcángel en 2016.",
+    "faqItem2Title": "¿Quién es el CEO de Gabriel Arcángel?",
+    "faqItem2Description": "César Salazar se mantiene como CEO y Fundador. Cuenta con una amplia trayectoria en la industria de servicios de la salud mental, habiéndose desempeñado como consultor y gerente en diversas instituciones de servicios de salud mental antes de fundar Gabriel Arcángel.",
+    "faqItem3Title": "¿Cómo funciona el modelo de un solo paciente a la vez?",
+    "faqItem3Description": "Nuestra filosofía de un solo paciente a la vez garantiza un nivel de dedicación incondicional. Durante su estancia, todo nuestro equipo interdisciplinario —desde médicos especialistas y terapeutas hasta nutricionistas— se enfoca exclusivamente en su recuperación. Al dedicar varias horas diarias de interacción intensiva y personalizada, cultivamos un santuario de seguridad y comprensión. Este enfoque inmersivo nos permite lograr en un solo mes lo que los entornos clínicos tradicionales suelen tardar años en alcanzar.",
+    "faqItem4Title": "¿Cómo redefine Gabriel Arcángel la experiencia clínica?",
+    "faqItem4Description": "Lo que nos distingue es la profunda calidad del cuidado y la atención personal incondicional que brindamos. Nuestra filosofía integra a la perfección la precisión médica con terapias holísticas basadas en evidencia. Cada aspecto de su proceso es meticulosamente diseñado a su medida, dentro de un entorno definido por la privacidad absoluta, el apoyo integral y la discreción.",
+    "faqItem5Title": "¿Dónde se encuentra la sede principal de Gabriel Arcángel?",
+    "faqItem5Description": "Nuestra sede principal se encuentra en Querétaro, México.",
+    "faqItem6Title": "¿Qué tipo de padecimientos trata Gabriel Arcángel?",
+    "faqItem6Description": "Tratamos la adicción, el agotamiento (burnout), la depresión, la ansiedad, el trauma y otros desafíos de salud mental mediante una combinación integral de terapias personalizadas basadas en evidencia. Trabajamos con tecnología avanzada como la Estimulación Magnética Transcraneal (EMT) para el tratamiento de trastornos neuropsiquiátricos y neurológicos.",
+    "faqItem7Title": "¿Qué hace que el enfoque de tratamiento de Paracelsus Recovery sea único?",
+    "faqItem7Description": "Lo que distingue a Gabriel Arcángel es nuestro modelo de un solo paciente a la vez, combinado con una excelencia médica inigualable. Cada paciente recibe un plan de tratamiento totalmente personalizado, diseñado y supervisado por un equipo dedicado de médicos, psiquiatras, terapeutas y especialistas.\nIntegramos ciencia médica y tecnología de vanguardia con psicoterapias basadas en evidencia, terapias holísticas e intervenciones de estilo de vida, abordando no solo los síntomas, sino las causas fundamentales de la adicción, el trauma, el estrés y los desafíos de salud mental. Nuestro enfoque combina precisión, compasión y profundidad, asegurando que cada paciente reciba el enfoque total de nuestro equipo.\nAl fusionar el rigor médico, tecnología de vanguardia, terapias innovadoras y un entorno de privacidad y cuidado, creamos un espacio donde los pacientes pueden sanar, crecer y lograr una recuperación duradera de una manera verdaderamente excepcional.",
+    "faqItem8Title": "¿Cómo puedo contactar a Gabriel Arcángel?",
+    "faqItem8Description": "Puede ponerse en contacto con nosotros a través de la sección de contacto de nuestro sitio web, ahí encontrará las opciones para llamada telefónica, WhatsApp, correo electrónico o puedes utilizar nuestro formulario web.",
+    "faqFooterHeading": "¿Necesita más ayuda? Estamos aquí para usted.",
+    "faqFooterDescription": "No existen preguntas insignificantes o innecesarias cuando se trata de determinar si nuestros programas de tratamiento son la opción adecuada para usted. Por lo tanto, si tiene dudas que no han sido resueltas aquí, por favor contáctenos. Nuestro equipo de atención al cliente está disponible las 24 horas, los 7 días de la semana, para una conversación confidencial y sin compromiso."
   },
   "Treatment": {
     "itName": "Tratamiento residencial",
@@ -72,13 +90,17 @@
     "rppName": "Plan de prevención de recaídas",
     "rppDescription": "Aprende a reconocer y dominar las situaciones que ponen en riesgo tu recuperación. Trabajamos contigo para detectar emociones o entornos peligrosos y crear respuestas efectivas que eviten recaídas. Sal de nuestra clínica con un plan de acción claro y las habilidades necesarias para proteger tu bienestar cada día."
   },
+  "CertificationsCarousel": {
+    "certificationsEyebrow": "Certificados por"
+  },
   "CallToAction": {
     "contact": "Contacto"
   },
   "PageLink": {
     "home": "Inicio",
     "aboutUs": "Sobre nosotros",
-    "ourPrograms": "Ver nuestros programas"
+    "ourPrograms": "Ver nuestros programas",
+    "contact": "Estamos para escucharte"
   },
   "ContactSidebar": {
     "title": "¿Cómo podemos ayudarte?",

@@ -15,12 +15,11 @@
     "whatsappTitle": "WhatsApp"
   },
   "LobbyPage": {
-    "pageHeaderTitle": "Inpatient Addiction Treatment Clinic",
+    "pageHeaderHeading": "Inpatient Addiction Treatment Clinic",
     "pageHeaderDescription": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery.",
     "pageHeaderLabel": "Inpatient Addiction Treatment Clinic",
     "pageHeaderAction": "Contact us",
     "aboutUs": "We understand that every recovery process is as unique as the story of the person experiencing it. That's why our clinic combines science, technology, and human care to provide truly comprehensive treatment. Through individual and group therapy, specialized psychiatric care, and continuous support, we help reduce withdrawal symptoms, prevent relapses, and strengthen emotional stability.",
-    "certificationsEyebrow": "Certified by",
     "whatWeTreatEyebrow": "What we treat",
     "whatWeTreatHeading": "The journey to your recovery begins at Gabriel Arcángel.",
     "whatWeTreatDescription": "We understand that the burden of addiction is carried not only by the individual, but also by those who stand by them day after day. Regardless of the journey that brought you here, we are ready to ensure you no longer fight this battle alone. With decades of experience serving high-profile clients, we provide an environment of utmost privacy and exclusivity, where your loved one will receive the clinical excellence and compassionate care they deserve.",
@@ -55,8 +54,27 @@
     "whoWeTreatHeading": "No matter who you are, we are here for you.",
     "whoWeTreatDescription": "At our renowned, discreet, and highly specialized inpatient treatment center, we have had the privilege of treating thousands of individuals from all walks of life, regardless of their social standing, condition, age, gender, background, or beliefs.\nWe treat only one person at a time. Therefore, no matter how you live, what you have been through, who you are, or where you want to go in life, treatment at Gabriel Arcángel will help you see clearly not only how far you have come but also discover with confidence the path that lies ahead.",
     "ourApproachEyebrow": "Our approach",
-    "ourApproachTitle": "Committed to excellence",
-    "ourApproachDescription": "We are the only inpatient addiction treatment center in Querétaro that integrates mental health professionals with cutting-edge technology. Throughout your stay, you will be accompanied by a coordinated team of certified doctors, therapists, and specialists, all working together to deliver the highest standard of care.\nTo ensure truly advanced and effective treatment, we have assembled a leading team of medical experts and therapists who work one-on-one with each patient. Our therapeutic approach incorporates the latest scientific breakthroughs, such as Transcranial Magnetic Stimulation (TMS) and IV Nutrient Therapy, facilitating effective detoxification and recovery.\nYou will have a 24/7 support team and specialists available whenever you need them, regardless of the day or hour. Every detail has been designed to guarantee absolute discretion, maximum comfort, and constant guidance throughout your recovery journey."
+    "ourApproachHeading": "Committed to excellence",
+    "ourApproachDescription": "We are the only inpatient addiction treatment center in Querétaro that integrates mental health professionals with cutting-edge technology. Throughout your stay, you will be accompanied by a coordinated team of certified doctors, therapists, and specialists, all working together to deliver the highest standard of care.\nTo ensure truly advanced and effective treatment, we have assembled a leading team of medical experts and therapists who work one-on-one with each patient. Our therapeutic approach incorporates the latest scientific breakthroughs, such as Transcranial Magnetic Stimulation (TMS) and IV Nutrient Therapy, facilitating effective detoxification and recovery.\nYou will have a 24/7 support team and specialists available whenever you need them, regardless of the day or hour. Every detail has been designed to guarantee absolute discretion, maximum comfort, and constant guidance throughout your recovery journey.",
+    "faqsHeading": "Have questions? Let us help.",
+    "faqItem1Title": "Who is the founder of Gabriel Arcángel?",
+    "faqItem1Description": "Together with his family, César Salazar founded Gabriel Arcángel in 2016.",
+    "faqItem2Title": "Who is the CEO of Gabriel Arcángel?",
+    "faqItem2Description": "César Salazar remains CEO and Founder. He has an extensive background in the mental health services industry, having served as a consultant and manager at various mental health institutions prior to founding Gabriel Arcángel.",
+    "faqItem3Title": "How does the one client at a time model work?",
+    "faqItem3Description": "Our one patient at a time philosophy ensures an uncompromising level of dedication. During your stay, our entire interdisciplinary team—from specialized physicians and therapists to nutritionists—is focused exclusively on your recovery. By dedicating several hours of intensive, one-on-one interaction daily, we cultivate a sanctuary of safety and understanding. This immersive approach allows us to achieve in a single month what traditional clinical settings often take years to accomplish.",
+    "faqItem4Title": "How does Gabriel Arcángel redefine the clinical experience?",
+    "faqItem4Description": "What sets us apart is the profound depth of care and the uncompromising personal attention we provide. Our philosophy seamlessly integrates medical precision with holistic, evidence-based therapies. Every aspect of your journey is meticulously tailored to you, within an environment defined by absolute privacy, nurturing support, and discretion.",
+    "faqItem5Title": "Where are Gabriel Arcángel’s headquarters located?",
+    "faqItem5Description": "Our headquarters are located in Queretaro, Mexico.",
+    "faqItem6Title": "What types of conditions does Gabriel Arcángel treat?",
+    "faqItem6Description": "We treat addiction, burnout, depression, anxiety, trauma, and other mental health challenges through a comprehensive blend of tailored, evidence-based therapies. We utilize advanced technology, such as Transcranial Magnetic Stimulation (TMS), for the treatment of neuropsychiatric and neurological disorders.",
+    "faqItem7Title": "What sets Gabriel Arcángel’s treatment approach apart?",
+    "faqItem7Description": "What sets Gabriel Arcángel apart is our one-patient-at-a-time model, combined with unparalleled medical excellence. Every patient receives a fully personalized treatment plan, designed and overseen by a dedicated team of doctors, psychiatrists, therapists, and specialists.\nWe integrate cutting-edge medical science and technology with evidence-based psychotherapies, holistic therapies, and lifestyle interventions, addressing not only the symptoms but the root causes of addiction, trauma, stress, and mental health challenges. Our approach combines precision, compassion, and depth, ensuring that each patient receives the full focus of our team.\nBy merging medical rigor, state-of-the-art technology, innovative therapies, and an environment of privacy and care, we create a space where patients can heal, grow, and achieve lasting recovery in a truly exceptional way.",
+    "faqItem8Title": "How can I contact Gabriel Arcángel?",
+    "faqItem8Description": "You can reach us through the contact section of our website, where you will find options for phone calls, WhatsApp, and email, or you may use our online inquiry form.",
+    "faqFooterHeading": "Need more help? We’re here for you.",
+    "faqFooterDescription": "There are no silly or unnecessary questions when it comes to figuring out if our treatment programmes are the right fit for you. So, if you have questions that are not covered here, please reach out. Our client relations team are available 24/7 for a confidential, obligation-free conversation."
   },
   "Treatment": {
     "itName": "Inpatient treatment",
@@ -72,13 +90,17 @@
     "rppName": "Relapse prevention plan",
     "rppDescription": "Learn to recognize and master the situations that put your recovery at risk. We work with you to detect high-risk emotions or environments and create effective responses to prevent relapse. Leave our facility with a clear action plan and the skills necessary to protect your well-being every single day."
   },
+  "CertificationsCarousel": {
+    "certificationsEyebrow": "Certified by"
+  },
   "CallToAction": {
     "contact": "Contact"
   },
   "PageLink": {
     "home": "Home",
     "aboutUs": "About us",
-    "ourPrograms": "See our programs"
+    "ourPrograms": "See our programs",
+    "contact": "We’re here to talk"
   },
   "ContactSidebar": {
     "title": "How can we help?",

@@ -23,6 +23,11 @@ const PAGE_LINK_CONFIG = [
     href: "#",
     icon: Icons.arrowRight,
   },
+  {
+    title: "contact",
+    href: "#",
+    icon: Icons.arrowRight,
+  },
 ] as const
 
 interface PageLinkProps
@@ -55,6 +60,7 @@ export function PageLink({
           size,
           variant,
         }),
+        variant === "link" ? "px-0 underline underline-offset-4" : "",
         className
       )}
       href={pageLink.href}
