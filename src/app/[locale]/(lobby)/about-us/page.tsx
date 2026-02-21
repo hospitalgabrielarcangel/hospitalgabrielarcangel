@@ -36,9 +36,9 @@ export default function Page() {
           </PageHeader>
         </div>
       </div>
-      <Shell variant="vertical" className="w-full pt-10 md:p-8">
+      <Shell variant="vertical" className="w-full">
         <div className="flex flex-col md:w-1/2 md:px-[2.3dvw] md:pt-8 lg:border-r">
-          <div className="relative grow">
+          <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
               <p className="eyebrow text-muted-foreground py-3">
                 {t("whoWeAreEyebrow")}
@@ -48,7 +48,7 @@ export default function Page() {
               </h2>
             </div>
           </div>
-          <div className="subtitle-md max-w-lg space-y-5 pt-10 pb-14 text-balance md:pb-20">
+          <div className="subtitle-md max-w-xl space-y-5 pt-10 pb-14 text-balance md:pb-20">
             {t("whoWeAreDescription")
               .split("\n")
               .map((paragraph, index) => (
@@ -56,7 +56,7 @@ export default function Page() {
               ))}
           </div>
         </div>
-        <div className="md:w-1/2">
+        <div className="bg-blue-500/50 md:w-1/2">
           <Image
             src="/images/howwetreat-section.webp"
             alt="EMT"
@@ -69,18 +69,18 @@ export default function Page() {
       </Shell>
       <Shell variant="vertical" className="w-full flex-col md:flex-row-reverse">
         <div className="flex flex-col pt-24 md:w-1/2 md:px-[2.3dvw] md:pt-8 lg:border-r">
-          <div className="relative grow">
+          <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
               <p className="eyebrow text-muted-foreground pb-3">
-                {t("whoWeAreEyebrow")}
+                {t("whoWeTreatEyebrow")}
               </p>
               <h2 className="heading-2xl text-balance">
-                {t("whoWeAreHeading")}
+                {t("whoWeTreatHeading")}
               </h2>
             </div>
           </div>
-          <div className="subtitle-md max-w-lg space-y-5 pt-10 pb-14 text-balance md:pb-20">
-            {t("whoWeAreDescription")
+          <div className="subtitle-md max-w-xl space-y-5 pt-10 pb-14 text-balance md:pb-20">
+            {t("whoWeTreatDescription")
               .split("\n")
               .map((paragraph, index) => (
                 <p key={index}>{paragraph}</p>
