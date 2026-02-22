@@ -14,7 +14,6 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 import { PageLink } from "@/components/page-link"
-import { Shell } from "@/components/shell"
 
 import { CertificationsCarousel } from "./_components/cerfifications-carousel"
 
@@ -64,11 +63,12 @@ export default function Page() {
 
   return (
     <>
-      <div className="relative -mt-20 h-dvh overflow-hidden">
+      <section className="relative -mt-20 h-dvh overflow-hidden">
         <div className="relative z-10 h-full px-4">
           <PageHeader
             className="flex h-full max-w-full justify-between gap-0 py-8"
             centered
+            as="div"
           >
             <PageHeaderDescription
               className="heading-xl animate-fade-up mx-auto mt-16 text-white md:px-4 lg:mt-0"
@@ -100,8 +100,8 @@ export default function Page() {
             <source src="/video/video-home.mp4" type="video/mp4" />
           </video>
         </div>
-      </div>
-      <Shell className="relative gap-12 px-5 pt-20 pb-14 md:pt-36">
+      </section>
+      <section className="relative grid items-center gap-12 px-5 pt-20 pb-14 md:pt-36">
         <div className="bg-muted-foreground absolute inset-x-1/2 -top-4 h-20 w-px lg:-top-5 lg:h-26" />
         <h2 className="heading-2xl mx-auto max-w-6xl text-center">
           {t("aboutUs")}
@@ -113,9 +113,9 @@ export default function Page() {
           className="mx-auto w-fit"
           withIcon
         />
-      </Shell>
+      </section>
       <CertificationsCarousel className="border-t md:border-b" />
-      <Shell variant="vertical">
+      <section className="container flex flex-col items-stretch md:flex-row">
         <div className="md:relative md:w-1/2 md:py-6 md:pr-6 lg:border-r">
           <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
             <Image
@@ -168,9 +168,9 @@ export default function Page() {
             ))}
           </Accordion>
         </div>
-      </Shell>
-      <div className="border-t">
-        <Shell variant="vertical" className="flex-col-reverse">
+      </section>
+      <section className="border-t">
+        <div className="container flex flex-col-reverse items-stretch md:flex-row">
           <div className="pt-16 pb-14 md:w-1/2 md:pt-8 md:pr-5 lg:border-r">
             <div className="md:relative md:h-164">
               <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
@@ -209,10 +209,10 @@ export default function Page() {
               />
             </div>
           </div>
-        </Shell>
-      </div>
-      <div className="bg-muted border-t">
-        <Shell className="gap-0 pt-10 pb-16">
+        </div>
+      </section>
+      <section className="bg-muted border-t pt-10 pb-16">
+        <div className="container">
           <div className="space-y-4 pb-10 text-center md:hidden">
             <p className="eyebrow uppercase">{t("ourProgramsEyebrow")}</p>
             <h2 className="heading-3xl">{t("ourProgramsTitle")}</h2>
@@ -236,28 +236,30 @@ export default function Page() {
               </h2>
             </div>
           </div>
-          <ul className="no-scrollbar flex justify-between overflow-x-scroll pt-18 md:overflow-x-auto">
-            {ourProgramsConfig.map((item) => (
-              <li
-                key={t(item.title)}
-                className="flex-[0_0_80%] pl-8 first:pl-0 md:flex-[0_0_31.33%] md:pl-0"
-              >
-                <div className="border-foreground space-y-4 border-t-2 pt-8">
-                  <h2 className="paragraph">{t(item.title)}</h2>
-                  <p className="paragraph">{t(item.description)}</p>
-                </div>
-              </li>
-            ))}
-          </ul>
+        </div>
+        <ul className="no-scrollbar flex justify-between overflow-x-scroll px-5 pt-18 md:overflow-x-auto md:px-[3dvw]">
+          {ourProgramsConfig.map((item) => (
+            <li
+              key={t(item.title)}
+              className="flex-[0_0_90%] pl-8 first:pl-0 md:flex-[0_0_31.33%] md:pl-0"
+            >
+              <div className="border-foreground space-y-4 border-t-2 pt-8">
+                <h2 className="paragraph">{t(item.title)}</h2>
+                <p className="paragraph">{t(item.description)}</p>
+              </div>
+            </li>
+          ))}
+        </ul>
+        <div className="container mt-10 flex justify-center">
           <PageLink
             to="ourPrograms"
             size="lg"
             variant="outline"
-            className="mx-auto mt-10 w-fit"
+            className="w-fit"
             withIcon
           />
-        </Shell>
-      </div>
+        </div>
+      </section>
     </>
   )
 }

@@ -10,7 +10,7 @@ export function SiteHeaderContent() {
   return (
     <SiteHeaderContainer>
       <header>
-        <Shell className="py-0 lg:py-0">
+        <Shell className="py-0">
           <div className="flex h-20 w-full items-center md:px-5 lg:pr-4">
             <div className="flex items-center gap-x-2">
               <Logomark className="h-14" />

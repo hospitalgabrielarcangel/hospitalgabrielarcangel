@@ -9,7 +9,6 @@ import {
 } from "@/components/ui/accordion"
 import { PageHeader, PageHeaderHeading } from "@/components/page-header"
 import { PageLink } from "@/components/page-link"
-import { Shell } from "@/components/shell"
 
 import { CertificationsCarousel } from "../_components/cerfifications-carousel"
 
@@ -54,9 +53,12 @@ export default function Page() {
 
   return (
     <>
-      <div className="-mt-20 h-166 overflow-hidden bg-[url('/images/about-us-hero.webp')] bg-cover bg-center px-5 md:h-dvh">
+      <section className="-mt-20 h-166 overflow-hidden bg-[url('/images/about-us-hero.webp')] bg-cover bg-center px-5 md:h-dvh">
         <div className="md:px-5">
-          <PageHeader className="flex max-w-full flex-col gap-y-6 pt-20 pb-8 md:h-dvh">
+          <PageHeader
+            className="flex max-w-full flex-col gap-y-6 pt-20 pb-8 md:h-dvh"
+            as="div"
+          >
             <div className="basis-[10dvh] md:basis-[16dvh]" />
             <PageHeaderHeading className="animate-fade-up heading-4xl flex w-full flex-col justify-between gap-6 text-white">
               <span
@@ -79,9 +81,9 @@ export default function Page() {
             </PageHeaderHeading>
           </PageHeader>
         </div>
-      </div>
+      </section>
       <CertificationsCarousel className="border-b" />
-      <Shell variant="vertical" className="w-full">
+      <section className="container flex w-full flex-col items-stretch md:flex-row">
         <div className="flex flex-col pt-6 md:w-1/2 md:px-[2.3dvw] md:pt-10 lg:border-r">
           <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
@@ -109,8 +111,11 @@ export default function Page() {
             className="aspect-square h-full w-full object-cover object-center"
           />
         </div>
-      </Shell>
-      <Shell variant="vertical" className="w-full flex-col md:flex-row-reverse">
+      </section>
+      <section
+        variant="vertical"
+        className="container flex w-full flex-col items-stretch md:flex-row-reverse"
+      >
         <div className="flex flex-col pt-24 md:w-1/2 md:px-[2.3dvw] md:pt-10 lg:border-r">
           <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
@@ -138,7 +143,7 @@ export default function Page() {
             className="aspect-square h-full w-full object-cover object-center"
           />
         </div>
-      </Shell>
+      </section>
       <section className="bg-muted px-5">
         <div className="mx-auto max-w-4xl space-y-6 pt-20 pb-24 text-center">
           <div className="space-y-4">
