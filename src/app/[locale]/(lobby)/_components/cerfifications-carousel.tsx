@@ -1,7 +1,10 @@
 import { useTranslations } from "next-intl"
 
 import { InfiniteMovingImages } from "@/components/layouts/infinite-moving-images"
-import { Shell } from "@/components/shell"
+
+interface CertificationsCarouselProps {
+  className?: string
+}
 
 const certificationConfig = [
   {
@@ -76,16 +79,19 @@ const certificationConfig = [
   },
 ]
 
-export function CertificationsCarousel() {
+export function CertificationsCarousel({
+  className,
+}: CertificationsCarouselProps) {
   const t = useTranslations("CertificationsCarousel")
+
   return (
-    <Shell variant="sidebar" className="block border-t p-0 md:border-b lg:p-0">
+    <section className={className}>
       <div className="eyebrow text-muted-foreground mx-auto w-full pt-4 text-center">
         {t("certificationsEyebrow")}
       </div>
       <div className="flex w-full">
         <InfiniteMovingImages items={certificationConfig} speed="slow" />
       </div>
-    </Shell>
+    </section>
   )
 }

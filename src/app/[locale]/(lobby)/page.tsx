@@ -114,7 +114,7 @@ export default function Page() {
           withIcon
         />
       </Shell>
-      <CertificationsCarousel />
+      <CertificationsCarousel className="border-t md:border-b" />
       <Shell variant="vertical">
         <div className="md:relative md:w-1/2 md:py-6 md:pr-6 lg:border-r">
           <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
@@ -130,7 +130,7 @@ export default function Page() {
           </div>
         </div>
         <div className="md:w-1/2">
-          <div className="px-5 pt-16 md:pt-8 md:pr-0 md:pl-6">
+          <div className="pt-16 md:pt-8 md:pl-6">
             <div className="md:relative md:h-164">
               <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
                 <p className="eyebrow text-muted-foreground pb-3">
@@ -148,12 +148,12 @@ export default function Page() {
                 value={t(item.title)}
                 className="p-0"
               >
-                <AccordionTrigger className="px-5 py-8 md:px-10">
+                <AccordionTrigger className="py-8 md:px-10">
                   <span className="subtitle-md font-normal">
                     {t(item.title)}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="px-5 pb-8 md:px-10">
+                <AccordionContent className="pb-8 md:px-6">
                   <p className="paragraph text-base">{t(item.description)}</p>
                   <div className="mt-5 w-fit">
                     <Link
@@ -171,7 +171,7 @@ export default function Page() {
       </Shell>
       <div className="border-t">
         <Shell variant="vertical" className="flex-col-reverse">
-          <div className="px-5 pt-16 pb-14 md:w-1/2 md:pt-8 md:pr-5 md:pl-0 lg:border-r">
+          <div className="pt-16 pb-14 md:w-1/2 md:pt-8 md:pr-5 lg:border-r">
             <div className="md:relative md:h-164">
               <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
                 <p className="eyebrow text-muted-foreground pb-3">
@@ -196,7 +196,7 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="md:relative md:w-1/2 md:py-6 md:pl-6">
+          <div className="pt-5 md:relative md:w-1/2 md:py-6 md:pl-6">
             <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
               <Image
                 src="/images/howwetreat-section.webp"

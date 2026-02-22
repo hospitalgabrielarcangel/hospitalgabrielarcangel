@@ -80,7 +80,7 @@ export default function Page() {
           </PageHeader>
         </div>
       </div>
-      <CertificationsCarousel />
+      <CertificationsCarousel className="border-b" />
       <Shell variant="vertical" className="w-full">
         <div className="flex flex-col pt-6 md:w-1/2 md:px-[2.3dvw] md:pt-10 lg:border-r">
           <div className="relative max-w-2xl grow">
