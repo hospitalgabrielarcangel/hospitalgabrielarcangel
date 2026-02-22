@@ -112,10 +112,7 @@ export default function Page() {
           />
         </div>
       </section>
-      <section
-        variant="vertical"
-        className="container flex w-full flex-col items-stretch md:flex-row-reverse"
-      >
+      <section className="container flex w-full flex-col items-stretch md:flex-row-reverse">
         <div className="flex flex-col pt-24 md:w-1/2 md:px-[2.3dvw] md:pt-10 lg:border-r">
           <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
