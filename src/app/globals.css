@@ -243,7 +243,7 @@
   .subtitle-md,
   .subtitle-lg,
   .subtitle-xl {
-    @apply leading-[1.4] font-normal tracking-tight text-balance;
+    @apply leading-[1.4] tracking-tight text-balance;
   }
 
   .heading-md,

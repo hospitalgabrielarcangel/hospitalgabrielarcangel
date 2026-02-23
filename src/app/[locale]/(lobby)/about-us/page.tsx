@@ -84,7 +84,7 @@ export default function Page() {
       </section>
       <CertificationsCarousel className="border-b" />
       <section className="container flex w-full flex-col items-stretch md:flex-row">
-        <div className="flex flex-col pt-6 md:w-1/2 md:px-[2.3dvw] md:pt-10 lg:border-r">
+        <div className="flex flex-col pt-6 md:w-1/2 md:px-[3dvw] md:pt-10 lg:border-r">
           <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
               <p className="eyebrow text-muted-foreground py-3">
@@ -113,7 +113,7 @@ export default function Page() {
         </div>
       </section>
       <section className="container flex w-full flex-col items-stretch md:flex-row-reverse">
-        <div className="flex flex-col pt-24 md:w-1/2 md:px-[2.3dvw] md:pt-10 lg:border-r">
+        <div className="flex flex-col pt-24 md:w-1/2 md:px-[3dvw] md:pt-10 lg:border-r">
           <div className="relative max-w-2xl grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
               <p className="eyebrow text-muted-foreground pb-3">
@@ -159,7 +159,7 @@ export default function Page() {
         </div>
       </section>
       <section className="flex flex-col px-5 py-20 md:flex-row md:px-0">
-        <div className="flex flex-col pb-8 md:w-2/5 md:px-[2.3dvw] md:pb-0">
+        <div className="flex flex-col pb-8 md:w-2/5 md:px-[3dvw] md:pb-0">
           <div className="relative max-w-lg grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
               <p className="eyebrow text-muted-foreground py-3">FAQS</p>
@@ -167,7 +167,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <div className="md:w-3/5 md:pr-[2.3dvw]">
+        <div className="md:w-3/5 md:pr-[3dvw]">
           <Accordion className="rounded-none border-none">
             {faqsConfig.map((item) => (
               <AccordionItem key={t(item.title)} value={t(item.title)}>

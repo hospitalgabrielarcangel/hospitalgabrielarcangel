@@ -21,22 +21,17 @@ const whatWeTreatConfig = [
   {
     title: "whatWeTreatItem1Title",
     description: "whatWeTreatItem1Description",
-    slug: "#",
+    href: "/treatment/mental-health-conditions",
   },
   {
     title: "whatWeTreatItem2Title",
     description: "whatWeTreatItem2Description",
-    slug: "#",
+    href: "/treatment/dependencies-and-addictions",
   },
   {
     title: "whatWeTreatItem3Title",
     description: "whatWeTreatItem3Description",
-    slug: "#",
-  },
-  {
-    title: "whatWeTreatItem4Title",
-    description: "whatWeTreatItem4Description",
-    slug: "#",
+    href: "/treatment/eating-disorder",
   },
 ]
 
@@ -44,17 +39,17 @@ const ourProgramsConfig = [
   {
     title: "ourProgramsItem1Title",
     description: "ourProgramsItem1Description",
-    slug: "#",
+    href: "#",
   },
   {
     title: "ourProgramsItem2Title",
     description: "ourProgramsItem2Description",
-    slug: "#",
+    href: "#",
   },
   {
     title: "ourProgramsItem3Title",
     description: "ourProgramsItem3Description",
-    slug: "#",
+    href: "#",
   },
 ]
 
@@ -115,9 +110,9 @@ export default function Page() {
         />
       </section>
       <CertificationsCarousel className="border-t md:border-b" />
-      <section className="container flex flex-col items-stretch md:flex-row">
-        <div className="md:relative md:w-1/2 md:py-6 md:pr-6 lg:border-r">
-          <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
+      <section className="flex flex-col items-stretch md:flex-row">
+        <div className="md:relative md:w-1/2 md:py-6 lg:border-r">
+          <div className="container md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
             <Image
               src="/images/about-us-hero.webp"
               alt="EMT"
@@ -130,7 +125,7 @@ export default function Page() {
           </div>
         </div>
         <div className="md:w-1/2">
-          <div className="pt-16 md:pt-8 md:pl-6">
+          <div className="container pt-16 md:pt-8">
             <div className="md:relative md:h-164">
               <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
                 <p className="eyebrow text-muted-foreground pb-3">
@@ -148,16 +143,16 @@ export default function Page() {
                 value={t(item.title)}
                 className="p-0"
               >
-                <AccordionTrigger className="py-8 md:px-10">
+                <AccordionTrigger className="py-8 md:px-6">
                   <span className="subtitle-md font-normal">
                     {t(item.title)}
                   </span>
                 </AccordionTrigger>
-                <AccordionContent className="pb-8 md:px-6">
+                <AccordionContent className="pb-8 md:px-4">
                   <p className="paragraph text-base">{t(item.description)}</p>
                   <div className="mt-5 w-fit">
                     <Link
-                      href={item.slug}
+                      href={item.href}
                       className="text-sm font-medium tracking-wide uppercase"
                     >
                       {t("readMore")}
@@ -169,9 +164,9 @@ export default function Page() {
           </Accordion>
         </div>
       </section>
-      <section className="border-t">
-        <div className="container flex flex-col-reverse items-stretch md:flex-row">
-          <div className="pt-16 pb-14 md:w-1/2 md:pt-8 md:pr-5 lg:border-r">
+      <section className="flex flex-col-reverse items-stretch border-t md:flex-row">
+        <div className="pt-16 pb-14 md:w-1/2 md:pt-8 lg:border-r">
+          <div className="container">
             <div className="md:relative md:h-164">
               <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
                 <p className="eyebrow text-muted-foreground pb-3">
@@ -196,18 +191,18 @@ export default function Page() {
               </Link>
             </div>
           </div>
-          <div className="pt-5 md:relative md:w-1/2 md:py-6 md:pl-6">
-            <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
-              <Image
-                src="/images/howwetreat-section.webp"
-                alt="Dental"
-                width={2160}
-                height={2700}
-                sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
-                loading="lazy"
-                className="aspect-3/4 h-full w-full object-cover object-center"
-              />
-            </div>
+        </div>
+        <div className="-z-10 pt-5 md:relative md:w-1/2 md:py-6">
+          <div className="container md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
+            <Image
+              src="/images/howwetreat-section.webp"
+              alt="Dental"
+              width={2160}
+              height={2700}
+              sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
+              loading="lazy"
+              className="aspect-3/4 h-full w-full object-cover object-center"
+            />
           </div>
         </div>
       </section>
