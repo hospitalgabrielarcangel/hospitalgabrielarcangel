@@ -2,7 +2,6 @@ import { CallToAction } from "@/components/call-to-action"
 import { LocaleSwitcher } from "@/components/layouts/locale-switcher"
 import { Logomark } from "@/components/logotype"
 import { MenuButton } from "@/components/menu-button"
-import { Shell } from "@/components/shell"
 
 import { SiteHeaderContainer } from "./site-header-container"
 
@@ -10,8 +9,8 @@ export function SiteHeaderContent() {
   return (
     <SiteHeaderContainer>
       <header>
-        <Shell className="py-0">
-          <div className="flex h-20 w-full items-center md:px-5 lg:pr-4">
+        <div className="py-0">
+          <div className="flex h-20 w-full items-center px-5 lg:pr-4">
             <div className="flex items-center gap-x-2">
               <Logomark className="h-12 md:h-14" />
             </div>
@@ -34,7 +33,7 @@ export function SiteHeaderContent() {
               </div>
             </div>
           </div>
-        </Shell>
+        </div>
       </header>
     </SiteHeaderContainer>
   )

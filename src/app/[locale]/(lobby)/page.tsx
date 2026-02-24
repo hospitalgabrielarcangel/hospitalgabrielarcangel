@@ -168,7 +168,7 @@ export default function Page() {
         divider
       />
       <section className="bg-muted border-t pt-10 pb-16">
-        <div className="container">
+        <div className="px-5">
           <div className="space-y-4 pb-10 text-center md:hidden">
             <p className="eyebrow uppercase">{t("ourProgramsEyebrow")}</p>
             <h2 className="heading-3xl">{t("ourProgramsTitle")}</h2>
@@ -193,7 +193,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <ul className="no-scrollbar flex justify-between overflow-x-scroll px-5 pt-18 md:overflow-x-auto md:px-[3dvw]">
+        <ul className="no-scrollbar flex justify-between overflow-x-scroll px-5 pt-18 md:overflow-x-auto">
           {ourProgramsConfig.map((item) => (
             <li
               key={t(item.title)}
@@ -206,7 +206,7 @@ export default function Page() {
             </li>
           ))}
         </ul>
-        <div className="container mt-10 flex justify-center">
+        <div className="mt-10 flex justify-center px-5">
           <PageLink
             to="ourPrograms"
             size="lg"

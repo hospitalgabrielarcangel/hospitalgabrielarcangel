@@ -49,7 +49,7 @@ export default function PageSection({
       >
         <div
           className={cn(
-            "container grow md:relative",
+            "grow px-5 md:relative",
             headingHeight ? "h-108" : "grow"
           )}
         >
@@ -58,7 +58,7 @@ export default function PageSection({
             <h2 className="heading-3xl">{title}</h2>
           </div>
         </div>
-        <div className="container pb-10">
+        <div className="px-5 pb-10">
           <div className="subtitle-md max-w-2xl space-y-4 pt-10">
             {description.split("\n").map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
@@ -86,8 +86,8 @@ export default function PageSection({
       >
         <div
           className={cn(
-            "md:sticky md:top-0",
-            imageFilled ? "px-5 md:px-0" : "container py-6"
+            "px-5 md:sticky md:top-0",
+            imageFilled ? "md:px-0" : "py-6"
           )}
         >
           <Image

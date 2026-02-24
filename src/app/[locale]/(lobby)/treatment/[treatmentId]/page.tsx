@@ -275,11 +275,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
     <>
       <section className="flex w-full flex-col items-stretch md:flex-row">
         <div className="flex flex-col md:w-1/2">
-          <PageHeader
-            className="container gap-0 md:h-dvh"
-            as="article"
-            centered
-          >
+          <PageHeader className="gap-0 px-5 md:h-dvh" as="article" centered>
             <PageHeaderHeading className="heading-4xl flex items-center py-20 text-center md:grow md:py-0">
               {tTreatment(treatment.title)}
             </PageHeaderHeading>
@@ -298,7 +294,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             />
           </div>
           <article>
-            <p className="subtitle-md container py-10">
+            <p className="subtitle-md px-5 py-10">
               {tTreatment(treatment.description)}
             </p>
             <ul>
@@ -306,7 +302,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
                 <li key={index} className="border-t last:border-b">
                   <Link
                     href={treatmentItem.href}
-                    className="subtitle-md container flex items-center justify-between py-8"
+                    className="subtitle-md flex items-center justify-between px-5 py-8"
                   >
                     {tTreatment(treatmentItem.title)}
                     <Icons.arrowRight />
@@ -315,7 +311,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               ))}
             </ul>
           </article>
-          <article className="container flex flex-col gap-10 py-20 text-center">
+          <article className="flex flex-col gap-10 px-5 py-20 text-center">
             <h2 className="heading-xl grid">
               {tTreatmentPage("contactHeading")
                 .split("\n")

@@ -1,11 +1,10 @@
 import { siteConfig } from "@/config/site"
 import { IconMenu } from "@/components/icon-menu"
-import { Shell } from "@/components/shell"
 
 export function SiteFooter() {
   return (
     <footer className="bg-background border-t">
-      <Shell className="flex items-center justify-between">
+      <div className="flex items-center justify-between px-5 pt-6 pb-8">
         <div className="text-muted-foreground text-sm font-light">
           {new Date().getFullYear()} © {siteConfig.name}
         </div>
@@ -16,7 +15,7 @@ export function SiteFooter() {
             )?.items || []
           }
         />
-      </Shell>
+      </div>
     </footer>
   )
 }
