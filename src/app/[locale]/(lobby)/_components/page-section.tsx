@@ -96,7 +96,7 @@ export default function PageSection({
             sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
             loading="lazy"
             className={cn(
-              "h-dvh w-full object-cover object-center",
+              "w-full object-cover object-center md:h-dvh",
               imageFilled ? "aspect-square" : "aspect-3/4"
             )}
           />
