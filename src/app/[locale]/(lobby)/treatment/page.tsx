@@ -63,12 +63,12 @@ export default function TreatmentPage() {
           </div>
         </div>
       </section>
-      <section className="flex flex-col items-stretch md:flex-row-reverse">
-        <div className="flex flex-col md:w-1/2 md:px-[3dvw]">
+      <section className="flex flex-col-reverse items-stretch md:flex-row-reverse">
+        <div className="flex flex-col px-5 md:w-1/2 md:px-[3dvw]">
           {conditionsWeTreatConfig.map((item, index) => (
             <article
               key={index}
-              className="flex flex-col items-start gap-y-10 border-b py-20 last:border-b-0"
+              className="flex flex-col items-start gap-y-10 border-b py-10 last:border-b-0 md:py-20"
             >
               <h2 className="heading-xl">{item.title}</h2>
               <p className="paragraph">{item.description}</p>
@@ -87,7 +87,7 @@ export default function TreatmentPage() {
               height={2880}
               sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
               loading="lazy"
-              className="aspect-3/4 w-full object-cover object-center md:h-dvh"
+              className="aspect-3/4 h-96 w-full object-cover object-center md:h-dvh"
             />
           </div>
         </div>
