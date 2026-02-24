@@ -11,7 +11,7 @@ export function Logomark({ className, ...props }: IconProps) {
   return (
     <Link href="/">
       <Icons.logomark
-        className={cn("h-9 w-auto", className)}
+        className={cn("h-8 w-auto md:h-9", className)}
         title={title}
         {...props}
       />
