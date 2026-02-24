@@ -14,6 +14,7 @@ interface PageSectionProps extends ItemWithImage {
   rowReverse?: boolean
   colReverse?: boolean
   imageFilled?: boolean
+  imageBetween?: boolean
   headingHeight?: boolean
   divider?: boolean
 }
@@ -27,6 +28,7 @@ export default function PageSection({
   className,
   link,
   imageFilled,
+  imageBetween,
   headingHeight,
   rowReverse,
   colReverse,
@@ -50,7 +52,8 @@ export default function PageSection({
         <div
           className={cn(
             "grow px-5 md:relative",
-            headingHeight ? "h-108" : "grow"
+            headingHeight ? "md:h-108" : "grow",
+            rowReverse ? "md:pr-[3dvw]" : "md:pl-[3dvw]"
           )}
         >
           <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
@@ -58,7 +61,23 @@ export default function PageSection({
             <h2 className="heading-3xl">{title}</h2>
           </div>
         </div>
-        <div className="px-5 pb-10">
+        {imageBetween && (
+          <div className="block pt-8 md:hidden">
+            <Image
+              {...image}
+              alt={image.alt}
+              sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
+              loading="lazy"
+              className=""
+            />
+          </div>
+        )}
+        <div
+          className={cn(
+            "px-5 pb-10",
+            rowReverse ? "md:pr-[3dvw]" : "md:pl-[3dvw]"
+          )}
+        >
           <div className="subtitle-md max-w-2xl space-y-4 pt-10">
             {description.split("\n").map((paragraph, index) => (
               <p key={index}>{paragraph}</p>
@@ -81,13 +100,16 @@ export default function PageSection({
       <div
         className={cn(
           "md:relative md:w-1/2",
-          divider && rowReverse && "lg:border-r"
+          divider && rowReverse && "lg:border-r",
+          imageBetween && "hidden md:block"
         )}
       >
         <div
           className={cn(
-            "px-5 md:sticky md:top-0",
-            imageFilled ? "md:px-0" : "py-6"
+            "px-5 py-6 md:sticky md:top-0",
+            imageFilled
+              ? "py-6 md:px-0 md:py-0"
+              : `${rowReverse ? "md:pl-[3dvw]" : "md:pr-[3dvw]"}`
           )}
         >
           <Image

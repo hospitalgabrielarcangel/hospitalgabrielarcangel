@@ -74,6 +74,19 @@
     "faqFooterDescription": "There are no silly or unnecessary questions when it comes to figuring out if our treatment programmes are the right fit for you. So, if you have questions that are not covered here, please reach out. Our client relations team are available 24/7 for a confidential, obligation-free conversation."
   },
   "TreatmentPage": {
+    "eyebrowPage": "Conditions We Treat",
+    "headingPage": "However you live, and whatever you’ve lived through, this is your place for healing.",
+    "phrasePage": "A bespoke approach, tailored to you",
+    "descriptionPage": "At Gabriel Arcángel, we have established a sanctuary of absolute discretion for those facing complex challenges in their physical and mental health. We understand that these hurdles are not isolated events, but rather the confluence of interrelated factors—ranging from burnout and anxiety to biochemical imbalances and systemic disruptions derived from lifestyle.\nBased on the premise that health is an ecosystem where the biological, psychological, and emotional converge, our commitment to medical excellence allows us to decipher and treat the root cause. We do not limit ourselves to the palliative management of symptoms; our methodology is designed to eradicate them at their source, thereby restoring the fulfillment and performance of our patients.",
+    "mentalHealthConditionsArticleHeading": "Mental health conditions",
+    "mentalHealthConditionsArticleDescription": "While every mental health narrative is unique, there remains a universal constant: isolation. Emotional imbalances fragment us, especially when a diagnosis is mistaken for identity, fueling the false premise of personal weakness. The reality is that mental health, much like physical health, is a universal human vulnerability. At Gabriel Arcángel, we address the neurobiological and psychological pain born from this alienation. Our team accompanies you in processing that suffering and transcending your challenges to restore your personal integrity.",
+    "dependenciesAndAddictionsArticleHeading": "Dependencies and addictions",
+    "dependenciesAndAddictionsArticleDescription": "Few states are as devastating as the moment one recognizes the loss of control in the face of dependency. Addictions operate as survival mechanisms against trauma, chronic stress, or emotional void, until the refuge itself transforms into the primary source of anguish. Whether dealing with substances, compulsive behaviors, or prescription medications, our intervention allows you to reclaim your personal sovereignty. We help you dismantle the cycle of fear and stigma to build an existence grounded in freedom and autonomy.",
+    "eatingDisorderArticleHeading": "Eating disorders",
+    "eatingDisorderArticleDescription": "Eating disorders often colonize one’s identity long before there is an awareness of their presence. They are complex manifestations of psychological and systemic roots that transcend mere nutrition. At Gabriel Arcángel, we equip you with the tools to dissolve the fear of losing control. Through an elite multidisciplinary approach, we intervene in the underlying mechanisms dictating your relationship with food—such as trauma, anxiety, or the rigidity of perfectionism—to restore peace and bodily balance.",
+    "treatmentsArticleLink": "Learn more"
+  },
+  "ConditionsWeTreat": {
     "pagePhrase": "Your path to healing",
     "contactHeading": "Need help?\nWe’re here for you.",
     "contactDescription": "Change starts with a conversation, so please do not hesitate to reach out if you think we could help you or a loved one. Our client-relation team are available around the clock for a confidential call about your health.",
@@ -181,6 +194,9 @@
     "aboutUs": "About us",
     "ourPrograms": "See our programs",
     "treatmentPlans": "Discover our approach",
+    "mentalHealthConditions": "Mental health conditions",
+    "dependenciesAndAddictions": "Dependencies and addictions",
+    "eatingDisorder": "Eating disorders",
     "contact": "We’re here to talk"
   },
   "ContactSidebar": {

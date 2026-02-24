@@ -29,6 +29,21 @@ const PAGE_LINK_CONFIG = [
     icon: Icons.arrowRight,
   },
   {
+    title: "mentalHealthConditions",
+    href: "/treatment/mental-health-conditions",
+    icon: Icons.arrowRight,
+  },
+  {
+    title: "dependenciesAndAddictions",
+    href: "/treatment/dependencies-and-addictions",
+    icon: Icons.arrowRight,
+  },
+  {
+    title: "eatingDisorder",
+    href: "/treatment/eating-disorder",
+    icon: Icons.arrowRight,
+  },
+  {
     title: "contact",
     href: "#",
     icon: Icons.arrowRight,

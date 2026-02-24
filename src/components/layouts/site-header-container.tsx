@@ -4,10 +4,15 @@ import * as React from "react"
 import type { LayoutProps } from "@/types"
 import { motion, useMotionValueEvent, useScroll } from "motion/react"
 
+import { useContactSidebarStore } from "./contact-sidebar"
+import { useMenuSidebarStore } from "./menu-sidebar"
+
 export function SiteHeaderContainer({ children }: LayoutProps) {
   const { scrollYProgress } = useScroll()
   const [isOnTop, setIsOnTop] = React.useState(true)
   const [visible, setVisible] = React.useState(true)
+  const { isMenuSidebarOpen } = useMenuSidebarStore()
+  const { isContactSidebarOpen } = useContactSidebarStore()
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
     if (typeof current === "number") {
@@ -29,7 +34,7 @@ export function SiteHeaderContainer({ children }: LayoutProps) {
         top: 0,
       }}
       animate={{
-        top: visible ? 0 : -92,
+        top: visible || isMenuSidebarOpen || isContactSidebarOpen ? 0 : -92,
       }}
       transition={{
         duration: 0.3,

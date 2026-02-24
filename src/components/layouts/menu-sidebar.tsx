@@ -41,7 +41,7 @@ function MenuSidebar() {
       onClickOutside={closeSidebarMenu}
       containerClassName="z-30"
     >
-      <Shell className="px-25 pt-25">
+      <section className="container pt-25 pb-8">
         <h5 className="heading-lg max-w-lg">{t("title")}</h5>
         <nav className="mt-12 flex flex-col gap-y-12">
           <div className="flex max-w-74 flex-col gap-y-6 [&_a]:font-semibold">
@@ -78,7 +78,7 @@ function MenuSidebar() {
             />
           </div>
         </nav>
-      </Shell>
+      </section>
     </Sidebar>
   )
 }

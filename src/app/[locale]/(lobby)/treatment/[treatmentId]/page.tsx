@@ -22,7 +22,7 @@ import { PageLink } from "@/components/page-link"
 
 import PageSection from "../../_components/page-section"
 
-interface TreatmentPageProps {
+interface ConditionsWeTreatProps {
   params: Promise<{
     treatmentId: string
     locale: string
@@ -224,7 +224,7 @@ const howWeTreatConfig = [
 
 export async function generateMetadata({
   params,
-}: TreatmentPageProps): Promise<Metadata> {
+}: ConditionsWeTreatProps): Promise<Metadata> {
   const treatmentParams = await params
 
   const treatmentId = toTitleCase(
@@ -249,7 +249,9 @@ export async function generateMetadata({
   }
 }
 
-export default async function TreatmentPage({ params }: TreatmentPageProps) {
+export default async function ConditionsWeTreat({
+  params,
+}: ConditionsWeTreatProps) {
   const treatmentParams = await params
   const treatmentId = toTitleCase(
     decodeURIComponent(treatmentParams.treatmentId).replaceAll("-", " ")
@@ -261,9 +263,9 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
     notFound()
   }
 
-  const tTreatmentPage = await getTranslations({
+  const tConditionsWeTreat = await getTranslations({
     locale: treatmentParams.locale,
-    namespace: "TreatmentPage",
+    namespace: "ConditionsWeTreat",
   })
 
   const tTreatment = await getTranslations({
@@ -275,12 +277,16 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
     <>
       <section className="flex w-full flex-col items-stretch md:flex-row">
         <div className="flex flex-col md:w-1/2">
-          <PageHeader className="gap-0 px-5 md:h-dvh" as="article" centered>
+          <PageHeader
+            className="container gap-0 md:h-dvh"
+            as="article"
+            centered
+          >
             <PageHeaderHeading className="heading-4xl flex items-center py-20 text-center md:grow md:py-0">
               {tTreatment(treatment.title)}
             </PageHeaderHeading>
             <PageHeaderDescription className="subtitle-md text-foreground pb-20 md:h-1/5 md:pb-0">
-              {tTreatmentPage("pagePhrase")}
+              {tConditionsWeTreat("pagePhrase")}
             </PageHeaderDescription>
           </PageHeader>
           <div className="md:hidden">
@@ -294,7 +300,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
             />
           </div>
           <article>
-            <p className="subtitle-md px-5 py-10">
+            <p className="subtitle-md px-5 py-10 md:px-[3dvw]">
               {tTreatment(treatment.description)}
             </p>
             <ul>
@@ -302,7 +308,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
                 <li key={index} className="border-t last:border-b">
                   <Link
                     href={treatmentItem.href}
-                    className="subtitle-md flex items-center justify-between px-5 py-8"
+                    className="subtitle-md flex items-center justify-between px-5 py-8 md:px-[3dvw]"
                   >
                     {tTreatment(treatmentItem.title)}
                     <Icons.arrowRight />
@@ -311,15 +317,17 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               ))}
             </ul>
           </article>
-          <article className="flex flex-col gap-10 px-5 py-20 text-center">
+          <article className="container flex flex-col gap-10 px-5 py-20 text-center md:px-[3dvw]">
             <h2 className="heading-xl grid">
-              {tTreatmentPage("contactHeading")
+              {tConditionsWeTreat("contactHeading")
                 .split("\n")
                 .map((item, index) => (
                   <span key={index}>{item}</span>
                 ))}
             </h2>
-            <p className="paragraph">{tTreatmentPage("contactDescription")}</p>
+            <p className="paragraph">
+              {tConditionsWeTreat("contactDescription")}
+            </p>
             <PageLink to="contact" variant="link" />
           </article>
         </div>
@@ -346,31 +354,32 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
         }}
         className="bg-muted lg:border-t"
         headingHeight
+        imageBetween
         rowReverse
         divider
       >
         <Accordion className="rounded-none border-none">
           {howWeTreatConfig.map((item) => (
             <AccordionItem
-              key={tTreatmentPage(item.title)}
-              value={tTreatmentPage(item.title)}
+              key={tConditionsWeTreat(item.title)}
+              value={tConditionsWeTreat(item.title)}
               className="p-0"
             >
-              <AccordionTrigger className="py-8 md:px-10">
+              <AccordionTrigger className="py-8 md:px-5 md:pr-[3dvw]">
                 <span className="subtitle-md font-normal">
-                  {tTreatmentPage(item.title)}
+                  {tConditionsWeTreat(item.title)}
                 </span>
               </AccordionTrigger>
               <AccordionContent className="pb-8 md:px-6">
                 <p className="paragraph text-base">
-                  {tTreatmentPage(item.description)}
+                  {tConditionsWeTreat(item.description)}
                 </p>
                 <div className="mt-5 w-fit">
                   <Link
                     href={item.slug}
                     className="text-sm font-medium tracking-wide uppercase"
                   >
-                    {tTreatmentPage(item.link)}
+                    {tConditionsWeTreat(item.link)}
                   </Link>
                 </div>
               </AccordionContent>

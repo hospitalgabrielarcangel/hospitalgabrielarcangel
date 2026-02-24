@@ -9,8 +9,8 @@ export function SiteHeaderContent() {
   return (
     <SiteHeaderContainer>
       <header>
-        <div className="py-0">
-          <div className="flex h-20 w-full items-center px-5 lg:pr-4">
+        <div className="container py-0">
+          <div className="flex h-20 w-full items-center lg:pr-4">
             <div className="flex items-center gap-x-2">
               <Logomark className="h-12 md:h-14" />
             </div>

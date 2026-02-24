@@ -60,14 +60,14 @@ export default function Page() {
   return (
     <>
       <section className="relative -mt-20 h-dvh overflow-hidden">
-        <div className="relative z-10 h-full px-4">
+        <div className="relative z-10 container h-full">
           <PageHeader
             className="flex h-full max-w-full justify-between gap-0 py-8"
             centered
             as="div"
           >
             <PageHeaderDescription
-              className="heading-xl animate-fade-up mx-auto mt-16 text-white md:px-4 lg:mt-0"
+              className="heading-xl animate-fade-up mx-auto mt-16 text-white lg:mt-0"
               style={{ animationDelay: "0.3s", animationFillMode: "both" }}
             >
               {t("pageHeaderDescription")}
@@ -97,7 +97,7 @@ export default function Page() {
           </video>
         </div>
       </section>
-      <section className="relative grid items-center gap-12 px-5 pt-20 pb-14 md:pt-36">
+      <section className="relative container grid items-center gap-12 pt-20 pb-14 md:pt-36">
         <div className="bg-muted-foreground absolute inset-x-1/2 -top-4 h-20 w-px lg:-top-5 lg:h-26" />
         <h2 className="heading-2xl mx-auto max-w-6xl text-center">
           {t("aboutUs")}
@@ -168,7 +168,7 @@ export default function Page() {
         divider
       />
       <section className="bg-muted border-t pt-10 pb-16">
-        <div className="px-5">
+        <div className="container">
           <div className="space-y-4 pb-10 text-center md:hidden">
             <p className="eyebrow uppercase">{t("ourProgramsEyebrow")}</p>
             <h2 className="heading-3xl">{t("ourProgramsTitle")}</h2>
@@ -193,7 +193,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <ul className="no-scrollbar flex justify-between overflow-x-scroll px-5 pt-18 md:overflow-x-auto">
+        <ul className="no-scrollbar flex justify-between overflow-x-scroll px-5 pt-18 md:overflow-x-auto md:px-[3dvw]">
           {ourProgramsConfig.map((item) => (
             <li
               key={t(item.title)}

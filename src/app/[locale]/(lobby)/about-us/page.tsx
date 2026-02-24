@@ -53,8 +53,8 @@ export default function AboutUsPage() {
 
   return (
     <>
-      <section className="-mt-20 h-166 overflow-hidden bg-[url('/images/about-us-hero.webp')] bg-cover bg-center px-5 md:h-dvh">
-        <div className="md:px-5">
+      <section className="-mt-20 h-166 overflow-hidden bg-[url('/images/about-us-hero.webp')] bg-cover bg-center md:h-dvh">
+        <div className="container">
           <PageHeader
             className="flex max-w-full flex-col gap-y-6 pt-20 pb-8 md:h-dvh"
             as="div"
@@ -108,25 +108,27 @@ export default function AboutUsPage() {
         imageFilled
         rowReverse
       />
-      <section className="bg-muted px-5">
-        <div className="mx-auto max-w-4xl space-y-6 pt-20 pb-24 text-center">
-          <div className="space-y-4">
-            <p className="eyebrow text-muted-foreground">
-              {t("ourApproachEyebrow")}
-            </p>
-            <h2 className="heading-3xl">{t("ourApproachHeading")}</h2>
-          </div>
-          <div className="subtitle-md space-y-4">
-            {t("ourApproachDescription")
-              .split("\n")
-              .map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
+      <section className="bg-muted">
+        <div className="container">
+          <div className="mx-auto max-w-4xl space-y-6 pt-20 pb-24 text-center">
+            <div className="space-y-4">
+              <p className="eyebrow text-muted-foreground">
+                {t("ourApproachEyebrow")}
+              </p>
+              <h2 className="heading-3xl">{t("ourApproachHeading")}</h2>
+            </div>
+            <div className="subtitle-md space-y-4">
+              {t("ourApproachDescription")
+                .split("\n")
+                .map((paragraph, index) => (
+                  <p key={index}>{paragraph}</p>
+                ))}
+            </div>
           </div>
         </div>
       </section>
-      <section className="flex flex-col px-5 py-20 md:flex-row md:px-0">
-        <div className="flex flex-col pb-8 md:w-2/5 md:px-[3dvw] md:pb-0">
+      <section className="container flex flex-col py-20 md:flex-row md:px-0">
+        <div className="flex flex-col pb-8 md:w-2/5 md:pb-0">
           <div className="relative max-w-lg grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
               <p className="eyebrow text-muted-foreground py-3">FAQS</p>

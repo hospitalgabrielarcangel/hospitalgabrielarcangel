@@ -74,6 +74,19 @@
     "faqFooterDescription": "No existen preguntas insignificantes o innecesarias cuando se trata de determinar si nuestros programas de tratamiento son la opción adecuada para usted. Por lo tanto, si tiene dudas que no han sido resueltas aquí, por favor contáctenos. Nuestro equipo de atención al cliente está disponible las 24 horas, los 7 días de la semana, para una conversación confidencial y sin compromiso."
   },
   "TreatmentPage": {
+    "eyebrowPage": "Condiciones Que Tratamos",
+    "headingPage": "Sin importar cómo viva, ni lo que haya vivido, este es su lugar para sanar.",
+    "phrasePage": "Un enfoque diseñado a su medida",
+    "descriptionPage": "En Gabriel Arcángel, hemos erigido un santuario de absoluta discreción para quienes enfrentan desafíos complejos en su salud física y mental. Entendemos que estos retos no son eventos aislados, sino la confluencia de factores interrelacionados: desde cuadros de burnout y ansiedad, hasta desequilibrios bioquímicos y desajustes sistémicos derivados del estilo de vida.\nBajo la premisa de que la salud es un ecosistema donde convergen lo biológico, lo psicológico y lo emocional, nuestro compromiso con la excelencia médica nos permite descifrar y tratar la causa raíz. No nos limitamos a la gestión paliativa de los síntomas; nuestra metodología está diseñada para erradicarlos de origen, restaurando así la plenitud y el rendimiento de nuestros pacientes.",
+    "mentalHealthConditionsArticleHeading": "Condiciones de salud mental",
+    "mentalHealthConditionsArticleDescription": "Aunque cada narrativa de salud mental es única, existe una constante universal: el aislamiento. Los desequilibrios emocionales nos fragmentan, especialmente cuando el diagnóstico se confunde con la identidad, alimentando la falsa premisa de la debilidad personal. La realidad es que la salud mental, al igual que la física, es una vulnerabilidad humana universal. En Gabriel Arcángel, abordamos el dolor neurobiológico y psicológico que nace de esta alienación. Nuestro equipo le acompaña a procesar ese sufrimiento y a trascender sus desafíos para restaurar su integridad personal.",
+    "dependenciesAndAddictionsArticleHeading": "Dependencias y adicciones",
+    "dependenciesAndAddictionsArticleDescription": "Pocos estados son tan devastadores como el instante en que se reconoce la pérdida de control frente a una dependencia. Las adicciones operan como mecanismos de supervivencia ante el trauma, el estrés crónico o el vacío emocional, hasta que el propio refugio se transforma en la mayor fuente de angustia. Ya sea ante sustancias, conductas compulsivas o fármacos recetados, nuestra intervención le permite recuperar su soberanía personal. Le ayudamos a desarticular el ciclo de miedo y estigma para construir una existencia fundamentada en la libertad y la autonomía.",
+    "eatingDisorderArticleHeading": "Trastornos alimenticios",
+    "eatingDisorderArticleDescription": "Los trastornos de la conducta alimentaria suelen colonizar la identidad mucho antes de que seamos conscientes de su presencia. Son manifestaciones complejas de raíces psicológicas y sistémicas que trascienden lo nutricional. En Gabriel Arcángel, le dotamos de las herramientas para disolver el temor a la pérdida de control. Mediante un abordaje multidisciplinario de élite, intervenimos en los mecanismos subyacentes que dictan su relación con la alimentación —como el trauma, la ansiedad o la rigidez del perfeccionismo— para devolverle la paz y el equilibrio corporal.",
+    "treatmentsArticleLink": "Saber más"
+  },
+  "ConditionsWeTreat": {
     "pagePhrase": "Tu camino hacia la sanación",
     "contactHeading": "¿Necesitas ayuda?\nEstamos aquí para ti.",
     "contactDescription": "El cambio comienza con una conversación, así que no dudes en contactarnos si crees que podríamos ayudarte a ti o a un ser querido. Nuestro equipo de relaciones con los clientes está disponible las 24 horas para una llamada confidencial sobre tu salud.",
@@ -181,6 +194,9 @@
     "aboutUs": "Sobre nosotros",
     "ourPrograms": "Ver nuestros programas",
     "treatmentPlans": "Descubre nuestros planes de tratamiento",
+    "mentalHealthConditions": "Condiciones de salud mental",
+    "dependenciesAndAddictions": "Dependencias y adicciones",
+    "eatingDisorder": "Trastornos alimenticios",
     "contact": "Estamos para escucharte"
   },
   "ContactSidebar": {

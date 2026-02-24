@@ -274,7 +274,7 @@
   }
 
   .eyebrow {
-    @apply text-sm leading-[1.2] font-semibold tracking-wider uppercase;
+    @apply text-sm leading-[1.2] tracking-wider uppercase;
   }
 
   .no-scrollbar::-webkit-scrollbar {
