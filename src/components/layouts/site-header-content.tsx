@@ -13,7 +13,7 @@ export function SiteHeaderContent() {
         <Shell className="py-0">
           <div className="flex h-20 w-full items-center md:px-5 lg:pr-4">
             <div className="flex items-center gap-x-2">
-              <Logomark className="h-14" />
+              <Logomark className="h-12 md:h-14" />
             </div>
             <div className="flex flex-1 items-center justify-end gap-x-2 lg:pr-5">
               <div className="flex items-center gap-x-2">
