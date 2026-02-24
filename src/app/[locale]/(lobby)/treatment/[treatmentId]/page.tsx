@@ -20,6 +20,8 @@ import {
 } from "@/components/page-header"
 import { PageLink } from "@/components/page-link"
 
+import PageSection from "../../_components/page-section"
+
 interface TreatmentPageProps {
   params: Promise<{
     treatmentId: string
@@ -282,7 +284,7 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
               {tTreatment(treatment.title)}
             </PageHeaderHeading>
             <PageHeaderDescription className="subtitle-md text-foreground pb-20 md:h-1/5 md:pb-0">
-              {tTreatmentPage("subHeading")}
+              {tTreatmentPage("pagePhrase")}
             </PageHeaderDescription>
           </PageHeader>
           <div className="md:hidden">
@@ -336,66 +338,50 @@ export default async function TreatmentPage({ params }: TreatmentPageProps) {
           />
         </div>
       </section>
-      <section className="bg-muted flex flex-col-reverse items-stretch border-t md:flex-row-reverse">
-        <div className="md:w-1/2">
-          <div className="container pt-16 md:pt-8">
-            <div className="md:relative md:h-164">
-              <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
-                <p className="eyebrow text-muted-foreground pb-3">
-                  {tTreatment(treatment.approach.name)}
+      <PageSection
+        name={tTreatment(treatment.approach.name)}
+        title={tTreatment(treatment.approach.title)}
+        description={tTreatment(treatment.approach.description)}
+        image={{
+          src: treatment.approach.image.src,
+          alt: treatment.approach.image.alt,
+          width: treatment.approach.image.width,
+          height: treatment.approach.image.height,
+        }}
+        className="bg-muted lg:border-t"
+        headingHeight
+        rowReverse
+        divider
+      >
+        <Accordion className="rounded-none border-none">
+          {howWeTreatConfig.map((item) => (
+            <AccordionItem
+              key={tTreatmentPage(item.title)}
+              value={tTreatmentPage(item.title)}
+              className="p-0"
+            >
+              <AccordionTrigger className="py-8 md:px-10">
+                <span className="subtitle-md font-normal">
+                  {tTreatmentPage(item.title)}
+                </span>
+              </AccordionTrigger>
+              <AccordionContent className="pb-8 md:px-6">
+                <p className="paragraph text-base">
+                  {tTreatmentPage(item.description)}
                 </p>
-                <h2 className="heading-3xl">
-                  {tTreatment(treatment.approach.title)}
-                </h2>
-              </div>
-            </div>
-            <p className="subtitle-md py-10">
-              {tTreatment(treatment.approach.description)}
-            </p>
-          </div>
-          <Accordion className="rounded-none border-none">
-            {howWeTreatConfig.map((item) => (
-              <AccordionItem
-                key={tTreatmentPage(item.title)}
-                value={tTreatmentPage(item.title)}
-                className="p-0"
-              >
-                <AccordionTrigger className="py-8 md:px-10">
-                  <span className="subtitle-md font-normal">
-                    {tTreatmentPage(item.title)}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="pb-8 md:px-6">
-                  <p className="paragraph text-base">
-                    {tTreatmentPage(item.description)}
-                  </p>
-                  <div className="mt-5 w-fit">
-                    <Link
-                      href={item.slug}
-                      className="text-sm font-medium tracking-wide uppercase"
-                    >
-                      {tTreatmentPage(item.link)}
-                    </Link>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-        <div className="py-5 md:relative md:w-1/2 lg:border-r">
-          <div className="container md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
-            <Image
-              src={treatment.approach.image.src}
-              alt={treatment.approach.image.alt}
-              width={treatment.approach.image.width}
-              height={treatment.approach.image.height}
-              sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
-              loading="lazy"
-              className="aspect-3/4 h-full w-full object-cover object-center"
-            />
-          </div>
-        </div>
-      </section>
+                <div className="mt-5 w-fit">
+                  <Link
+                    href={item.slug}
+                    className="text-sm font-medium tracking-wide uppercase"
+                  >
+                    {tTreatmentPage(item.link)}
+                  </Link>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </PageSection>
     </>
   )
 }

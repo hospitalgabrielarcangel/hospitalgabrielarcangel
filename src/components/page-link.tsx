@@ -24,17 +24,24 @@ const PAGE_LINK_CONFIG = [
     icon: Icons.arrowRight,
   },
   {
+    title: "treatmentPlans",
+    href: "#",
+    icon: Icons.arrowRight,
+  },
+  {
     title: "contact",
     href: "#",
     icon: Icons.arrowRight,
   },
 ] as const
 
-interface PageLinkProps
+export type PageLinkTitle = (typeof PAGE_LINK_CONFIG)[number]["title"]
+
+export interface PageLinkProps
   extends
     Omit<React.ComponentProps<typeof Link>, "href">,
     VariantProps<typeof buttonVariants> {
-  to: (typeof PAGE_LINK_CONFIG)[number]["title"]
+  to: PageLinkTitle
   withIcon?: boolean
 }
 

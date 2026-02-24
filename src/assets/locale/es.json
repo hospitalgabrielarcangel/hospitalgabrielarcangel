@@ -33,7 +33,6 @@
     "howWeTreatEyebrow": "Cómo tratamos",
     "howWeTreatHeading": "Un enfoque médico, integral y personalizado en cada etapa de la recuperación física, mental y emocional.",
     "howWeTreatDescription": "En Gabriel Arcángel, entendemos que un enfoque generalizado es insuficiente para una sanación verdadera; por ello, nos especializamos en lo excepcional. Somos el único centro de tratamiento a nivel global que asigna un equipo mínimo de 15 profesionales dedicados exclusivamente a cada paciente.\nDurante su estancia, no solo estará bajo el cuidado de una institución, sino respaldado por una junta de médicos, terapeutas y especialistas de prestigio mundial. Combinamos la medicina de vanguardia con enfoques holísticos de alto nivel para abordar el espectro completo de la salud. Desde la biología celular hasta el bienestar emocional, cada detalle de su plan de tratamiento es diseñado a medida, garantizando que su proceso de recuperación sea tan único como su propia historia.",
-    "treatmentPlans": "Descubre nuestros planes de tratamiento",
     "ourProgramsEyebrow": "Una experiencia a medida",
     "ourProgramsTitle": "Porque su historia es única, su recuperación no puede ser ordinaria.",
     "ourProgramsItem1Title": "Un refugio de protección y cuidado",
@@ -75,7 +74,7 @@
     "faqFooterDescription": "No existen preguntas insignificantes o innecesarias cuando se trata de determinar si nuestros programas de tratamiento son la opción adecuada para usted. Por lo tanto, si tiene dudas que no han sido resueltas aquí, por favor contáctenos. Nuestro equipo de atención al cliente está disponible las 24 horas, los 7 días de la semana, para una conversación confidencial y sin compromiso."
   },
   "TreatmentPage": {
-    "subHeading": "Tu camino hacia la sanación",
+    "pagePhrase": "Tu camino hacia la sanación",
     "contactHeading": "¿Necesitas ayuda?\nEstamos aquí para ti.",
     "contactDescription": "El cambio comienza con una conversación, así que no dudes en contactarnos si crees que podríamos ayudarte a ti o a un ser querido. Nuestro equipo de relaciones con los clientes está disponible las 24 horas para una llamada confidencial sobre tu salud.",
     "howWeTreatItem1Title": "Procedimiento de evaluación",
@@ -181,6 +180,7 @@
     "home": "Inicio",
     "aboutUs": "Sobre nosotros",
     "ourPrograms": "Ver nuestros programas",
+    "treatmentPlans": "Descubre nuestros planes de tratamiento",
     "contact": "Estamos para escucharte"
   },
   "ContactSidebar": {

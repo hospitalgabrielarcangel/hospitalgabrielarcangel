@@ -1,4 +1,5 @@
 import * as React from "react"
+import { type ImageProps } from "next/image"
 
 import { siteConfig } from "@/config/site"
 import type { Icons } from "@/components/icons"
@@ -18,6 +19,16 @@ export interface LocaleParams {
 export interface LayoutWithLocaleProps extends LayoutProps, LocaleParams {}
 
 export type Icon = keyof typeof Icons
+
+export interface Item {
+  name: string
+  title: string
+  description: string
+}
+
+export interface ItemWithImage extends Item {
+  image: ImageProps
+}
 
 export interface NavItem {
   title: string

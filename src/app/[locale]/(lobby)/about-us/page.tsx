@@ -11,6 +11,7 @@ import { PageHeader, PageHeaderHeading } from "@/components/page-header"
 import { PageLink } from "@/components/page-link"
 
 import { CertificationsCarousel } from "../_components/cerfifications-carousel"
+import PageSection from "../_components/page-section"
 
 const faqsConfig = [
   {
@@ -47,7 +48,7 @@ const faqsConfig = [
   },
 ]
 
-export default function Page() {
+export default function AboutUsPage() {
   const t = useTranslations("AboutUsPage")
   const pageHeaderHeading = t("pageHeaderHeading").split("\n")
 
@@ -83,64 +84,31 @@ export default function Page() {
         </div>
       </section>
       <CertificationsCarousel className="border-b" />
-      <section className="container flex w-full flex-col items-stretch md:flex-row">
-        <div className="flex flex-col pt-6 md:w-1/2 md:px-[3dvw] md:pt-10 lg:border-r">
-          <div className="relative max-w-2xl grow">
-            <div className="sticky top-0 -mt-20 h-fit pt-20.25">
-              <p className="eyebrow text-muted-foreground py-3">
-                {t("whoWeAreEyebrow")}
-              </p>
-              <h2 className="heading-3xl">{t("whoWeAreHeading")}</h2>
-            </div>
-          </div>
-          <div className="subtitle-md max-w-xl space-y-5 pt-10 pb-14 md:pb-20">
-            {t("whoWeAreDescription")
-              .split("\n")
-              .map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-          </div>
-        </div>
-        <div className="md:w-1/2">
-          <Image
-            src="/images/howwetreat-section.webp"
-            alt="EMT"
-            width={2160}
-            height={2880}
-            sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
-            className="aspect-square h-full w-full object-cover object-center"
-          />
-        </div>
-      </section>
-      <section className="container flex w-full flex-col items-stretch md:flex-row-reverse">
-        <div className="flex flex-col pt-24 md:w-1/2 md:px-[3dvw] md:pt-10 lg:border-r">
-          <div className="relative max-w-2xl grow">
-            <div className="sticky top-0 -mt-20 h-fit pt-20.25">
-              <p className="eyebrow text-muted-foreground pb-3">
-                {t("whoWeTreatEyebrow")}
-              </p>
-              <h2 className="heading-3xl">{t("whoWeTreatHeading")}</h2>
-            </div>
-          </div>
-          <div className="subtitle-md max-w-xl space-y-5 pt-10 pb-14 md:pb-20">
-            {t("whoWeTreatDescription")
-              .split("\n")
-              .map((paragraph, index) => (
-                <p key={index}>{paragraph}</p>
-              ))}
-          </div>
-        </div>
-        <div className="pb-5 md:w-1/2 md:pb-0">
-          <Image
-            src="/images/about-us-hero.webp"
-            alt="EMT"
-            width={2160}
-            height={2880}
-            sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
-            className="aspect-square h-full w-full object-cover object-center"
-          />
-        </div>
-      </section>
+      <PageSection
+        name={t("whoWeAreEyebrow")}
+        title={t("whoWeAreHeading")}
+        description={t("whoWeAreDescription")}
+        image={{
+          src: "/images/howwetreat-section.webp",
+          alt: "EMT",
+          width: 2160,
+          height: 2880,
+        }}
+        imageFilled
+      />
+      <PageSection
+        name={t("whoWeTreatEyebrow")}
+        title={t("whoWeTreatHeading")}
+        description={t("whoWeTreatDescription")}
+        image={{
+          src: "/images/howwetreat-section.webp",
+          alt: "EMT",
+          width: 2160,
+          height: 2880,
+        }}
+        imageFilled
+        rowReverse
+      />
       <section className="bg-muted px-5">
         <div className="mx-auto max-w-4xl space-y-6 pt-20 pb-24 text-center">
           <div className="space-y-4">

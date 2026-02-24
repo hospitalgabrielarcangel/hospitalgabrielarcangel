@@ -16,6 +16,7 @@ import {
 import { PageLink } from "@/components/page-link"
 
 import { CertificationsCarousel } from "./_components/cerfifications-carousel"
+import PageSection from "./_components/page-section"
 
 const whatWeTreatConfig = [
   {
@@ -110,102 +111,62 @@ export default function Page() {
         />
       </section>
       <CertificationsCarousel className="border-t md:border-b" />
-      <section className="flex flex-col items-stretch md:flex-row">
-        <div className="md:relative md:w-1/2 md:py-6 lg:border-r">
-          <div className="container md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
-            <Image
-              src="/images/about-us-hero.webp"
-              alt="EMT"
-              width={2160}
-              height={2880}
-              sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
-              loading="lazy"
-              className="aspect-3/4 h-full w-full object-cover object-center"
-            />
-          </div>
-        </div>
-        <div className="md:w-1/2">
-          <div className="container pt-16 md:pt-8">
-            <div className="md:relative md:h-164">
-              <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
-                <p className="eyebrow text-muted-foreground pb-3">
-                  {t("whatWeTreatEyebrow")}
-                </p>
-                <h2 className="heading-3xl">{t("whatWeTreatHeading")}</h2>
-              </div>
-            </div>
-            <p className="subtitle-md py-10">{t("whatWeTreatDescription")}</p>
-          </div>
-          <Accordion className="rounded-none border-none">
-            {whatWeTreatConfig.map((item) => (
-              <AccordionItem
-                key={t(item.title)}
-                value={t(item.title)}
-                className="p-0"
-              >
-                <AccordionTrigger className="py-8 md:px-6">
-                  <span className="subtitle-md font-normal">
-                    {t(item.title)}
-                  </span>
-                </AccordionTrigger>
-                <AccordionContent className="pb-8 md:px-4">
-                  <p className="paragraph text-base">{t(item.description)}</p>
-                  <div className="mt-5 w-fit">
-                    <Link
-                      href={item.href}
-                      className="text-sm font-medium tracking-wide uppercase"
-                    >
-                      {t("readMore")}
-                    </Link>
-                  </div>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      </section>
-      <section className="flex flex-col-reverse items-stretch border-t md:flex-row">
-        <div className="pt-16 pb-14 md:w-1/2 md:pt-8 lg:border-r">
-          <div className="container">
-            <div className="md:relative md:h-164">
-              <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
-                <p className="eyebrow text-muted-foreground pb-3">
-                  {t("howWeTreatEyebrow")}
-                </p>
-                <h2 className="heading-3xl">{t("howWeTreatHeading")}</h2>
-              </div>
-            </div>
-            <div className="subtitle-md max-w-lg space-y-5 py-10">
-              {t("howWeTreatDescription")
-                .split("\n")
-                .map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-            </div>
-            <div className="border-foreground mt-5 w-fit border-b">
-              <Link
-                href="#"
-                className="text-sm font-medium tracking-wide uppercase"
-              >
-                {t("treatmentPlans")}
-              </Link>
-            </div>
-          </div>
-        </div>
-        <div className="-z-10 pt-5 md:relative md:w-1/2 md:py-6">
-          <div className="container md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
-            <Image
-              src="/images/howwetreat-section.webp"
-              alt="Dental"
-              width={2160}
-              height={2700}
-              sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
-              loading="lazy"
-              className="aspect-3/4 h-full w-full object-cover object-center"
-            />
-          </div>
-        </div>
-      </section>
+      <PageSection
+        name={t("whatWeTreatEyebrow")}
+        title={t("whatWeTreatHeading")}
+        description={t("whatWeTreatDescription")}
+        image={{
+          src: "/images/about-us-hero.webp",
+          alt: "EMT",
+          width: 2160,
+          height: 2880,
+        }}
+        rowReverse
+        colReverse
+        divider
+      >
+        <Accordion className="rounded-none border-r-0 border-b-0 border-l-0">
+          {whatWeTreatConfig.map((item) => (
+            <AccordionItem
+              key={t(item.title)}
+              value={t(item.title)}
+              className="p-0"
+            >
+              <AccordionTrigger className="py-8 md:px-6">
+                <span className="subtitle-md font-normal">{t(item.title)}</span>
+              </AccordionTrigger>
+              <AccordionContent className="pb-8 md:px-4">
+                <p className="paragraph text-base">{t(item.description)}</p>
+                <div className="mt-5 w-fit">
+                  <Link
+                    href={item.href}
+                    className="text-sm font-medium tracking-wide uppercase"
+                  >
+                    {t("readMore")}
+                  </Link>
+                </div>
+              </AccordionContent>
+            </AccordionItem>
+          ))}
+        </Accordion>
+      </PageSection>
+      <PageSection
+        name={t("howWeTreatEyebrow")}
+        title={t("howWeTreatHeading")}
+        description={t("howWeTreatDescription")}
+        image={{
+          src: "/images/howwetreat-section.webp",
+          alt: "Dental",
+          width: 2160,
+          height: 2700,
+        }}
+        link={{
+          to: "treatmentPlans",
+        }}
+        className="border-t"
+        colReverse
+        divider
+      />
       <section className="bg-muted border-t pt-10 pb-16">
         <div className="container">
           <div className="space-y-4 pb-10 text-center md:hidden">
