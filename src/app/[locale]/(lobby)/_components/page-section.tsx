@@ -62,13 +62,12 @@ export default function PageSection({
           </div>
         </div>
         {imageBetween && (
-          <div className="block pt-8 md:hidden">
+          <div className="block h-128 pt-8 md:hidden">
             <Image
               {...image}
               alt={image.alt}
               sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
               loading="lazy"
-              className=""
             />
           </div>
         )}
@@ -118,7 +117,7 @@ export default function PageSection({
             sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
             loading="lazy"
             className={cn(
-              "w-full object-cover object-center md:h-dvh",
+              "h-128 w-full object-cover object-center md:h-dvh",
               imageFilled ? "aspect-square" : "aspect-3/4"
             )}
           />

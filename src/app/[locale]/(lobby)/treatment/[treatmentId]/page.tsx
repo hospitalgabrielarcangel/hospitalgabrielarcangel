@@ -370,7 +370,7 @@ export default async function ConditionsWeTreat({
                   {tConditionsWeTreat(item.title)}
                 </span>
               </AccordionTrigger>
-              <AccordionContent className="pb-8 md:px-6">
+              <AccordionContent className="px-5 pb-8 md:pr-[3dvw]">
                 <p className="paragraph text-base">
                   {tConditionsWeTreat(item.description)}
                 </p>

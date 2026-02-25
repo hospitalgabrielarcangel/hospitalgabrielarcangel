@@ -132,10 +132,10 @@ export default function Page() {
               value={t(item.title)}
               className="p-0"
             >
-              <AccordionTrigger className="py-8 md:px-6">
+              <AccordionTrigger className="px-5 py-8 md:pr-[3dvw]">
                 <span className="subtitle-md font-normal">{t(item.title)}</span>
               </AccordionTrigger>
-              <AccordionContent className="pb-8 md:px-4">
+              <AccordionContent className="px-5 pb-8 md:pr-[3dvw]">
                 <p className="paragraph text-base">{t(item.description)}</p>
                 <div className="mt-5 w-fit">
                   <Link

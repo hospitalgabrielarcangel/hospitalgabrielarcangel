@@ -127,7 +127,7 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
-      <section className="container flex flex-col py-20 md:flex-row md:px-0">
+      <section className="container flex flex-col py-20 md:flex-row">
         <div className="flex flex-col pb-8 md:w-2/5 md:pb-0">
           <div className="relative max-w-lg grow">
             <div className="sticky top-0 -mt-20 h-fit pt-20.25">
@@ -140,10 +140,10 @@ export default function AboutUsPage() {
           <Accordion className="rounded-none border-none">
             {faqsConfig.map((item) => (
               <AccordionItem key={t(item.title)} value={t(item.title)}>
-                <AccordionTrigger className="py-8">
+                <AccordionTrigger className="px-5 py-8">
                   <h3 className="subtitle-md font-normal">{t(item.title)}</h3>
                 </AccordionTrigger>
-                <AccordionContent className="sapce-y-4 pb-8">
+                <AccordionContent className="sapce-y-4 px-5 pb-8">
                   {t(item.description)
                     .split("\n")
                     .map((paragraph, index) => (
