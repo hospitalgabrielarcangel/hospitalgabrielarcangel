@@ -7,12 +7,23 @@
     "aboutUs": "About us"
   },
   "SiteFooter": {
-    "author": "Built by",
-    "socialTitle": "Social Media",
-    "contactTitle": "Contact",
-    "emailTitle": "Email",
-    "callUsTitle": "Call us",
-    "whatsappTitle": "WhatsApp"
+    "footerHeading": "Excellence in Rehabilitation: The most comprehensive mental health treatment clinic for your recovery.",
+    "treatmentNavTitle": "Treatment",
+    "approachNavItem": "Our approach",
+    "conditionsNavItem": "Conditions we treat",
+    "assessmentsNavItem": "Assessments",
+    "programmesNavItem": "Programmes",
+    "therapiesNavItem": "Therapies",
+    "pricesNavItem": "Prices",
+    "techNavItem": "Tech",
+    "informationNavTitle": "Information",
+    "teamNavItem": "Team",
+    "blogNavItem": "Blog",
+    "storiesNavItem": "Stories",
+    "contactNavItem": "Contact",
+    "termsNavItem": "Terms",
+    "privacyNavItem": "Privacy policy",
+    "socialNavTitle": "Connect"
   },
   "LobbyPage": {
     "pageHeaderHeading": "Inpatient Addiction Treatment Clinic",
@@ -34,13 +45,14 @@
     "howWeTreatHeading": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery.",
     "howWeTreatDescription": "At Gabriel Arcángel, we believe that a generalized approach hinders true recovery. We stand alone as the only treatment center in the world to provide a dedicated team of at least 15 professionals for every single patient.\nThroughout your stay, you will be supported by a private circle of world-renowned physicians, therapists, and specialists. By merging cutting-edge medical excellence with sophisticated holistic methodologies, we address the entire spectrum of your health. From cellular biology to psychological well-being, we craft a singular path to healing—ensuring that in the most exclusive environment, your recovery is our only focus.",
     "ourProgramsEyebrow": "A bespoke experience",
-    "ourProgramsTitle": "Your story is singular. Your recovery must be exceptional.",
+    "ourProgramsHeading": "Your story is singular. Your recovery must be exceptional.",
     "ourProgramsItem1Title": "Safety and compassionate care",
     "ourProgramsItem1Description": "Wherever you stand on your journey, whatever challenges you may face, we are here for you. We provide the elite care you require within a secure and nurturing environment. A place where your privacy is sacred and your recovery is our only focus.",
     "ourProgramsItem2Title": "A dedicated elite team",
     "ourProgramsItem2Description": "You are supported by a private circle of experts dedicated exclusively to your recovery. From your personal psychiatrist and primary physician to your live-in therapist and client relations team, we provide unwavering 24/7 support.",
     "ourProgramsItem3Title": "Privacy and exclusivity",
-    "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process."
+    "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process.",
+    "bannerHeading": "The journey to recovery begins with a conversation."
   },
   "AboutUsPage": {
     "pageHeaderHeading": "The first step at\nGabriel Arcángel\nis the last one\nyou’ll take alone.",
@@ -73,13 +85,13 @@
     "faqFooterHeading": "Need more help? We’re here for you.",
     "faqFooterDescription": "There are no silly or unnecessary questions when it comes to figuring out if our treatment programmes are the right fit for you. So, if you have questions that are not covered here, please reach out. Our client relations team are available 24/7 for a confidential, obligation-free conversation."
   },
-  "TreatmentPage": {
+  "ConditionsWeTreatPage": {
     "eyebrowPage": "Conditions We Treat",
     "headingPage": "However you live, and whatever you’ve lived through, this is your place for healing.",
     "phrasePage": "A bespoke approach, tailored to you",
     "descriptionPage": "At Gabriel Arcángel, we have established a sanctuary of absolute discretion for those facing complex challenges in their physical and mental health. We understand that these hurdles are not isolated events, but rather the confluence of interrelated factors—ranging from burnout and anxiety to biochemical imbalances and systemic disruptions derived from lifestyle.\nBased on the premise that health is an ecosystem where the biological, psychological, and emotional converge, our commitment to medical excellence allows us to decipher and treat the root cause. We do not limit ourselves to the palliative management of symptoms; our methodology is designed to eradicate them at their source, thereby restoring the fulfillment and performance of our patients.",
-    "mentalHealthConditionsArticleHeading": "Mental health conditions",
-    "mentalHealthConditionsArticleDescription": "While every mental health narrative i|s unique, there remains a universal constant: isolation. Emotional imbalances fragment us, especially when a diagnosis is mistaken for identity, fueling the false premise of personal weakness. The reality is that mental health, much like physical health, is a universal human vulnerability. At Gabriel Arcángel, we address the neurobiological and psychological pain born from this alienation. Our team accompanies you in processing that suffering and transcending your challenges to restore your personal integrity.",
+    "mentalHealthArticleHeading": "Mental health conditions",
+    "mentalHealthArticleDescription": "While every mental health narrative i|s unique, there remains a universal constant: isolation. Emotional imbalances fragment us, especially when a diagnosis is mistaken for identity, fueling the false premise of personal weakness. The reality is that mental health, much like physical health, is a universal human vulnerability. At Gabriel Arcángel, we address the neurobiological and psychological pain born from this alienation. Our team accompanies you in processing that suffering and transcending your challenges to restore your personal integrity.",
     "dependenciesAndAddictionsArticleHeading": "Dependencies and addictions",
     "dependenciesAndAddictionsArticleDescription": "Few states are as devastating as the moment one recognizes the loss of control in the face of dependency. Addictions operate as survival mechanisms against trauma, chronic stress, or emotional void, until the refuge itself transforms into the primary source of anguish. Whether dealing with substances, compulsive behaviors, or prescription medications, our intervention allows you to reclaim your personal sovereignty. We help you dismantle the cycle of fear and stigma to build an existence grounded in freedom and autonomy.",
     "eatingDisorderArticleHeading": "Eating disorders",
@@ -93,9 +105,10 @@
     "treatmentApproachItem2Title": "Guiding you on your personal evolution.",
     "treatmentApproachItem2Description": "Recovery is a profoundly intimate journey, and our approach is entirely personalized. There are no quick fixes; transformation requires commitment and determination. However, you will not traverse this path alone. We are by your side, guiding and supporting you at every step of the process.",
     "treatmentApproachItem3Title": "Mastering medicine at every step.",
-    "treatmentApproachItem3Description": "With a team of specialists per patient, state-of-the-art facilities, and certified medical treatments in the heart of Zurich, we ensure access to the most advanced diagnostic tools and therapeutic protocols in the world for your recovery."
+    "treatmentApproachItem3Description": "With a team of specialists per patient, state-of-the-art facilities, and certified medical treatments in the heart of Zurich, we ensure access to the most advanced diagnostic tools and therapeutic protocols in the world for your recovery.",
+    "bannerHeading": "The journey to recovery begins with a conversation."
   },
-  "ConditionsWeTreat": {
+  "ConditionPage": {
     "pagePhrase": "Your path to healing",
     "contactHeading": "Need help?\nWe’re here for you.",
     "contactDescription": "Change starts with a conversation, so please do not hesitate to reach out if you think we could help you or a loved one. Our client-relation team are available around the clock for a confidential call about your health.",
@@ -133,47 +146,47 @@
     "howWeTreatItem11Description": "In tandem with your mental health care, our medical infrastructure allows us to address any pre-existing or emerging physical conditions. Whether dealing with cardiovascular disorders, hormonal imbalances, chronic pain, or dermatological, dental, and sexual health issues, our team of specialists guarantees an accurate diagnosis and coordinated treatment under the highest clinical standards.",
     "howWeTreatItem11Link": "Medical treatments"
   },
-  "MentalHealthConditions": {
-    "treatmentHeading": "Mental Health Treatment Center",
-    "treatmentDescription": "At Gabriel Arcángel, our priority is the individual, not just the diagnosis. We embrace a holistic approach that transcends symptoms to understand and heal the root causes of every challenge. Here, you do not walk the path alone: our team of experts accompanies you with precision and warmth through every stage of your evolution.",
-    "treatmentItem1Title": "Depression",
-    "treatmentItem2Title": "Treatment-Resistant Depression (TRD)",
-    "treatmentItem3Title": "Anxiety",
-    "treatmentItem4Title": "Bipolar Disorder",
-    "treatmentItem5Title": "Cyclothymia",
-    "treatmentItem6Title": "Stress",
-    "treatmentItem7Title": "Burnout",
-    "treatmentItem8Title": "Post-Traumatic Stress Disorder (PTSD)",
-    "treatmentItem9Title": "Trauma",
-    "treatmentItem10Title": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
-    "treatmentItem11Title": "Obsessive-Compulsive Disorder (OCD)",
-    "treatmentItem12Title": "Phobias",
-    "treatmentItem13Title": "Narcissistic Abuse",
-    "treatmentItem14Title": "Personality Disorders",
+  "MentalHealth": {
+    "conditionHeading": "Mental Health Treatment Center",
+    "conditionDescription": "At Gabriel Arcángel, our priority is the individual, not just the diagnosis. We embrace a holistic approach that transcends symptoms to understand and heal the root causes of every challenge. Here, you do not walk the path alone: our team of experts accompanies you with precision and warmth through every stage of your evolution.",
+    "conditionItem1Title": "Depression",
+    "conditionItem2Title": "Treatment-Resistant Depression (TRD)",
+    "conditionItem3Title": "Anxiety",
+    "conditionItem4Title": "Bipolar Disorder",
+    "conditionItem5Title": "Cyclothymia",
+    "conditionItem6Title": "Stress",
+    "conditionItem7Title": "Burnout",
+    "conditionItem8Title": "Post-Traumatic Stress Disorder (PTSD)",
+    "conditionItem9Title": "Trauma",
+    "conditionItem10Title": "Attention-Deficit/Hyperactivity Disorder (ADHD)",
+    "conditionItem11Title": "Obsessive-Compulsive Disorder (OCD)",
+    "conditionItem12Title": "Phobias",
+    "conditionItem13Title": "Narcissistic Abuse",
+    "conditionItem14Title": "Personality Disorders",
     "approachEyebrow": "How We Treat",
     "approachHeading": "Our approach to mental health treatment",
     "approachDescription": "At Gabriel Arcángel, we operate on an absolute premise: while pain is a universal experience, healing is a strictly personal journey. Therefore, each of our programs moves away from generic protocols to become a masterpiece of clinical precision, meticulously designed to respond to the unique biography and needs of every patient."
   },
   "DependenciesAndAddictions": {
-    "treatmentHeading": "Dependencies & Addiction Treatment Center",
-    "treatmentDescription": "We understand that addiction is merely the surface of a story that deserves to be healed. Beyond physical detoxification, at Gabriel Arcángel we explore the 'why' behind your pain to deactivate the mechanisms of dependency from their origin. Our mission is to guide you through every stage of your evolution, offering a sanctuary of medical excellence where understanding becomes the definitive tool for reclaiming your life.",
-    "treatmentItem1Title": "Alcohol Addiction",
-    "treatmentItem2Title": "Drug Addiction",
-    "treatmentItem3Title": "Prescription Drug Addiction",
-    "treatmentItem4Title": "Behavioural Dependencies",
+    "conditionHeading": "Dependencies & Addiction Treatment Center",
+    "conditionDescription": "We understand that addiction is merely the surface of a story that deserves to be healed. Beyond physical detoxification, at Gabriel Arcángel we explore the 'why' behind your pain to deactivate the mechanisms of dependency from their origin. Our mission is to guide you through every stage of your evolution, offering a sanctuary of medical excellence where understanding becomes the definitive tool for reclaiming your life.",
+    "conditionItem1Title": "Alcohol Addiction",
+    "conditionItem2Title": "Drug Addiction",
+    "conditionItem3Title": "Prescription Drug Addiction",
+    "conditionItem4Title": "Behavioural Dependencies",
     "approachEyebrow": "How We Treat",
     "approachHeading": "Our approach to dependencies and addiction treatment",
     "approachDescription": "At Gabriel Arcángel, we do not treat addictions; we heal individuals. By moving away from the traditional 12-step model, we implement a 360-degree systemic approach that addresses the true origin of dependency. Our message is clear and resolute: the challenge you face defines neither your worth nor your strength. We are here to transform that vulnerability into the solid foundation of your new life."
   },
   "EatingDisorder": {
-    "treatmentHeading": "Eating Disorder Rehabilitation Center",
-    "treatmentDescription": "We understand that recovery demands an environment of maximum specialization. At Gabriel Arcángel, we fuse scientific rigor with elite clinical guidance to heal the relationship with food from its very roots. Backed by an interdisciplinary team, we work to silence the paralyzing self-criticism and restore your right to enjoyment, rebuilding your identity upon the foundations of health and emotional freedom.",
-    "treatmentItem1Title": "Anorexia Nervosa",
-    "treatmentItem2Title": "Bulimia Nervosa",
-    "treatmentItem3Title": "Orthorexia Nervosa",
-    "treatmentItem4Title": "Obesity & Metabolic Syndrome",
-    "treatmentItem5Title": "Binge Eating Disorder",
-    "treatmentItem6Title": "Body Dysmorphic Disorder",
+    "conditionHeading": "Eating Disorder Rehabilitation Center",
+    "conditionDescription": "We understand that recovery demands an environment of maximum specialization. At Gabriel Arcángel, we fuse scientific rigor with elite clinical guidance to heal the relationship with food from its very roots. Backed by an interdisciplinary team, we work to silence the paralyzing self-criticism and restore your right to enjoyment, rebuilding your identity upon the foundations of health and emotional freedom.",
+    "conditionItem1Title": "Anorexia Nervosa",
+    "conditionItem2Title": "Bulimia Nervosa",
+    "conditionItem3Title": "Orthorexia Nervosa",
+    "conditionItem4Title": "Obesity & Metabolic Syndrome",
+    "conditionItem5Title": "Binge Eating Disorder",
+    "conditionItem6Title": "Body Dysmorphic Disorder",
     "approachEyebrow": "How We Treat",
     "approachHeading": "Our approach to eating disorder treatment",
     "approachDescription": "We understand that an eating disorder is, at its core, a language of pain. At Gabriel Arcángel, our methodology explores what lies beneath the surface, treating the behavior merely as the tip of an emotional iceberg. By healing the roots—be it unresolved trauma or the rigidity of perfectionism—we enable our patients to regain their autonomy, transforming their relationship with food into a source of balance and freedom."
@@ -202,8 +215,8 @@
     "home": "Home",
     "aboutUs": "About us",
     "ourPrograms": "See our programs",
-    "treatmentPlans": "Discover our approach",
-    "mentalHealthConditions": "Mental health conditions",
+    "conditionsWeTreat": "Discover our approach",
+    "mentalHealth": "Mental health conditions",
     "dependenciesAndAddictions": "Dependencies and addictions",
     "eatingDisorder": "Eating disorders",
     "contact": "We’re here to talk"
@@ -251,8 +264,5 @@
   },
   "MenuButton": {
     "label": "Open menu"
-  },
-  "MenuSidebar": {
-    "title": "Excellence in Rehabilitation: The most comprehensive mental health treatment clinic for your recovery."
   }
 }

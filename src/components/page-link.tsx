@@ -11,52 +11,47 @@ const PAGE_LINK_CONFIG = [
   {
     title: "home",
     href: "/",
-    icon: Icons.home,
   },
   {
     title: "aboutUs",
     href: "about-us",
-    icon: Icons.arrowRight,
   },
   {
     title: "ourPrograms",
     href: "#",
-    icon: Icons.arrowRight,
   },
   {
-    title: "treatmentPlans",
-    href: "#",
-    icon: Icons.arrowRight,
+    title: "conditionsWeTreat",
+    href: "/conditions-we-treat",
   },
   {
-    title: "mentalHealthConditions",
-    href: "/treatment/mental-health-conditions",
-    icon: Icons.arrowRight,
+    title: "mentalHealth",
+    href: "/conditions-we-treat/mental-health",
   },
   {
     title: "dependenciesAndAddictions",
-    href: "/treatment/dependencies-and-addictions",
-    icon: Icons.arrowRight,
+    href: "/conditions-we-treat/dependencies-and-addictions",
   },
   {
     title: "eatingDisorder",
-    href: "/treatment/eating-disorder",
-    icon: Icons.arrowRight,
+    href: "/conditions-we-treat/eating-disorder",
   },
   {
     title: "contact",
     href: "#",
-    icon: Icons.arrowRight,
   },
 ] as const
 
-export type PageLinkTitle = (typeof PAGE_LINK_CONFIG)[number]["title"]
+export type PageLinkToProp = (typeof PAGE_LINK_CONFIG)[number]["title"]
 
 export interface PageLinkProps
   extends
     Omit<React.ComponentProps<typeof Link>, "href">,
-    VariantProps<typeof buttonVariants> {
-  to: PageLinkTitle
+    Omit<
+      VariantProps<typeof buttonVariants>,
+      "icon" | "icon-xs" | "icon-sm" | "icon-lg"
+    > {
+  to: PageLinkToProp
   withIcon?: boolean
 }
 
@@ -77,25 +72,19 @@ export function PageLink({
   return (
     <Link
       className={cn(
-        "uppercase",
+        "w-fit uppercase",
         buttonVariants({
           size,
           variant,
         }),
-        variant === "link" ? "px-0 underline underline-offset-4" : "",
+        variant === "link" && "px-0 underline underline-offset-4",
         className
       )}
       href={pageLink.href}
       {...props}
     >
-      {size !== "icon" ? (
-        <>
-          <span>{children || title}</span>
-          {withIcon && <pageLink.icon aria-hidden />}
-        </>
-      ) : (
-        <pageLink.icon aria-hidden />
-      )}
+      <span>{children || title}</span>
+      {withIcon && <Icons.arrowRight aria-hidden />}
     </Link>
   )
 }

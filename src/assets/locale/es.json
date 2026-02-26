@@ -7,12 +7,23 @@
     "aboutUs": "Sobre nosotros"
   },
   "SiteFooter": {
-    "author": "Contruido por",
-    "socialTitle": "Redes sociales",
-    "contactTitle": "Contacto",
-    "emailTitle": "Correo electrónico",
-    "callUsTitle": "Llámanos",
-    "whatsappTitle": "WhatsApp"
+    "footerHeading": "Excelencia en rehabilitación: La clínica de tratamiento de salud mental más completa para tu recuperación.",
+    "treatmentNavTitle": "Tratamiento",
+    "approachNavItem": "Nuestro enfoque",
+    "conditionsNavItem": "Condiciones que tratamos",
+    "assessmentsNavItem": "Evaluaciones",
+    "programmesNavItem": "Programas",
+    "therapiesNavItem": "Tipos de terapias",
+    "pricesNavItem": "Precios",
+    "techNavItem": "Tecnología",
+    "informationNavTitle": "Información",
+    "teamNavItem": "Equipo",
+    "blogNavItem": "Blog",
+    "storiesNavItem": "Historias",
+    "contactNavItem": "Contacto",
+    "termsNavItem": "Términos y condiciones",
+    "privacyNavItem": "Política de privacidad",
+    "socialNavTitle": "Conecta"
   },
   "LobbyPage": {
     "pageHeaderHeading": "Clínica Hospitalizada Contra Adicciones",
@@ -34,13 +45,14 @@
     "howWeTreatHeading": "Un enfoque médico, integral y personalizado en cada etapa de la recuperación física, mental y emocional.",
     "howWeTreatDescription": "En Gabriel Arcángel, entendemos que un enfoque generalizado es insuficiente para una sanación verdadera; por ello, nos especializamos en lo excepcional. Somos el único centro de tratamiento a nivel global que asigna un equipo mínimo de 15 profesionales dedicados exclusivamente a cada paciente.\nDurante su estancia, no solo estará bajo el cuidado de una institución, sino respaldado por una junta de médicos, terapeutas y especialistas de prestigio mundial. Combinamos la medicina de vanguardia con enfoques holísticos de alto nivel para abordar el espectro completo de la salud. Desde la biología celular hasta el bienestar emocional, cada detalle de su plan de tratamiento es diseñado a medida, garantizando que su proceso de recuperación sea tan único como su propia historia.",
     "ourProgramsEyebrow": "Una experiencia a medida",
-    "ourProgramsTitle": "Porque su historia es única, su recuperación no puede ser ordinaria.",
+    "ourProgramsHeading": "Porque su historia es única, su recuperación no puede ser ordinaria.",
     "ourProgramsItem1Title": "Un refugio de protección y cuidado",
     "ourProgramsItem1Description": "No importa en qué etapa de su camino se encuentre, los desafíos que enfrente o su historia personal. Ofrecemos la atención de excelencia que usted merece en un entorno privado, seguro y diseñado para sostenerle en cada paso hacia su bienestar.",
     "ourProgramsItem2Title": "Expertos dedicados a su excelencia",
     "ourProgramsItem2Description": "No solo damos un tratamiento, Contamos con especialistas de élite dedicados exclusivamente a su evolución. Desde su psiquiatra personal y médico de cabecera, hasta un terapeuta residente y un equipo de gestión de relaciones, garantizamos una presencia constante las 24 horas del día.",
     "ourProgramsItem3Title": "Privacidad y exclusividad",
-    "ourProgramsItem3Description": "Nuestra experiencia de tratamiento es enteramente privada y discreta, diseñada no solo para priorizar su salud, sino para salvaguardar su integridad personal en cada etapa del proceso."
+    "ourProgramsItem3Description": "Nuestra experiencia de tratamiento es enteramente privada y discreta, diseñada no solo para priorizar su salud, sino para salvaguardar su integridad personal en cada etapa del proceso.",
+    "bannerHeading": "El camino hacia la recuperación comienza con una charla."
   },
   "AboutUsPage": {
     "pageHeaderHeading": "El primer paso en\nGabriel Arcángel\nes el último que\ndarás solo.",
@@ -73,13 +85,13 @@
     "faqFooterHeading": "¿Necesita más ayuda? Estamos aquí para usted.",
     "faqFooterDescription": "No existen preguntas insignificantes o innecesarias cuando se trata de determinar si nuestros programas de tratamiento son la opción adecuada para usted. Por lo tanto, si tiene dudas que no han sido resueltas aquí, por favor contáctenos. Nuestro equipo de atención al cliente está disponible las 24 horas, los 7 días de la semana, para una conversación confidencial y sin compromiso."
   },
-  "TreatmentPage": {
+  "ConditionsWeTreatPage": {
     "eyebrowPage": "Condiciones Que Tratamos",
     "headingPage": "Sin importar cómo viva, ni lo que haya vivido, este es su lugar para sanar.",
     "phrasePage": "Un enfoque diseñado a su medida",
     "descriptionPage": "En Gabriel Arcángel, hemos erigido un santuario de absoluta discreción para quienes enfrentan desafíos complejos en su salud física y mental. Entendemos que estos retos no son eventos aislados, sino la confluencia de factores interrelacionados: desde cuadros de burnout y ansiedad, hasta desequilibrios bioquímicos y desajustes sistémicos derivados del estilo de vida.\nBajo la premisa de que la salud es un ecosistema donde convergen lo biológico, lo psicológico y lo emocional, nuestro compromiso con la excelencia médica nos permite descifrar y tratar la causa raíz. No nos limitamos a la gestión paliativa de los síntomas; nuestra metodología está diseñada para erradicarlos de origen, restaurando así la plenitud y el rendimiento de nuestros pacientes.",
-    "mentalHealthConditionsArticleHeading": "Condiciones de salud mental",
-    "mentalHealthConditionsArticleDescription": "Aunque cada narrativa de salud mental es única, existe una constante universal: el aislamiento. Los desequilibrios emocionales nos fragmentan, especialmente cuando el diagnóstico se confunde con la identidad, alimentando la falsa premisa de la debilidad personal. La realidad es que la salud mental, al igual que la física, es una vulnerabilidad humana universal. En Gabriel Arcángel, abordamos el dolor neurobiológico y psicológico que nace de esta alienación. Nuestro equipo le acompaña a procesar ese sufrimiento y a trascender sus desafíos para restaurar su integridad personal.",
+    "mentalHealthArticleHeading": "Condiciones de salud mental",
+    "mentalHealthArticleDescription": "Aunque cada narrativa de salud mental es única, existe una constante universal: el aislamiento. Los desequilibrios emocionales nos fragmentan, especialmente cuando el diagnóstico se confunde con la identidad, alimentando la falsa premisa de la debilidad personal. La realidad es que la salud mental, al igual que la física, es una vulnerabilidad humana universal. En Gabriel Arcángel, abordamos el dolor neurobiológico y psicológico que nace de esta alienación. Nuestro equipo le acompaña a procesar ese sufrimiento y a trascender sus desafíos para restaurar su integridad personal.",
     "dependenciesAndAddictionsArticleHeading": "Dependencias y adicciones",
     "dependenciesAndAddictionsArticleDescription": "Pocos estados son tan devastadores como el instante en que se reconoce la pérdida de control frente a una dependencia. Las adicciones operan como mecanismos de supervivencia ante el trauma, el estrés crónico o el vacío emocional, hasta que el propio refugio se transforma en la mayor fuente de angustia. Ya sea ante sustancias, conductas compulsivas o fármacos recetados, nuestra intervención le permite recuperar su soberanía personal. Le ayudamos a desarticular el ciclo de miedo y estigma para construir una existencia fundamentada en la libertad y la autonomía.",
     "eatingDisorderArticleHeading": "Trastornos alimenticios",
@@ -93,9 +105,10 @@
     "treatmentApproachItem2Title": "Guiándole en su evolución personal",
     "treatmentApproachItem2Description": "La recuperación es una trayectoria profundamente íntima y nuestro abordaje es íntegramente a medida. No existen soluciones inmediatas; la transformación exige compromiso y determinación. Sin embargo, no transitará este camino en soledad. Estamos a su lado, brindándole guía y respaldo en cada etapa del proceso.",
     "treatmentApproachItem3Title": "Maestría médica en cada etapa",
-    "treatmentApproachItem3Description": "Con un equipo de especialistas por paciente, instalaciones de vanguardia y tratamientos médicos certificados en el corazón de Zúrich, garantizamos el acceso a las herramientas de diagnóstico y protocolos terapéuticos más avanzados del mundo para su recuperación."
+    "treatmentApproachItem3Description": "Con un equipo de especialistas por paciente, instalaciones de vanguardia y tratamientos médicos certificados en el corazón de Zúrich, garantizamos el acceso a las herramientas de diagnóstico y protocolos terapéuticos más avanzados del mundo para su recuperación.",
+    "bannerHeading": "El camino hacia la recuperación comienza con una charla."
   },
-  "ConditionsWeTreat": {
+  "ConditionPage": {
     "pagePhrase": "Tu camino hacia la sanación",
     "contactHeading": "¿Necesitas ayuda?\nEstamos aquí para ti.",
     "contactDescription": "El cambio comienza con una conversación, así que no dudes en contactarnos si crees que podríamos ayudarte a ti o a un ser querido. Nuestro equipo de relaciones con los clientes está disponible las 24 horas para una llamada confidencial sobre tu salud.",
@@ -133,47 +146,47 @@
     "howWeTreatItem11Description": "De manera paralela a su salud mental, nuestra infraestructura médica permite abordar cualquier afección física preexistente o emergente. Ya se trate de padecimientos cardiovasculares, desequilibrios hormonales, dolor crónico, salud dermatológica, dental o sexual, nuestro cuerpo de especialistas garantiza un diagnóstico preciso y un tratamiento coordinado bajo los más altos estándares clínicos.",
     "howWeTreatItem11Link": "Tratamientos médicos"
   },
-  "MentalHealthConditions": {
-    "treatmentHeading": "Condiciones de salud mental que tratamos",
-    "treatmentDescription": "En Gabriel Arcángel, nuestra prioridad es el ser humano, no solo el diagnóstico. Adoptamos un enfoque integral que trasciende los síntomas para comprender y sanar las causas profundas de cada desafío. Aquí, usted no recorre el camino solo: nuestro equipo de expertos le acompaña con precisión y calidez en cada etapa de su evolución.",
-    "treatmentItem1Title": "Depresión",
-    "treatmentItem2Title": "Depresión resistente al tratamiento",
-    "treatmentItem3Title": "Ansiedad",
-    "treatmentItem4Title": "Trastorno bipolar",
-    "treatmentItem5Title": "Ciclotimia",
-    "treatmentItem6Title": "Estrés",
-    "treatmentItem7Title": "Síndrome de desgaste profesional (Burnout)",
-    "treatmentItem8Title": "Trastorno de estrés postraumático (TEPT)",
-    "treatmentItem9Title": "Trauma",
-    "treatmentItem10Title": "Trastorno por Déficit de Atención e Hiperactividad (TDAH)",
-    "treatmentItem11Title": "Trastorno Obsesivo-Compulsivo (TOC)",
-    "treatmentItem12Title": "Fobias",
-    "treatmentItem13Title": "Abuso narcisista",
-    "treatmentItem14Title": "Trastornos de la personalidad",
+  "MentalHealth": {
+    "conditionHeading": "Condiciones de salud mental que tratamos",
+    "conditionDescription": "En Gabriel Arcángel, nuestra prioridad es el ser humano, no solo el diagnóstico. Adoptamos un enfoque integral que trasciende los síntomas para comprender y sanar las causas profundas de cada desafío. Aquí, usted no recorre el camino solo: nuestro equipo de expertos le acompaña con precisión y calidez en cada etapa de su evolución.",
+    "conditionItem1Title": "Depresión",
+    "conditionItem2Title": "Depresión resistente al tratamiento",
+    "conditionItem3Title": "Ansiedad",
+    "conditionItem4Title": "Trastorno bipolar",
+    "conditionItem5Title": "Ciclotimia",
+    "conditionItem6Title": "Estrés",
+    "conditionItem7Title": "Síndrome de desgaste profesional (Burnout)",
+    "conditionItem8Title": "Trastorno de estrés postraumático (TEPT)",
+    "conditionItem9Title": "Trauma",
+    "conditionItem10Title": "Trastorno por Déficit de Atención e Hiperactividad (TDAH)",
+    "conditionItem11Title": "Trastorno Obsesivo-Compulsivo (TOC)",
+    "conditionItem12Title": "Fobias",
+    "conditionItem13Title": "Abuso narcisista",
+    "conditionItem14Title": "Trastornos de la personalidad",
     "approachEyebrow": "Cómo Tratamos",
     "approachHeading": "Nuestro enfoque para el tratamiento de la salud mental",
     "approachDescription": "En Gabriel Arcángel, partimos de una premisa absoluta: aunque el dolor es una experiencia universal, la sanación es un camino estrictamente personal. Por ello, cada uno de nuestros programas se aleja de los protocolos genéricos para convertirse en una obra de precisión clínica, diseñada meticulosamente para responder a la biografía y necesidades únicas de cada paciente."
   },
   "DependenciesAndAddictions": {
-    "treatmentHeading": "Dependencias & adicciones que tratamos",
-    "treatmentDescription": "Entendemos que la adicción es solo la superficie de una historia que merece ser sanada. Más allá de la desintoxicación física, en Gabriel Arcángel exploramos el 'porqué' de su dolor para desactivar los mecanismos de la dependencia desde su origen. Nuestra misión es guiarle en cada etapa de su evolución, ofreciendo un refugio de excelencia médica donde el entendimiento se convierte en la herramienta definitiva para recuperar su vida.",
-    "treatmentItem1Title": "Adicción al Alcohol",
-    "treatmentItem2Title": "Adicción a las Drogas",
-    "treatmentItem3Title": "Adicción a los Medicamentos Recetados",
-    "treatmentItem4Title": "Dependencias Conductuales",
+    "conditionHeading": "Dependencias & adicciones que tratamos",
+    "conditionDescription": "Entendemos que la adicción es solo la superficie de una historia que merece ser sanada. Más allá de la desintoxicación física, en Gabriel Arcángel exploramos el 'porqué' de su dolor para desactivar los mecanismos de la dependencia desde su origen. Nuestra misión es guiarle en cada etapa de su evolución, ofreciendo un refugio de excelencia médica donde el entendimiento se convierte en la herramienta definitiva para recuperar su vida.",
+    "conditionItem1Title": "Adicción al Alcohol",
+    "conditionItem2Title": "Adicción a las Drogas",
+    "conditionItem3Title": "Adicción a los Medicamentos Recetados",
+    "conditionItem4Title": "Dependencias Conductuales",
     "approachEyebrow": "Cómo Tratamos",
     "approachHeading": "Nuestro enfoque en el tratamiento de dependencias y adicciones",
     "approachDescription": "En Gabriel Arcángel, no tratamos adicciones; sanamos personas. Al alejarnos del tradicional modelo de 12 pasos, implementamos un enfoque sistémico de 360 grados que aborda el origen real de la dependencia. Nuestro mensaje es claro y rotundo: el desafío que enfrenta no define su valor ni su fortaleza. Estamos aquí para transformar esa vulnerabilidad en la base sólida de su nueva vida."
   },
   "EatingDisorder": {
-    "treatmentHeading": "Trastornos alimenticios que tratamos",
-    "treatmentDescription": "Entendemos que la recuperación requiere un entorno de máxima especialización. En Gabriel Arcángel, fusionamos el rigor científico con un acompañamiento de élite para sanar la relación con la alimentación desde su raíz. Con el respaldo de un equipo interdisciplinario, trabajamos para silenciar la autocrítica paralizante y devolverle el derecho al disfrute, reconstruyendo su identidad sobre los cimientos de la salud y la libertad emocional.",
-    "treatmentItem1Title": "Anorexia Nerviosa",
-    "treatmentItem2Title": "Bulimia Nerviosa",
-    "treatmentItem3Title": "Ortorexia Nerviosa",
-    "treatmentItem4Title": "Obesidad & Síndrome Metabólico",
-    "treatmentItem5Title": "Trastorno por Atracón",
-    "treatmentItem6Title": "Trastorno Dismórfico Corporal",
+    "conditionHeading": "Trastornos alimenticios que tratamos",
+    "conditionDescription": "Entendemos que la recuperación requiere un entorno de máxima especialización. En Gabriel Arcángel, fusionamos el rigor científico con un acompañamiento de élite para sanar la relación con la alimentación desde su raíz. Con el respaldo de un equipo interdisciplinario, trabajamos para silenciar la autocrítica paralizante y devolverle el derecho al disfrute, reconstruyendo su identidad sobre los cimientos de la salud y la libertad emocional.",
+    "conditionItem1Title": "Anorexia Nerviosa",
+    "conditionItem2Title": "Bulimia Nerviosa",
+    "conditionItem3Title": "Ortorexia Nerviosa",
+    "conditionItem4Title": "Obesidad & Síndrome Metabólico",
+    "conditionItem5Title": "Trastorno por Atracón",
+    "conditionItem6Title": "Trastorno Dismórfico Corporal",
     "approachEyebrow": "Cómo Tratamos",
     "approachHeading": "Nuestro enfoque en el tratamiento de trastornos alimenticios",
     "approachDescription": "Entendemos que un trastorno alimentario es, en esencia, un lenguaje del dolor. En Gabriel Arcángel, nuestra metodología explora lo que subyace bajo la superficie, tratando la conducta como la punta de un iceberg emocional. Al sanar las raíces —el trauma no resuelto o la rigidez del perfeccionismo— permitimos que nuestros pacientes recuperen su autonomía, transformando su relación con la alimentación en una fuente de equilibrio y libertad."
@@ -202,8 +215,8 @@
     "home": "Inicio",
     "aboutUs": "Sobre nosotros",
     "ourPrograms": "Ver nuestros programas",
-    "treatmentPlans": "Descubre nuestros planes de tratamiento",
-    "mentalHealthConditions": "Condiciones de salud mental",
+    "conditionsWeTreat": "Descubre nuestros planes de tratamiento",
+    "mentalHealth": "Condiciones de salud mental",
     "dependenciesAndAddictions": "Dependencias y adicciones",
     "eatingDisorder": "Trastornos alimenticios",
     "contact": "Estamos para escucharte"
@@ -251,8 +264,5 @@
   },
   "MenuButton": {
     "label": "Abrir menú"
-  },
-  "MenuSidebar": {
-    "title": "Excelencia en rehabilitación: La clínica de tratamiento de salud mental más completa para tu recuperación."
   }
 }

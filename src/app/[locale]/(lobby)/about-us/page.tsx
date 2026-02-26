@@ -10,7 +10,7 @@ import { PageHeader, PageHeaderHeading } from "@/components/page-header"
 import { PageLink } from "@/components/page-link"
 
 import { CertificationsCarousel } from "../_components/cerfifications-carousel"
-import PageSection from "../_components/page-section"
+import { PageSection, PageSectionHeader } from "../_components/page-section"
 
 const faqsConfig = [
   {
@@ -84,8 +84,8 @@ export default function AboutUsPage() {
       </section>
       <CertificationsCarousel className="border-b" />
       <PageSection
-        name={t("whoWeAreEyebrow")}
-        title={t("whoWeAreHeading")}
+        eyebrow={t("whoWeAreEyebrow")}
+        heading={t("whoWeAreHeading")}
         description={t("whoWeAreDescription")}
         image={{
           src: "/images/howwetreat-section.webp",
@@ -96,8 +96,8 @@ export default function AboutUsPage() {
         imageFilled
       />
       <PageSection
-        name={t("whoWeTreatEyebrow")}
-        title={t("whoWeTreatHeading")}
+        eyebrow={t("whoWeTreatEyebrow")}
+        heading={t("whoWeTreatHeading")}
         description={t("whoWeTreatDescription")}
         image={{
           src: "/images/howwetreat-section.webp",
@@ -108,25 +108,12 @@ export default function AboutUsPage() {
         imageFilled
         rowReverse
       />
-      <section className="bg-muted">
-        <div className="container">
-          <div className="mx-auto max-w-4xl space-y-6 pt-20 pb-24 text-center">
-            <div className="space-y-4">
-              <p className="eyebrow text-muted-foreground">
-                {t("ourApproachEyebrow")}
-              </p>
-              <h2 className="heading-3xl">{t("ourApproachHeading")}</h2>
-            </div>
-            <div className="subtitle-md space-y-4">
-              {t("ourApproachDescription")
-                .split("\n")
-                .map((paragraph, index) => (
-                  <p key={index}>{paragraph}</p>
-                ))}
-            </div>
-          </div>
-        </div>
-      </section>
+      <PageSectionHeader
+        heading={t("ourApproachHeading")}
+        description={t("ourApproachDescription")}
+        eyebrow={t("ourApproachEyebrow")}
+        className="bg-muted"
+      />
       <section className="container flex flex-col py-20 md:flex-row">
         <div className="flex flex-col pb-8 md:w-2/5 md:pb-0">
           <div className="relative max-w-lg grow">

@@ -1,16 +1,23 @@
-import Image from "next/image"
-import type { ItemWithImage } from "@/types"
+import Image, { type ImageProps } from "next/image"
+import type { ContainerElementType, HeadingElementType } from "@/types"
 
 import { cn } from "@/lib/utils"
-import { PageLink, type PageLinkTitle } from "@/components/page-link"
+import { PageLink, type PageLinkToProp } from "@/components/page-link"
 
-interface PageSectionProps extends ItemWithImage {
+interface SectionHeader {
+  heading: string
+  description: string
+  eyebrow?: string
+}
+
+interface PageSectionProps extends SectionHeader {
   children?: React.ReactNode
   className?: string
   link?: {
-    to: PageLinkTitle
+    to: PageLinkToProp
     label?: string
   }
+  image: ImageProps
   rowReverse?: boolean
   colReverse?: boolean
   imageFilled?: boolean
@@ -19,13 +26,13 @@ interface PageSectionProps extends ItemWithImage {
   divider?: boolean
 }
 
-export default function PageSection({
-  name,
-  title,
-  description,
-  image,
+function PageSection({
   children,
   className,
+  heading,
+  description,
+  eyebrow,
+  image,
   link,
   imageFilled,
   imageBetween,
@@ -56,9 +63,15 @@ export default function PageSection({
             rowReverse ? "md:pr-[3dvw]" : "md:pl-[3dvw]"
           )}
         >
-          <div className="md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
-            <p className="eyebrow text-muted-foreground pb-3">{name}</p>
-            <h2 className="heading-3xl">{title}</h2>
+          <div className="space-y-3 md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
+            {eyebrow && (
+              <p className="eyebrow text-muted-foreground">{eyebrow}</p>
+            )}
+            <h2 className="heading-3xl grid">
+              {heading.split("\n").map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
+            </h2>
           </div>
         </div>
         {imageBetween && (
@@ -126,3 +139,160 @@ export default function PageSection({
     </section>
   )
 }
+
+interface PageSectionHeaderProps extends SectionHeader {
+  className?: string
+  as?: ContainerElementType
+  headingAs?: HeadingElementType
+  link?: {
+    to: PageLinkToProp
+    label?: string
+  }
+  size?: "default" | "sm"
+}
+
+function PageSectionHeader({
+  className,
+  as: Comp = "section",
+  headingAs: HeadingComp = "h2",
+  heading,
+  description,
+  eyebrow,
+  link,
+  size = "default",
+}: PageSectionHeaderProps) {
+  return (
+    <Comp className={className}>
+      <div className="container">
+        <div className="mx-auto max-w-4xl space-y-10 pt-20 pb-24 text-center">
+          <div className="space-y-4">
+            {eyebrow && (
+              <p className="eyebrow text-muted-foreground">{eyebrow}</p>
+            )}
+            <HeadingComp
+              className={`grid ${size === "sm" ? "heading-xl" : "heading-3xl"}`}
+            >
+              {heading.split("\n").map((item, index) => (
+                <span key={index}>{item}</span>
+              ))}
+            </HeadingComp>
+          </div>
+          <div
+            className={`space-y-4 ${size === "sm" ? "paragraph" : "subtitle-md"}`}
+          >
+            {description.split("\n").map((paragraph, index) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+          {link && (
+            <PageLink
+              to={link.to}
+              variant="link"
+              className="text-sm font-medium tracking-wide uppercase"
+            >
+              {link.label}
+            </PageLink>
+          )}
+        </div>
+      </div>
+    </Comp>
+  )
+}
+
+interface PageSectionImageProps extends Omit<SectionHeader, "description"> {
+  className?: string
+  items: {
+    title: string
+    description: string
+  }[]
+  link?: {
+    to: PageLinkToProp
+    label?: string
+  }
+}
+
+function PageSectionImage({
+  className,
+  heading,
+  eyebrow,
+  items,
+  link,
+}: PageSectionImageProps) {
+  return (
+    <section className={cn("pt-10 pb-16", className)}>
+      <div className="container">
+        <div className="space-y-4 pb-10 text-center md:hidden">
+          <p className="eyebrow uppercase">{eyebrow}</p>
+          <h2 className="heading-3xl">{heading}</h2>
+        </div>
+        <div className="relative flex items-center justify-center overflow-hidden">
+          <Image
+            src="/images/ourprograms-section.webp"
+            alt="Dental"
+            width={1536}
+            height={1024}
+            sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
+            loading="lazy"
+            className="aspect-353/380 h-full w-full object-cover object-center sm:aspect-1360/616"
+          />
+          <div className="absolute inset-0 hidden flex-col items-center justify-center gap-y-6 md:flex lg:px-18">
+            <p className="eyebrow text-white uppercase">{eyebrow}</p>
+            <h2 className="heading-3xl text-center text-white">{heading}</h2>
+          </div>
+        </div>
+      </div>
+      <ul className="no-scrollbar flex justify-between overflow-x-scroll px-5 pt-18 md:overflow-x-auto md:px-[3dvw]">
+        {items.map((item) => (
+          <li
+            key={item.title}
+            className="flex-[0_0_90%] pl-8 first:pl-0 md:flex-[0_0_31.33%] md:pl-0"
+          >
+            <div className="border-foreground space-y-4 border-t-2 pt-8">
+              <h2 className="paragraph">{item.title}</h2>
+              <p className="paragraph">{item.description}</p>
+            </div>
+          </li>
+        ))}
+      </ul>
+      {link && (
+        <div className="mt-10 flex justify-center px-5">
+          <PageLink
+            to={link.to}
+            size="lg"
+            variant="outline"
+            className="w-fit"
+            withIcon
+          >
+            {link.label}
+          </PageLink>
+        </div>
+      )}
+    </section>
+  )
+}
+
+interface PageSectionBannerProps {
+  className?: string
+  heading: string
+}
+
+function PageSectionBanner({ className, heading }: PageSectionBannerProps) {
+  return (
+    <section className={cn("flex items-start", className)}>
+      <div className="z-10 mx-auto grid w-full gap-y-12 bg-[url('/images/banner-bg.webp')] bg-cover bg-center px-5 py-24 md:w-[80dvw] md:rounded-md md:px-20">
+        <h2 className="heading-4xl max-w-4xl text-center text-white md:text-left">
+          {heading}
+        </h2>
+        <PageLink
+          className="mx-auto h-11 pt-0.25 md:mx-0"
+          to="contact"
+          variant="secondary"
+          size="lg"
+          withIcon
+        />
+      </div>
+    </section>
+  )
+}
+
+export { PageSection, PageSectionHeader, PageSectionImage, PageSectionBanner }

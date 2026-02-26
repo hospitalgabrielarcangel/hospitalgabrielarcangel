@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl"
 import { toast } from "sonner"
 import * as z from "zod"
 
-import { treatmentConfig } from "@/config/treatment"
+import { programmesConfig } from "@/config/treatment"
 import { Button } from "@/components/ui/button"
 import { Field, FieldError, FieldGroup } from "@/components/ui/field"
 import { Input } from "@/components/ui/input"
@@ -30,7 +30,7 @@ export function ContactForm() {
   const t = useTranslations("ContactForm")
   const tService = useTranslations("Treatment")
 
-  const treatmentItems = treatmentConfig.map((treatment) => ({
+  const conditionItems = programmesConfig.map((treatment) => ({
     value: tService(treatment.name),
     label: tService(treatment.name),
   }))
@@ -222,12 +222,12 @@ export function ContactForm() {
                       <SelectContent>
                         <SelectGroup>
                           <SelectLabel>{t("treatmentInputLabel")}</SelectLabel>
-                          {treatmentItems.map((treatmentItem) => (
+                          {conditionItems.map((conditionItem) => (
                             <SelectItem
-                              key={treatmentItem.value}
-                              value={treatmentItem.value}
+                              key={conditionItem.value}
+                              value={conditionItem.value}
                             >
-                              {treatmentItem.label}
+                              {conditionItem.label}
                             </SelectItem>
                           ))}
                         </SelectGroup>

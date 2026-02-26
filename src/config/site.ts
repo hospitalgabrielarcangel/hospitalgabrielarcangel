@@ -82,59 +82,93 @@ export const siteConfig = {
   footerNav: {
     male: [
       {
-        title: "socialTitle",
+        title: "treatmentNavTitle",
+        items: [
+          {
+            title: "approachNavItem",
+            href: "#",
+          },
+          {
+            title: "conditionsNavItem",
+            href: "#",
+          },
+          {
+            title: "assessmentsNavItem",
+            href: "#",
+          },
+          {
+            title: "programmesNavItem",
+            href: "#",
+          },
+          {
+            title: "therapiesNavItem",
+            href: "#",
+          },
+          {
+            title: "pricesNavItem",
+            href: "#",
+          },
+          {
+            title: "techNavItem",
+            href: "#",
+          },
+        ],
+      },
+      {
+        title: "informationNavTitle",
+        items: [
+          {
+            title: "teamNavItem",
+            href: "#",
+          },
+          {
+            title: "blogNavItem",
+            href: "#",
+          },
+          {
+            title: "storiesNavItem",
+            href: "#",
+          },
+          {
+            title: "contactNavItem",
+            href: "#",
+          },
+          {
+            title: "termsNavItem",
+            href: "#",
+          },
+          {
+            title: "privacyNavItem",
+            href: "#",
+          },
+        ],
+      },
+      {
+        title: "socialNavTitle",
         items: [
           {
             title: "Facebook",
             href: links.male.facebook,
-            icon: "facebook",
             external: true,
           },
           {
             title: "Instagram",
             href: links.male.instagram,
-            icon: "instagram",
             external: true,
           },
           {
             title: "YouTube",
             href: links.male.youtube,
-            icon: "youtube",
             external: true,
           },
           {
             title: "TikTok",
             href: links.male.tiktok,
-            icon: "tiktok",
             external: true,
           },
           {
             title: "Whatsapp",
             href: createWhatsappUrl(phoneNumbers.male),
-            icon: "whatsapp",
-            external: true,
-          },
-        ],
-      },
-      {
-        title: "contactTitle",
-        items: [
-          {
-            title: "emailTitle",
-            href: createEmailUrl(emails.male),
-            icon: "mail",
-            external: true,
-          },
-          {
-            title: "whatsappTitle",
-            href: createWhatsappUrl(phoneNumbers.male),
-            icon: "whatsapp",
-            external: true,
-          },
-          {
-            title: "callUsTitle",
-            href: createCallUrl(phoneNumbers.male),
-            icon: "call",
             external: true,
           },
         ],

@@ -1,5 +1,4 @@
 import Image from "next/image"
-import type { Item } from "@/types"
 import { useTranslations } from "next-intl"
 
 import {
@@ -8,29 +7,24 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { PageLink, PageLinkTitle } from "@/components/page-link"
+import { PageLink, PageLinkToProp } from "@/components/page-link"
 
-import PageSection from "../_components/page-section"
+import { PageSection, PageSectionBanner } from "../_components/page-section"
 
-const conditionsWeTreatConfig: (Omit<Item, "name"> & {
-  href: PageLinkTitle
-})[] = [
+const conditionsWeTreatConfig = [
   {
-    title: "Mental health conditions",
-    description:
-      "While each mental health condition will be unique, there is one constant throughout them all: loneliness. Mental ill-health isolates us, especially when we mistake our condition for our identity, as it leads to misguided beliefs about personal weakness. In reality, mental illness, like physical illness, can impact anyone. At Paracelsus Recovery, we understand the profound physical, psychological, or neurobiological pain that accompanies this alienation. Our team is here to help you process that pain and overcome your mental health issues.",
-    href: "mentalHealthConditions",
+    title: "mentalHealthArticleHeading",
+    description: "mentalHealthArticleDescription",
+    href: "mentalHealth",
   },
   {
-    title: "Addictions and dependencies",
-    description:
-      "There are few states of being as terrifying as realising you have completely lost control over your substance abuse. Addiction and dependencies serve as coping mechanisms for underlying emotional pain, stress, or mental health challenges until that coping mechanism becomes your main source of pain. Whether it’s substance abuse, behavioural addictions, or reliance on prescription medications, our team can help you regain a sense of autonomy and live a life free of that fear and shame that the addiction thrives on.",
+    title: "dependenciesAndAddictionsArticleHeading",
+    description: "dependenciesAndAddictionsArticleDescription",
     href: "dependenciesAndAddictions",
   },
   {
-    title: "Eating disorders",
-    description:
-      "Eating disorders can take over our lives before we’ve even come to terms with the fact we are struggling with one. They are complex and multifaceted conditions with psychological, emotional, and societal root causes. At Paracelsus Recovery, we can help you overcome that fear of losing control. The multidisciplinary approach we take at our eating disorder rehabilitation centre targets the underlying issues at work in your relationship to food, such as trauma, anxiety, or perfectionism.",
+    title: "eatingDisorderArticleHeading",
+    description: "eatingDisorderArticleDescription",
     href: "eatingDisorder",
   },
 ]
@@ -50,8 +44,8 @@ const ourApproachConfig = [
   },
 ]
 
-export default function TreatmentPage() {
-  const t = useTranslations("TreatmentPage")
+export default function ConditionsWeTreatPage() {
+  const t = useTranslations("ConditionsWeTreatPage")
 
   return (
     <>
@@ -93,10 +87,10 @@ export default function TreatmentPage() {
               key={index}
               className="flex flex-col items-start gap-y-10 border-b py-10 last:border-b-0 md:py-20"
             >
-              <h2 className="heading-xl">{item.title}</h2>
-              <p className="paragraph">{item.description}</p>
-              <PageLink to={item.href} variant="link">
-                Saber más
+              <h2 className="heading-xl">{t(item.title)}</h2>
+              <p className="paragraph">{t(item.description)}</p>
+              <PageLink to={item.href as PageLinkToProp} variant="link">
+                {t("learnMoreLink")}
               </PageLink>
             </article>
           ))}
@@ -116,8 +110,8 @@ export default function TreatmentPage() {
         </div>
       </section>
       <PageSection
-        name={t("treatmentApproachEyebrow")}
-        title={t("treatmentApproachHeading")}
+        eyebrow={t("treatmentApproachEyebrow")}
+        heading={t("treatmentApproachHeading")}
         description={t("treatmentApproachDescription")}
         link={{
           label: t("learnMoreLink"),
@@ -129,6 +123,9 @@ export default function TreatmentPage() {
           width: 2160,
           height: 2880,
         }}
+        headingHeight
+        divider
+        className="bg-muted border-y"
       >
         <Accordion className="rounded-none border-r-0 border-b-0 border-l-0">
           {ourApproachConfig.map((item) => (
@@ -147,6 +144,10 @@ export default function TreatmentPage() {
           ))}
         </Accordion>
       </PageSection>
+      <PageSectionBanner
+        className="bg-muted pt-20 md:h-100"
+        heading={t("bannerHeading")}
+      />
     </>
   )
 }
