@@ -66,7 +66,7 @@ export default function ConditionsWeTreatPage() {
           loading="lazy"
           className="h-128 w-full object-cover object-center lg:h-dvh"
         />
-        <div className="container flex flex-col gap-y-5 py-20 lg:flex-row">
+        <article className="container flex flex-col gap-y-5 py-20 lg:flex-row">
           <div className="text-muted-foreground lg:w-1/3">
             <p className="eyebrow">{t("phrasePage")}</p>
           </div>
@@ -79,7 +79,7 @@ export default function ConditionsWeTreatPage() {
                 ))}
             </p>
           </div>
-        </div>
+        </article>
       </section>
       <section className="flex flex-col-reverse items-stretch md:flex-row-reverse">
         <div className="flex flex-col px-5 md:w-1/2 md:px-[3dvw]">

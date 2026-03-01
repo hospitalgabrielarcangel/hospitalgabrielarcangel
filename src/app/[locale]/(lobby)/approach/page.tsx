@@ -25,22 +25,38 @@ export default function ApproachPage() {
           className="h-128 w-full object-cover object-center lg:h-dvh"
         />
       </section>
-      <section className="container flex flex-col-reverse gap-y-10 pt-28 pb-20 md:flex-row md:pt-50 md:pb-40">
-        <div className="md:w-1/2 md:pr-8">
-          <iframe
-            width={1920}
-            height={1080}
-            src="https://www.youtube.com/embed/qjXH34UGjrM"
-            title={t("videoTitle")}
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="aspect-video h-auto w-full"
-          />
+      <section className="border-b">
+        <div className="container flex flex-col-reverse gap-y-10 pt-28 pb-20 md:flex-row md:pt-50 md:pb-40">
+          <div className="md:w-1/2 md:pr-8">
+            <iframe
+              width={1920}
+              height={1080}
+              src="https://www.youtube.com/embed/FH9mMdbj5C8"
+              title={t("videoTitle")}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="aspect-video h-auto w-full"
+            />
+          </div>
+          <div className="flex flex-col justify-center gap-4 md:w-1/2 md:pl-5">
+            <p className="eyebrow">{t("videoEyebrow")}</p>
+            <h2 className="heading-2xl">{t("videoHeading")}</h2>
+            <p className="paragraph">{t("videoDescription")}</p>
+          </div>
         </div>
-        <div className="flex flex-col justify-center gap-4 md:w-1/2 md:pl-5">
-          <p className="eyebrow">{t("videoEyebrow")}</p>
-          <h2 className="heading-2xl">{t("videoHeading")}</h2>
-          <p className="paragraph">{t("videoDescription")}</p>
+      </section>
+      <section className="container flex flex-col gap-y-5 py-20 lg:flex-row">
+        <div className="text-muted-foreground lg:w-1/3">
+          <p className="eyebrow">{t("methodEyebrow")}</p>
+        </div>
+        <div className="lg:w-2/3">
+          <p className="subtitle-md flex flex-col gap-y-5">
+            {t("methodDescription")
+              .split("\n")
+              .map((paragraph, index) => (
+                <span key={index}>{paragraph}</span>
+              ))}
+          </p>
         </div>
       </section>
     </>
