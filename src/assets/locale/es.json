@@ -51,8 +51,7 @@
     "ourProgramsItem2Title": "Expertos dedicados a su excelencia",
     "ourProgramsItem2Description": "No solo damos un tratamiento, Contamos con especialistas de élite dedicados exclusivamente a su evolución. Desde su psiquiatra personal y médico de cabecera, hasta un terapeuta residente y un equipo de gestión de relaciones, garantizamos una presencia constante las 24 horas del día.",
     "ourProgramsItem3Title": "Privacidad y exclusividad",
-    "ourProgramsItem3Description": "Nuestra experiencia de tratamiento es enteramente privada y discreta, diseñada no solo para priorizar su salud, sino para salvaguardar su integridad personal en cada etapa del proceso.",
-    "bannerHeading": "El camino hacia la recuperación comienza con una charla."
+    "ourProgramsItem3Description": "Nuestra experiencia de tratamiento es enteramente privada y discreta, diseñada no solo para priorizar su salud, sino para salvaguardar su integridad personal en cada etapa del proceso."
   },
   "AboutUsPage": {
     "pageHeaderHeading": "El primer paso en\nGabriel Arcángel\nes el último que\ndarás solo.",
@@ -105,8 +104,7 @@
     "treatmentApproachItem2Title": "Guiándole en su evolución personal",
     "treatmentApproachItem2Description": "La recuperación es una trayectoria profundamente íntima y nuestro abordaje es íntegramente a medida. No existen soluciones inmediatas; la transformación exige compromiso y determinación. Sin embargo, no transitará este camino en soledad. Estamos a su lado, brindándole guía y respaldo en cada etapa del proceso.",
     "treatmentApproachItem3Title": "Maestría médica en cada etapa",
-    "treatmentApproachItem3Description": "Con un equipo de especialistas por paciente, instalaciones de vanguardia y tratamientos médicos certificados en el corazón de Zúrich, garantizamos el acceso a las herramientas de diagnóstico y protocolos terapéuticos más avanzados del mundo para su recuperación.",
-    "bannerHeading": "El camino hacia la recuperación comienza con una charla."
+    "treatmentApproachItem3Description": "Con un equipo de especialistas por paciente, instalaciones de vanguardia y tratamientos médicos certificados en el corazón de Zúrich, garantizamos el acceso a las herramientas de diagnóstico y protocolos terapéuticos más avanzados del mundo para su recuperación."
   },
   "ConditionPage": {
     "pagePhrase": "Tu camino hacia la sanación",
@@ -144,7 +142,10 @@
     "howWeTreatItem10Link": "Bienestar",
     "howWeTreatItem11Title": "Tratamientos médicos",
     "howWeTreatItem11Description": "De manera paralela a su salud mental, nuestra infraestructura médica permite abordar cualquier afección física preexistente o emergente. Ya se trate de padecimientos cardiovasculares, desequilibrios hormonales, dolor crónico, salud dermatológica, dental o sexual, nuestro cuerpo de especialistas garantiza un diagnóstico preciso y un tratamiento coordinado bajo los más altos estándares clínicos.",
-    "howWeTreatItem11Link": "Tratamientos médicos"
+    "howWeTreatItem11Link": "Tratamientos médicos",
+    "ourTeamEyebrow": "Conoce a nuestro equipo",
+    "ourTeamHeading": "Especialistas de primer nivel guiando cada etapa de su proceso.",
+    "ourTeamDescription": "Contamos con un ecosistema de expertos de prestigio que diseñan y supervisan su recuperación. Este grupo selecto de profesionales le ofrece un respaldo constante, administrando sus tratamientos con una precisión médica superior y una atención al detalle sin precedentes durante su tiempo con nosotros."
   },
   "MentalHealth": {
     "conditionHeading": "Condiciones de salud mental que tratamos",
@@ -205,6 +206,18 @@
     "rppName": "Plan de prevención de recaídas",
     "rppDescription": "Aprende a reconocer y dominar las situaciones que ponen en riesgo tu recuperación. Trabajamos contigo para detectar emociones o entornos peligrosos y crear respuestas efectivas que eviten recaídas. Sal de nuestra clínica con un plan de acción claro y las habilidades necesarias para proteger tu bienestar cada día."
   },
+  "ApproachPage": {
+    "headerEyebrowPage": "Our approach",
+    "headerHeadingPage": "The most comprehensive, innovative and cutting-edge treatment worldwide.",
+    "headerImageAlt": "Lorem ipsum",
+    "videoEyebrow": "Arquitectura Clínica a Medida",
+    "videoHeading": "Enfoque integral especializado",
+    "videoDescription": "Nuestro enfoque de 360 grados integra a los mejores especialistas bajo un solo propósito: su evolución. Desde la precisión médica hasta el acompañamiento emocional constante, cubrimos cada ángulo de su bienestar con rigor y discreción absoluta.",
+    "videoTitle": ""
+  },
+  "Banners": {
+    "contactBanner": "El camino hacia la recuperación comienza con una charla."
+  },
   "CertificationsCarousel": {
     "certificationsEyebrow": "Certificados por"
   },
@@ -219,6 +232,8 @@
     "mentalHealth": "Condiciones de salud mental",
     "dependenciesAndAddictions": "Dependencias y adicciones",
     "eatingDisorder": "Trastornos alimenticios",
+    "approach": "Descubre nuestro enfoque",
+    "ourTeam": "Conoce a nuestro equipo",
     "contact": "Estamos para escucharte"
   },
   "ContactSidebar": {

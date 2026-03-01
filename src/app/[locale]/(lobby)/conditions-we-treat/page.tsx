@@ -7,9 +7,10 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
-import { PageLink, PageLinkToProp } from "@/components/page-link"
+import { PageLink, type PageLinkToProp } from "@/components/page-link"
 
-import { PageSection, PageSectionBanner } from "../_components/page-section"
+import { ContactBanner } from "../_components/contact-banner"
+import { PageSection } from "../_components/page-section"
 
 const conditionsWeTreatConfig = [
   {
@@ -144,10 +145,7 @@ export default function ConditionsWeTreatPage() {
           ))}
         </Accordion>
       </PageSection>
-      <PageSectionBanner
-        className="bg-muted pt-20 md:h-100"
-        heading={t("bannerHeading")}
-      />
+      <ContactBanner muted />
     </>
   )
 }

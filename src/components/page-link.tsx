@@ -37,6 +37,14 @@ const PAGE_LINK_CONFIG = [
     href: "/conditions-we-treat/eating-disorder",
   },
   {
+    title: "approach",
+    href: "/approach",
+  },
+  {
+    title: "ourTeam",
+    href: "#",
+  },
+  {
     title: "contact",
     href: "#",
   },

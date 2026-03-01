@@ -7,9 +7,9 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 import { PageHeader, PageHeaderHeading } from "@/components/page-header"
-import { PageLink } from "@/components/page-link"
 
 import { CertificationsCarousel } from "../_components/cerfifications-carousel"
+import { ContactBanner } from "../_components/contact-banner"
 import { PageSection, PageSectionHeader } from "../_components/page-section"
 
 const faqsConfig = [
@@ -112,12 +112,14 @@ export default function AboutUsPage() {
         heading={t("ourApproachHeading")}
         description={t("ourApproachDescription")}
         eyebrow={t("ourApproachEyebrow")}
-        className="bg-muted"
+        className="bg-muted pb-24"
+        size="lg"
+        centered
       />
       <section className="container flex flex-col py-20 md:flex-row">
         <div className="flex flex-col pb-8 md:w-2/5 md:pb-0">
           <div className="relative max-w-lg grow">
-            <div className="sticky top-0 -mt-20 h-fit pt-20.25">
+            <div className="sticky top-0 -mt-24 h-fit pt-24.25">
               <p className="eyebrow text-muted-foreground py-3">FAQS</p>
               <h2 className="heading-3xl">{t("faqsHeading")}</h2>
             </div>
@@ -142,15 +144,18 @@ export default function AboutUsPage() {
               </AccordionItem>
             ))}
           </Accordion>
-          <div className="py-20">
-            <h2 className="heading-xl max-w-sm">{t("faqFooterHeading")}</h2>
-            <p className="paragraph pt-10 italic">
-              {t("faqFooterDescription")}
-            </p>
-            <PageLink className="pt-10" to="contact" variant="link" />
-          </div>
+          <PageSectionHeader
+            heading={t("faqFooterHeading")}
+            description={t("faqFooterDescription")}
+            link={{
+              to: "contact",
+            }}
+            size="sm"
+            className="pb-0"
+          />
         </div>
       </section>
+      <ContactBanner />
     </>
   )
 }

@@ -51,8 +51,7 @@
     "ourProgramsItem2Title": "A dedicated elite team",
     "ourProgramsItem2Description": "You are supported by a private circle of experts dedicated exclusively to your recovery. From your personal psychiatrist and primary physician to your live-in therapist and client relations team, we provide unwavering 24/7 support.",
     "ourProgramsItem3Title": "Privacy and exclusivity",
-    "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process.",
-    "bannerHeading": "The journey to recovery begins with a conversation."
+    "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process."
   },
   "AboutUsPage": {
     "pageHeaderHeading": "The first step at\nGabriel Arcángel\nis the last one\nyou’ll take alone.",
@@ -105,8 +104,7 @@
     "treatmentApproachItem2Title": "Guiding you on your personal evolution.",
     "treatmentApproachItem2Description": "Recovery is a profoundly intimate journey, and our approach is entirely personalized. There are no quick fixes; transformation requires commitment and determination. However, you will not traverse this path alone. We are by your side, guiding and supporting you at every step of the process.",
     "treatmentApproachItem3Title": "Mastering medicine at every step.",
-    "treatmentApproachItem3Description": "With a team of specialists per patient, state-of-the-art facilities, and certified medical treatments in the heart of Zurich, we ensure access to the most advanced diagnostic tools and therapeutic protocols in the world for your recovery.",
-    "bannerHeading": "The journey to recovery begins with a conversation."
+    "treatmentApproachItem3Description": "With a team of specialists per patient, state-of-the-art facilities, and certified medical treatments in the heart of Zurich, we ensure access to the most advanced diagnostic tools and therapeutic protocols in the world for your recovery."
   },
   "ConditionPage": {
     "pagePhrase": "Your path to healing",
@@ -144,7 +142,10 @@
     "howWeTreatItem10Link": "Wellness",
     "howWeTreatItem11Title": "Medical treatments",
     "howWeTreatItem11Description": "In tandem with your mental health care, our medical infrastructure allows us to address any pre-existing or emerging physical conditions. Whether dealing with cardiovascular disorders, hormonal imbalances, chronic pain, or dermatological, dental, and sexual health issues, our team of specialists guarantees an accurate diagnosis and coordinated treatment under the highest clinical standards.",
-    "howWeTreatItem11Link": "Medical treatments"
+    "howWeTreatItem11Link": "Medical treatments",
+    "ourTeamEyebrow": "Meet our team",
+    "ourTeamHeading": "World-class specialists guiding every stage of your journey.",
+    "ourTeamDescription": "We feature an ecosystem of prestigious experts who design and oversee your recovery. This select group of professionals offers constant support, administering your treatments with superior medical precision and unprecedented attention to detail throughout your time with us."
   },
   "MentalHealth": {
     "conditionHeading": "Mental Health Treatment Center",
@@ -205,6 +206,18 @@
     "rppName": "Relapse prevention plan",
     "rppDescription": "Learn to recognize and master the situations that put your recovery at risk. We work with you to detect high-risk emotions or environments and create effective responses to prevent relapse. Leave our facility with a clear action plan and the skills necessary to protect your well-being every single day."
   },
+  "ApproachPage": {
+    "headerEyebrowPage": "Nuestro enfoque",
+    "headerHeadingPage": "El tratamiento más integral, innovador y de vanguardia a nivel mundial.",
+    "headerImageAlt": "Lorem ipsum",
+    "videoEyebrow": "Bespoke Clinical Architecture",
+    "videoHeading": "360-degree approach",
+    "videoDescription": "Our 360-degree approach unites world-class specialists under a single purpose: your evolution. From medical precision to constant emotional support, we cover every angle of your well-being with absolute rigor and discretion.",
+    "videoTitle": ""
+  },
+  "Banners": {
+    "contactBanner": "The journey to recovery begins with a conversation."
+  },
   "CertificationsCarousel": {
     "certificationsEyebrow": "Certified by"
   },
@@ -219,6 +232,8 @@
     "mentalHealth": "Mental health conditions",
     "dependenciesAndAddictions": "Dependencies and addictions",
     "eatingDisorder": "Eating disorders",
+    "approach": "Discover our approach",
+    "ourTeam": "Meet our team",
     "contact": "We’re here to talk"
   },
   "ContactSidebar": {

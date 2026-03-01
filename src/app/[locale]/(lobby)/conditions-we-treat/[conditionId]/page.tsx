@@ -20,6 +20,7 @@ import {
   PageHeaderHeading,
 } from "@/components/page-header"
 
+import { ContactBanner } from "../../_components/contact-banner"
 import { PageSection, PageSectionHeader } from "../../_components/page-section"
 
 interface ConditionsWeTreatProps {
@@ -86,7 +87,7 @@ export default async function ConditionsWeTreat({
 
   return (
     <>
-      <section className="flex w-full flex-col items-stretch md:flex-row">
+      <section className="flex w-full flex-col items-stretch border-t md:flex-row">
         <div className="flex flex-col md:w-1/2">
           <PageHeader
             className="container gap-0 md:h-dvh"
@@ -133,6 +134,7 @@ export default async function ConditionsWeTreat({
             description={t("contactDescription")}
             link={{ to: "contact" }}
             size="sm"
+            centered
           />
         </div>
         <div className="relative hidden md:block md:w-1/2">
@@ -156,7 +158,7 @@ export default async function ConditionsWeTreat({
           width: condition.approach.image.width,
           height: condition.approach.image.height,
         }}
-        className="bg-muted lg:border-t"
+        className="bg-muted border-b lg:border-t"
         headingHeight
         imageBetween
         rowReverse
@@ -187,6 +189,23 @@ export default async function ConditionsWeTreat({
           ))}
         </Accordion>
       </PageSection>
+      <PageSection
+        eyebrow={t("ourTeamEyebrow")}
+        heading={t("ourTeamHeading")}
+        description={t("ourTeamDescription")}
+        link={{
+          to: "ourTeam",
+        }}
+        image={{
+          src: "/images/howwetreat-section.webp",
+          alt: "EMT",
+          width: 2160,
+          height: 2880,
+        }}
+        divider
+        className="border-b"
+      />
+      <ContactBanner />
     </>
   )
 }

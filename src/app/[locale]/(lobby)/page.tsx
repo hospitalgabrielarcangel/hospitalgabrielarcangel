@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Link } from "@/i18n/routing"
 import { useTranslations } from "next-intl"
 
@@ -16,9 +15,10 @@ import {
 import { PageLink } from "@/components/page-link"
 
 import { CertificationsCarousel } from "./_components/cerfifications-carousel"
+import { ContactBanner } from "./_components/contact-banner"
 import {
   PageSection,
-  PageSectionBanner,
+  PageSectionHeader,
   PageSectionImage,
 } from "./_components/page-section"
 
@@ -165,14 +165,14 @@ export default function Page() {
           height: 2700,
         }}
         link={{
-          to: "conditionsWeTreat",
+          to: "approach",
         }}
         className="border-t"
         colReverse
         divider
       />
       <PageSectionImage
-        className="bg-muted border-t"
+        className="bg-muted border-y"
         heading={t("ourProgramsHeading")}
         eyebrow={t("ourProgramsEyebrow")}
         items={ourProgramsConfig.map((item) => ({
@@ -183,10 +183,18 @@ export default function Page() {
           to: "ourPrograms",
         }}
       />
-      <PageSectionBanner
-        className="bg-muted pt-20 md:h-100"
-        heading={t("bannerHeading")}
+      <div className="relative h-10 w-full">
+        <div className="bg-border absolute top-0 left-1/2 h-24 w-px" />
+      </div>
+      <PageSectionHeader
+        heading="World-leading experts with you at every step of your journey"
+        description="Every patient will have a dedicated team of world-renowned doctors and therapists. And with a Nobel prize-winning medical advisory board, you can be sure of unparalleled medical and therapeutic excellence."
+        eyebrow="Expertise"
+        link={{ to: "ourTeam" }}
+        size="xl"
+        centered
       />
+      <ContactBanner />
     </>
   )
 }

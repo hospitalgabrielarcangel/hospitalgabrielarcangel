@@ -16,8 +16,8 @@ export function SiteFooter() {
 
   return (
     <footer className="bg-foreground">
-      <section className="container space-y-20 pt-20 md:pt-54 lg:pt-64 2xl:px-[7dvw]">
-        <div className="flex flex-col-reverse justify-between gap-10 md:flex-row">
+      <section className="container space-y-20 pt-16 2xl:px-[7dvw]">
+        <div className="flex flex-col-reverse justify-between gap-8 md:flex-row">
           <h5 className="heading-lg text-secondary max-w-2xl">
             {t("footerHeading")}
           </h5>

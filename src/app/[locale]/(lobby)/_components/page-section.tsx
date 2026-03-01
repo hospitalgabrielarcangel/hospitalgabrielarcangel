@@ -1,5 +1,6 @@
 import Image, { type ImageProps } from "next/image"
 import type { ContainerElementType, HeadingElementType } from "@/types"
+import { cva, type VariantProps } from "class-variance-authority"
 
 import { cn } from "@/lib/utils"
 import { PageLink, type PageLinkToProp } from "@/components/page-link"
@@ -63,7 +64,7 @@ function PageSection({
             rowReverse ? "md:pr-[3dvw]" : "md:pl-[3dvw]"
           )}
         >
-          <div className="space-y-3 md:sticky md:top-0 md:-mt-20 md:h-fit md:pt-20.25">
+          <div className="space-y-3 md:sticky md:top-0 md:-mt-24 md:h-fit md:pt-24.25">
             {eyebrow && (
               <p className="eyebrow text-muted-foreground">{eyebrow}</p>
             )}
@@ -140,7 +141,22 @@ function PageSection({
   )
 }
 
-interface PageSectionHeaderProps extends SectionHeader {
+const pageSectionHeaderVariants = cva("grid", {
+  variants: {
+    size: {
+      default: "heading-2xl",
+      sm: "heading-xl",
+      lg: "heading-3xl",
+      xl: "heading-4xl",
+    },
+  },
+  defaultVariants: {
+    size: "default",
+  },
+})
+
+interface PageSectionHeaderProps
+  extends SectionHeader, VariantProps<typeof pageSectionHeaderVariants> {
   className?: string
   as?: ContainerElementType
   headingAs?: HeadingElementType
@@ -148,7 +164,7 @@ interface PageSectionHeaderProps extends SectionHeader {
     to: PageLinkToProp
     label?: string
   }
-  size?: "default" | "sm"
+  centered?: boolean
 }
 
 function PageSectionHeader({
@@ -159,19 +175,23 @@ function PageSectionHeader({
   description,
   eyebrow,
   link,
-  size = "default",
+  size,
+  centered = false,
 }: PageSectionHeaderProps) {
   return (
-    <Comp className={className}>
+    <Comp className={cn("py-20", className)}>
       <div className="container">
-        <div className="mx-auto max-w-4xl space-y-10 pt-20 pb-24 text-center">
+        <div
+          className={cn(
+            "max-w-3xl space-y-10",
+            centered && "mx-auto text-center"
+          )}
+        >
           <div className="space-y-4">
             {eyebrow && (
               <p className="eyebrow text-muted-foreground">{eyebrow}</p>
             )}
-            <HeadingComp
-              className={`grid ${size === "sm" ? "heading-xl" : "heading-3xl"}`}
-            >
+            <HeadingComp className={pageSectionHeaderVariants({ size })}>
               {heading.split("\n").map((item, index) => (
                 <span key={index}>{item}</span>
               ))}
@@ -271,28 +291,4 @@ function PageSectionImage({
   )
 }
 
-interface PageSectionBannerProps {
-  className?: string
-  heading: string
-}
-
-function PageSectionBanner({ className, heading }: PageSectionBannerProps) {
-  return (
-    <section className={cn("flex items-start", className)}>
-      <div className="z-10 mx-auto grid w-full gap-y-12 bg-[url('/images/banner-bg.webp')] bg-cover bg-center px-5 py-24 md:w-[80dvw] md:rounded-md md:px-20">
-        <h2 className="heading-4xl max-w-4xl text-center text-white md:text-left">
-          {heading}
-        </h2>
-        <PageLink
-          className="mx-auto h-11 pt-0.25 md:mx-0"
-          to="contact"
-          variant="secondary"
-          size="lg"
-          withIcon
-        />
-      </div>
-    </section>
-  )
-}
-
-export { PageSection, PageSectionHeader, PageSectionImage, PageSectionBanner }
+export { PageSection, PageSectionHeader, PageSectionImage }
