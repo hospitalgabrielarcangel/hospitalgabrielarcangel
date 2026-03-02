@@ -127,14 +127,14 @@ export default function ApproachPage() {
         <section key={approachSectionKey}>
           <div
             className={cn(
-              "container flex flex-col items-center py-32 md:flex-row-reverse",
+              "container flex flex-col-reverse items-center gap-y-10 py-20 md:flex-row-reverse md:py-32",
               approachSectionKey % 2 === 0 && "md:flex-row"
             )}
           >
             <div
               className={cn(
-                "flex flex-col gap-y-8 md:w-1/2",
-                approachSectionKey % 2 === 0 ? "pr-6" : "pl-6"
+                "flex flex-col gap-y-6 md:w-1/2 md:gap-y-8",
+                approachSectionKey % 2 === 0 ? "md:pr-6" : "md:pl-6"
               )}
             >
               <h2 className="heading-2xl">{t(approachSectionItem.title)}</h2>
@@ -162,7 +162,7 @@ export default function ApproachPage() {
                 loading="lazy"
                 className={cn(
                   "aspect-square h-128 object-cover object-center",
-                  approachSectionKey % 2 === 0 ? "pl-[3dvw]" : "pr-[3dvw]"
+                  approachSectionKey % 2 === 0 ? "md:pl-6" : "md:pr-6"
                 )}
               />
             </div>
