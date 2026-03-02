@@ -17,7 +17,23 @@ const PAGE_LINK_CONFIG = [
     href: "about-us",
   },
   {
-    title: "ourPrograms",
+    title: "programmes",
+    href: "#",
+  },
+  {
+    title: "assessments",
+    href: "#",
+  },
+  {
+    title: "tech",
+    href: "#",
+  },
+  {
+    title: "therapies",
+    href: "#",
+  },
+  {
+    title: "residences",
     href: "#",
   },
   {

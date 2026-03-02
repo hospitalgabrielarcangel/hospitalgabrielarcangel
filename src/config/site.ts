@@ -71,7 +71,7 @@ export const siteConfig = {
       href: "/what-we-treat",
     },
     {
-      title: "ourPrograms",
+      title: "programmes",
       href: "/our-programs",
     },
     {

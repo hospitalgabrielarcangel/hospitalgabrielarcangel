@@ -51,7 +51,10 @@
     "ourProgramsItem2Title": "A dedicated elite team",
     "ourProgramsItem2Description": "You are supported by a private circle of experts dedicated exclusively to your recovery. From your personal psychiatrist and primary physician to your live-in therapist and client relations team, we provide unwavering 24/7 support.",
     "ourProgramsItem3Title": "Privacy and exclusivity",
-    "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process."
+    "ourProgramsItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process.",
+    "ourTeamEyebrow": "Expertise",
+    "ourTeamHeading": "World-class experts guiding you through every stage of your recovery",
+    "ourTeamDescription": "Each patient is supported by a dedicated team of specialized physicians and therapists. Furthermore, with a medical advisory board composed of world-renowned professionals, you can be assured of unparalleled medical and therapeutic excellence."
   },
   "AboutUsPage": {
     "pageHeaderHeading": "The first step at\nGabriel Arcángel\nis the last one\nyou’ll take alone.",
@@ -215,7 +218,25 @@
     "videoDescription": "Our 360-degree approach unites world-class specialists under a single purpose: your evolution. From medical precision to constant emotional support, we cover every angle of your well-being with absolute rigor and discretion.",
     "videoTitle": "360-degree approach",
     "methodEyebrow": "A method of proven efficacy",
-    "methodDescription": "We understand health as the reflection of our inner bond. At Gabriel Arcángel, we move beyond standardized solutions to design bespoke programs that respond to each individual's uniqueness. We integrate next-generation medicine and a holistic approach under the supervision of international experts, ensuring absolute support throughout your entire restoration process."
+    "methodDescription": "We understand health as the reflection of our inner bond. At Gabriel Arcángel, we move beyond standardized solutions to design bespoke programs that respond to each individual's uniqueness. We integrate next-generation medicine and a holistic approach under the supervision of international experts, ensuring absolute support throughout your entire restoration process.",
+    "assessmentsHeading": "A 360-degree treatment that considers the whole person: mind, body, and soul.",
+    "assessmentsDescription": "Gabriel Arcángel established itself as the pioneering center in Querétaro by integrating functional medicine and cutting-edge interdisciplinary protocols. Since our inception, we have understood that symptoms are the echo of deep imbalances in life. True healing requires deciphering the origin and purpose of these signs; only then can we treat the root cause, moving beyond the superficial relief of symptoms.",
+    "assessmentsImageAlt": "",
+    "programmesHeading": "Our path to healing, tailored entirely to you.",
+    "programmesDescription": "Each treatment program is a piece of clinical architecture, meticulously designed to respond to the uniqueness of every client. We approach health from both its physical complexity and psychological depth; should our evaluation detect biochemical or emotional imbalances, the program is immediately reconfigured to integrate them. Our pragmatic vision understands your lifestyle: from corporate demands to international commitments, we adapt with absolute flexibility to your requirements.",
+    "programmesImageAlt": "",
+    "techHeading": "Cutting edge medicine",
+    "techDescription": "Nuestro equipo está integrado por líderes que han consolidado el presente y continúan trazando el futuro de sus respectivas disciplinas a nivel mundial.\nSu programa es una pieza de alta ingeniería clínica, diseñada por especialistas de renombre internacional. Nos guía la medicina de vanguardia: desde resonancias magnéticas de cuerpo completo y protocolos avanzados de laboratorio, hasta psicoterapia con psicodélicos e infusiones vitamínicas de precisión. Integramos cada recurso diagnóstico y terapéutico de última generación para asegurar una restauración absoluta.",
+    "techImageAlt": "",
+    "therapieHeading": "We meet you wherever you are",
+    "therapieDescription": "With over a decade of experience, we have accompanied the restoration of health in its most complex forms. We understand that, all too often, the journey leads us to feel isolated or bound to habits that compromise our fulfillment, creating an emotional burden that is difficult to sustain. At Gabriel Arcángel, our priority is your personal evolution—whether collaborating with your trusted team or providing exclusive care, through extended periods or strategic sessions. We facilitate a seamless transition toward your own healing.\nWe recognize that success is deeply individual: in the management of dependencies, it may translate into absolute freedom or a conscious balance; in mental health, it may mean overcoming the symptom or learning to transform that energy into a tool that works in your favor.\nUnder a guarantee of unwavering confidentiality, we customize every aspect of your stay. Regardless of your definition of progress, we are here to ensure you achieve it.",
+    "therapieImageAlt": "",
+    "residenceHeading": "A place of healing",
+    "residenceDescription": "Health and well-being are intrinsic pillars of our philosophy; the natural result of a secure environment, a profound connection with nature, and uncompromising medical excellence.\nOur headquarters are located in Querétaro, an enclave that blends Mexico's clinical vanguard with an atmosphere of unique serenity. Here, the convergence of high-precision medicine, elite hospital infrastructure, and a peaceful environment transforms the city into an unparalleled setting for personal evolution, mental clarity, and the beginning of a restored life.",
+    "residenceImageAlt": "",
+    "ourTeamEyebrow": "Expertise",
+    "ourTeamHeading": "A truly meaningful experience",
+    "ourTeamDescription": "We are the only treatment center in Querétaro to assign a dedicated team of professionals to each client. Therefore, throughout your stay, you will be guided by a team of specialized physicians, therapists, and experts."
   },
   "Banners": {
     "contactBanner": "The journey to recovery begins with a conversation."
@@ -229,7 +250,11 @@
   "PageLink": {
     "home": "Home",
     "aboutUs": "About us",
-    "ourPrograms": "See our programs",
+    "programmes": "See our programs",
+    "assessments": "Assessments",
+    "tech": "Diagnostics & Technologies",
+    "therapies": "Therapies",
+    "residences": "Residence",
     "conditionsWeTreat": "Discover our approach",
     "mentalHealth": "Mental health conditions",
     "dependenciesAndAddictions": "Dependencies and addictions",

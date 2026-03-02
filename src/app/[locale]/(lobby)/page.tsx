@@ -180,16 +180,16 @@ export default function Page() {
           description: t(item.description),
         }))}
         link={{
-          to: "ourPrograms",
+          to: "programmes",
         }}
       />
       <div className="relative h-10 w-full">
         <div className="bg-border absolute top-0 left-1/2 h-24 w-px" />
       </div>
       <PageSectionHeader
-        heading="World-leading experts with you at every step of your journey"
-        description="Every patient will have a dedicated team of world-renowned doctors and therapists. And with a Nobel prize-winning medical advisory board, you can be sure of unparalleled medical and therapeutic excellence."
-        eyebrow="Expertise"
+        eyebrow={t("ourTeamEyebrow")}
+        heading={t("ourTeamHeading")}
+        description={t("ourTeamDescription")}
         link={{ to: "ourTeam" }}
         size="xl"
         centered
