@@ -1,5 +1,9 @@
+import { type Metadata } from "next"
 import Image from "next/image"
+import { env } from "@/env.mjs"
+import type { LocaleParams } from "@/types"
 import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
 import {
   Accordion,
@@ -11,6 +15,23 @@ import { PageLink, type PageLinkToProp } from "@/components/page-link"
 
 import { ContactBanner } from "../_components/contact-banner"
 import { PageSection } from "../_components/page-section"
+
+export async function generateMetadata({
+  params,
+}: LocaleParams): Promise<Metadata> {
+  const { locale } = await params
+
+  const t = await getTranslations({
+    locale: locale,
+    namespace: "ConditionsWeTreatPage",
+  })
+
+  return {
+    metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
+    title: t("metadataTitle"),
+    description: t("metadataDescription"),
+  }
+}
 
 const conditionsWeTreatConfig = [
   {

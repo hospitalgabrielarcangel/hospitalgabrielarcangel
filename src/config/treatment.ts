@@ -27,100 +27,454 @@ export const programmesConfig = [
 
 export const conditionsWeTreatConfig = [
   {
-    name: "MentalHealth",
-    title: "conditionHeading",
-    description: "conditionDescription",
-    image: {
-      src: "/images/howwetreat-section.webp",
-      alt: "EMT",
-      width: 2160,
-      height: 2880,
-    },
-    items: [
-      { title: "conditionItem1Title", href: "#" },
-      { title: "conditionItem2Title", href: "#" },
-      { title: "conditionItem3Title", href: "#" },
-      { title: "conditionItem4Title", href: "#" },
-      { title: "conditionItem5Title", href: "#" },
-      { title: "conditionItem6Title", href: "#" },
-      { title: "conditionItem7Title", href: "#" },
-      { title: "conditionItem8Title", href: "#" },
-      { title: "conditionItem9Title", href: "#" },
-      { title: "conditionItem10Title", href: "#" },
-      { title: "conditionItem11Title", href: "#" },
-      { title: "conditionItem12Title", href: "#" },
-      { title: "conditionItem13Title", href: "#" },
-      { title: "conditionItem14Title", href: "#" },
-    ],
-    approach: {
-      name: "approachEyebrow",
-      title: "approachHeading",
-      description: "approachDescription",
+    page: {
+      name: "MentalHealth",
+      title: "conditionHeading",
+      description: "conditionDescription",
       image: {
         src: "/images/howwetreat-section.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
       },
+      items: [
+        {
+          title: "conditionItem1Title",
+          href: "/conditions-we-treat/mental-health/depression",
+        },
+        {
+          title: "conditionItem2Title",
+          href: "/conditions-we-treat/mental-health/trd",
+        },
+        { title: "conditionItem3Title", href: "#" },
+        { title: "conditionItem4Title", href: "#" },
+        { title: "conditionItem5Title", href: "#" },
+        { title: "conditionItem6Title", href: "#" },
+        { title: "conditionItem7Title", href: "#" },
+        { title: "conditionItem8Title", href: "#" },
+        { title: "conditionItem9Title", href: "#" },
+        { title: "conditionItem10Title", href: "#" },
+        { title: "conditionItem11Title", href: "#" },
+        { title: "conditionItem12Title", href: "#" },
+        { title: "conditionItem13Title", href: "#" },
+        { title: "conditionItem14Title", href: "#" },
+      ],
+      approach: {
+        name: "approachEyebrow",
+        title: "approachHeading",
+        description: "approachDescription",
+        image: {
+          src: "/images/howwetreat-section.webp",
+          alt: "EMT",
+          width: 2160,
+          height: 2880,
+        },
+      },
     },
+    conditions: [
+      {
+        name: "depression",
+        title: "pageHeading",
+        info: {
+          title: "conditionHeading",
+          description: "conditionDescription",
+          whatIs: {
+            title: "whatIsHeading",
+            description: "whatIsDescription",
+          },
+          symptoms: [
+            {
+              title: "symptoms1Title",
+              items: [
+                "symptom1Item1",
+                "symptom1Item2",
+                "symptom1Item3",
+                "symptom1Item4",
+                "symptom1Item5",
+              ],
+            },
+            {
+              title: "symptoms2Title",
+              items: [
+                "symptom2Item1",
+                "symptom2Item2",
+                "symptom2Item3",
+                "symptom2Item4",
+                "symptom2Item5",
+              ],
+            },
+            {
+              title: "symptoms3Title",
+              items: [
+                "symptom3Item1",
+                "symptom3Item2",
+                "symptom3Item3",
+                "symptom3Item4",
+                "symptom3Item5",
+              ],
+            },
+            {
+              title: "symptoms4Title",
+              items: [
+                "symptom4tem1",
+                "symptom4tem2",
+                "symptom4tem3",
+                "symptom4tem4",
+                "symptom4tem5",
+              ],
+            },
+          ],
+        },
+        howWeTreat: {
+          title: "howWeTreatHeading",
+          description: "howWeTreatDescription",
+        },
+        sections: [
+          {
+            title: "section1Heading",
+            description: "section1Description",
+            href: "approach",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "section2Heading",
+            description: "section2Description",
+            href: "ourTeam",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "section3Heading",
+            description: "section3Description",
+            href: "programmes",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+        ],
+      },
+      {
+        name: "trd",
+        title: "pageHeading",
+        info: {
+          title: "conditionHeading",
+          description: "conditionDescription",
+          whatIs: {
+            title: "whatIsHeading",
+            description: "whatIsDescription",
+          },
+          symptoms: [
+            {
+              title: "symptoms1Title",
+              items: ["symptom1Item1", "symptom1Item2", "symptom1Item3"],
+            },
+          ],
+        },
+        howWeTreat: {
+          title: "howWeTreatHeading",
+          description: "howWeTreatDescription",
+        },
+        sections: [
+          {
+            title: "section1Heading",
+            description: "section1Description",
+            href: "approach",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "section2Heading",
+            description: "section2Description",
+            href: "ourTeam",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "section3Heading",
+            description: "section3Description",
+            href: "programmes",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+        ],
+      },
+    ],
   },
   {
-    name: "DependenciesAndAddictions",
-    title: "conditionHeading",
-    description: "conditionDescription",
-    image: {
-      src: "/images/howwetreat-section.webp",
-      alt: "EMT",
-      width: 2160,
-      height: 2880,
-    },
-    items: [
-      { title: "conditionItem1Title", href: "#" },
-      { title: "conditionItem2Title", href: "#" },
-      { title: "conditionItem3Title", href: "#" },
-      { title: "conditionItem4Title", href: "#" },
-    ],
-    approach: {
-      name: "approachEyebrow",
-      title: "approachHeading",
-      description: "approachDescription",
+    page: {
+      name: "DependenciesAndAddictions",
+      title: "conditionHeading",
+      description: "conditionDescription",
       image: {
         src: "/images/howwetreat-section.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
       },
+      items: [
+        { title: "conditionItem1Title", href: "#" },
+        { title: "conditionItem2Title", href: "#" },
+        { title: "conditionItem3Title", href: "#" },
+        { title: "conditionItem4Title", href: "#" },
+      ],
+      approach: {
+        name: "approachEyebrow",
+        title: "approachHeading",
+        description: "approachDescription",
+        image: {
+          src: "/images/howwetreat-section.webp",
+          alt: "EMT",
+          width: 2160,
+          height: 2880,
+        },
+      },
     },
+    conditions: [
+      {
+        name: "depression",
+        title: "pageHeading",
+        info: {
+          title: "conditionHeading",
+          description: "conditionDescription",
+          whatIs: {
+            title: "whatIsHeading",
+            description: "whatIsDescription",
+          },
+          symptoms: [
+            {
+              title: "symptoms1Title",
+              items: [
+                "symptom1Item1",
+                "symptom1Item2",
+                "symptom1Item3",
+                "symptom1Item4",
+                "symptom1Item5",
+              ],
+            },
+            {
+              title: "symptoms2Title",
+              items: [
+                "symptom2Item1",
+                "symptom2Item2",
+                "symptom2Item3",
+                "symptom2Item4",
+                "symptom2Item5",
+              ],
+            },
+            {
+              title: "symptoms3Title",
+              items: [
+                "symptom3Item1",
+                "symptom3Item2",
+                "symptom3Item3",
+                "symptom3Item4",
+                "symptom3Item5",
+              ],
+            },
+            {
+              title: "symptoms4Title",
+              items: [
+                "symptom4tem1",
+                "symptom4tem2",
+                "symptom4tem3",
+                "symptom4tem4",
+                "symptom4tem5",
+              ],
+            },
+          ],
+        },
+        howWeTreat: {
+          title: "howWeTreatHeading",
+          description: "howWeTreatDescription",
+        },
+        sections: [
+          {
+            title: "approachSectionHeading",
+            description: "approachSectionDescription",
+            href: "approach",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "teamSectionHeading",
+            description: "teamSectionDescription",
+            href: "ourTeam",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "programmesSectionHeading",
+            description: "programmesSectionDescription",
+            href: "programmes",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+        ],
+      },
+    ],
   },
   {
-    name: "EatingDisorder",
-    title: "conditionHeading",
-    description: "conditionDescription",
-    image: {
-      src: "/images/howwetreat-section.webp",
-      alt: "EMT",
-      width: 2160,
-      height: 2880,
-    },
-    items: [
-      { title: "conditionItem1Title", href: "#" },
-      { title: "conditionItem2Title", href: "#" },
-      { title: "conditionItem3Title", href: "#" },
-      { title: "conditionItem4Title", href: "#" },
-      { title: "conditionItem5Title", href: "#" },
-      { title: "conditionItem6Title", href: "#" },
-    ],
-    approach: {
-      name: "approachEyebrow",
-      title: "approachHeading",
-      description: "approachDescription",
+    page: {
+      name: "EatingDisorder",
+      title: "conditionHeading",
+      description: "conditionDescription",
       image: {
         src: "/images/howwetreat-section.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
       },
+      items: [
+        { title: "conditionItem1Title", href: "#" },
+        { title: "conditionItem2Title", href: "#" },
+        { title: "conditionItem3Title", href: "#" },
+        { title: "conditionItem4Title", href: "#" },
+        { title: "conditionItem5Title", href: "#" },
+        { title: "conditionItem6Title", href: "#" },
+      ],
+      approach: {
+        name: "approachEyebrow",
+        title: "approachHeading",
+        description: "approachDescription",
+        image: {
+          src: "/images/howwetreat-section.webp",
+          alt: "EMT",
+          width: 2160,
+          height: 2880,
+        },
+      },
     },
+    conditions: [
+      {
+        name: "depression",
+        title: "pageHeading",
+        info: {
+          title: "conditionHeading",
+          description: "conditionDescription",
+          whatIs: {
+            title: "whatIsHeading",
+            description: "whatIsDescription",
+          },
+          symptoms: [
+            {
+              title: "symptoms1Title",
+              items: [
+                "symptom1Item1",
+                "symptom1Item2",
+                "symptom1Item3",
+                "symptom1Item4",
+                "symptom1Item5",
+              ],
+            },
+            {
+              title: "symptoms2Title",
+              items: [
+                "symptom2Item1",
+                "symptom2Item2",
+                "symptom2Item3",
+                "symptom2Item4",
+                "symptom2Item5",
+              ],
+            },
+            {
+              title: "symptoms3Title",
+              items: [
+                "symptom3Item1",
+                "symptom3Item2",
+                "symptom3Item3",
+                "symptom3Item4",
+                "symptom3Item5",
+              ],
+            },
+            {
+              title: "symptoms4Title",
+              items: [
+                "symptom4tem1",
+                "symptom4tem2",
+                "symptom4tem3",
+                "symptom4tem4",
+                "symptom4tem5",
+              ],
+            },
+          ],
+        },
+        howWeTreat: {
+          title: "howWeTreatHeading",
+          description: "howWeTreatDescription",
+        },
+        sections: [
+          {
+            title: "approachSectionHeading",
+            description: "approachSectionDescription",
+            href: "approach",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "teamSectionHeading",
+            description: "teamSectionDescription",
+            href: "ourTeam",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "programmesSectionHeading",
+            description: "programmesSectionDescription",
+            href: "programmes",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+        ],
+      },
+    ],
   },
 ]
 

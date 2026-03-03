@@ -26,7 +26,7 @@ export async function generateMetadata({
     metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
     title: {
       default: siteConfig.name,
-      template: `${siteConfig.name} — %s`,
+      template: `%s | ${siteConfig.name}`,
     },
     description: t("description"),
     keywords: [

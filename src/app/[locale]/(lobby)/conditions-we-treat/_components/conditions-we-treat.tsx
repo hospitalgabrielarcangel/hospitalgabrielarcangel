@@ -1,12 +1,8 @@
-import { type Metadata } from "next"
 import Image from "next/image"
-import { notFound } from "next/navigation"
-import { env } from "@/env.mjs"
 import { Link } from "@/i18n/routing"
-import { getTranslations } from "next-intl/server"
+import { useTranslations } from "next-intl"
 
 import { conditionsWeTreatConfig, howWeTreatConfig } from "@/config/treatment"
-import { toTitleCase } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -24,66 +20,14 @@ import { ContactBanner } from "../../_components/contact-banner"
 import { PageSection, PageSectionHeader } from "../../_components/page-section"
 
 interface ConditionsWeTreatProps {
-  params: Promise<{
-    conditionId: string
-    locale: string
-  }>
+  condition: (typeof conditionsWeTreatConfig)[0]["page"]
 }
 
-export async function generateMetadata({
-  params,
-}: ConditionsWeTreatProps): Promise<Metadata> {
-  const conditionParams = await params
-
-  const conditionId = toTitleCase(
-    decodeURIComponent(conditionParams.conditionId).replaceAll("-", " ")
-  ).replaceAll(" ", "")
-
-  const condition = conditionsWeTreatConfig.find(
-    (item) => item.name === conditionId
-  )
-
-  if (!condition) {
-    return {}
-  }
-
-  const t = await getTranslations({
-    locale: conditionParams.locale,
-    namespace: conditionId,
-  })
-
-  return {
-    metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
-    title: t(condition.title),
-    description: t(condition.description),
-  }
-}
-
-export default async function ConditionsWeTreat({
-  params,
+export default function ConditionsWeTreat({
+  condition,
 }: ConditionsWeTreatProps) {
-  const conditionParams = await params
-  const conditionId = toTitleCase(
-    decodeURIComponent(conditionParams.conditionId).replaceAll("-", " ")
-  ).replaceAll(" ", "")
-
-  const condition = conditionsWeTreatConfig.find(
-    (item) => item.name === conditionId
-  )
-
-  if (!condition) {
-    notFound()
-  }
-
-  const t = await getTranslations({
-    locale: conditionParams.locale,
-    namespace: "ConditionPage",
-  })
-
-  const tCondition = await getTranslations({
-    locale: conditionParams.locale,
-    namespace: conditionId,
-  })
+  const t = useTranslations("ConditionPage")
+  const tCondition = useTranslations(condition.name)
 
   return (
     <>
