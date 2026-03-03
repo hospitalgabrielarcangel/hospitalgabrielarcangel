@@ -46,7 +46,10 @@ export const conditionsWeTreatConfig = [
           title: "conditionItem2Title",
           href: "/conditions-we-treat/mental-health/trd",
         },
-        { title: "conditionItem3Title", href: "#" },
+        {
+          title: "conditionItem3Title",
+          href: "/conditions-we-treat/mental-health/anxiety",
+        },
         { title: "conditionItem4Title", href: "#" },
         { title: "conditionItem5Title", href: "#" },
         { title: "conditionItem6Title", href: "#" },
@@ -179,6 +182,102 @@ export const conditionsWeTreatConfig = [
             {
               title: "symptoms1Title",
               items: ["symptom1Item1", "symptom1Item2", "symptom1Item3"],
+            },
+          ],
+        },
+        howWeTreat: {
+          title: "howWeTreatHeading",
+          description: "howWeTreatDescription",
+        },
+        sections: [
+          {
+            title: "section1Heading",
+            description: "section1Description",
+            href: "approach",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "section2Heading",
+            description: "section2Description",
+            href: "therapies",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+          {
+            title: "section3Heading",
+            description: "section3Description",
+            href: "programmes",
+            image: {
+              src: "/images/howwetreat-section.webp",
+              alt: "approachImageAlt",
+              width: 2160,
+              height: 2880,
+            },
+          },
+        ],
+      },
+      {
+        name: "anxiety",
+        title: "pageHeading",
+        info: {
+          title: "conditionHeading",
+          description: "conditionDescription",
+          whatIs: {
+            title: "whatIsHeading",
+            description: "whatIsDescription",
+          },
+          symptoms: [
+            {
+              title: "symptoms1Title",
+              items: [
+                "symptom1Item1",
+                "symptom1Item2",
+                "symptom1Item3",
+                "symptom1Item4",
+                "symptom1Item5",
+              ],
+            },
+            {
+              title: "symptoms2Title",
+              items: [
+                "symptom2Item1",
+                "symptom2Item2",
+                "symptom2Item3",
+                "symptom2Item4",
+                "symptom2Item5",
+              ],
+            },
+            {
+              title: "symptoms3Title",
+              items: [
+                "symptom3Item1",
+                "symptom3Item2",
+                "symptom3Item3",
+                "symptom3Item4",
+                "symptom3Item5",
+                "symptom3Item6",
+                "symptom3Item7",
+              ],
+            },
+            {
+              title: "symptoms4Title",
+              items: [
+                "symptom4tem1",
+                "symptom4tem2",
+                "symptom4tem3",
+                "symptom4tem4",
+                "symptom4tem5",
+                "symptom4tem6",
+              ],
             },
           ],
         },
