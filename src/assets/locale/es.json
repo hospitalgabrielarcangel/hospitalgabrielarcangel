@@ -259,7 +259,7 @@
   },
   "Trd": {
     "pageHeading": "Rehabilitación para la depresión resistente al tratamiento (TRD)",
-    "conditionHeading": "Understanding Treatment-Resistant Depression (TRD)",
+    "conditionHeading": "Comprender la Depresión Resistente al Tratamiento (DRT)",
     "conditionDescription": "Comprendemos que la DRT es una experiencia tan extenuante como desoladora. Tras múltiples intentos fallidos, el escepticismo es natural; sin embargo, en Gabriel Arcángel aplicamos ciencia donde otros ven límites. Nuestros protocolos combinan psicoterapia asistida con psicodélicos e intervenciones neurobiológicas de última generación con una eficacia clínica disruptiva. Más allá de la remisión de síntomas, nuestro compromiso es ayudarle a recuperar su sentido de propósito y la vitalidad necesaria para reconectar con la vida.",
     "whatIsHeading": "¿Qué es la Depresión Resistente al Tratamiento (DRT)?",
     "whatIsDescription": "La depresión es una de las condiciones más difíciles de afrontar, especialmente cuando siente que lo ha intentado todo sin obtener resultados. Aunque la depresión resistente al tratamiento se encuentra entre las patologías más complejas, la recuperación es posible mediante un enfoque terapéutico holístico. Las causas raíz son casi siempre multifacéticas: desde factores superficiales como el estilo de vida, la higiene del sueño y la dieta, hasta patrones de pensamiento y conducta profundamente arraigados, a menudo derivados de experiencias infantiles y sistemas de creencias internos.\nUna persona es diagnosticada con Depresión Resistente al Tratamiento (DRT) cuando padece un trastorno depresivo que no ha respondido con éxito a, al menos, dos ensayos con antidepresivos administrados en dosis y duración adecuadas. Por lo general, quienes sufren depresión logran recuperarse con la medicación y el tratamiento pertinentes; sin embargo, en los casos de DRT, los fármacos convencionales no ofrecen alivio. Esta es una condición relativamente común, afectando hasta al 30% de las personas que luchan contra la depresión clínica.\nNo existe una causa única para la DRT. En nuestra experiencia en Gabriel Arcángel, la depresión se vuelve resistente cuando existen factores (a menudo traumas) que bloquean la eficacia del antidepresivo.\nLa buena noticia es que la DRT es, de hecho, tratable. En Gabriel Arcángel, creemos que la DRT simplemente significa que los antidepresivos no funcionaron para usted y que se requiere un enfoque terapéutico distinto.",
@@ -323,8 +323,8 @@
   "ApproachPage": {
     "metadataTitle": "Enfoque de Recuperación Integral - Tratamiento de 360°",
     "metadataDescription": "Nuestro enfoque de 360 grados integra a los mejores especialistas bajo un solo propósito: su evolución. Desde la precisión médica hasta el acompañamiento emocional constante, cubrimos cada ángulo de su bienestar con rigor y discreción absoluta.",
-    "headerEyebrowPage": "Our approach",
-    "headerHeadingPage": "The most comprehensive, innovative and cutting-edge treatment worldwide.",
+    "headerEyebrowPage": "Nuestro enfoque",
+    "headerHeadingPage": "El tratamiento más integral, innovador y de vanguardia a nivel mundial.",
     "headerImageAlt": "Lorem ipsum",
     "videoEyebrow": "Arquitectura Clínica a Medida",
     "videoHeading": "Enfoque integral especializado",
