@@ -8,7 +8,7 @@ import { toPascalCase } from "@/lib/utils"
 
 import Condition from "../../_components/condition"
 
-export interface MentalHealthConditionsPageProps {
+export interface DependenciesAndAddictionsConditionPagePsrops {
   readonly params: Promise<{
     conditionId: string
     locale: string
@@ -17,11 +17,11 @@ export interface MentalHealthConditionsPageProps {
 
 export async function generateMetadata({
   params,
-}: MentalHealthConditionsPageProps): Promise<Metadata> {
+}: DependenciesAndAddictionsConditionPagePsrops): Promise<Metadata> {
   const { conditionId, locale } = await params
 
   const condition = conditionsWeTreatConfig.find(
-    (item) => item.page.name === "MentalHealth"
+    (item) => item.page.name === "DependenciesAndAddictions"
   )
 
   if (!condition) {
@@ -48,13 +48,13 @@ export async function generateMetadata({
   }
 }
 
-export default async function MentalHealthConditionsPage({
+export default async function DependenciesAndAddictionsConditionsPage({
   params,
-}: MentalHealthConditionsPageProps) {
+}: DependenciesAndAddictionsConditionPagePsrops) {
   const { conditionId } = await params
 
   const condition = conditionsWeTreatConfig.find(
-    (item) => item.page.name === "MentalHealth"
+    (item) => item.page.name === "DependenciesAndAddictions"
   )
 
   if (!condition) {

@@ -57,8 +57,23 @@ export function unslugify(str: string) {
 }
 
 export function toTitleCase(str: string) {
-  return str.replace(
-    /\w\S*/g,
-    (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase()
-  )
+  return str
+    .replace(
+      /\w\-\_\S*/g,
+      (txt) => txt.charAt(0).toUpperCase() + txt.slice(1).toLowerCase()
+    )
+    .replace(/[-\s]/g, "")
+}
+
+export function toPascalCase(str: string) {
+  const words = str
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .trim()
+    .split(" ")
+  return words
+    .map((word) => {
+      if (!word) return ""
+      return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    })
+    .join("")
 }

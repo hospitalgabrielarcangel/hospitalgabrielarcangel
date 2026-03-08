@@ -2,7 +2,7 @@ import Image from "next/image"
 import { useTranslations } from "next-intl"
 
 import { conditionsWeTreatConfig } from "@/config/treatment"
-import { cn, toTitleCase } from "@/lib/utils"
+import { cn, toPascalCase } from "@/lib/utils"
 import { PageLink, type PageLinkToProp } from "@/components/page-link"
 
 import { ContactBanner } from "../../_components/contact-banner"
@@ -14,7 +14,7 @@ export interface ConditionProps {
 
 export default function Condition({ condition }: ConditionProps) {
   const t = useTranslations("ConditionTreatmentPage")
-  const tCondition = useTranslations(toTitleCase(condition.name))
+  const tCondition = useTranslations(toPascalCase(condition.name))
 
   return (
     <>
@@ -28,18 +28,27 @@ export default function Condition({ condition }: ConditionProps) {
       </section>
       <section className="bg-muted border-b">
         <div className="container flex flex-col items-stretch md:flex-row">
-          <div className="relative space-y-5 pt-10 pb-20 md:w-1/2 md:border-r md:pr-8">
-            <div className="sticky top-0 -mt-24 max-w-2xl space-y-5 pt-24.25">
+          <div className="space-y-5 border-b pt-12 pb-12 md:relative md:w-1/2 md:border-r md:border-b-0 md:pt-10 md:pr-8 md:pb-20">
+            <div className="max-w-2xl space-y-5 md:sticky md:top-0 md:-mt-24 md:pt-24.25">
               <h2 className="heading-2xl">
                 {tCondition(condition.info.title)}
               </h2>
-              <p className="paragraph">
-                {tCondition(condition.info.description)}
-              </p>
+              <div className="space-y-4">
+                {tCondition(condition.info.description)
+                  .split("\n")
+                  .map((paragraph, index) => (
+                    <p
+                      className="paragraph"
+                      key={`${condition.info.description}-${index}`}
+                    >
+                      {paragraph}
+                    </p>
+                  ))}
+              </div>
             </div>
           </div>
-          <div className="pb-10 md:w-1/2">
-            <article className="space-y-6 border-b py-10 md:pl-8">
+          <div className="md:w-1/2 md:pb-8">
+            <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
               <h3 className="subtitle-lg font-medium">
                 {tCondition(condition.info.whatIs.title)}
               </h3>
@@ -51,12 +60,13 @@ export default function Condition({ condition }: ConditionProps) {
                   ))}
               </div>
             </article>
-            <article className="space-y-6 py-10 md:pl-8">
+            <article className="space-y-6 py-12 md:pl-8">
               <h3 className="subtitle-lg font-medium">
                 {tCondition("signsTitle")}
               </h3>
+              <p className="paragraph">{tCondition("signsDescription")}</p>
               <ul className="space-y-6">
-                {condition.info.symptoms.map((symptoms) => (
+                {condition.info.signs.symptoms.map((symptoms) => (
                   <li className="space-y-4" key={symptoms.title}>
                     <h4 className="subtitle-md">
                       {tCondition(symptoms.title)}
@@ -71,6 +81,7 @@ export default function Condition({ condition }: ConditionProps) {
                   </li>
                 ))}
               </ul>
+              <p className="paragraph">{t("conditionMessage")}</p>
             </article>
           </div>
         </div>
@@ -83,7 +94,7 @@ export default function Condition({ condition }: ConditionProps) {
         size="lg"
         className="border-b"
       />
-      <div className="container py-20 md:px-[3.5dvw]">
+      <div className="py-20 md:container md:px-[3.5dvw] md:py-20">
         <video
           className="size-full object-cover"
           width={1920}
@@ -103,7 +114,7 @@ export default function Condition({ condition }: ConditionProps) {
         <section key={conditionSectionKey}>
           <div
             className={cn(
-              "container flex flex-col-reverse items-center gap-y-10 py-20 md:flex-row-reverse md:py-32",
+              "container flex flex-col-reverse items-center gap-y-10 border-t py-20 md:flex-row-reverse md:border-t-0 md:py-32",
               conditionSectionKey % 2 === 0 && "md:flex-row"
             )}
           >
