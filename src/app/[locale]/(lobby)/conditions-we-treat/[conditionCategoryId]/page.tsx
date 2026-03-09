@@ -1,8 +1,12 @@
+import { type Metadata } from "next"
 import Image from "next/image"
+import { notFound } from "next/navigation"
+import { env } from "@/env.mjs"
 import { Link } from "@/i18n/routing"
-import { useTranslations } from "next-intl"
+import { getTranslations } from "next-intl/server"
 
 import { conditionsWeTreatConfig, howWeTreatConfig } from "@/config/treatment"
+import { toPascalCase } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -19,15 +23,64 @@ import {
 import { ContactBanner } from "../../_components/contact-banner"
 import { PageSection, PageSectionHeader } from "../../_components/page-section"
 
-interface ConditionsWeTreatProps {
-  condition: (typeof conditionsWeTreatConfig)[0]["page"]
+interface ConditionCategoryPageProps {
+  readonly params: Promise<{
+    locale: string
+    conditionCategoryId: string
+  }>
 }
 
-export default function ConditionsWeTreat({
-  condition,
-}: ConditionsWeTreatProps) {
-  const t = useTranslations("ConditionPage")
-  const tCondition = useTranslations(condition.name)
+export async function generateMetadata({
+  params,
+}: ConditionCategoryPageProps): Promise<Metadata> {
+  const { locale, conditionCategoryId } = await params
+
+  const conditionCategoryName = toPascalCase(conditionCategoryId)
+
+  const condition = conditionsWeTreatConfig.find(
+    (item) => item.page.name === conditionCategoryName
+  )
+
+  if (!condition) {
+    notFound()
+  }
+
+  const t = await getTranslations({
+    locale: locale,
+    namespace: conditionCategoryName,
+  })
+
+  return {
+    metadataBase: new URL(env.NEXT_PUBLIC_APP_URL),
+    title: t("conditionHeading"),
+    description: t("conditionDescription"),
+  }
+}
+
+export default async function ConditionCategoryPage({
+  params,
+}: ConditionCategoryPageProps) {
+  const { conditionCategoryId, locale } = await params
+
+  const conditionCategoryName = toPascalCase(conditionCategoryId)
+
+  const condition = conditionsWeTreatConfig.find(
+    (item) => item.page.name === conditionCategoryName
+  )
+
+  if (!condition) {
+    notFound()
+  }
+
+  const t = await getTranslations({
+    locale: locale,
+    namespace: "ConditionPage",
+  })
+
+  const tCondition = await getTranslations({
+    locale: locale,
+    namespace: conditionCategoryName,
+  })
 
   return (
     <>
@@ -39,7 +92,7 @@ export default function ConditionsWeTreat({
             centered
           >
             <PageHeaderHeading className="heading-4xl flex items-center py-20 text-center md:grow md:py-0">
-              {tCondition(condition.title)}
+              {tCondition("conditionHeading")}
             </PageHeaderHeading>
             <PageHeaderDescription className="subtitle-md text-foreground pb-20 md:h-1/5 md:pb-0">
               {t("pagePhrase")}
@@ -47,26 +100,26 @@ export default function ConditionsWeTreat({
           </PageHeader>
           <div className="md:hidden">
             <Image
-              src={condition.image.src}
-              alt={condition.image.alt}
-              width={condition.image.width}
-              height={condition.image.height}
+              src={condition.page.image.src}
+              alt={condition.page.image.alt}
+              width={condition.page.image.width}
+              height={condition.page.image.height}
               sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
               className="aspect-square w-full object-cover object-center"
             />
           </div>
           <article>
             <p className="subtitle-md px-5 py-10 md:px-[3dvw]">
-              {tCondition(condition.description)}
+              {tCondition("conditionDescription")}
             </p>
             <ul>
-              {condition.items.map((conditionItem, index) => (
-                <li key={index} className="border-t last:border-b">
+              {condition.page.items.map((conditionItem, conditionItemKey) => (
+                <li key={conditionItemKey} className="border-t last:border-b">
                   <Link
-                    href={conditionItem.href}
+                    href={conditionItem}
                     className="subtitle-md flex items-center justify-between px-5 py-8 md:px-[3dvw]"
                   >
-                    {tCondition(conditionItem.title)}
+                    {tCondition(`conditionItem${conditionItemKey + 1}Title`)}
                     <Icons.arrowRight />
                   </Link>
                 </li>
@@ -83,24 +136,24 @@ export default function ConditionsWeTreat({
         </div>
         <div className="relative hidden md:block md:w-1/2">
           <Image
-            src={condition.image.src}
-            alt={condition.image.alt}
-            width={condition.image.width}
-            height={condition.image.height}
+            src={condition.page.image.src}
+            alt={condition.page.image.alt}
+            width={condition.page.image.width}
+            height={condition.page.image.height}
             sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
             className="sticky top-0 aspect-square h-dvh w-full object-cover object-center"
           />
         </div>
       </section>
       <PageSection
-        eyebrow={tCondition(condition.approach.name)}
-        heading={tCondition(condition.approach.title)}
-        description={tCondition(condition.approach.description)}
+        eyebrow={tCondition("approachEyebrow")}
+        heading={tCondition("approachHeading")}
+        description={tCondition("approachDescription")}
         image={{
-          src: condition.approach.image.src,
-          alt: condition.approach.image.alt,
-          width: condition.approach.image.width,
-          height: condition.approach.image.height,
+          src: condition.page.approachImage.src,
+          alt: condition.page.approachImage.alt,
+          width: condition.page.approachImage.width,
+          height: condition.page.approachImage.height,
         }}
         className="bg-muted border-b lg:border-t"
         headingHeight
