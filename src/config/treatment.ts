@@ -25,10 +25,31 @@ export const programmesConfig = [
   },
 ]
 
-export const conditionsWeTreatConfig = [
+export interface ConditionProps {
+  name: string
+  symptoms: number[]
+  dependenciesAndAddictions?: {
+    image: {
+      src: string
+      alt: string
+      width: number
+      height: number
+    }
+    items: string[]
+    contact?: boolean
+  }
+  sectionsImages: {
+    src: string
+    alt: string
+    width: number
+    height: number
+  }[]
+}
+
+export const conditionsCategories = [
   {
     page: {
-      name: "MentalHealth",
+      id: "mental-health",
       image: {
         src: "/images/howwetreat-section.webp",
         alt: "EMT",
@@ -395,11 +416,11 @@ export const conditionsWeTreatConfig = [
           },
         ],
       },
-    ],
+    ] satisfies ConditionProps[],
   },
   {
     page: {
-      name: "DependenciesAndAddictions",
+      id: "dependencies-and-addictions",
       image: {
         src: "/images/howwetreat-section.webp",
         alt: "EMT",
@@ -447,7 +468,7 @@ export const conditionsWeTreatConfig = [
       {
         name: "drug-addiction",
         symptoms: [5, 5, 5, 5],
-        dependencies: {
+        dependenciesAndAddictions: {
           image: {
             src: "/images/howwetreat-section.webp",
             alt: "approachImageAlt",
@@ -455,72 +476,24 @@ export const conditionsWeTreatConfig = [
             height: 2880,
           },
           items: [
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
+            "cocaine",
+            "methamphetamine",
+            "crack-cocaine",
+            "heroin",
+            "morphine",
+            "fentanyl",
+            "ghb",
+            "prescription-stimulants",
+            "prescription-depressants",
+            "prescription-opioids",
+            "cannabis",
+            "synthetic-cathinones-bath-salts",
+            "synthetic-cannabinoids",
+            "kratom",
+            "ketamine",
+            "nicotine",
           ],
-        },
-        sectionsImages: [
-          {
-            src: "/images/howwetreat-section.webp",
-            alt: "approachImageAlt",
-            width: 2160,
-            height: 2880,
-          },
-          {
-            src: "/images/howwetreat-section.webp",
-            alt: "approachImageAlt",
-            width: 2160,
-            height: 2880,
-          },
-          {
-            src: "/images/howwetreat-section.webp",
-            alt: "approachImageAlt",
-            width: 2160,
-            height: 2880,
-          },
-        ],
-      },
-      {
-        name: "behavioural-addictions",
-        symptoms: [7],
-        dependencies: {
-          image: {
-            src: "/images/howwetreat-section.webp",
-            alt: "approachImageAlt",
-            width: 2160,
-            height: 2880,
-          },
-          items: [
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-            "#",
-          ],
+          contact: true,
         },
         sectionsImages: [
           {
@@ -546,14 +519,30 @@ export const conditionsWeTreatConfig = [
       {
         name: "prescription-drugs",
         symptoms: [8],
-        dependencies: {
+        dependenciesAndAddictions: {
           image: {
             src: "/images/howwetreat-section.webp",
             alt: "approachImageAlt",
             width: 2160,
             height: 2880,
           },
-          items: ["#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#", "#"],
+          items: [
+            "oxycodone-oxycontin",
+            "buprenorphine-suboxone",
+            "hydrocodone-vicodin-lortab",
+            "amphetamine-dextroamphetamine-adderall",
+            "methylphenidate-ritalin-concerta",
+            "alprazolam-xanax",
+            "diazepam-valium",
+            "lorazepam-ativan",
+            "clonazepam-klonopin",
+            "zolpidem-ambien",
+            "gabapentin-neurontin",
+            "carisoprodol-soma",
+            "codeine",
+            "morphine",
+          ],
+          contact: true,
         },
         sectionsImages: [
           {
@@ -576,11 +565,57 @@ export const conditionsWeTreatConfig = [
           },
         ],
       },
-    ],
+      {
+        name: "behavioural-addictions",
+        symptoms: [7],
+        dependenciesAndAddictions: {
+          image: {
+            src: "/images/howwetreat-section.webp",
+            alt: "approachImageAlt",
+            width: 2160,
+            height: 2880,
+          },
+          items: [
+            "gambling",
+            "cryptocurrency",
+            "sex-and-love",
+            "social-media",
+            "adrenaline",
+            "gaming",
+            "pornography",
+            "exercise",
+            "work",
+            "shopping",
+            "codependency",
+          ],
+          contact: true,
+        },
+        sectionsImages: [
+          {
+            src: "/images/howwetreat-section.webp",
+            alt: "approachImageAlt",
+            width: 2160,
+            height: 2880,
+          },
+          {
+            src: "/images/howwetreat-section.webp",
+            alt: "approachImageAlt",
+            width: 2160,
+            height: 2880,
+          },
+          {
+            src: "/images/howwetreat-section.webp",
+            alt: "approachImageAlt",
+            width: 2160,
+            height: 2880,
+          },
+        ],
+      },
+    ] satisfies ConditionProps[],
   },
   {
     page: {
-      name: "EatingDisorder",
+      id: "eating-disorder",
       image: {
         src: "/images/howwetreat-section.webp",
         alt: "EMT",
@@ -771,9 +806,1001 @@ export const conditionsWeTreatConfig = [
           },
         ],
       },
-    ],
+    ] satisfies ConditionProps[],
   },
 ]
+
+export const dependenciesAndAddictions = [
+  {
+    name: "cocaine",
+    symptoms: [5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "methamphetamine",
+    symptoms: [7, 8, 5, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "crack-cocaine",
+    symptoms: [7, 8, 6, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "heroin",
+    symptoms: [7, 6, 5, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "morphine",
+    symptoms: [5, 7, 5, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "fentanyl",
+    symptoms: [8, 7, 5, 4],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "ghb",
+    symptoms: [7, 5, 5, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "prescription-stimulants",
+    symptoms: [5, 6, 4, 5],
+    dependenciesAndAddictions: {
+      image: {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      items: [
+        "amphetamine-dextroamphetamine-adderall",
+        "methylphenidate-ritalin-concerta",
+      ],
+    },
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "prescription-depressants",
+    symptoms: [7, 5, 5, 5],
+    dependenciesAndAddictions: {
+      image: {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      items: [
+        "buprenorphine-suboxone",
+        "hydrocodone-vicodin-lortab",
+        "diazepam-valium",
+        "clonazepam-klonopin",
+        "zolpidem-ambien",
+        "carisoprodol-soma",
+        "codeine",
+      ],
+    },
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "prescription-opioids",
+    symptoms: [7, 6, 5, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "cannabis",
+    symptoms: [5, 5, 4, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "synthetic-cathinones-bath-salts",
+    symptoms: [5, 8, 8, 7],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "synthetic-cannabinoids",
+    symptoms: [5, 7, 7, 7],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "kratom",
+    symptoms: [6, 8, 6, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "ketamine",
+    symptoms: [5, 4, 5, 4],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "nicotine",
+    symptoms: [5, 5, 6, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "oxycodone-oxycontin",
+    symptoms: [7, 7, 6, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "buprenorphine-suboxone",
+    symptoms: [7, 9, 6, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "hydrocodone-vicodin-lortab",
+    symptoms: [8, 9, 6, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "amphetamine-dextroamphetamine-adderall",
+    symptoms: [7, 10, 6, 8],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "methylphenidate-ritalin-concerta",
+    symptoms: [5, 8, 5, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "alprazolam-xanax",
+    symptoms: [5, 4, 8, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "diazepam-valium",
+    symptoms: [5, 8, 8, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "lorazepam-ativan",
+    symptoms: [5, 9, 5, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "clonazepam-klonopin",
+    symptoms: [5, 8, 5, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "zolpidem-ambien",
+    symptoms: [5, 5, 6, 7],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "gabapentin-neurontin",
+    symptoms: [5, 6, 6, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "carisoprodol-soma",
+    symptoms: [5, 6, 7, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "codeine",
+    symptoms: [8, 7, 5, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "gambling",
+    symptoms: [5, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "cryptocurrency",
+    symptoms: [5, 5],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "sex-and-love",
+    symptoms: [8],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "social-media",
+    symptoms: [8, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "adrenaline",
+    symptoms: [7, 7, 8, 7],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "gaming",
+    symptoms: [9],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "pornography",
+    symptoms: [7, 6, 5, 4],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "exercise",
+    symptoms: [5, 6],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "work",
+    symptoms: [5, 8],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "shopping",
+    symptoms: [5, 7],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+  {
+    name: "codependency",
+    symptoms: [8],
+    sectionsImages: [
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+      {
+        src: "/images/howwetreat-section.webp",
+        alt: "approachImageAlt",
+        width: 2160,
+        height: 2880,
+      },
+    ],
+  },
+] satisfies ConditionProps[]
 
 export const howWeTreatConfig = [
   {

@@ -77,3 +77,18 @@ export function toPascalCase(str: string) {
     })
     .join("")
 }
+
+export function toCamelCase(str: string) {
+  const words = str
+    .replace(/[^a-zA-Z0-9]+/g, " ")
+    .trim()
+    .split(" ")
+  return words
+    .map((word, index) => {
+      if (!word) return ""
+      return index === 0
+        ? word.toLowerCase()
+        : word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+    })
+    .join("")
+}

@@ -76,7 +76,7 @@ function PageSection({
           </div>
         </div>
         {imageBetween && (
-          <div className="block h-128 pt-8 md:hidden">
+          <div className="block h-128 overflow-hidden pt-8 md:hidden">
             <Image
               {...image}
               alt={image.alt}

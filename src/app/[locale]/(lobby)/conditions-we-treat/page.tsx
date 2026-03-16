@@ -5,6 +5,8 @@ import type { LocaleParams } from "@/types"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
+import { conditionsCategories } from "@/config/treatment"
+import { toCamelCase } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -32,24 +34,6 @@ export async function generateMetadata({
     description: t("metadataDescription"),
   }
 }
-
-const conditionsWeTreatConfig = [
-  {
-    title: "mentalHealthArticleHeading",
-    description: "mentalHealthArticleDescription",
-    href: "mentalHealth",
-  },
-  {
-    title: "dependenciesAndAddictionsArticleHeading",
-    description: "dependenciesAndAddictionsArticleDescription",
-    href: "dependenciesAndAddictions",
-  },
-  {
-    title: "eatingDisorderArticleHeading",
-    description: "eatingDisorderArticleDescription",
-    href: "eatingDisorder",
-  },
-]
 
 const ourApproachConfig = [
   {
@@ -104,18 +88,28 @@ export default function ConditionsWeTreatPage() {
       </section>
       <section className="flex flex-col-reverse items-stretch md:flex-row-reverse">
         <div className="flex flex-col px-5 md:w-1/2 md:px-[3dvw]">
-          {conditionsWeTreatConfig.map((item, index) => (
-            <article
-              key={index}
-              className="flex flex-col items-start gap-y-10 border-b py-10 last:border-b-0 md:py-20"
-            >
-              <h2 className="heading-xl">{t(item.title)}</h2>
-              <p className="paragraph">{t(item.description)}</p>
-              <PageLink to={item.href as PageLinkToProp} variant="link">
-                {t("learnMoreLink")}
-              </PageLink>
-            </article>
-          ))}
+          {conditionsCategories.map(({ page: { id } }) => {
+            const conditionCategoryKey = toCamelCase(id)
+            return (
+              <article
+                key={conditionCategoryKey}
+                className="flex flex-col items-start gap-y-10 border-b py-10 last:border-b-0 md:py-20"
+              >
+                <h2 className="heading-xl">
+                  {t(`${conditionCategoryKey}ArticleHeading`)}
+                </h2>
+                <p className="paragraph">
+                  {t(`${conditionCategoryKey}ArticleDescription`)}
+                </p>
+                <PageLink
+                  to={conditionCategoryKey as PageLinkToProp}
+                  variant="link"
+                >
+                  {t("learnMoreLink")}
+                </PageLink>
+              </article>
+            )
+          })}
         </div>
         <div className="py-6 md:relative md:w-1/2">
           <div className="px-5 md:sticky md:top-0 md:pl-[3dvw]">

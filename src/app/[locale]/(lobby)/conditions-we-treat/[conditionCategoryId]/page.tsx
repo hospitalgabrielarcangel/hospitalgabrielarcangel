@@ -5,7 +5,7 @@ import { env } from "@/env.mjs"
 import { Link } from "@/i18n/routing"
 import { getTranslations } from "next-intl/server"
 
-import { conditionsWeTreatConfig, howWeTreatConfig } from "@/config/treatment"
+import { conditionsCategories, howWeTreatConfig } from "@/config/treatment"
 import { toPascalCase } from "@/lib/utils"
 import {
   Accordion,
@@ -35,19 +35,17 @@ export async function generateMetadata({
 }: ConditionCategoryPageProps): Promise<Metadata> {
   const { locale, conditionCategoryId } = await params
 
-  const conditionCategoryName = toPascalCase(conditionCategoryId)
-
-  const condition = conditionsWeTreatConfig.find(
-    (item) => item.page.name === conditionCategoryName
+  const conditionCategory = conditionsCategories.find(
+    (item) => item.page.id === conditionCategoryId
   )
 
-  if (!condition) {
+  if (!conditionCategory) {
     notFound()
   }
 
   const t = await getTranslations({
     locale: locale,
-    namespace: conditionCategoryName,
+    namespace: toPascalCase(conditionCategoryId),
   })
 
   return {
@@ -62,13 +60,11 @@ export default async function ConditionCategoryPage({
 }: ConditionCategoryPageProps) {
   const { conditionCategoryId, locale } = await params
 
-  const conditionCategoryName = toPascalCase(conditionCategoryId)
-
-  const condition = conditionsWeTreatConfig.find(
-    (item) => item.page.name === conditionCategoryName
+  const conditionCategory = conditionsCategories.find(
+    (item) => item.page.id === conditionCategoryId
   )
 
-  if (!condition) {
+  if (!conditionCategory) {
     notFound()
   }
 
@@ -79,7 +75,7 @@ export default async function ConditionCategoryPage({
 
   const tCondition = await getTranslations({
     locale: locale,
-    namespace: conditionCategoryName,
+    namespace: toPascalCase(conditionCategoryId),
   })
 
   return (
@@ -100,10 +96,10 @@ export default async function ConditionCategoryPage({
           </PageHeader>
           <div className="md:hidden">
             <Image
-              src={condition.page.image.src}
-              alt={condition.page.image.alt}
-              width={condition.page.image.width}
-              height={condition.page.image.height}
+              src={conditionCategory.page.image.src}
+              alt={conditionCategory.page.image.alt}
+              width={conditionCategory.page.image.width}
+              height={conditionCategory.page.image.height}
               sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
               className="aspect-square w-full object-cover object-center"
             />
@@ -113,17 +109,19 @@ export default async function ConditionCategoryPage({
               {tCondition("conditionDescription")}
             </p>
             <ul>
-              {condition.page.items.map((conditionItem, conditionItemKey) => (
-                <li key={conditionItemKey} className="border-t last:border-b">
-                  <Link
-                    href={conditionItem}
-                    className="subtitle-md flex items-center justify-between px-5 py-8 md:px-[3dvw]"
-                  >
-                    {tCondition(`conditionItem${conditionItemKey + 1}Title`)}
-                    <Icons.arrowRight />
-                  </Link>
-                </li>
-              ))}
+              {conditionCategory.page.items.map(
+                (conditionItem, conditionItemKey) => (
+                  <li key={conditionItemKey} className="border-t last:border-b">
+                    <Link
+                      href={conditionItem}
+                      className="subtitle-md flex items-center justify-between px-5 py-8 md:px-[3dvw]"
+                    >
+                      {tCondition(`conditionItem${conditionItemKey + 1}Title`)}
+                      <Icons.arrowRight />
+                    </Link>
+                  </li>
+                )
+              )}
             </ul>
           </article>
           <PageSectionHeader
@@ -136,10 +134,10 @@ export default async function ConditionCategoryPage({
         </div>
         <div className="relative hidden md:block md:w-1/2">
           <Image
-            src={condition.page.image.src}
-            alt={condition.page.image.alt}
-            width={condition.page.image.width}
-            height={condition.page.image.height}
+            src={conditionCategory.page.image.src}
+            alt={conditionCategory.page.image.alt}
+            width={conditionCategory.page.image.width}
+            height={conditionCategory.page.image.height}
             sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
             className="sticky top-0 aspect-square h-dvh w-full object-cover object-center"
           />
@@ -150,10 +148,10 @@ export default async function ConditionCategoryPage({
         heading={tCondition("approachHeading")}
         description={tCondition("approachDescription")}
         image={{
-          src: condition.page.approachImage.src,
-          alt: condition.page.approachImage.alt,
-          width: condition.page.approachImage.width,
-          height: condition.page.approachImage.height,
+          src: conditionCategory.page.approachImage.src,
+          alt: conditionCategory.page.approachImage.alt,
+          width: conditionCategory.page.approachImage.width,
+          height: conditionCategory.page.approachImage.height,
         }}
         className="bg-muted border-b lg:border-t"
         headingHeight
