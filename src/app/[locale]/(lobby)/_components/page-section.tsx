@@ -221,6 +221,7 @@ function PageSectionHeader({
 
 interface PageSectionImageProps extends Omit<SectionHeader, "description"> {
   className?: string
+  image: ImageProps
   items: {
     title: string
     description: string
@@ -235,6 +236,7 @@ function PageSectionImage({
   className,
   heading,
   eyebrow,
+  image,
   items,
   link,
 }: PageSectionImageProps) {
@@ -247,10 +249,8 @@ function PageSectionImage({
         </div>
         <div className="relative flex items-center justify-center overflow-hidden">
           <Image
-            src="/images/ourprograms-section.webp"
-            alt="Dental"
-            width={1536}
-            height={1024}
+            {...image}
+            alt={image.alt}
             sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
             loading="lazy"
             className="aspect-353/380 h-full w-full object-cover object-center sm:aspect-1360/616"

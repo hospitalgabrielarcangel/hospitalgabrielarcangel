@@ -16,11 +16,8 @@ import { PageLink } from "@/components/page-link"
 
 import { CertificationsCarousel } from "./_components/cerfifications-carousel"
 import { ContactBanner } from "./_components/contact-banner"
-import {
-  PageSection,
-  PageSectionHeader,
-  PageSectionImage,
-} from "./_components/page-section"
+import { PageSection, PageSectionHeader } from "./_components/page-section"
+import { ProgrammesSection } from "./_components/programmes-section"
 
 const whatWeTreatConfig = [
   {
@@ -37,21 +34,6 @@ const whatWeTreatConfig = [
     title: "whatWeTreatItem3Title",
     description: "whatWeTreatItem3Description",
     href: "/conditions-we-treat/eating-disorder",
-  },
-]
-
-const ourProgramsConfig = [
-  {
-    title: "ourProgramsItem1Title",
-    description: "ourProgramsItem1Description",
-  },
-  {
-    title: "ourProgramsItem2Title",
-    description: "ourProgramsItem2Description",
-  },
-  {
-    title: "ourProgramsItem3Title",
-    description: "ourProgramsItem3Description",
   },
 ]
 
@@ -167,23 +149,12 @@ export default function Page() {
         link={{
           to: "approach",
         }}
-        className="border-t"
+        className="border-y"
         colReverse
         divider
       />
-      <PageSectionImage
-        className="bg-muted border-y"
-        heading={t("ourProgramsHeading")}
-        eyebrow={t("ourProgramsEyebrow")}
-        items={ourProgramsConfig.map((item) => ({
-          title: t(item.title),
-          description: t(item.description),
-        }))}
-        link={{
-          to: "programmes",
-        }}
-      />
-      <div className="relative h-10 w-full">
+      <ProgrammesSection />
+      <div className="relative h-10 w-full border-t">
         <div className="bg-border absolute top-0 left-1/2 h-24 w-px" />
       </div>
       <PageSectionHeader

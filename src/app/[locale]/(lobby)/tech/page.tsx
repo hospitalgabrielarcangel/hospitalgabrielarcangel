@@ -18,7 +18,7 @@ import {
 } from "@/components/page-header"
 
 import { ContactBanner } from "../_components/contact-banner"
-import { PageSectionHeader } from "../_components/page-section"
+import { ProgrammesSection } from "../_components/programmes-section"
 
 export async function generateMetadata({
   params,
@@ -39,45 +39,49 @@ export async function generateMetadata({
 
 const assessmentsConfig = [
   {
-    title: "specialisedLaboratoryTestsTitle",
-    description: "specialisedLaboratoryTestsDescription",
+    title: "3dEcgTitle",
+    description: "3dEcgDescription",
   },
   {
-    title: "geneticTestingTitle",
-    description: "geneticTestingDescription",
+    title: "24hEngTitle",
+    description: "24hEngDescription",
   },
   {
-    title: "stateOfTheArtImagingDiagnosticsTitle",
-    description: "stateOfTheArtImagingDiagnosticsDescription",
+    title: "HrvAndCarotidUltrasoundTitle",
+    description: "HrvAndCarotidUltrasoundDescription",
   },
   {
-    title: "functionalHealthAssessmentsTitle",
-    description: "functionalHealthAssessmentsDescription",
+    title: "stressEchocardiographyTitle",
+    description: "stressEchocardiographyDescription",
   },
   {
-    title: "sleepAssessmentTitle",
-    description: "sleepAssessmentDescription",
+    title: "tmsTitle",
+    description: "tmsDescription",
   },
   {
-    title: "psychiatricScreeningTitle",
-    description: "psychiatricScreeningDescription",
+    title: "sleepizTitle",
+    description: "sleepizDescription",
   },
   {
-    title: "lifestyleAndNutritionalAssessmentTitle",
-    description: "lifestyleAndNutritionalAssessmentDescription",
+    title: "nadAndOrthomolecularIVInfusionsTitle",
+    description: "nadAndOrthomolecularIVInfusionsDescription",
   },
   {
-    title: "psychologicalAssessmentTitle",
-    description: "psychologicalAssessmentDescription",
+    title: "whoopBandAndOuraRingTitle",
+    description: "whoopBandAndOuraRingDescription",
   },
   {
-    title: "additionalAssessmentsTitle",
-    description: "additionalAssessmentsDescription",
+    title: "neurofeedbackTitle",
+    description: "neurofeedbackDescription",
+  },
+  {
+    title: "therapeuticMassageChairsTitle",
+    description: "therapeuticMassageChairsDescription",
   },
 ]
 
 export default function AssessmentsPage() {
-  const t = useTranslations("AssessmentsPage")
+  const t = useTranslations("TechPage")
 
   return (
     <>
@@ -144,17 +148,7 @@ export default function AssessmentsPage() {
           />
         </div>
       </section>
-      <PageSectionHeader
-        heading={t("ourApproachHeading")}
-        description={t("ourApproachDescription")}
-        eyebrow={t("ourApproachEyebrow")}
-        className="bg-muted pb-24"
-        size="lg"
-        link={{
-          to: "approach",
-        }}
-        centered
-      />
+      <ProgrammesSection />
       <ContactBanner muted />
     </>
   )
