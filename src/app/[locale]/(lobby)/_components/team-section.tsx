@@ -1,10 +1,8 @@
 import { useTranslations } from "next-intl"
 
-import { cn } from "@/lib/utils"
-
 import { PageSectionHeader } from "./page-section"
 
-export function TeamSection({ muted }: { muted?: boolean }) {
+export function TeamSection() {
   const t = useTranslations("OurTeamSection")
 
   return (
