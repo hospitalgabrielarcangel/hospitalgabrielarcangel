@@ -17,12 +17,12 @@ export const ourProgrammesConfig = [
   },
 ]
 
-export function ProgrammesSection() {
-  const t = useTranslations("OurProgrammes")
+export function ProgrammesSection({ muted }: { muted?: boolean }) {
+  const t = useTranslations("OurProgrammesSection")
 
   return (
     <PageSectionImage
-      className="bg-muted"
+      className={muted ? "bg-muted" : ""}
       heading={t("ourProgrammesHeading")}
       eyebrow={t("ourProgrammesEyebrow")}
       image={{

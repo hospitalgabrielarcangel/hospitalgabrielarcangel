@@ -43,12 +43,9 @@
     "readMore": "Leer más",
     "howWeTreatEyebrow": "Cómo tratamos",
     "howWeTreatHeading": "Un enfoque médico, integral y personalizado en cada etapa de la recuperación física, mental y emocional.",
-    "howWeTreatDescription": "En Gabriel Arcángel, entendemos que un enfoque generalizado es insuficiente para una sanación verdadera; por ello, nos especializamos en lo excepcional. Somos el único centro de tratamiento a nivel global que asigna un equipo de profesionales dedicados exclusivamente a cada paciente.\nDurante su estancia, no solo estará bajo el cuidado de una institución, sino respaldado por una junta de médicos, terapeutas y especialistas de prestigio mundial. Combinamos la medicina de vanguardia con enfoques holísticos de alto nivel para abordar el espectro completo de la salud. Desde la biología celular hasta el bienestar emocional, cada detalle de su plan de tratamiento es diseñado a medida, garantizando que su proceso de recuperación sea tan único como su propia historia.",
-    "ourTeamEyebrow": "Experiencia",
-    "ourTeamHeading": "Expertos líderes especializados a tu lado en cada paso de tu viaje",
-    "ourTeamDescription": "Cada paciente cuenta con un equipo dedicado de médicos y terapeutas especializados. Además, con un consejo médico asesor integrado por profesionales, usted puede tener la certeza de una excelencia médica y terapéutica sin precedentes."
+    "howWeTreatDescription": "En Gabriel Arcángel, entendemos que un enfoque generalizado es insuficiente para una sanación verdadera; por ello, nos especializamos en lo excepcional. Somos el único centro de tratamiento a nivel global que asigna un equipo de profesionales dedicados exclusivamente a cada paciente.\nDurante su estancia, no solo estará bajo el cuidado de una institución, sino respaldado por una junta de médicos, terapeutas y especialistas de prestigio mundial. Combinamos la medicina de vanguardia con enfoques holísticos de alto nivel para abordar el espectro completo de la salud. Desde la biología celular hasta el bienestar emocional, cada detalle de su plan de tratamiento es diseñado a medida, garantizando que su proceso de recuperación sea tan único como su propia historia."
   },
-  "OurProgrammes": {
+  "OurProgrammesSection": {
     "ourProgrammesEyebrow": "Una experiencia a medida",
     "ourProgrammesHeading": "Ningún paciente es igual a otro, por lo que ningún plan de tratamiento lo es tampoco.",
     "ourProgrammesItem1Title": "Un refugio de protección y cuidado",
@@ -57,6 +54,11 @@
     "ourProgrammesItem2Description": "No solo damos un tratamiento, Contamos con especialistas de élite dedicados exclusivamente a su evolución. Desde su psiquiatra personal y médico de cabecera, hasta un terapeuta residente y un equipo de gestión de relaciones, garantizamos una presencia constante las 24 horas del día.",
     "ourProgrammesItem3Title": "Privacidad y exclusividad",
     "ourProgrammesItem3Description": "Nuestra experiencia de tratamiento es enteramente privada y discreta, diseñada no solo para priorizar su salud, sino para salvaguardar su integridad personal en cada etapa del proceso."
+  },
+  "OurTeamSection": {
+    "ourTeamEyebrow": "Experiencia",
+    "ourTeamHeading": "Expertos líderes especializados a tu lado en cada paso de tu viaje",
+    "ourTeamDescription": "Cada paciente cuenta con un equipo dedicado de médicos y terapeutas especializados. Además, con un consejo médico asesor integrado por profesionales, usted puede tener la certeza de una excelencia médica y terapéutica sin precedentes."
   },
   "AboutUsPage": {
     "metadataTitle": "Acerca de Gabriel Arcángel - Clínica Hospitalizada Contra Adicciones",
@@ -174,6 +176,45 @@
     "neurofeedbackDescription": "El neurofeedback es una terapia de vanguardia que entrena al cerebro para autorregular su propia actividad. Mediante la monitorización en tiempo real de las ondas cerebrales, el neurofeedback ayuda a mejorar la función mental, la regulación emocional y el rendimiento cognitivo. Este tratamiento no invasivo puede reducir los síntomas de ansiedad, depresión, TDAH y estrés, al reentrenar el cerebro para generar patrones neuronales más equilibrados y eficientes. Asimismo, mejora la concentración, la estabilidad emocional y la claridad mental general, contribuyendo al bienestar psicológico y a una mejor calidad de vida.",
     "therapeuticMassageChairsTitle": "Sillones de Masaje Terapéutico",
     "therapeuticMassageChairsDescription": "Los sillones masajeadores terapéuticos están diseñados para ofrecer alivio de dolores crónicos, mejorar la circulación y promover la recuperación muscular, siendo ideales para uso en casa o entornos profesionales como clínicas de fisioterapia.  Estos sillones incorporan tecnologías avanzadas como sensores de detección corporal, masajes 5D, calor terapéutico y programas personalizados que imitan las técnicas de un terapeuta profesional."
+  },
+  "PsychotherapyPage": {
+    "pageEyebrow": "Tipos de terapia",
+    "pageHeading": "Tratamiento psicoterapéutico",
+    "sectionHeading": "Psicoterapia: qué es, cuáles son los diferentes tipos y cómo se incluye",
+    "sectionDescription": "En Gabriel Arcángel, adoptamos un modelo de tratamiento completamente holístico, en el que la psicoterapia desempeña un papel integral. El objetivo de la psicoterapia es proporcionarle el espacio y el apoyo necesarios para reflexionar sobre las preguntas que tiene acerca de sí mismo y su sufrimiento, tanto consciente como inconscientemente.",
+    "whatIsHeading": "¿Qué es la psicoterapia?",
+    "whatIsDescription": "Nuestras mentes, al igual que nuestros cuerpos, intentan constantemente sanar. Sin embargo, para lograrlo, debemos procesar y liberar emociones dolorosas. Cuando nos sentimos atrapados en ciclos destructivos de comportamiento, nuestra mente intenta traer a la superficie sentimientos no resueltos. Cada vez que nos enfrentamos al mismo dolor, nuestro inconsciente espera que esta vez podamos procesar el dolor y el trauma. Sin embargo, esa es una tarea significativa para emprender solo. Ahí es donde entra la psicoterapia.\nLa psicoterapia es un enfoque para tratar condiciones de salud mental que implica hablar con un psicoterapeuta capacitado. También se conoce como terapia de conversación, asesoramiento o simplemente “terapia”. Un psicoterapeuta puede ayudarlo a procesar emociones no resueltas y a comprender cómo o por qué surgieron esas emociones. Trabajando juntos, su psicoterapeuta lo ayudará a navegar desafíos, desarrollar estrategias de afrontamiento saludables y aceptar aquellas partes de sí mismo con las que ha estado en conflicto.\nEntre los numerosos beneficios de la psicoterapia se encuentran: estrategias de afrontamiento para manejar la angustia, habilidades de comunicación mejoradas, mayor conciencia de los pensamientos negativos y mayores conocimientos sobre su vida. De muchas maneras, la psicoterapia lo invita a intentar pensar en quién es usted y cómo llegó a ser “usted”. Ese conocimiento nos permite aceptarnos tal como somos, lo que, a su vez, nos brinda la oportunidad de elegir vivir nuestras vidas en nuestros propios términos.",
+    "typesHeading": "¿Cuáles son los diferentes tipos de psicoterapia?",
+    "typesDescription": "Hay muchos tipos diferentes de psicoterapia, y sus psicoterapeutas específicos adaptarán el tratamiento a sus necesidades particulares. Algunos tipos comunes incluyen:",
+    "itpTitle": "Terapia interpersonal (IPT)",
+    "itpDescription": "Se centra en mejorar las relaciones interpersonales y las habilidades de comunicación.",
+    "cbtTitle": "Terapia cognitivo-conductual (TCC)",
+    "cbtDescription": "Se enfoca en identificar y cambiar patrones de pensamiento y comportamientos negativos.",
+    "psychodynamicTitle": "Terapia psicodinámica",
+    "psychodynamicDescription": "Explora los procesos inconscientes y las experiencias pasadas que influyen en el comportamiento actual.",
+    "hypnotherapyTitle": "Hipnoterapia",
+    "hypnotherapyDescription": "Utiliza la relajación profunda para acceder al inconsciente, ayudando a descubrir y abordar desencadenantes emocionales subyacentes, romper patrones de comportamiento negativos y promover la curación a nivel subconsciente.",
+    "psychoanalysisTitle": "Psicoanálisis",
+    "psychoanalysisDescription": "Una forma más profunda de terapia psicodinámica, el psicoanálisis se adentra en el inconsciente para explorar pensamientos y sentimientos reprimidos, a menudo mediante asociación libre y análisis de sueños.",
+    "humanisticTitle": "Terapia humanista",
+    "humanisticDescription": "Enfatiza la autoexploración y el crecimiento personal, fomentando la autoaceptación y la autoconciencia.",
+    "dbtTitle": "Terapia dialéctica conductual (TDC)",
+    "dbtDescription": "Utilizada principalmente para la regulación emocional y la efectividad interpersonal, a menudo aplicada en casos de trastorno límite de la personalidad.",
+    "eftTitle": "Terapia enfocada en las emociones (EFT)",
+    "eftDescription": "Tiene como objetivo ayudar a las personas a procesar y manejar sus emociones de manera efectiva.",
+    "typesFooter": "Su psicoterapeuta colaborará con usted para determinar el enfoque más apropiado, combinando a menudo técnicas para crear un plan de tratamiento personalizado que satisfaga sus necesidades únicas.",
+    "ourProgrammeHeading": "¿Cómo se incluye la psicoterapia en mi programa?",
+    "ourProgrammeDescription": "Trabajará de manera individual en numerosas sesiones con un psicoterapeuta dedicado, generalmente una o dos por día. Ellos lo ayudarán a superar cualquier trauma subyacente, patrones de pensamiento negativos o problemas no resueltos que puedan estar contribuyendo a sus problemas de salud mental o adicción. Además del psicoterapeuta, colaborará con un terapeuta residente dedicado, un psicólogo y un psiquiatra para asegurar que reciba el tratamiento de salud mental más efectivo posible. Nuestro equipo también incluye practicantes calificados que utilizan algunos de los métodos de tratamiento más avanzados del mundo. Estos incluyen, pero no se limitan a:",
+    "ourProgrammeItem1": "Psicología positiva.",
+    "ourProgrammeItem2": "Terapia de desensibilización y reprocesamiento por movimientos oculares (EMDR).",
+    "ourProgrammeItem3": "Terapia cognitivo-conductual (TCC).",
+    "ourProgrammeItem4": "Psicoterapia centrada en el cuerpo.",
+    "ourProgrammeItem5": "Terapia de relación Imago (TRI).",
+    "ourProgrammeItem6": "Psicología clínica.",
+    "ourProgrammeItem7": "Terapia del trauma.",
+    "ourProgrammeItem8": "Terapia conductual.",
+    "ourProgrammeItem9": "Terapia de esquemas.",
+    "ourProgrammeFooter": "Su tratamiento psicoterapéutico comenzará con una evaluación interdisciplinaria exhaustiva. Durante este período, exploraremos los problemas presentes y subyacentes desde todas las perspectivas. Trabajando en colaboración, luego crearemos un programa de tratamiento psicoterapéutico especializado que aborde su conjunto único de necesidades. Este plan especificará con qué frecuencia recibirá psicoterapia y consultará a su psiquiatra. En algunos casos, la psicoterapia puede tratar eficazmente su condición sin necesidad de medicamentos. Sin embargo, también podría necesitar medicación para aliviar los síntomas y navegar por la etapa aguda de las luchas de salud mental."
   },
   "Treatment": {
     "itName": "Tratamiento residencial",

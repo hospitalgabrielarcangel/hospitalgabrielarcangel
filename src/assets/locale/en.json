@@ -43,12 +43,9 @@
     "readMore": "Read more",
     "howWeTreatEyebrow": "How we treat",
     "howWeTreatHeading": "A medical, comprehensive, and personalized approach to every stage of physical, mental, and emotional recovery.",
-    "howWeTreatDescription": "At Gabriel Arcángel, we believe that a generalized approach hinders true recovery. We stand alone as the only treatment center in the world to provide a dedicated team of professionals for every single patient.\nThroughout your stay, you will be supported by a private circle of world-renowned physicians, therapists, and specialists. By merging cutting-edge medical excellence with sophisticated holistic methodologies, we address the entire spectrum of your health. From cellular biology to psychological well-being, we craft a singular path to healing—ensuring that in the most exclusive environment, your recovery is our only focus.",
-    "ourTeamEyebrow": "Expertise",
-    "ourTeamHeading": "World-class experts guiding you through every stage of your recovery",
-    "ourTeamDescription": "Each patient is supported by a dedicated team of specialized physicians and therapists. Furthermore, with a medical advisory board composed of world-renowned professionals, you can be assured of unparalleled medical and therapeutic excellence."
+    "howWeTreatDescription": "At Gabriel Arcángel, we believe that a generalized approach hinders true recovery. We stand alone as the only treatment center in the world to provide a dedicated team of professionals for every single patient.\nThroughout your stay, you will be supported by a private circle of world-renowned physicians, therapists, and specialists. By merging cutting-edge medical excellence with sophisticated holistic methodologies, we address the entire spectrum of your health. From cellular biology to psychological well-being, we craft a singular path to healing—ensuring that in the most exclusive environment, your recovery is our only focus."
   },
-  "OurProgrammes": {
+  "OurProgrammesSection": {
     "ourProgrammesEyebrow": "A bespoke experience",
     "ourProgrammesHeading": "No patient is ever the same, so no treatment plan is either.",
     "ourProgrammesItem1Title": "Safety and compassionate care",
@@ -57,6 +54,11 @@
     "ourProgrammesItem2Description": "You are supported by a private circle of experts dedicated exclusively to your recovery. From your personal psychiatrist and primary physician to your live-in therapist and client relations team, we provide unwavering 24/7 support.",
     "ourProgrammesItem3Title": "Privacy and exclusivity",
     "ourProgrammesItem3Description": "Our treatment experience is entirely private and discreet, designed not only to prioritize your health but to safeguard your personal integrity at every stage of the process."
+  },
+  "OurTeamSection": {
+    "ourTeamEyebrow": "Expertise",
+    "ourTeamHeading": "World-class experts guiding you through every stage of your recovery",
+    "ourTeamDescription": "Each patient is supported by a dedicated team of specialized physicians and therapists. Furthermore, with a medical advisory board composed of world-renowned professionals, you can be assured of unparalleled medical and therapeutic excellence."
   },
   "AboutUsPage": {
     "metadataTitle": "About Gabriel Arcángel - Impatient Addiction treatment",
@@ -174,6 +176,45 @@
     "neurofeedbackDescription": "Neurofeedback is a cutting-edge therapy that trains your brain to regulate its own activity. By using real-time monitoring of brainwaves, neurofeedback helps improve mental function, emotional regulation, and cognitive performance. This non-invasive treatment can reduce symptoms of anxiety, depression, ADHD, and stress by retraining the brain to create more balanced and efficient neural patterns. It enhances focus, emotional stability, and overall mental clarity, contributing to both psychological well-being and improved quality of life.",
     "therapeuticMassageChairsTitle": "Therapeutic Massage Chairs",
     "therapeuticMassageChairsDescription": "Therapeutic massage chairs are designed to provide relief from chronic pain, improve circulation, and promote muscle recovery, making them ideal for home use or professional settings such as physiotherapy clinics. These chairs incorporate advanced technologies such as body detection sensors, 5D massage, therapeutic heat, and customized programs that mimic the techniques of a professional therapist."
+  },
+  "PsychotherapyPage": {
+    "pageEyebrow": "Types of therapy",
+    "pageHeading": "Psychotherapy Treatment",
+    "sectionHeading": "Psychotherapy: What is, What are the Different Types, and How id included",
+    "sectionDescription": "At Gabriel Arcángel, we adopt an entirely holistic treatment model, with psychotherapy treatment playing an integral role The aim of psychotherapy is to provide you with the space and support needed to think through the questions you have about yourself and your suffering; both consciously and unconsciously.",
+    "whatIsHeading": "What is psychotherapy?",
+    "whatIsDescription": "Our minds, like our bodies, are constantly attempting to heal. However, in order to do so, we must process and release painful emotions. When we feel trapped in destructive cycles of behaviour, our mind is attempting to bring unresolved feelings to the surface. Every time we are confronted with the same pain, our unconscious mind hopes that this time we will be able to process the pain and trauma. However, that is a significant task to undertake on your own. That is where psychotherapy comes in.\nPsychotherapy is an approach to treating mental health conditions that involves talking with a trained psychotherapist. It is also referred to as talk therapy, counselling or just ‘therapy’. A psychotherapist can assist you in processing unresolved emotions and understanding how or why those emotions came to be. Working together, your psychotherapist will help you navigate challenges, develop healthy coping strategies and accept those parts of yourself that you’ve been at war with.\nAmong the numerous benefits of psychotherapy are: coping strategies to manage distress, improved communication skills, greater awareness of negative thoughts and greater insights about your life. In many ways, psychotherapy invites you to try and think about who you are and how you came to be ‘you.’ That knowledge enables us to accept ourselves as we are, which in turn, gives us the opportunity to choose to live our lives on our own terms.",
+    "typesHeading": "What are the different types of psychotherapy?",
+    "typesDescription": "There are many different types of psychotherapy, and your specific psychotherapists will tailor the treatment to your specific needs. Some common types include:",
+    "itpTitle": "Interpersonal Therapy (IPT)",
+    "itpDescription": "Concentrates on improving interpersonal relationships and communication skills.",
+    "cbtTitle": "Cognitive Behavioural Therapy (CBT)",
+    "cbtDescription": "Focuses on identifying and changing negative thought patterns and behaviours.",
+    "psychodynamicTitle": "Psychodynamic Therapy",
+    "psychodynamicDescription": "Explores the unconscious processes and past experiences that influence current behaviour.",
+    "hypnotherapyTitle": "Hypnotherapy",
+    "hypnotherapyDescription": "Utilises deep relaxation to access the unconscious mind, helping to uncover and address underlying emotional triggers, break negative behavioural patterns, and promote healing at a subconscious level.",
+    "psychoanalysisTitle": "Psychoanalysis",
+    "psychoanalysisDescription": "A deeper form of psychodynamic therapy, psychoanalysis delves into the unconscious mind to explore repressed thoughts and feelings, often through free association and dream analysis.",
+    "humanisticTitle": "Humanistic Therapy",
+    "humanisticDescription": "Emphasises self-exploration and personal growth, fostering self-acceptance and self-awareness.",
+    "dbtTitle": "Dialectical Behaviour Therapy (DBT)",
+    "dbtDescription": "Primarily used for emotion regulation and interpersonal effectiveness, often applied in cases of borderline personality disorder.",
+    "eftTitle": "Emotion-Focused Therapy (EFT)",
+    "eftDescription": "Aims to help individuals process and manage their emotions effectively.",
+    "typesFooter": "Your psychotherapist will collaborate with you to determine the most appropriate approach, often combining techniques to create a personalised treatment plan that meets your unique needs.",
+    "ourProgrammeHeading": "How is psychotherapy Included in my programme?",
+    "ourProgrammeDescription": "You will work one-on-one in numerous sessions with a dedicated psychotherapist, typically one or two a day. They will assist you in overcoming any underlying trauma, negative thinking patterns or unresolved issues that may be contributing to your mental health issues or addiction. In addition to the psychotherapist, you will collaborate with a dedicated live-in therapist, psychologist and psychiatrist to ensure that you receive the most effective mental health treatment possible. Our team also includes qualified practitioners who use some of the world’s most cutting-edge treatment methods. These include, but are not limited to:",
+    "ourProgrammeItem1": "Positive psychology.",
+    "ourProgrammeItem2": "Eye movement desensitisation and reprocessing (EMDR) therapy.",
+    "ourProgrammeItem3": "Cognitive-behavioural therapy (CBT).",
+    "ourProgrammeItem4": "Body-centred psychotherapy.",
+    "ourProgrammeItem5": "Imago relationship therapy (IRT).",
+    "ourProgrammeItem6": "Clinical psychology.",
+    "ourProgrammeItem7": "Trauma therapy.",
+    "ourProgrammeItem8": "Behavioural therapy.",
+    "ourProgrammeItem9": "Schema therapy.",
+    "ourProgrammeFooter": "Your psychotherapy treatment will begin with an in-depth interdisciplinary assessment. During this period, we will explore the presenting and underlying issues from all perspectives. Working collaboratively, we then create a specialised psychotherapeutic treatment program that addresses your unique set of needs. This plan will specify how frequently you will receive psychotherapy and consult with your psychiatrist. In some cases, psychotherapy can be effective in treating your condition without the need for medicines. However, you may also need medication to ease the symptoms of navigate the acute stage of mental health struggles."
   },
   "Treatment": {
     "itName": "Inpatient treatment",

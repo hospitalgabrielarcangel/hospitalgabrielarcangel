@@ -80,7 +80,7 @@ const assessmentsConfig = [
   },
 ]
 
-export default function AssessmentsPage() {
+export default function TechPage() {
   const t = useTranslations("TechPage")
 
   return (

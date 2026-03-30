@@ -12,7 +12,7 @@ function ContactBanner({ muted }: { muted?: boolean }) {
           {t("contactBanner")}
         </h2>
         <PageLink
-          className="mx-auto h-11 pt-0.25 md:mx-0"
+          className="mx-auto h-11 md:mx-0"
           to="contact"
           variant="secondary"
           size="lg"

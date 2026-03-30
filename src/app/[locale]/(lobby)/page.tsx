@@ -18,6 +18,7 @@ import { CertificationsCarousel } from "./_components/cerfifications-carousel"
 import { ContactBanner } from "./_components/contact-banner"
 import { PageSection, PageSectionHeader } from "./_components/page-section"
 import { ProgrammesSection } from "./_components/programmes-section"
+import { TeamSection } from "./_components/team-section"
 
 const whatWeTreatConfig = [
   {
@@ -154,17 +155,7 @@ export default function Page() {
         divider
       />
       <ProgrammesSection />
-      <div className="relative h-10 w-full border-t">
-        <div className="bg-border absolute top-0 left-1/2 h-24 w-px" />
-      </div>
-      <PageSectionHeader
-        eyebrow={t("ourTeamEyebrow")}
-        heading={t("ourTeamHeading")}
-        description={t("ourTeamDescription")}
-        link={{ to: "ourTeam" }}
-        size="xl"
-        centered
-      />
+      <TeamSection />
       <ContactBanner />
     </>
   )
