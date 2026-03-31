@@ -77,7 +77,7 @@ export default function PsychotherapyPage() {
 
   return (
     <>
-      <section className="bg-muted -mt-20 border-b bg-[url(/Images/about-us-hero.webp)] bg-center">
+      <section className="bg-muted -mt-20 border-b bg-[url(/images/about-us-hero.webp)] bg-center">
         <div className="container pt-70 pb-12 md:pt-84">
           <div className="max-w-6xl space-y-5">
             <p className="eyebrow text-white">{t("pageEyebrow")}</p>

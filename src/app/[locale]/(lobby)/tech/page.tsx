@@ -19,6 +19,7 @@ import {
 
 import { ContactBanner } from "../_components/contact-banner"
 import { ProgrammesSection } from "../_components/programmes-section"
+import { TeamSection } from "../_components/team-section"
 
 export async function generateMetadata({
   params,
@@ -149,6 +150,7 @@ export default function TechPage() {
         </div>
       </section>
       <ProgrammesSection />
+      <TeamSection />
       <ContactBanner muted />
     </>
   )
