@@ -23,6 +23,27 @@ const conditionPageLinkTo = [
   "programmes",
 ] satisfies PageLinkToProp[]
 
+const sectionsImages = [
+  {
+    src: "/images/meditation.webp",
+    alt: "approachImageAlt",
+    width: 2160,
+    height: 2880,
+  },
+  {
+    src: "/images/nurse.webp",
+    alt: "approachImageAlt",
+    width: 2160,
+    height: 2880,
+  },
+  {
+    src: "/images/vsm_4-5.webp",
+    alt: "approachImageAlt",
+    width: 2160,
+    height: 2880,
+  },
+]
+
 export default function Condition(props: ConditionProps) {
   const t = useTranslations("ConditionTreatmentPage")
   const tConditionTreatment = useTranslations(toPascalCase(props.name))
@@ -217,7 +238,7 @@ export default function Condition(props: ConditionProps) {
           <source src="/video/video-home.mp4" type="video/mp4" />
         </video>
       </div>
-      {props.sectionsImages.map((conditionSectionItem, conditionSectionKey) => (
+      {sectionsImages.map((conditionSectionItem, conditionSectionKey) => (
         <section key={`condition-section-item-${conditionSectionKey}`}>
           <div
             className={cn(
@@ -259,7 +280,7 @@ export default function Condition(props: ConditionProps) {
                 sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
                 loading="lazy"
                 className={cn(
-                  "aspect-square h-128 object-cover object-center",
+                  "aspect-square h-128 object-cover object-center md:h-164",
                   conditionSectionKey % 2 === 0 ? "md:pl-6" : "md:pr-6"
                 )}
               />

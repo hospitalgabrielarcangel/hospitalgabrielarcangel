@@ -34,7 +34,7 @@ const ourApproachSctions = [
     descripion: "assessmentsDescription",
     href: "assessments",
     image: {
-      src: "/images/howwetreat-section.webp",
+      src: "/images/meditation.webp",
       alt: "assessmentsImageAlt",
       width: 2160,
       height: 2880,
@@ -45,7 +45,7 @@ const ourApproachSctions = [
     descripion: "programmesDescription",
     href: "programmes",
     image: {
-      src: "/images/howwetreat-section.webp",
+      src: "/images/dentist.webp",
       alt: "programmesImageAlt",
       width: 2160,
       height: 2880,
@@ -56,7 +56,7 @@ const ourApproachSctions = [
     descripion: "techDescription",
     href: "tech",
     image: {
-      src: "/images/howwetreat-section.webp",
+      src: "/images/vsm.webp",
       alt: "techImageAlt",
       width: 2160,
       height: 2880,
@@ -67,7 +67,7 @@ const ourApproachSctions = [
     descripion: "therapieDescription",
     href: "therapies",
     image: {
-      src: "/images/howwetreat-section.webp",
+      src: "/images/group-therapy.webp",
       alt: "therapieImageAlt",
       width: 2160,
       height: 2880,
@@ -78,7 +78,7 @@ const ourApproachSctions = [
     descripion: "residenceDescription",
     href: "residences",
     image: {
-      src: "/images/howwetreat-section.webp",
+      src: "/images/patience-smiling.webp",
       alt: "residenceImageAlt",
       width: 2160,
       height: 2880,
@@ -101,7 +101,7 @@ export default function ApproachPage() {
           </div>
         </div>
         <Image
-          src="/images/howwetreat-section.webp"
+          src="/images/approach.webp"
           alt={t("headerImageAlt")}
           width={2160}
           height={2880}
@@ -182,7 +182,7 @@ export default function ApproachPage() {
                 sizes="(min-width: 1536px) 1536px, (min-width: 1280px) 1280px, (min-width: 1024px) 1024px, (min-width: 768px) 768px, (min-width: 640px) 640px, 100vw"
                 loading="lazy"
                 className={cn(
-                  "aspect-square h-128 object-cover object-center",
+                  "aspect-square h-128 bg-center object-cover object-center",
                   approachSectionKey % 2 === 0 ? "md:pl-6" : "md:pr-6"
                 )}
               />
@@ -194,10 +194,9 @@ export default function ApproachPage() {
         <div className="bg-border absolute top-0 left-1/2 h-24 w-px" />
       </div>
       <PageSectionHeader
-        heading="A truly meaningful experience"
-        description="We are the only treatment centre in the world to provide a minimum of 15 dedicated professionals to each client. So, throughout your stay, you will be guided by a team of world-renowned doctors, therapists, and specialists.\nHear directly from the minds and hearts of our staff below."
-        eyebrow="Expertise"
-        link={{ to: "ourTeam" }}
+        heading={t("ourTeamHeading")}
+        description={t("ourTeamDescription")}
+        eyebrow={t("ourTeamEyebrow")}
         size="xl"
         centered
         className="bg-muted"

@@ -15,7 +15,7 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale: locale,
-    namespace: "PsychotherapyPage",
+    namespace: "LiveInTherapistPage",
   })
 
   return {
@@ -25,59 +25,12 @@ export async function generateMetadata({
   }
 }
 
-const psychotherapyTypesConfig = [
-  {
-    title: "itpTitle",
-    description: "itpDescription",
-  },
-  {
-    title: "cbtTitle",
-    description: "cbtDescription",
-  },
-  {
-    title: "psychodynamicTitle",
-    description: "psychodynamicDescription",
-  },
-  {
-    title: "hypnotherapyTitle",
-    description: "hypnotherapyDescription",
-  },
-  {
-    title: "psychoanalysisTitle",
-    description: "psychoanalysisDescription",
-  },
-  {
-    title: "humanisticTitle",
-    description: "humanisticDescription",
-  },
-  {
-    title: "dbtTitle",
-    description: "dbtDescription",
-  },
-  {
-    title: "eftTitle",
-    description: "eftDescription",
-  },
-]
-
-const psychotherapyProgrammeConfig = [
-  "ourProgrammeItem1",
-  "ourProgrammeItem2",
-  "ourProgrammeItem3",
-  "ourProgrammeItem4",
-  "ourProgrammeItem5",
-  "ourProgrammeItem6",
-  "ourProgrammeItem7",
-  "ourProgrammeItem8",
-  "ourProgrammeItem9",
-]
-
 export default function PsychotherapyPage() {
-  const t = useTranslations("PsychotherapyPage")
+  const t = useTranslations("LiveInTherapistPage")
 
   return (
     <>
-      <section className="bg-muted -mt-20 border-b bg-[url(/images/counselor.webp)] bg-center">
+      <section className="bg-muted -mt-20 border-b bg-[url(/images/psychiatrist_16-9.webp)] bg-top object-cover">
         <div className="container pt-70 pb-12 md:pt-84">
           <div className="max-w-6xl space-y-5">
             <p className="eyebrow text-white">{t("pageEyebrow")}</p>
@@ -119,31 +72,33 @@ export default function PsychotherapyPage() {
                 </div>
               </div>
             </article>
-            <article className="space-y-6 border-b py-12 md:pl-8">
-              <h3 className="subtitle-lg font-medium">{t("typesHeading")}</h3>
-              <p className="paragraph">{t("typesDescription")}</p>
-              <ul className="space-y-6">
-                {psychotherapyTypesConfig.map((item) => (
-                  <li key={item.title}>
-                    <p>
-                      <strong>{t(item.title)}</strong>: {t(item.description)}
-                    </p>
-                  </li>
-                ))}
-              </ul>
-              <p className="paragraph">{t("typesFooter")}</p>
+            <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
+              <div className="space-y-6">
+                <h3 className="subtitle-lg font-medium">
+                  {t("howHelpHeading")}
+                </h3>
+                <div className="paragraph space-y-4">
+                  {t("howHelpDescription")
+                    .split("\n")
+                    .map((whatIsParagraph, whatIsKey) => (
+                      <p key={whatIsKey}>{whatIsParagraph}</p>
+                    ))}
+                </div>
+              </div>
             </article>
-            <article className="space-y-6 py-12 md:pl-8">
-              <h3 className="subtitle-lg font-medium">
-                {t("ourProgrammeHeading")}
-              </h3>
-              <p className="paragraph">{t("ourProgrammeDescription")}</p>
-              <ul className="text-muted-foreground list-disc space-y-6 pl-10">
-                {psychotherapyProgrammeConfig.map((item) => (
-                  <li key={item}>{t(item)}</li>
-                ))}
-              </ul>
-              <p className="paragraph">{t("ourProgrammeFooter")}</p>
+            <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
+              <div className="space-y-6">
+                <h3 className="subtitle-lg font-medium">
+                  {t("benefistHeading")}
+                </h3>
+                <div className="paragraph space-y-4">
+                  {t("benefistDescription")
+                    .split("\n")
+                    .map((whatIsParagraph, whatIsKey) => (
+                      <p key={whatIsKey}>{whatIsParagraph}</p>
+                    ))}
+                </div>
+              </div>
             </article>
           </div>
         </div>

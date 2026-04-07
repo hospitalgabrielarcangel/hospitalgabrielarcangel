@@ -74,7 +74,7 @@ export default function AboutUsPage() {
 
   return (
     <>
-      <section className="-mt-20 h-166 overflow-hidden bg-[url('/images/about-us-hero.webp')] bg-cover bg-center md:h-dvh">
+      <section className="-mt-20 h-166 overflow-hidden bg-[url('/images/ceo2.webp')] bg-cover bg-center md:h-dvh">
         <div className="container">
           <PageHeader
             className="flex max-w-full flex-col gap-y-6 pt-20 pb-8 md:h-dvh"
@@ -109,7 +109,7 @@ export default function AboutUsPage() {
         heading={t("whoWeAreHeading")}
         description={t("whoWeAreDescription")}
         image={{
-          src: "/images/howwetreat-section.webp",
+          src: "/images/patience-smiling.webp",
           alt: "EMT",
           width: 2160,
           height: 2880,
@@ -121,7 +121,7 @@ export default function AboutUsPage() {
         heading={t("whoWeTreatHeading")}
         description={t("whoWeTreatDescription")}
         image={{
-          src: "/images/howwetreat-section.webp",
+          src: "/images/counselor.webp",
           alt: "EMT",
           width: 2160,
           height: 2880,
@@ -133,6 +133,9 @@ export default function AboutUsPage() {
         heading={t("ourApproachHeading")}
         description={t("ourApproachDescription")}
         eyebrow={t("ourApproachEyebrow")}
+        link={{
+          to: "approach",
+        }}
         className="bg-muted pb-24"
         size="lg"
         centered

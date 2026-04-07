@@ -51,7 +51,7 @@ export const conditionsCategories = [
     page: {
       id: "mental-health",
       image: {
-        src: "/images/howwetreat-section.webp",
+        src: "/images/emt-session3.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
@@ -73,7 +73,7 @@ export const conditionsCategories = [
         "/conditions-we-treat/mental-health/borderline-personality-disorder",
       ],
       approachImage: {
-        src: "/images/howwetreat-section.webp",
+        src: "/images/psychiatrist.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
@@ -422,7 +422,7 @@ export const conditionsCategories = [
     page: {
       id: "dependencies-and-addictions",
       image: {
-        src: "/images/howwetreat-section.webp",
+        src: "/images/nurse.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
@@ -434,7 +434,7 @@ export const conditionsCategories = [
         "/conditions-we-treat/dependencies-and-addictions/behavioural-addictions",
       ],
       approachImage: {
-        src: "/images/howwetreat-section.webp",
+        src: "/images/ceo.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
@@ -617,7 +617,7 @@ export const conditionsCategories = [
     page: {
       id: "eating-disorder",
       image: {
-        src: "/images/howwetreat-section.webp",
+        src: "/images/medical-consultation.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
@@ -631,7 +631,7 @@ export const conditionsCategories = [
         "/conditions-we-treat/eating-disorder/body-dysmorphic-disorder",
       ],
       approachImage: {
-        src: "/images/howwetreat-section.webp",
+        src: "/images/emt-session.webp",
         alt: "EMT",
         width: 2160,
         height: 2880,
@@ -1807,31 +1807,31 @@ export const howWeTreatConfig = [
     title: "howWeTreatItem1Title",
     description: "howWeTreatItem1Description",
     link: "howWeTreatItem1Link",
-    slug: "#",
+    slug: "/assessments",
   },
   {
     title: "howWeTreatItem2Title",
     description: "howWeTreatItem2Description",
     link: "howWeTreatItem2Link",
-    slug: "#",
+    slug: "/tech",
   },
   {
     title: "howWeTreatItem3Title",
     description: "howWeTreatItem3Description",
     link: "howWeTreatItem3Link",
-    slug: "#",
+    slug: "/psychotherapy",
   },
   {
     title: "howWeTreatItem4Title",
     description: "howWeTreatItem4Description",
     link: "howWeTreatItem4Link",
-    slug: "#",
+    slug: "/live-in-therapist",
   },
   {
     title: "howWeTreatItem5Title",
     description: "howWeTreatItem5Description",
     link: "howWeTreatItem5Link",
-    slug: "#",
+    slug: "/psychiatry",
   },
   {
     title: "howWeTreatItem6Title",

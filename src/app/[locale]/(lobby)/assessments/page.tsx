@@ -83,11 +83,7 @@ export default function AssessmentsPage() {
     <>
       <section className="flex w-full flex-col items-stretch border-t border-b md:flex-row-reverse">
         <div className="flex flex-col md:w-1/2">
-          <PageHeader
-            className="container gap-0 md:h-dvh"
-            as="article"
-            centered
-          >
+          <PageHeader className="container gap-0 md:h-dvh" as="div" centered>
             <PageHeaderHeading className="heading-4xl flex items-center py-20 text-center md:grow md:py-0">
               {t("pageHeading")}
             </PageHeaderHeading>
@@ -97,7 +93,7 @@ export default function AssessmentsPage() {
           </PageHeader>
           <div className="md:hidden">
             <Image
-              src="/images/howwetreat-section.webp"
+              src="/images/assessment.webp"
               alt={t("headerImageAlt")}
               width={2160}
               height={2880}
@@ -135,7 +131,7 @@ export default function AssessmentsPage() {
         </div>
         <div className="relative hidden md:block md:w-1/2">
           <Image
-            src="/images/howwetreat-section.webp"
+            src="/images/assessment.webp"
             alt={t("headerImageAlt")}
             width={2160}
             height={2880}

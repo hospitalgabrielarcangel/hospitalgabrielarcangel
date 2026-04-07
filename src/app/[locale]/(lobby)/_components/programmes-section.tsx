@@ -26,7 +26,7 @@ export function ProgrammesSection({ muted }: { muted?: boolean }) {
       heading={t("ourProgrammesHeading")}
       eyebrow={t("ourProgrammesEyebrow")}
       image={{
-        src: "/images/ourprogrammes-section.webp",
+        src: "/images/neuromodulation-specialist.webp",
         alt: "Dental",
         width: 1536,
         height: 1024,

@@ -63,7 +63,7 @@ export default function ConditionsWeTreatPage() {
           </div>
         </div>
         <Image
-          src="/images/howwetreat-section.webp"
+          src="/images/doctor.webp"
           alt="EMT"
           width={2160}
           height={2880}
@@ -114,7 +114,7 @@ export default function ConditionsWeTreatPage() {
         <div className="py-6 md:relative md:w-1/2">
           <div className="px-5 md:sticky md:top-0 md:pl-[3dvw]">
             <Image
-              src="/images/howwetreat-section.webp"
+              src="/images/emt-session2.webp"
               alt="EMT"
               width={2160}
               height={2880}
@@ -130,11 +130,10 @@ export default function ConditionsWeTreatPage() {
         heading={t("treatmentApproachHeading")}
         description={t("treatmentApproachDescription")}
         link={{
-          label: t("learnMoreLink"),
-          to: "home",
+          to: "approach",
         }}
         image={{
-          src: "/images/howwetreat-section.webp",
+          src: "/images/meditation.webp",
           alt: "EMT",
           width: 2160,
           height: 2880,

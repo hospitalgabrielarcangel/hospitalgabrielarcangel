@@ -188,11 +188,8 @@ export default async function ConditionCategoryPage({
         eyebrow={t("ourTeamEyebrow")}
         heading={t("ourTeamHeading")}
         description={t("ourTeamDescription")}
-        link={{
-          to: "ourTeam",
-        }}
         image={{
-          src: "/images/howwetreat-section.webp",
+          src: "/images/neuromodulation-specialist.webp",
           alt: "EMT",
           width: 2160,
           height: 2880,

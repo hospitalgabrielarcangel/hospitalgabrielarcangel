@@ -102,7 +102,7 @@ export default function TechPage() {
           </PageHeader>
           <div className="md:hidden">
             <Image
-              src="/images/howwetreat-section.webp"
+              src="/images/emt-chair.webp"
               alt={t("headerImageAlt")}
               width={2160}
               height={2880}
@@ -140,7 +140,7 @@ export default function TechPage() {
         </div>
         <div className="relative hidden md:block md:w-1/2">
           <Image
-            src="/images/howwetreat-section.webp"
+            src="/images/emt-chair.webp"
             alt={t("headerImageAlt")}
             width={2160}
             height={2880}

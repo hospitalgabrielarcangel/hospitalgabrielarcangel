@@ -16,7 +16,7 @@ import { PageLink } from "@/components/page-link"
 
 import { CertificationsCarousel } from "./_components/cerfifications-carousel"
 import { ContactBanner } from "./_components/contact-banner"
-import { PageSection, PageSectionHeader } from "./_components/page-section"
+import { PageSection } from "./_components/page-section"
 import { ProgrammesSection } from "./_components/programmes-section"
 import { TeamSection } from "./_components/team-section"
 
@@ -100,8 +100,8 @@ export default function Page() {
         heading={t("whatWeTreatHeading")}
         description={t("whatWeTreatDescription")}
         image={{
-          src: "/images/about-us-hero.webp",
-          alt: "EMT",
+          src: "/images/ceo.webp",
+          alt: t("whatWeTreatImageAlt"),
           width: 2160,
           height: 2880,
         }}
@@ -142,7 +142,7 @@ export default function Page() {
         heading={t("howWeTreatHeading")}
         description={t("howWeTreatDescription")}
         image={{
-          src: "/images/howwetreat-section.webp",
+          src: "/images/vsm_4-5.webp",
           alt: "Dental",
           width: 2160,
           height: 2700,

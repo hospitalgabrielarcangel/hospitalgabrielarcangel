@@ -14,7 +14,7 @@ export function TeamSection() {
         eyebrow={t("ourTeamEyebrow")}
         heading={t("ourTeamHeading")}
         description={t("ourTeamDescription")}
-        link={{ to: "ourTeam" }}
+        // link={{ to: "ourTeam" }}
         size="xl"
         centered
       />
