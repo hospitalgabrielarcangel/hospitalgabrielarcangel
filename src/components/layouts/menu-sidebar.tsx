@@ -3,6 +3,7 @@
 // import { useTranslations } from "next-intl"
 import { create } from "zustand"
 
+import { LocaleSwitcher } from "./locale-switcher"
 import Sidebar from "./sidebar"
 
 interface MenuSidebarStore {
@@ -30,11 +31,15 @@ function MenuSidebar() {
   return (
     <Sidebar
       position="left"
-      size="full"
+      size="sm"
       status={isMenuSidebarOpen}
       onClickOutside={closeSidebarMenu}
       containerClassName="z-30"
     >
+      <div className="h-full overflow-y-auto"></div>
+      <div>
+        <LocaleSwitcher />
+      </div>
       {/* <section className="container py-20 pb-8 xl:px-[7dvw]">
         <h5 className="heading-lg max-w-lg">{t("title")}</h5>
         <nav className="mt-12 flex w-full flex-col justify-between gap-x-20 gap-y-12 lg:flex-row xl:gap-0">

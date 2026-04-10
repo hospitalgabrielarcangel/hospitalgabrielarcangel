@@ -44,8 +44,8 @@ const assessmentsConfig = [
     description: "tmsDescription",
   },
   {
-    title: "EcgTitle",
-    description: "EcgDescription",
+    title: "ecgTitle",
+    description: "ecgDescription",
   },
   {
     title: "eegTitle",
@@ -56,8 +56,8 @@ const assessmentsConfig = [
     description: "vsmDescription",
   },
   {
-    title: "OrthomolecularIVInfusionsTitle",
-    description: "OrthomolecularIVInfusionsDescription",
+    title: "orthomolecularIVInfusionsTitle",
+    description: "orthomolecularIVInfusionsDescription",
   },
   {
     title: "neurofeedbackTitle",
