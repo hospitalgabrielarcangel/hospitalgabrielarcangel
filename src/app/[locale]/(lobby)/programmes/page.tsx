@@ -41,7 +41,7 @@ const programmesConfig = [
     description: "residentialProgrammeDescription",
     href: "residentialProgramme",
     image: {
-      src: "/images/meditation.webp",
+      src: "/images/approach.webp",
       alt: "residentialProgrammeImageAlt",
       width: 2160,
       height: 2880,

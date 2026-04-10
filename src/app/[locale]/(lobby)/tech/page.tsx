@@ -40,36 +40,24 @@ export async function generateMetadata({
 
 const assessmentsConfig = [
   {
-    title: "3dEcgTitle",
-    description: "3dEcgDescription",
-  },
-  {
-    title: "24hEngTitle",
-    description: "24hEngDescription",
-  },
-  {
-    title: "HrvAndCarotidUltrasoundTitle",
-    description: "HrvAndCarotidUltrasoundDescription",
-  },
-  {
-    title: "stressEchocardiographyTitle",
-    description: "stressEchocardiographyDescription",
-  },
-  {
     title: "tmsTitle",
     description: "tmsDescription",
   },
   {
-    title: "sleepizTitle",
-    description: "sleepizDescription",
+    title: "EcgTitle",
+    description: "EcgDescription",
   },
   {
-    title: "nadAndOrthomolecularIVInfusionsTitle",
-    description: "nadAndOrthomolecularIVInfusionsDescription",
+    title: "eegTitle",
+    description: "eegDescription",
   },
   {
-    title: "whoopBandAndOuraRingTitle",
-    description: "whoopBandAndOuraRingDescription",
+    title: "vsmTitle",
+    description: "vsmDescription",
+  },
+  {
+    title: "OrthomolecularIVInfusionsTitle",
+    description: "OrthomolecularIVInfusionsDescription",
   },
   {
     title: "neurofeedbackTitle",

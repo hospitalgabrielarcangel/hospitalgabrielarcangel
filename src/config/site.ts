@@ -86,49 +86,33 @@ export const siteConfig = {
         items: [
           {
             title: "approachNavItem",
-            href: "#",
+            href: "/approach",
           },
           {
             title: "conditionsNavItem",
-            href: "#",
+            href: "conditions-we-treat",
           },
           {
             title: "assessmentsNavItem",
-            href: "#",
+            href: "/assessments",
           },
           {
             title: "programmesNavItem",
-            href: "#",
+            href: "/programmes",
           },
           {
             title: "therapiesNavItem",
-            href: "#",
-          },
-          {
-            title: "pricesNavItem",
-            href: "#",
+            href: "/types-of-therapies",
           },
           {
             title: "techNavItem",
-            href: "#",
+            href: "/tech",
           },
         ],
       },
       {
         title: "informationNavTitle",
         items: [
-          {
-            title: "teamNavItem",
-            href: "#",
-          },
-          {
-            title: "blogNavItem",
-            href: "#",
-          },
-          {
-            title: "storiesNavItem",
-            href: "#",
-          },
           {
             title: "contactNavItem",
             href: "#",
