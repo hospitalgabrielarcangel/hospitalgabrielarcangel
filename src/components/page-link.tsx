@@ -18,7 +18,15 @@ const PAGE_LINK_CONFIG = [
   },
   {
     title: "programmes",
-    href: "#",
+    href: "/programmes",
+  },
+  {
+    title: "residentialProgramme",
+    href: "/programmes/residential-rehab-treatment",
+  },
+  {
+    title: "aftercareProgramme",
+    href: "/programmes/aftercare-treatment",
   },
   {
     title: "assessments",
@@ -30,10 +38,6 @@ const PAGE_LINK_CONFIG = [
   },
   {
     title: "therapies",
-    href: "#",
-  },
-  {
-    title: "residences",
     href: "#",
   },
   {

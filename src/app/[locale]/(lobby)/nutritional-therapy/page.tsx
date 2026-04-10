@@ -15,7 +15,7 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale: locale,
-    namespace: "PsychiatryPage",
+    namespace: "NutritionalTherapyPage",
   })
 
   return {
@@ -25,12 +25,12 @@ export async function generateMetadata({
   }
 }
 
-export default function PsychiatryPage() {
-  const t = useTranslations("PsychiatryPage")
+export default function NutritionalTherapyPage() {
+  const t = useTranslations("NutritionalTherapyPage")
 
   return (
     <>
-      <section className="bg-muted -mt-20 border-b bg-[url(/images/psychiatry.webp)] bg-center object-cover">
+      <section className="bg-muted -mt-20 border-b bg-[url(/images/nutrition-therapy.webp)] bg-center object-cover">
         <div className="container pt-70 pb-12 md:pt-84">
           <div className="max-w-6xl space-y-5">
             <p className="eyebrow text-white">{t("pageEyebrow")}</p>
@@ -58,30 +58,38 @@ export default function PsychiatryPage() {
             </div>
           </div>
           <div className="md:w-1/2 md:pb-8">
-            <article className="space-y-6 border-b py-12 md:pl-8">
-              <h3 className="subtitle-lg font-medium">{t("whatIsHeading")}</h3>
-              <p className="paragraph">{t("whatIsDescription")}</p>
-              <ul className="text-muted-foreground list-disc space-y-6 pl-8">
-                {[...Array(12).keys()].map((item) => (
-                  <li key={item}>
-                    <p>{t(`whatIsItem${item + 1}`)}</p>
-                  </li>
-                ))}
-              </ul>
-              <p className="paragraph">{t("whatIsFooter")}</p>
-            </article>
             <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
               <div className="space-y-6">
                 <h3 className="subtitle-lg font-medium">
-                  {t("differenceHeading")}
+                  {t("whatIsHeading")}
                 </h3>
                 <div className="paragraph space-y-4">
-                  {t("differenceDescription")
+                  {t("whatIsDescription")
                     .split("\n")
                     .map((whatIsParagraph, whatIsKey) => (
                       <p key={whatIsKey}>{whatIsParagraph}</p>
                     ))}
                 </div>
+              </div>
+            </article>
+            <article className="space-y-6 border-b py-12 md:pl-8">
+              <h3 className="subtitle-lg font-medium">
+                {t("benefistHeading")}
+              </h3>
+              <p className="paragraph">{t("benefistDescription")}</p>
+              <ul className="text-muted-foreground list-disc space-y-6 pl-8">
+                {[...Array(6).keys()].map((item) => (
+                  <li key={item}>
+                    <p>{t(`benefistItem${item + 1}`)}</p>
+                  </li>
+                ))}
+              </ul>
+              <div className="paragraph space-y-4">
+                {t("benefistFooter")
+                  .split("\n")
+                  .map((whatIsParagraph, whatIsKey) => (
+                    <p key={whatIsKey}>{whatIsParagraph}</p>
+                  ))}
               </div>
             </article>
             <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">

@@ -7,16 +7,10 @@ import { getTranslations } from "next-intl/server"
 
 import { conditionsCategories } from "@/config/treatment"
 import { toCamelCase } from "@/lib/utils"
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion"
 import { PageLink, type PageLinkToProp } from "@/components/page-link"
 
+import { ApproachSection } from "../_components/approach-section"
 import { ContactBanner } from "../_components/contact-banner"
-import { PageSection } from "../_components/page-section"
 
 export async function generateMetadata({
   params,
@@ -34,21 +28,6 @@ export async function generateMetadata({
     description: t("metadataDescription"),
   }
 }
-
-const ourApproachConfig = [
-  {
-    title: "treatmentApproachItem1Title",
-    description: "treatmentApproachItem1Description",
-  },
-  {
-    title: "treatmentApproachItem2Title",
-    description: "treatmentApproachItem2Description",
-  },
-  {
-    title: "treatmentApproachItem3Title",
-    description: "treatmentApproachItem3Description",
-  },
-]
 
 export default function ConditionsWeTreatPage() {
   const t = useTranslations("ConditionsWeTreatPage")
@@ -125,40 +104,7 @@ export default function ConditionsWeTreatPage() {
           </div>
         </div>
       </section>
-      <PageSection
-        eyebrow={t("treatmentApproachEyebrow")}
-        heading={t("treatmentApproachHeading")}
-        description={t("treatmentApproachDescription")}
-        link={{
-          to: "approach",
-        }}
-        image={{
-          src: "/images/meditation.webp",
-          alt: "EMT",
-          width: 2160,
-          height: 2880,
-        }}
-        headingHeight
-        divider
-        className="bg-muted border-y"
-      >
-        <Accordion className="rounded-none border-r-0 border-b-0 border-l-0">
-          {ourApproachConfig.map((item) => (
-            <AccordionItem
-              key={t(item.title)}
-              value={t(item.title)}
-              className="p-0"
-            >
-              <AccordionTrigger className="px-5 py-8 md:px-[3dvw]">
-                <span className="subtitle-md font-normal">{t(item.title)}</span>
-              </AccordionTrigger>
-              <AccordionContent className="px-5 pb-8 md:px-[3dvw]">
-                <p className="paragraph text-base">{t(item.description)}</p>
-              </AccordionContent>
-            </AccordionItem>
-          ))}
-        </Accordion>
-      </PageSection>
+      <ApproachSection className="border-y" />
       <ContactBanner muted />
     </>
   )

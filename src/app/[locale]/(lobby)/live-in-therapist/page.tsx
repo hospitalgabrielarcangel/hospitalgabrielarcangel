@@ -25,7 +25,7 @@ export async function generateMetadata({
   }
 }
 
-export default function PsychotherapyPage() {
+export default function LiveInTherapistPage() {
   const t = useTranslations("LiveInTherapistPage")
 
   return (

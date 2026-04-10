@@ -73,17 +73,17 @@ const ourApproachSctions = [
       height: 2880,
     },
   },
-  {
-    title: "residenceHeading",
-    descripion: "residenceDescription",
-    href: "residences",
-    image: {
-      src: "/images/patience-smiling.webp",
-      alt: "residenceImageAlt",
-      width: 2160,
-      height: 2880,
-    },
-  },
+  // {
+  //   title: "residenceHeading",
+  //   descripion: "residenceDescription",
+  //   href: "residences",
+  //   image: {
+  //     src: "/images/patience-smiling.webp",
+  //     alt: "residenceImageAlt",
+  //     width: 2160,
+  //     height: 2880,
+  //   },
+  // },
 ]
 
 export default function ApproachPage() {

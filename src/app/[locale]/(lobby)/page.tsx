@@ -22,18 +22,18 @@ import { TeamSection } from "./_components/team-section"
 
 const whatWeTreatConfig = [
   {
-    title: "whatWeTreatItem1Title",
-    description: "whatWeTreatItem1Description",
-    href: "/conditions-we-treat/mental-health",
-  },
-  {
-    title: "whatWeTreatItem2Title",
-    description: "whatWeTreatItem2Description",
+    title: "dependenciesAndAddictionsTitle",
+    description: "dependenciesAndAddictionsDescription",
     href: "/conditions-we-treat/dependencies-and-addictions",
   },
   {
-    title: "whatWeTreatItem3Title",
-    description: "whatWeTreatItem3Description",
+    title: "mentalHealthConditionsTitle",
+    description: "mentalHealthConditionsDescription",
+    href: "/conditions-we-treat/mental-health",
+  },
+  {
+    title: "eatingDisordersTitle",
+    description: "eatingDisordersDescription",
     href: "/conditions-we-treat/eating-disorder",
   },
 ]

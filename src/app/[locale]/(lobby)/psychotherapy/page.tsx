@@ -140,7 +140,9 @@ export default function PsychotherapyPage() {
               <p className="paragraph">{t("ourProgrammeDescription")}</p>
               <ul className="text-muted-foreground list-disc space-y-6 pl-10">
                 {psychotherapyProgrammeConfig.map((item) => (
-                  <li key={item}>{t(item)}</li>
+                  <li key={item}>
+                    <p>{t(item)}</p>
+                  </li>
                 ))}
               </ul>
               <p className="paragraph">{t("ourProgrammeFooter")}</p>
