@@ -1,8 +1,21 @@
 "use client"
 
 // import { useTranslations } from "next-intl"
+import Link from "next/link"
+import { useTranslations } from "next-intl"
 import { create } from "zustand"
 
+import { conditionsCategories } from "@/config/treatment"
+import { toCamelCase } from "@/lib/utils"
+
+import { Icons } from "../icons"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "../ui/accordion"
+import { Button } from "../ui/button"
 import { LocaleSwitcher } from "./locale-switcher"
 import Sidebar from "./sidebar"
 
@@ -24,9 +37,65 @@ const useMenuSidebarStore = create<MenuSidebarStore>((set) => ({
     set((state) => ({ isMenuSidebarOpen: !state.isMenuSidebarOpen })),
 }))
 
+const navConfig = [
+  {
+    title: "programmes",
+    href: "/programmes",
+    items: [
+      {
+        title: "residentialRehab",
+        href: "/programmes/residential-rehab",
+        items: [],
+      },
+      {
+        title: "aftercareServices",
+        href: "/programmes/aftercare-services",
+        items: [],
+      },
+    ],
+  },
+  {
+    title: "conditionsWeTreat",
+    href: "/conditions-we-treat",
+    items: conditionsCategories.map((conditionCategoryItem) => ({
+      title: toCamelCase(conditionCategoryItem.page.id),
+      href: `/conditions-we-treat/${conditionCategoryItem.page.id}`,
+      items: conditionCategoryItem.conditions.map((conditionItem) => ({
+        title: toCamelCase(conditionItem.name),
+        href: `/conditions-we-treat/${conditionCategoryItem.page.id}/${conditionItem.name}`,
+      })),
+    })),
+  },
+  {
+    title: "approach",
+    href: "/approach",
+    items: [],
+  },
+  {
+    title: "aboutUs",
+    href: "/about-us",
+    items: [],
+  },
+  {
+    title: "assessments",
+    href: "/assessments",
+    items: [],
+  },
+  {
+    title: "tech",
+    href: "/tech",
+    items: [],
+  },
+  {
+    title: "contact",
+    href: "/contact",
+    items: [],
+  },
+]
+
 function MenuSidebar() {
   const { closeSidebarMenu, isMenuSidebarOpen } = useMenuSidebarStore()
-  // const t = useTranslations("MenuSidebar")
+  const t = useTranslations("MenuSidebar")
 
   return (
     <Sidebar
@@ -34,86 +103,127 @@ function MenuSidebar() {
       size="sm"
       status={isMenuSidebarOpen}
       onClickOutside={closeSidebarMenu}
-      containerClassName="z-30"
+      containerClassName="z-50"
     >
-      <div className="h-full overflow-y-auto"></div>
-      <div>
-        <LocaleSwitcher />
-      </div>
-      {/* <section className="container py-20 pb-8 xl:px-[7dvw]">
-        <h5 className="heading-lg max-w-lg">{t("title")}</h5>
-        <nav className="mt-12 flex w-full flex-col justify-between gap-x-20 gap-y-12 lg:flex-row xl:gap-0">
-          <div className="flex w-fit flex-col gap-y-6 xl:w-1/2">
-            <div className="flex max-w-74 flex-col gap-y-6 font-semibold">
-              <Link
-                href={siteConfig.addresses.male.href}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => closeSidebarMenu()}
-              >
-                <span>{siteConfig.addresses.male.description}</span>
-              </Link>
-              <Link
-                href={createCallUrl(siteConfig.phoneNumbers.male)}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => closeSidebarMenu()}
-              >
-                <span>{formatPhoneNumber(siteConfig.phoneNumbers.male)}</span>
-              </Link>
-              <Link
-                href={createEmailUrl(siteConfig.emails.male)}
-                target="_blank"
-                rel="noreferrer"
-                onClick={() => closeSidebarMenu()}
-              >
-                <span>{siteConfig.emails.male}</span>
-              </Link>
-              <IconMenu
-                items={
-                  siteConfig.footerNav.male.find(
-                    (item) => item.title === "socialTitle"
-                  )?.items || []
-                }
-              />
-            </div>
-          </div>
-          <div className="w-full xl:w-1/2">
-            <ul className="paragraph flex flex-wrap gap-y-12">
-              <li className="xs:w-1/2 w-full space-y-5 md:w-1/3">
-                <div className="font-bold">Lorem ipsum</div>
-                <ul className="space-y-3">
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                </ul>
-              </li>
-              <li className="xs:w-1/2 w-full space-y-5 md:w-1/3">
-                <div className="font-bold">Lorem ipsum</div>
-                <ul className="space-y-3">
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                </ul>
-              </li>
-              <li className="xs:w-1/2 w-full space-y-5 md:w-1/3">
-                <div className="font-bold">Lorem ipsum</div>
-                <ul className="space-y-3">
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                  <li>Lorem ipsum</li>
-                </ul>
-              </li>
-            </ul>
-          </div>
+      <div className="flex h-dvh w-full flex-col">
+        <div className="bg-background flex items-center justify-between border-b p-5">
+          <LocaleSwitcher
+            className="gap-0.5 p-2 [&>.icon]:size-5"
+            withSet="1"
+            withChevron
+          />
+          <Button
+            size="icon-sm"
+            variant="outline"
+            className="text-muted-foreground text-lg"
+            onClick={() => closeSidebarMenu()}
+          >
+            <Icons.close className="size-5" aria-label="Close" />
+          </Button>
+        </div>
+        <nav className="grow overflow-y-auto py-4">
+          <ul>
+            {navConfig.map((navItem) => {
+              if (navItem.items.length > 0) {
+                return (
+                  <Accordion
+                    className="h-fit rounded-none border-none p-0"
+                    render={<li />}
+                    key={navItem.title}
+                  >
+                    <AccordionItem value={navItem.title}>
+                      <AccordionTrigger className="heading px-2 py-2 text-3xl font-normal">
+                        {t(navItem.title)}
+                      </AccordionTrigger>
+                      <AccordionContent
+                        className="sapce-y-4 px-2 py-2 [&_a]:no-underline"
+                        render={<ul />}
+                      >
+                        <li className="px-2 py-2">
+                          <Link
+                            href={navItem.href}
+                            className="heading text-[1.625rem] font-normal hover:underline"
+                            onClick={() => closeSidebarMenu()}
+                          >
+                            {t("overview")}
+                          </Link>
+                        </li>
+                        {navItem.items.map((subNavItem) => {
+                          if (subNavItem.items.length > 0) {
+                            return (
+                              <Accordion
+                                className="h-fit rounded-none border-none p-0"
+                                render={<li />}
+                                key={subNavItem.title}
+                              >
+                                <AccordionItem value={subNavItem.title}>
+                                  <AccordionTrigger className="heading px-2 py-2 text-[1.625rem] font-normal">
+                                    {t(subNavItem.title)}
+                                  </AccordionTrigger>
+                                  <AccordionContent
+                                    className="sapce-y-4 px-2 py-2 [&_a]:no-underline"
+                                    render={<ul />}
+                                  >
+                                    <li className="px-2 py-2">
+                                      <Link
+                                        href={subNavItem.href}
+                                        className="heading text-2xl font-normal hover:underline"
+                                        onClick={() => closeSidebarMenu()}
+                                      >
+                                        {t("overview")}
+                                      </Link>
+                                    </li>
+                                    {subNavItem.items.map((subNavLinkItem) => (
+                                      <li
+                                        key={`${subNavItem.title}-${subNavLinkItem.title}`}
+                                        className="px-2 py-2"
+                                      >
+                                        <Link
+                                          href={subNavLinkItem.href}
+                                          className="heading text-2xl font-normal hover:underline"
+                                          onClick={() => closeSidebarMenu()}
+                                        >
+                                          {t(subNavLinkItem.title)}
+                                        </Link>
+                                      </li>
+                                    ))}
+                                  </AccordionContent>
+                                </AccordionItem>
+                              </Accordion>
+                            )
+                          }
+                          return (
+                            <li key={subNavItem.title} className="px-2 py-2">
+                              <Link
+                                href={subNavItem.href}
+                                className="heading text-[1.625rem] font-normal hover:underline"
+                                onClick={() => closeSidebarMenu()}
+                              >
+                                {t(subNavItem.title)}
+                              </Link>
+                            </li>
+                          )
+                        })}
+                      </AccordionContent>
+                    </AccordionItem>
+                  </Accordion>
+                )
+              }
+              return (
+                <li key={navItem.title} className="px-2 py-2">
+                  <Link
+                    href={navItem.href}
+                    className="heading text-3xl font-normal hover:underline"
+                    onClick={() => closeSidebarMenu()}
+                  >
+                    {t(navItem.title)}
+                  </Link>
+                </li>
+              )
+            })}
+          </ul>
         </nav>
-      </section> */}
+      </div>
     </Sidebar>
   )
 }

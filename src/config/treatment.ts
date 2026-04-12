@@ -711,30 +711,6 @@ export const conditionsCategories = [
         ],
       },
       {
-        name: "orthorexia-nervosa",
-        symptoms: [10, 7, 7, 7],
-        sectionsImages: [
-          {
-            src: "/images/howwetreat-section.webp",
-            alt: "approachImageAlt",
-            width: 2160,
-            height: 2880,
-          },
-          {
-            src: "/images/howwetreat-section.webp",
-            alt: "approachImageAlt",
-            width: 2160,
-            height: 2880,
-          },
-          {
-            src: "/images/howwetreat-section.webp",
-            alt: "approachImageAlt",
-            width: 2160,
-            height: 2880,
-          },
-        ],
-      },
-      {
         name: "obesity-and-metabolic-syndrome",
         symptoms: [5, 7, 5],
         sectionsImages: [
