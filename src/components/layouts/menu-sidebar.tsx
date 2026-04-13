@@ -48,7 +48,7 @@ const navConfig = [
       },
       {
         title: "aftercareServices",
-        href: "/programmes/aftercare-services",
+        href: "/programmes/aftercare",
         items: [],
       },
     ],
