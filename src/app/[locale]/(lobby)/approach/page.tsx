@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils"
 import { PageLink, type PageLinkToProp } from "@/components/page-link"
 
 import { ContactBanner } from "../_components/contact-banner"
-import { PageSectionHeader } from "../_components/page-section"
+import { PageSectionHeader } from "../_components/page-section-header"
 
 export async function generateMetadata({
   params,

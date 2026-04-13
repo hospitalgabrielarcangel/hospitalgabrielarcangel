@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl"
 
-import { PageSectionHeader } from "./page-section"
+import { PageSectionHeader } from "./page-section-header"
 
 export function TeamSection() {
   const t = useTranslations("OurTeamSection")

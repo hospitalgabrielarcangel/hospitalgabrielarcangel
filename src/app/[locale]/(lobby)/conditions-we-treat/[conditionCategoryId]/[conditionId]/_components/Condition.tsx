@@ -15,7 +15,7 @@ import { ContactBanner } from "@/app/[locale]/(lobby)/_components/contact-banner
 import {
   PageSection,
   PageSectionHeader,
-} from "@/app/[locale]/(lobby)/_components/page-section"
+} from "@/app/[locale]/(lobby)/_components/page-section-header"
 
 const conditionPageLinkTo = [
   "approach",

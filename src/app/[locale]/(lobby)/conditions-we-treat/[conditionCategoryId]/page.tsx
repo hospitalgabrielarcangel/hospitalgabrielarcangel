@@ -21,7 +21,10 @@ import {
 } from "@/components/page-header"
 
 import { ContactBanner } from "../../_components/contact-banner"
-import { PageSection, PageSectionHeader } from "../../_components/page-section"
+import {
+  PageSection,
+  PageSectionHeader,
+} from "../../_components/page-section-header"
 
 interface ConditionCategoryPageProps {
   readonly params: Promise<{

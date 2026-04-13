@@ -14,7 +14,10 @@ import { PageHeader, PageHeaderHeading } from "@/components/page-header"
 
 import { CertificationsCarousel } from "../_components/cerfifications-carousel"
 import { ContactBanner } from "../_components/contact-banner"
-import { PageSection, PageSectionHeader } from "../_components/page-section"
+import {
+  PageSection,
+  PageSectionHeader,
+} from "../_components/page-section-header"
 
 export async function generateMetadata({
   params,

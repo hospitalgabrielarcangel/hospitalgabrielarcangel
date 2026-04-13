@@ -1,6 +1,5 @@
 "use client"
 
-// import { useTranslations } from "next-intl"
 import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { create } from "zustand"
@@ -44,7 +43,7 @@ const navConfig = [
     items: [
       {
         title: "residentialRehab",
-        href: "/programmes/residential-rehab",
+        href: "/programmes/residential-rehab-treatment",
         items: [],
       },
       {
@@ -136,10 +135,10 @@ function MenuSidebar() {
                         {t(navItem.title)}
                       </AccordionTrigger>
                       <AccordionContent
-                        className="sapce-y-4 px-6 [&_a]:no-underline"
+                        className="sapce-y-0 p-0 [&_a]:no-underline"
                         render={<ul />}
                       >
-                        <li className="py-4">
+                        <li className="px-5 py-4">
                           <Link
                             href={navItem.href}
                             className="heading text-[1.625rem] font-normal hover:underline"
@@ -157,14 +156,14 @@ function MenuSidebar() {
                                 key={subNavItem.title}
                               >
                                 <AccordionItem value={subNavItem.title}>
-                                  <AccordionTrigger className="heading px-2 py-4 text-[1.625rem] font-normal">
+                                  <AccordionTrigger className="heading px-7 py-4 text-[1.625rem] font-normal">
                                     {t(subNavItem.title)}
                                   </AccordionTrigger>
                                   <AccordionContent
-                                    className="sapce-y-4 px-2 py-4 [&_a]:no-underline"
+                                    className="sapce-y-0 p-0 [&_a]:no-underline"
                                     render={<ul />}
                                   >
-                                    <li className="py-4">
+                                    <li className="px-7 py-4">
                                       <Link
                                         href={subNavItem.href}
                                         className="heading text-2xl font-normal hover:underline"
@@ -176,7 +175,7 @@ function MenuSidebar() {
                                     {subNavItem.items.map((subNavLinkItem) => (
                                       <li
                                         key={`${subNavItem.title}-${subNavLinkItem.title}`}
-                                        className="px-2 py-4"
+                                        className="px-9 py-4"
                                       >
                                         <Link
                                           href={subNavLinkItem.href}
@@ -193,7 +192,7 @@ function MenuSidebar() {
                             )
                           }
                           return (
-                            <li key={subNavItem.title} className="px-2 py-4">
+                            <li key={subNavItem.title} className="px-9 py-4">
                               <Link
                                 href={subNavItem.href}
                                 className="heading text-[1.625rem] font-normal hover:underline"

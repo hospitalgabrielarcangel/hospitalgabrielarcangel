@@ -26,19 +26,19 @@ const PAGE_LINK_CONFIG = [
   },
   {
     title: "aftercareProgramme",
-    href: "/programmes/aftercare-treatment",
+    href: "/programmes/aftercare",
   },
   {
     title: "assessments",
-    href: "#",
+    href: "/assessments",
   },
   {
     title: "tech",
-    href: "#",
+    href: "/tech",
   },
   {
     title: "therapies",
-    href: "#",
+    href: "/therapies",
   },
   {
     title: "conditionsWeTreat",
@@ -59,6 +59,10 @@ const PAGE_LINK_CONFIG = [
   {
     title: "approach",
     href: "/approach",
+  },
+  {
+    title: "liveInTherapist",
+    href: "/live-in-therapist",
   },
   {
     title: "ourTeam",

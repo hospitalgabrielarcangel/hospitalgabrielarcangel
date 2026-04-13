@@ -18,7 +18,7 @@ import {
 } from "@/components/page-header"
 
 import { ContactBanner } from "../_components/contact-banner"
-import { PageSectionHeader } from "../_components/page-section"
+import { PageSectionHeader } from "../_components/page-section-header"
 
 export async function generateMetadata({
   params,

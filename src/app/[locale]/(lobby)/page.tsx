@@ -16,7 +16,7 @@ import { PageLink } from "@/components/page-link"
 
 import { CertificationsCarousel } from "./_components/cerfifications-carousel"
 import { ContactBanner } from "./_components/contact-banner"
-import { PageSection } from "./_components/page-section"
+import { PageSection } from "./_components/page-section-header"
 import { ProgrammesSection } from "./_components/programmes-section"
 import { TeamSection } from "./_components/team-section"
 

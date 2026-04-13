@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl"
 
-import { PageSectionImage } from "./page-section"
+import { PageSectionImage } from "./page-section-header"
 
 export const ourProgrammesConfig = [
   {

@@ -8,7 +8,7 @@ import {
   AccordionTrigger,
 } from "@/components/ui/accordion"
 
-import { PageSection } from "./page-section"
+import { PageSection } from "./page-section-header"
 
 const ourApproachConfig = [
   {
