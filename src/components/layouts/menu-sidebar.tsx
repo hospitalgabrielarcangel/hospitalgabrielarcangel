@@ -132,14 +132,14 @@ function MenuSidebar() {
                     key={navItem.title}
                   >
                     <AccordionItem value={navItem.title}>
-                      <AccordionTrigger className="heading px-2 py-2 text-3xl font-normal">
+                      <AccordionTrigger className="heading px-5 py-4 text-3xl font-normal">
                         {t(navItem.title)}
                       </AccordionTrigger>
                       <AccordionContent
-                        className="sapce-y-4 px-2 py-2 [&_a]:no-underline"
+                        className="sapce-y-4 px-6 [&_a]:no-underline"
                         render={<ul />}
                       >
-                        <li className="px-2 py-2">
+                        <li className="py-4">
                           <Link
                             href={navItem.href}
                             className="heading text-[1.625rem] font-normal hover:underline"
@@ -157,14 +157,14 @@ function MenuSidebar() {
                                 key={subNavItem.title}
                               >
                                 <AccordionItem value={subNavItem.title}>
-                                  <AccordionTrigger className="heading px-2 py-2 text-[1.625rem] font-normal">
+                                  <AccordionTrigger className="heading px-2 py-4 text-[1.625rem] font-normal">
                                     {t(subNavItem.title)}
                                   </AccordionTrigger>
                                   <AccordionContent
-                                    className="sapce-y-4 px-2 py-2 [&_a]:no-underline"
+                                    className="sapce-y-4 px-2 py-4 [&_a]:no-underline"
                                     render={<ul />}
                                   >
-                                    <li className="px-2 py-2">
+                                    <li className="py-4">
                                       <Link
                                         href={subNavItem.href}
                                         className="heading text-2xl font-normal hover:underline"
@@ -176,7 +176,7 @@ function MenuSidebar() {
                                     {subNavItem.items.map((subNavLinkItem) => (
                                       <li
                                         key={`${subNavItem.title}-${subNavLinkItem.title}`}
-                                        className="px-2 py-2"
+                                        className="px-2 py-4"
                                       >
                                         <Link
                                           href={subNavLinkItem.href}
@@ -193,7 +193,7 @@ function MenuSidebar() {
                             )
                           }
                           return (
-                            <li key={subNavItem.title} className="px-2 py-2">
+                            <li key={subNavItem.title} className="px-2 py-4">
                               <Link
                                 href={subNavItem.href}
                                 className="heading text-[1.625rem] font-normal hover:underline"
@@ -210,7 +210,7 @@ function MenuSidebar() {
                 )
               }
               return (
-                <li key={navItem.title} className="px-2 py-2">
+                <li key={navItem.title} className="px-5 py-4">
                   <Link
                     href={navItem.href}
                     className="heading text-3xl font-normal hover:underline"
