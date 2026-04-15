@@ -3022,9 +3022,10 @@
   },
   "ContactSidebar": {
     "title": "¿Cómo podemos ayudarte?",
-    "callUsTitle": "Llama en cualquier momento",
+    "contactDescription": "Contamos con instalación de varonil y femenil completamente separadas.",
+    "maleContactTitle": "Contacta a nuestras instalaciones de varonil",
+    "femaleContactTitle": "Contacta a nuestras instalaciones de femenil",
     "callUsLabel": "Número de atención a clientes",
-    "messageUsTitle": "Envíanos un mensaje",
     "emailLabel": "Correo electrónico de atención a clientes",
     "whatsappLabel": "WhatsApp de atención a clientes"
   },

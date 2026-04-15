@@ -45,7 +45,7 @@ function ContactSidebar() {
     >
       <div>
         <div className="flex items-center justify-between p-5">
-          <h2 className="heading-xl tracking-tighter">{t("title")}</h2>
+          <h2 className="heading-xl">{t("title")}</h2>
           <Button
             size="icon-sm"
             variant="outline"
@@ -55,65 +55,134 @@ function ContactSidebar() {
             <Icons.close className="size-5" aria-label="Close" />
           </Button>
         </div>
-        <div className="flex flex-col gap-y-12 border-t px-5 py-15 md:flex-row md:items-center md:justify-between md:gap-y-0">
-          <h2 className="heading-lg md:w-40">{t("callUsTitle")}</h2>
-          <Button
-            variant="link"
-            className="subtitle-md flex w-fit flex-col items-start gap-y-0.5 rounded-none px-0 underline underline-offset-4"
-            onClick={() => closeContactSidebar()}
-            render={
-              <Link
-                href={createCallUrl(siteConfig.phoneNumbers.male)}
-                title={t("callUsLabel")}
-                aria-label={t("callUsLabel")}
-                target="_blank"
-                rel="noreferrer"
-              />
-            }
-            nativeButton={false}
-          >
-            {formatPhoneNumber(siteConfig.phoneNumbers.male)}
-          </Button>
+        <div className="border-t px-5 py-15">
+          <h2 className="heading-lg">
+            Contamos con instalación de varonil y femenil completamente
+            separadas.
+          </h2>
         </div>
         <div className="flex flex-col gap-y-12 border-t px-5 py-15 md:flex-row md:items-center md:justify-between md:gap-y-0">
-          <h2 className="heading-lg md:w-40">{t("messageUsTitle")}</h2>
-          <div className="space-x-4">
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => closeContactSidebar()}
-              className="uppercase"
-              render={
-                <Link
-                  href={createEmailUrl(siteConfig.emails.male)}
-                  title={t("emailLabel")}
-                  aria-label={t("emailLabel")}
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              }
-              nativeButton={false}
-            >
-              Email
-            </Button>
-            <Button
-              variant="outline"
-              size="lg"
-              onClick={() => closeContactSidebar()}
-              className="uppercase"
-              render={
-                <Link
-                  href={createWhatsappUrl(siteConfig.phoneNumbers.male)}
-                  title={t("callUsLabel")}
-                  aria-label={t("callUsLabel")}
-                  target="_blank"
-                  rel="noreferrer"
-                />
-              }
-              nativeButton={false}
-            >
-              WhatsApp
-            </Button>
+          <h2 className="heading-lg md:w-40">{t("maleContactTitle")}</h2>
+          <div className="flex flex-col gap-y-5">
+            <div className="space-x-4">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => closeContactSidebar()}
+                className="uppercase"
+                render={
+                  <Link
+                    href={createEmailUrl(siteConfig.emails.male)}
+                    title={t("emailLabel")}
+                    aria-label={t("emailLabel")}
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+                nativeButton={false}
+              >
+                Email
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => closeContactSidebar()}
+                className="uppercase"
+                render={
+                  <Link
+                    href={createWhatsappUrl(siteConfig.phoneNumbers.male)}
+                    title={t("callUsLabel")}
+                    aria-label={t("callUsLabel")}
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+                nativeButton={false}
+              >
+                WhatsApp
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="link"
+                className="subtitle-md flex w-fit flex-col items-start gap-y-0.5 rounded-none px-0 underline underline-offset-4"
+                onClick={() => closeContactSidebar()}
+                render={
+                  <Link
+                    href={createCallUrl(siteConfig.phoneNumbers.male)}
+                    title={t("callUsLabel")}
+                    aria-label={t("callUsLabel")}
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+                nativeButton={false}
+              >
+                {formatPhoneNumber(siteConfig.phoneNumbers.male)}
+              </Button>
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col gap-y-12 border-t px-5 py-15 md:flex-row md:items-center md:justify-between md:gap-y-0">
+          <h2 className="heading-lg md:w-40">{t("femaleContactTitle")}</h2>
+          <div className="flex flex-col gap-y-5">
+            <div className="space-x-4">
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => closeContactSidebar()}
+                className="uppercase"
+                render={
+                  <Link
+                    href={createEmailUrl(siteConfig.emails.female)}
+                    title={t("emailLabel")}
+                    aria-label={t("emailLabel")}
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+                nativeButton={false}
+              >
+                Email
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => closeContactSidebar()}
+                className="uppercase"
+                render={
+                  <Link
+                    href={createWhatsappUrl(siteConfig.phoneNumbers.female)}
+                    title={t("callUsLabel")}
+                    aria-label={t("callUsLabel")}
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+                nativeButton={false}
+              >
+                WhatsApp
+              </Button>
+            </div>
+            <div>
+              <Button
+                variant="link"
+                className="subtitle-md flex w-fit flex-col items-start gap-y-0.5 rounded-none px-0 underline underline-offset-4"
+                onClick={() => closeContactSidebar()}
+                render={
+                  <Link
+                    href={createCallUrl(siteConfig.phoneNumbers.female)}
+                    title={t("callUsLabel")}
+                    aria-label={t("callUsLabel")}
+                    target="_blank"
+                    rel="noreferrer"
+                  />
+                }
+                nativeButton={false}
+              >
+                {formatPhoneNumber(siteConfig.phoneNumbers.female)}
+              </Button>
+            </div>
           </div>
         </div>
         <div className="border-t px-5 pt-15 pb-5">

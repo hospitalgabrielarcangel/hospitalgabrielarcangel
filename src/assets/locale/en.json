@@ -3048,10 +3048,11 @@
   },
   "ContactSidebar": {
     "title": "How can we help?",
-    "callUsTitle": "Call anytime",
+    "contactDescription": "We have completely separate male and female facilities.",
+    "maleContactTitle": "Contact our men's facilities",
+    "femaleContactTitle": "Message us",
     "callUsLabel": "Customer service number",
-    "messageUsTitle": "Message us",
-    "emailLabel": "Customer service email",
+    "emailLabel": "Contact our women's facilities",
     "whatsappLabel": "Customer service WhatsApp"
   },
   "ContactForm": {
