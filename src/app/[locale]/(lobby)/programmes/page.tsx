@@ -146,7 +146,7 @@ export default function ProgrammesPage() {
           </article>
         ))}
       </section>
-      <ApproachSection className="border-y" />
+      <ApproachSection className="border-y" colReverse />
       <ProgrammesFAQs />
       <ContactBanner />
     </>

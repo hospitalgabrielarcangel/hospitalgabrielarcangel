@@ -104,7 +104,7 @@ export default function ConditionsWeTreatPage() {
           </div>
         </div>
       </section>
-      <ApproachSection className="border-y" />
+      <ApproachSection className="border-y" colReverse />
       <ContactBanner muted />
     </>
   )

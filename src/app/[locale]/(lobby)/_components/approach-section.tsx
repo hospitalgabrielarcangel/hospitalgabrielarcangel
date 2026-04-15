@@ -1,6 +1,7 @@
 import { ImageProps } from "next/image"
 import { useTranslations } from "next-intl"
 
+import { cn } from "@/lib/utils"
 import {
   Accordion,
   AccordionContent,
@@ -33,9 +34,13 @@ export function ApproachSection({
     width: 1920,
     height: 1080,
   },
+  colReverse,
+  rowReverse,
 }: {
   className?: string
   image?: ImageProps
+  colReverse?: boolean
+  rowReverse?: boolean
 }) {
   const t = useTranslations("ApproachSection")
 
@@ -49,7 +54,8 @@ export function ApproachSection({
         to: "approach",
       }}
       className={className}
-      colReverse
+      colReverse={colReverse}
+      rowReverse={rowReverse}
       divider
     >
       <Accordion className="rounded-none border-r-0 border-b-0 border-l-0">
@@ -59,10 +65,20 @@ export function ApproachSection({
             value={t(item.title)}
             className="p-0"
           >
-            <AccordionTrigger className="px-5 py-8 md:px-[3dvw]">
+            <AccordionTrigger
+              className={cn(
+                "px-5 py-8",
+                rowReverse ? "md:pr-[3dvw]" : "md:pl-[3dvw]"
+              )}
+            >
               <span className="subtitle-md font-normal">{t(item.title)}</span>
             </AccordionTrigger>
-            <AccordionContent className="px-5 pb-8 md:px-[3dvw]">
+            <AccordionContent
+              className={cn(
+                "px-5 pb-8",
+                rowReverse ? "md:pr-[3dvw]" : "md:pl-[3dvw]"
+              )}
+            >
               <p className="paragraph text-base">{t(item.description)}</p>
             </AccordionContent>
           </AccordionItem>
