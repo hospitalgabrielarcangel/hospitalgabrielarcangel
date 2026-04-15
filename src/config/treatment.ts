@@ -8,16 +8,8 @@ export const programmesConfig = [
     description: "otDescription",
   },
   {
-    name: "edpName",
-    description: "edpDescription",
-  },
-  {
     name: "tmsName",
     description: "tmsDescription",
-  },
-  {
-    name: "cipName",
-    description: "cipDescription",
   },
   {
     name: "rppName",

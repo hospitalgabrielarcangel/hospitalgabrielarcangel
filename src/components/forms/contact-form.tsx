@@ -1,6 +1,6 @@
 "use client"
 
-import { type CSSProperties } from "react"
+import { useTransition, type CSSProperties } from "react"
 import { useForm } from "@tanstack/react-form"
 import { useTranslations } from "next-intl"
 import { toast } from "sonner"
@@ -26,7 +26,10 @@ import {
   SelectValue,
 } from "@/components/ui/select"
 
+import { Icons } from "../icons"
+
 export function ContactForm() {
+  const [isPending, startTransition] = useTransition()
   const t = useTranslations("ContactForm")
   const tService = useTranslations("Treatment")
 
@@ -35,7 +38,7 @@ export function ContactForm() {
     label: tService(treatment.name),
   }))
 
-  const formSchema = z.object({
+  const contactFormSchema = z.object({
     firstName: z
       .string()
       .min(2, t("firstNameInputError"))
@@ -45,7 +48,16 @@ export function ContactForm() {
       .min(2, t("lastNameInputError"))
       .max(28, t("lastNameInputError")),
     email: z.email(t("emailInputError")),
-    phoneNumber: z.e164(t("phoneNumberInputError")),
+    phoneNumber: z
+      .string()
+      .transform((value) => value.replace(/[-\s]/g, ""))
+      .pipe(
+        z
+          .string()
+          .min(10, t("phoneNumberInputError"))
+          .max(13, t("phoneNumberInputError"))
+          .regex(/^\+?\d+$/, t("phoneNumberInputError"))
+      ),
     treatment: z.string().min(1, t("treatmentInputError")),
     message: z
       .string()
@@ -63,22 +75,46 @@ export function ContactForm() {
       message: "",
     },
     validators: {
-      onSubmit: formSchema,
+      onSubmit: contactFormSchema,
     },
     onSubmit: async ({ value }) => {
-      toast("You submitted the following values:", {
-        description: (
-          <pre className="bg-code text-code-foreground mt-2 w-[320px] overflow-x-auto rounded-md p-4">
-            <code>{JSON.stringify(value, null, 2)}</code>
-          </pre>
-        ),
-        position: "bottom-right",
-        classNames: {
-          content: "flex flex-col gap-2",
-        },
-        style: {
-          "--border-radius": "calc(var(--radius)  + 4px)",
-        } as CSSProperties,
+      startTransition(async () => {
+        const response = await fetch("/api/email/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(value),
+        })
+
+        if (!response.ok) {
+          switch (response.status) {
+            case 422:
+              toast.error(t("errorInputMessage"))
+              break
+            case 500:
+              toast.error(t("errorMessage"))
+              break
+            default:
+              toast.error(t("errorMessage"))
+          }
+          return
+        }
+        form.reset()
+        toast(t("successMessage"), {
+          description: (
+            <div className="text-muted-foreground p-2">
+              {t("successDescriptionMessage")}
+            </div>
+          ),
+          position: "bottom-right",
+          classNames: {
+            content: "flex flex-col gap-2",
+          },
+          style: {
+            "--border-radius": "calc(var(--radius)  + 4px)",
+          } as CSSProperties,
+        })
       })
     },
   })
@@ -279,10 +315,21 @@ export function ContactForm() {
       </div>
       <div>
         <Field orientation="horizontal" className="gap-0.5">
-          <Button type="submit" form="contact-form" size="lg">
+          <Button
+            type="submit"
+            form="contact-form"
+            size="lg"
+            disabled={isPending}
+          >
             {t("submitButton")}
+            {isPending && <Icons.Spinner className="size-4" aria-hidden />}
           </Button>
-          <Button type="button" variant="ghost" onClick={() => form.reset()}>
+          <Button
+            type="button"
+            variant="ghost"
+            onClick={() => form.reset()}
+            disabled={isPending}
+          >
             {t("resetButton")}
           </Button>
         </Field>

@@ -98,7 +98,7 @@ function MenuSidebar() {
 
   return (
     <Sidebar
-      position="left"
+      position="right"
       size="sm"
       status={isMenuSidebarOpen}
       onClickOutside={closeSidebarMenu}

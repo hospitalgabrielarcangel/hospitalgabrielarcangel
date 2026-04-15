@@ -9,7 +9,6 @@ import {
 } from "@/components/page-header"
 import { PageLink, type PageLinkToProp } from "@/components/page-link"
 
-import ProgrammesFAQs from "../_components/programmes-faqs"
 import { ContactBanner } from "../../_components/contact-banner"
 import { PageSectionHeader } from "../../_components/page-section-header"
 
@@ -157,7 +156,6 @@ export default function ResidentialRehabPage() {
           </div>
         </section>
       ))}
-      <ProgrammesFAQs className="border-t" />
       <ContactBanner />
     </>
   )

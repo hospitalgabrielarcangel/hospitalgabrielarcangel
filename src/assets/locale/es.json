@@ -431,12 +431,8 @@
     "itDescription": "Programa de internamiento especializado para la superación de adicciones. Ofrecemos contención profesional, supervisión continua y un entorno de apoyo diseñado para eliminar riesgos y fortalecer la voluntad del paciente en cada etapa del proceso.",
     "otName": "Tratamiento ambulatorio",
     "otDescription": "Nuestro programa ambulatorio te ofrece sesiones de tratamiento intensivo adaptadas a tu horario, brindándote el acompañamiento necesario para fortalecer tu sobriedad mientras mantienes tus vínculos y actividades cotidianas.",
-    "edpName": "Programa de desintoxicación ejecutiva",
-    "edpDescription": "La solución inmediata para frenar el consumo de sustancias y recuperar el control. Un primer paso estratégico y medicamente supervisado que te prepara para el éxito en tu tratamiento continuo, sin necesidad de ausencias prolongadas de tu entorno profesional o familiar.",
     "tmsName": "Estimulación magnética transcraneal",
     "tmsDescription": "Neuroestimulación de precisión no invasiva y libre de dolor. Mediante campos magnéticos seguros, estimulamos las áreas del cerebro responsables del control de impulsos y el estado de ánimo, ayudando a reducir el deseo de consumo (craving) y restaurar el equilibrio mental sin necesidad de fármacos adicionales.",
-    "cipName": "Programa de intervención clínica",
-    "cipDescription": "Identificamos los desafíos reales detrás de la conducta. Nuestro proceso de diagnóstico evalúa tu salud emocional y física de manera integral, permitiéndonos crear un plan de acción a tu medida que aborde no solo la adicción, sino también tu bienestar mental y estabilidad a largo plazo.",
     "rppName": "Plan de prevención de recaídas",
     "rppDescription": "Aprende a reconocer y dominar las situaciones que ponen en riesgo tu recuperación. Trabajamos contigo para detectar emociones o entornos peligrosos y crear respuestas efectivas que eviten recaídas. Sal de nuestra clínica con un plan de acción claro y las habilidades necesarias para proteger tu bienestar cada día."
   },
@@ -3048,7 +3044,11 @@
     "messageInputError": "El mensaje debe tener al menos de 12 a 100 caracteres",
     "messageInputChars": "caracteres",
     "resetButton": "Reiniciar",
-    "submitButton": "Enviar"
+    "submitButton": "Enviar",
+    "successMessage": "Hemos recibido tu mensaje.",
+    "successDescriptionMessage": "Un miembro de nuestro equipo se comunicará con usted en breve.",
+    "errorInputMessage": "Entrada invalida.",
+    "errorMessage": "Algo salió mal. Revisa que los datos que ingresaste o inténtalo de nuevo más tarde."
   },
   "MenuSidebar": {
     "programmes": "Nuestros Programas",

@@ -10,6 +10,7 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    GOOGLE_APP_PASS: z.string(),
   },
   /**
    * Specify your client-side environment variables schema here. This way you can ensure the app
@@ -33,6 +34,7 @@ export const env = createEnv({
    */
   runtimeEnv: {
     NODE_ENV: process.env.NODE_ENV,
+    GOOGLE_APP_PASS: process.env.GOOGLE_APP_PASS,
     NEXT_PUBLIC_APP_URL: process.env.NEXT_PUBLIC_APP_URL,
     NEXT_PUBLIC_PHONE_NUMBER_MALE: process.env.NEXT_PUBLIC_PHONE_NUMBER_MALE,
     NEXT_PUBLIC_PHONE_NUMBER_FEMALE:
