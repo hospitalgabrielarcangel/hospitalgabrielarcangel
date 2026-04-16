@@ -56,10 +56,7 @@ function ContactSidebar() {
           </Button>
         </div>
         <div className="border-t px-5 py-15">
-          <h2 className="heading-lg">
-            Contamos con instalación de varonil y femenil completamente
-            separadas.
-          </h2>
+          <h2 className="heading-lg">{t("contactDescription")}</h2>
         </div>
         <div className="flex flex-col gap-y-12 border-t px-5 py-15 md:flex-row md:items-center md:justify-between md:gap-y-0">
           <h2 className="heading-lg md:w-40">{t("maleContactTitle")}</h2>

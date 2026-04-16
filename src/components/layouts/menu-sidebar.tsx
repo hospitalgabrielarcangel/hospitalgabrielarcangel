@@ -66,14 +66,15 @@ const navConfig = [
     })),
   },
   {
-    title: "approach",
-    href: "/approach",
-    items: [],
-  },
-  {
-    title: "aboutUs",
-    href: "/about-us",
-    items: [],
+    title: "tech",
+    href: "/tech",
+    items: [
+      {
+        title: "tms",
+        href: "/tech/tms",
+        items: [],
+      },
+    ],
   },
   {
     title: "assessments",
@@ -81,8 +82,13 @@ const navConfig = [
     items: [],
   },
   {
-    title: "tech",
-    href: "/tech",
+    title: "approach",
+    href: "/approach",
+    items: [],
+  },
+  {
+    title: "aboutUs",
+    href: "/about-us",
     items: [],
   },
   {

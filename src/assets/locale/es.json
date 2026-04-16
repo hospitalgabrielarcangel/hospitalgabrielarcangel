@@ -136,6 +136,17 @@
     "ourTeamHeading": "Una experiencia con un propósito real",
     "ourTeamDescription": "Somos el único centro de tratamiento en Querétaro que asigna un equipo de profesionales dedicados a cada cliente. Por ello, durante toda su estancia, contará con la guía de un equipo de médicos, terapeutas y especialistas."
   },
+  "ContactPage": {
+    "pageHeading": "Contáctanos cuando quieras, como prefieras.",
+    "pageDescription": "Contamos con instalación de varonil y femenil completamente separadas.",
+    "sectionHeading": "Consultas de Tratamiento.",
+    "sectionDescription": "Comparte tanta información como te resulte cómodo, junto con tu método de contacto preferido. Toda la información está protegida mediante cifrado y se maneja con la más estricta confidencialidad.",
+    "maleContactTitle": "Contacta a nuestras instalaciones de varonil",
+    "femaleContactTitle": "Contacta a nuestras instalaciones de femenil",
+    "callUsLabel": "Número de atención a clientes",
+    "emailLabel": "Correo electrónico de atención a clientes",
+    "whatsappLabel": "WhatsApp de atención a clientes"
+  },
   "ProgrammesPage": {
     "metadataTitle": "Programas de Tratamiento",
     "metadataDescription": "En Gabriel Arcángel, no seguimos un enfoque estandarizado. En lugar de eso, diseñamos programas de tratamiento personalizados que responden a tu conjunto único de necesidades. Este proceso se guía por una exhaustiva evaluación inicial.",
@@ -3088,6 +3099,7 @@
     "approach": "Nuestro Enfoque",
     "assessments": "Evaluaciones",
     "tech": "Tecnologías",
+    "tms": "Estimulación Magnética Transcraneana",
     "contact": "Contacto"
   },
   "ClinicGender": {

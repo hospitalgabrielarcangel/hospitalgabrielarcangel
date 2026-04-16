@@ -136,6 +136,17 @@
     "ourTeamHeading": "A truly meaningful experience",
     "ourTeamDescription": "We are the only treatment center in Querétaro to assign a dedicated team of professionals to each client. Therefore, throughout your stay, you will be guided by a team of specialized physicians, therapists, and experts."
   },
+  "ContactPage": {
+    "pageHeading": "Contact us anytime, however you prefer.",
+    "pageDescription": "We have completely separate male and female facilities.",
+    "sectionHeading": "Treatment Enquiries.",
+    "sectionDescription": "Share as much information as you feel comfortable providing, along with your preferred contact method. All details are securely encrypted and handled with the utmost confidentiality.",
+    "maleContactTitle": "Contact our men's facilities",
+    "femaleContactTitle": "Message us",
+    "callUsLabel": "Customer service number",
+    "emailLabel": "Contact our women's facilities",
+    "whatsappLabel": "Customer service WhatsApp"
+  },
   "ProgrammesPage": {
     "metadataTitle": "Recovery Treatment Programmes",
     "metadataDescription": "At Gabriel Arcángel, we do not take a “one size fits all” approach. Rather, we tailor-make a treatment programme that addresses your unique set of needs. An elaborate assessment procedure will guide this process.",
@@ -3114,6 +3125,7 @@
     "approach": "Our Approach",
     "assessments": "Assessments",
     "tech": "Technologies",
+    "tms": "Transcranial Magnetic Stimulation",
     "contact": "Contact"
   },
   "ClinicGender": {
