@@ -8,6 +8,8 @@
   },
   "SiteFooter": {
     "footerHeading": "Excellence in Rehabilitation: The most comprehensive mental health treatment clinic for your recovery.",
+    "maleContactTitle": "Contact our men's facilities",
+    "femaleContactTitle": "Contact our women's facilities",
     "treatmentNavTitle": "Treatment",
     "approachNavItem": "Our approach",
     "conditionsNavItem": "Conditions we treat",
@@ -142,7 +144,7 @@
     "sectionHeading": "Treatment Enquiries.",
     "sectionDescription": "Share as much information as you feel comfortable providing, along with your preferred contact method. All details are securely encrypted and handled with the utmost confidentiality.",
     "maleContactTitle": "Contact our men's facilities",
-    "femaleContactTitle": "Message us",
+    "femaleContactTitle": "Contact our women's facilities",
     "callUsLabel": "Customer service number",
     "emailLabel": "Contact our women's facilities",
     "whatsappLabel": "Customer service WhatsApp"
@@ -3061,7 +3063,7 @@
     "title": "How can we help?",
     "contactDescription": "We have completely separate male and female facilities.",
     "maleContactTitle": "Contact our men's facilities",
-    "femaleContactTitle": "Message us",
+    "femaleContactTitle": "Contact our women's facilities",
     "callUsLabel": "Customer service number",
     "emailLabel": "Contact our women's facilities",
     "whatsappLabel": "Customer service WhatsApp"

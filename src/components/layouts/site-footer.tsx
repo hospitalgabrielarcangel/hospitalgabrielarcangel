@@ -24,29 +24,64 @@ export function SiteFooter() {
           <Logomark className="size-14" />
         </div>
         <nav className="flex w-full flex-col justify-between gap-20 lg:flex-row xl:gap-0">
-          <div className="flex flex-col gap-y-6 lg:w-180 xl:w-1/2">
-            <div className="text-secondary flex max-w-74 flex-col gap-y-6 font-semibold">
-              <Link
-                href={siteConfig.addresses.male.href}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{siteConfig.addresses.male.description}</span>
-              </Link>
-              <Link
-                href={createCallUrl(siteConfig.phoneNumbers.male)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{formatPhoneNumber(siteConfig.phoneNumbers.male)}</span>
-              </Link>
-              <Link
-                href={createEmailUrl(siteConfig.emails.male)}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <span>{siteConfig.emails.male}</span>
-              </Link>
+          <div className="flex flex-col gap-y-20 lg:w-180 xl:w-1/2">
+            <div className="space-y-6">
+              <p className="text-secondary heading-md">
+                {t("maleContactTitle")}
+              </p>
+              <div className="text-secondary flex max-w-74 flex-col gap-y-6 font-semibold">
+                <Link
+                  href={siteConfig.addresses.male.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{siteConfig.addresses.male.description}</span>
+                </Link>
+                <Link
+                  href={createCallUrl(siteConfig.phoneNumbers.male)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{formatPhoneNumber(siteConfig.phoneNumbers.male)}</span>
+                </Link>
+                <Link
+                  href={createEmailUrl(siteConfig.emails.male)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{siteConfig.emails.male}</span>
+                </Link>
+              </div>
+            </div>
+            <div className="space-y-6">
+              <p className="text-secondary heading-md">
+                {t("femaleContactTitle")}
+              </p>
+              <div className="text-secondary flex max-w-74 flex-col gap-y-6 font-semibold">
+                <Link
+                  href={siteConfig.addresses.female.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{siteConfig.addresses.female.description}</span>
+                </Link>
+                <Link
+                  href={createCallUrl(siteConfig.phoneNumbers.female)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>
+                    {formatPhoneNumber(siteConfig.phoneNumbers.female)}
+                  </span>
+                </Link>
+                <Link
+                  href={createEmailUrl(siteConfig.emails.female)}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <span>{siteConfig.emails.female}</span>
+                </Link>
+              </div>
             </div>
           </div>
           <div className="w-full xl:w-1/2">
