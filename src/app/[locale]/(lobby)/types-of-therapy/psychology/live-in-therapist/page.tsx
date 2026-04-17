@@ -4,9 +4,9 @@ import type { LocaleParams } from "@/types"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
-import { ContactBanner } from "../../_components/contact-banner"
-import { ProgrammesSection } from "../../_components/programmes-section"
-import { TeamSection } from "../../_components/team-section"
+import { ContactBanner } from "../../../_components/contact-banner"
+import { ProgrammesSection } from "../../../_components/programmes-section"
+import { TeamSection } from "../../../_components/team-section"
 
 export async function generateMetadata({
   params,
