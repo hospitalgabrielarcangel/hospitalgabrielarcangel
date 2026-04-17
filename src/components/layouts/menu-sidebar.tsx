@@ -4,7 +4,7 @@ import Link from "next/link"
 import { useTranslations } from "next-intl"
 import { create } from "zustand"
 
-import { conditionsCategories } from "@/config/treatment"
+import { conditionsCategories, typeOfTherapyConfig } from "@/config/treatment"
 import { toCamelCase } from "@/lib/utils"
 
 import { Icons } from "../icons"
@@ -62,6 +62,18 @@ const navConfig = [
       items: conditionCategoryItem.conditions.map((conditionItem) => ({
         title: toCamelCase(conditionItem.name),
         href: `/conditions-we-treat/${conditionCategoryItem.page.id}/${conditionItem.name}`,
+      })),
+    })),
+  },
+  {
+    title: "typesOfTherapy",
+    href: "/types-of-therapy",
+    items: typeOfTherapyConfig.map((typesOfTherapyItem) => ({
+      title: typesOfTherapyItem.title,
+      href: typesOfTherapyItem.href,
+      items: typesOfTherapyItem.items.map((typesOfTherapySubItem) => ({
+        title: typesOfTherapySubItem.title,
+        href: typesOfTherapySubItem.href,
       })),
     })),
   },

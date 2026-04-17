@@ -4,9 +4,10 @@ import type { LocaleParams } from "@/types"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
-import { ContactBanner } from "../_components/contact-banner"
-import { ProgrammesSection } from "../_components/programmes-section"
-import { TeamSection } from "../_components/team-section"
+import { ApproachSection } from "../../../_components/approach-section"
+import { ContactBanner } from "../../../_components/contact-banner"
+import { ProgrammesSection } from "../../../_components/programmes-section"
+import { TeamSection } from "../../../_components/team-section"
 
 export async function generateMetadata({
   params,
@@ -15,7 +16,7 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale: locale,
-    namespace: "PsychiatryPage",
+    namespace: "FamilyPsychoeducationPage",
   })
 
   return {
@@ -25,12 +26,12 @@ export async function generateMetadata({
   }
 }
 
-export default function PsychiatryPage() {
-  const t = useTranslations("PsychiatryPage")
+export default function FamilyPsychoeducationPage() {
+  const t = useTranslations("FamilyPsychoeducationPage")
 
   return (
     <>
-      <section className="bg-muted -mt-20 border-b bg-[url(/images/psychiatry.webp)] bg-center object-cover">
+      <section className="bg-muted -mt-20 border-b bg-[url(/images/family-psychoeducation.webp)] bg-center">
         <div className="container pt-70 pb-12 md:pt-84">
           <div className="max-w-6xl space-y-5">
             <p className="eyebrow text-white">{t("pageEyebrow")}</p>
@@ -58,19 +59,35 @@ export default function PsychiatryPage() {
             </div>
           </div>
           <div className="md:w-1/2 md:pb-8">
-            <article className="space-y-6 border-b py-12 md:pl-8">
-              <h3 className="subtitle-lg font-medium">{t("whatIsHeading")}</h3>
-              <p className="paragraph">{t("whatIsDescription")}</p>
-              <ul className="text-muted-foreground list-disc space-y-6 pl-8">
-                {[...Array(12).keys()].map((item) => (
-                  <li key={item}>
-                    <p>{t(`whatIsItem${item + 1}`)}</p>
-                  </li>
-                ))}
-              </ul>
-              <p className="paragraph">{t("whatIsFooter")}</p>
+            <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
+              <div className="space-y-6">
+                <h3 className="subtitle-lg font-medium">
+                  {t("whatIsHeading")}
+                </h3>
+                <div className="paragraph space-y-4">
+                  {t("whatIsDescription")
+                    .split("\n")
+                    .map((paragraph, key) => (
+                      <p key={key}>{paragraph}</p>
+                    ))}
+                </div>
+              </div>
             </article>
             <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
+              <div className="space-y-6">
+                <h3 className="subtitle-lg font-medium">
+                  {t("benefistHeading")}
+                </h3>
+                <div className="paragraph space-y-4">
+                  {t("benefistDescription")
+                    .split("\n")
+                    .map((paragraph, key) => (
+                      <p key={key}>{paragraph}</p>
+                    ))}
+                </div>
+              </div>
+            </article>
+            <article className="space-y-6 py-12 md:pt-10 md:pl-8">
               <div className="space-y-6">
                 <h3 className="subtitle-lg font-medium">
                   {t("differenceHeading")}
@@ -78,22 +95,8 @@ export default function PsychiatryPage() {
                 <div className="paragraph space-y-4">
                   {t("differenceDescription")
                     .split("\n")
-                    .map((whatIsParagraph, whatIsKey) => (
-                      <p key={whatIsKey}>{whatIsParagraph}</p>
-                    ))}
-                </div>
-              </div>
-            </article>
-            <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
-              <div className="space-y-6">
-                <h3 className="subtitle-lg font-medium">
-                  {t("programmeHeading")}
-                </h3>
-                <div className="paragraph space-y-4">
-                  {t("programmeDescription")
-                    .split("\n")
-                    .map((whatIsParagraph, whatIsKey) => (
-                      <p key={whatIsKey}>{whatIsParagraph}</p>
+                    .map((paragraph, key) => (
+                      <p key={key}>{paragraph}</p>
                     ))}
                 </div>
               </div>
@@ -101,6 +104,15 @@ export default function PsychiatryPage() {
           </div>
         </div>
       </section>
+      <ApproachSection
+        image={{
+          src: "/images/patience-therapy.webp",
+          alt: "",
+          width: 1080,
+          height: 1350,
+        }}
+        className="border-b"
+      />
       <ProgrammesSection />
       <TeamSection />
       <ContactBanner />

@@ -4,9 +4,9 @@ import type { LocaleParams } from "@/types"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
-import { ContactBanner } from "../_components/contact-banner"
-import { ProgrammesSection } from "../_components/programmes-section"
-import { TeamSection } from "../_components/team-section"
+import { ContactBanner } from "../../_components/contact-banner"
+import { ProgrammesSection } from "../../_components/programmes-section"
+import { TeamSection } from "../../_components/team-section"
 
 export async function generateMetadata({
   params,
@@ -15,7 +15,7 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale: locale,
-    namespace: "LiveInTherapistPage",
+    namespace: "PsychiatryPage",
   })
 
   return {
@@ -25,12 +25,12 @@ export async function generateMetadata({
   }
 }
 
-export default function LiveInTherapistPage() {
-  const t = useTranslations("LiveInTherapistPage")
+export default function PsychiatryPage() {
+  const t = useTranslations("PsychiatryPage")
 
   return (
     <>
-      <section className="bg-muted -mt-20 border-b bg-[url(/images/psychiatrist_16-9.webp)] bg-top object-cover">
+      <section className="bg-muted -mt-20 border-b bg-[url(/images/psychiatry.webp)] bg-center object-cover">
         <div className="container pt-70 pb-12 md:pt-84">
           <div className="max-w-6xl space-y-5">
             <p className="eyebrow text-white">{t("pageEyebrow")}</p>
@@ -58,13 +58,25 @@ export default function LiveInTherapistPage() {
             </div>
           </div>
           <div className="md:w-1/2 md:pb-8">
+            <article className="space-y-6 border-b py-12 md:pl-8">
+              <h3 className="subtitle-lg font-medium">{t("whatIsHeading")}</h3>
+              <p className="paragraph">{t("whatIsDescription")}</p>
+              <ul className="text-muted-foreground list-disc space-y-6 pl-8">
+                {[...Array(12).keys()].map((item) => (
+                  <li key={item}>
+                    <p>{t(`whatIsItem${item + 1}`)}</p>
+                  </li>
+                ))}
+              </ul>
+              <p className="paragraph">{t("whatIsFooter")}</p>
+            </article>
             <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
               <div className="space-y-6">
                 <h3 className="subtitle-lg font-medium">
-                  {t("whatIsHeading")}
+                  {t("differenceHeading")}
                 </h3>
                 <div className="paragraph space-y-4">
-                  {t("whatIsDescription")
+                  {t("differenceDescription")
                     .split("\n")
                     .map((whatIsParagraph, whatIsKey) => (
                       <p key={whatIsKey}>{whatIsParagraph}</p>
@@ -75,24 +87,10 @@ export default function LiveInTherapistPage() {
             <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
               <div className="space-y-6">
                 <h3 className="subtitle-lg font-medium">
-                  {t("howHelpHeading")}
+                  {t("programmeHeading")}
                 </h3>
                 <div className="paragraph space-y-4">
-                  {t("howHelpDescription")
-                    .split("\n")
-                    .map((whatIsParagraph, whatIsKey) => (
-                      <p key={whatIsKey}>{whatIsParagraph}</p>
-                    ))}
-                </div>
-              </div>
-            </article>
-            <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
-              <div className="space-y-6">
-                <h3 className="subtitle-lg font-medium">
-                  {t("benefistHeading")}
-                </h3>
-                <div className="paragraph space-y-4">
-                  {t("benefistDescription")
+                  {t("programmeDescription")
                     .split("\n")
                     .map((whatIsParagraph, whatIsKey) => (
                       <p key={whatIsKey}>{whatIsParagraph}</p>

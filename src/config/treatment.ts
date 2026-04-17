@@ -1838,3 +1838,114 @@ export const howWeTreatConfig = [
     slug: "/medical-treatments",
   },
 ]
+
+export const typeOfTherapyConfig = [
+  {
+    title: "psychology",
+    href: "/types-of-therapy/psychology",
+    items: [
+      {
+        title: "psychotherapy",
+        href: "/types-of-therapy/psychology/psychotherapy",
+        items: [],
+      },
+      {
+        title: "psichiatry",
+        href: "/types-of-therapy/psychology/psichiatry",
+        items: [],
+      },
+      {
+        title: "familyPsychotherapy",
+        href: "/types-of-therapy/psychology/family-psychotherapy",
+        items: [],
+      },
+      {
+        title: "traumaFocusedTherapy",
+        href: "/types-of-therapy/psychology/trauma-focused-therapy",
+        items: [],
+      },
+      // {
+      //   title: "familyPsychoeducation",
+      //   href: "/types-of-therapy/psychology/family-psychoeducation",
+      //   items: [],
+      // },
+      // {
+      //   title: "cognitiveBehavioural",
+      //   href: "/types-of-therapy/psychology/cognitive-behavioural",
+      //   items: [],
+      // },
+      // {
+      //   title: "dialecticalBehaviour",
+      //   href: "/types-of-therapy/psychology/dialectical-behaviour",
+      //   items: [],
+      // },
+    ],
+  },
+  // {
+  //   title: "functionalMedicine",
+  //   href: "/types-of-therapy/functional-medicine",
+  //   items: [
+  //     {
+  //       title: "psychonutrition",
+  //       href: "/types-of-therapy/functional-medicine/psychonutrition",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "nutritionalTherapy",
+  //       href: "/types-of-therapy/functional-medicine/nutritional-therapy",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "sleepTherapies",
+  //       href: "/types-of-therapy/functional-medicine/sleep-therapies",
+  //       items: [],
+  //     },
+  //   ],
+  // },
+  // {
+  //   title: "holisticComplementaryTherapies",
+  //   href: "/types-of-therapy/holistic-complementary-therapies",
+  //   items: [
+  //     {
+  //       title: "yoga",
+  //       href: "/types-of-therapy/holistic-complementary-therapies/yoga",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "personalTrainer",
+  //       href: "/types-of-therapy/holistic-complementary-therapiespersonal-trainer",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "meditation",
+  //       href: "/types-of-therapy/holistic-complementary-therapies/meditation",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "breathwork",
+  //       href: "/types-of-therapy/holistic-complementary-therapies/breathwork",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "reflexology",
+  //       href: "/types-of-therapy/holistic-complementary-therapies/reflexology",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "artTherapy",
+  //       href: "/types-of-therapy/holistic-complementary-therapies/art-therapy",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "massageTherapy",
+  //       href: "/types-of-therapy/holistic-complementary-therapies/massage-therapy",
+  //       items: [],
+  //     },
+  //     {
+  //       title: "chiropody",
+  //       href: "/types-of-therapy/holistic-complementary-therapies/chiropody",
+  //       items: [],
+  //     },
+  //   ],
+  // },
+]

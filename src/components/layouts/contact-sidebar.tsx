@@ -18,8 +18,6 @@ import { ContactForm } from "@/components/forms/contact-form"
 import { Icons } from "@/components/icons"
 import Sidebar from "@/components/layouts/sidebar"
 
-import { SocialNav } from "../social-nav"
-
 interface ContactSidebarStore {
   isContactSidebarOpen: boolean
   setIsContactSidebarOpen: (isContactSidebarOpen: boolean) => void

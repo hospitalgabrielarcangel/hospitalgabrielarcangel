@@ -4,9 +4,10 @@ import type { LocaleParams } from "@/types"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
-import { ContactBanner } from "../_components/contact-banner"
-import { ProgrammesSection } from "../_components/programmes-section"
-import { TeamSection } from "../_components/team-section"
+import { ApproachSection } from "../../../_components/approach-section"
+import { ContactBanner } from "../../../_components/contact-banner"
+import { ProgrammesSection } from "../../../_components/programmes-section"
+import { TeamSection } from "../../../_components/team-section"
 
 export async function generateMetadata({
   params,
@@ -150,6 +151,15 @@ export default function PsychotherapyPage() {
           </div>
         </div>
       </section>
+      <ApproachSection
+        image={{
+          src: "/images/patience-therapy.webp",
+          alt: "",
+          width: 1080,
+          height: 1350,
+        }}
+        className="border-b"
+      />
       <ProgrammesSection />
       <TeamSection />
       <ContactBanner />
