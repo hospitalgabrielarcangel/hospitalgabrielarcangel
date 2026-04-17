@@ -1874,11 +1874,11 @@ export const typeOfTherapyConfig = [
         href: "/types-of-therapy/psychology/cognitive-behavioural",
         items: [],
       },
-      // {
-      //   title: "dialecticalBehaviour",
-      //   href: "/types-of-therapy/psychology/dialectical-behaviour",
-      //   items: [],
-      // },
+      {
+        title: "dialecticalBehaviour",
+        href: "/types-of-therapy/psychology/dialectical-behaviour",
+        items: [],
+      },
     ],
   },
   // {
