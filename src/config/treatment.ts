@@ -1849,11 +1849,11 @@ export const typeOfTherapyConfig = [
         href: "/types-of-therapy/psychology/psychotherapy",
         items: [],
       },
-      {
-        title: "psichiatry",
-        href: "/types-of-therapy/psychology/psichiatry",
-        items: [],
-      },
+      // {
+      //   title: "psichiatry",
+      //   href: "/types-of-therapy/psychology/psichiatry",
+      //   items: [],
+      // },
       {
         title: "familyPsychotherapy",
         href: "/types-of-therapy/psychology/family-psychotherapy",
@@ -1864,16 +1864,16 @@ export const typeOfTherapyConfig = [
         href: "/types-of-therapy/psychology/trauma-focused-therapy",
         items: [],
       },
-      // {
-      //   title: "familyPsychoeducation",
-      //   href: "/types-of-therapy/psychology/family-psychoeducation",
-      //   items: [],
-      // },
-      // {
-      //   title: "cognitiveBehavioural",
-      //   href: "/types-of-therapy/psychology/cognitive-behavioural",
-      //   items: [],
-      // },
+      {
+        title: "familyPsychoeducation",
+        href: "/types-of-therapy/psychology/family-psychoeducation",
+        items: [],
+      },
+      {
+        title: "cognitiveBehavioural",
+        href: "/types-of-therapy/psychology/cognitive-behavioural",
+        items: [],
+      },
       // {
       //   title: "dialecticalBehaviour",
       //   href: "/types-of-therapy/psychology/dialectical-behaviour",
