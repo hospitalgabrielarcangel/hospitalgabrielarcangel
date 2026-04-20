@@ -210,7 +210,7 @@ function MenuSidebar() {
                             )
                           }
                           return (
-                            <li key={subNavItem.title} className="px-9 py-4">
+                            <li key={subNavItem.title} className="px-7 py-4">
                               <Link
                                 href={subNavItem.href}
                                 className="heading text-[1.625rem] font-normal hover:underline"

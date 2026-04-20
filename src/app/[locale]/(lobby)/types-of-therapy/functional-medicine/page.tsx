@@ -27,7 +27,7 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale: locale,
-    namespace: "PsychologyPage",
+    namespace: "FunctionalMedicinePage",
   })
 
   return {
@@ -37,12 +37,12 @@ export async function generateMetadata({
   }
 }
 
-export default function PsychologyPage() {
-  const t = useTranslations("PsychologyPage")
+export default function FunctionalMedicinePage() {
+  const t = useTranslations("FunctionalMedicinePage")
   const tMenu = useTranslations("MenuSidebar")
 
-  const psychologyConfig = typeOfTherapyConfig.find(
-    ({ title }) => title === "psychology"
+  const functionalMedicineConfig = typeOfTherapyConfig.find(
+    ({ title }) => title === "functionalMedicine"
   )!
 
   return (
@@ -63,7 +63,7 @@ export default function PsychologyPage() {
           </PageHeader>
           <div className="md:hidden">
             <Image
-              src="/images/counselor.webp"
+              src="/images/functional-medicine.webp"
               alt=""
               width={1920}
               height={1080}
@@ -82,7 +82,7 @@ export default function PsychologyPage() {
                 ))}
             </div>
             <ul>
-              {psychologyConfig.items.map((typeOfTherpayItem) => (
+              {functionalMedicineConfig.items.map((typeOfTherpayItem) => (
                 <li
                   key={typeOfTherpayItem.title}
                   className="border-t last:border-b"
@@ -108,7 +108,7 @@ export default function PsychologyPage() {
         </div>
         <div className="relative hidden md:block md:w-1/2">
           <Image
-            src="/images/counselor.webp"
+            src="/images/functional-medicine.webp"
             alt=""
             width={1920}
             height={1080}
@@ -119,7 +119,7 @@ export default function PsychologyPage() {
       </section>
       <ApproachSection
         image={{
-          src: "/images/types-of-therapy.webp",
+          src: "/images/vsm_4-5.webp",
           alt: "",
           width: 1080,
           height: 1350,

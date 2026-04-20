@@ -4,9 +4,10 @@ import type { LocaleParams } from "@/types"
 import { useTranslations } from "next-intl"
 import { getTranslations } from "next-intl/server"
 
-import { ContactBanner } from "../_components/contact-banner"
-import { ProgrammesSection } from "../_components/programmes-section"
-import { TeamSection } from "../_components/team-section"
+import { ApproachSection } from "../../../_components/approach-section"
+import { ContactBanner } from "../../../_components/contact-banner"
+import { ProgrammesSection } from "../../../_components/programmes-section"
+import { TeamSection } from "../../../_components/team-section"
 
 export async function generateMetadata({
   params,
@@ -15,7 +16,7 @@ export async function generateMetadata({
 
   const t = await getTranslations({
     locale: locale,
-    namespace: "MedicalTreatmentsPage",
+    namespace: "PsychonutritionPage",
   })
 
   return {
@@ -25,12 +26,12 @@ export async function generateMetadata({
   }
 }
 
-export default function MedicalTreatmentsPage() {
-  const t = useTranslations("MedicalTreatmentsPage")
+export default function PsychonutritionPage() {
+  const t = useTranslations("PsychonutritionPage")
 
   return (
     <>
-      <section className="bg-muted -mt-20 border-b bg-[url(/images/medical-treatment.webp)] bg-center object-cover">
+      <section className="bg-muted -mt-20 border-b bg-[url(/images/psychonutrition.webp)] bg-center">
         <div className="container pt-70 pb-12 md:pt-84">
           <div className="max-w-6xl space-y-5">
             <p className="eyebrow text-white">{t("pageEyebrow")}</p>
@@ -66,8 +67,8 @@ export default function MedicalTreatmentsPage() {
                 <div className="paragraph space-y-4">
                   {t("whatIsDescription")
                     .split("\n")
-                    .map((whatIsParagraph, whatIsKey) => (
-                      <p key={whatIsKey}>{whatIsParagraph}</p>
+                    .map((paragraph, key) => (
+                      <p key={key}>{paragraph}</p>
                     ))}
                 </div>
               </div>
@@ -75,27 +76,27 @@ export default function MedicalTreatmentsPage() {
             <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
               <div className="space-y-6">
                 <h3 className="subtitle-lg font-medium">
-                  {t("benefistHeading")}
+                  {t("differenceHeading")}
                 </h3>
                 <div className="paragraph space-y-4">
-                  {t("benefistDescription")
+                  {t("differenceDescription")
                     .split("\n")
-                    .map((whatIsParagraph, whatIsKey) => (
-                      <p key={whatIsKey}>{whatIsParagraph}</p>
+                    .map((paragraph, key) => (
+                      <p key={key}>{paragraph}</p>
                     ))}
                 </div>
               </div>
             </article>
-            <article className="space-y-6 border-b py-12 md:pt-10 md:pb-20 md:pl-8">
+            <article className="space-y-6 py-12 md:pt-10 md:pl-8">
               <div className="space-y-6">
                 <h3 className="subtitle-lg font-medium">
-                  {t("programmeHeading")}
+                  {t("includeHeading")}
                 </h3>
                 <div className="paragraph space-y-4">
-                  {t("programmeDescription")
+                  {t("includeDescription")
                     .split("\n")
-                    .map((whatIsParagraph, whatIsKey) => (
-                      <p key={whatIsKey}>{whatIsParagraph}</p>
+                    .map((paragraph, key) => (
+                      <p key={key}>{paragraph}</p>
                     ))}
                 </div>
               </div>
@@ -103,6 +104,15 @@ export default function MedicalTreatmentsPage() {
           </div>
         </div>
       </section>
+      <ApproachSection
+        image={{
+          src: "/images/patience-therapy.webp",
+          alt: "",
+          width: 1080,
+          height: 1350,
+        }}
+        className="border-b"
+      />
       <ProgrammesSection />
       <TeamSection />
       <ContactBanner />
